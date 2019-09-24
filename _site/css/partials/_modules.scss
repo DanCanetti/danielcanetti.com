@@ -1,0 +1,246 @@
+/*
+    Modules
+    ---
+    Modules are the reusable, modular parts of the design.
+    E.G. callouts, sidebar sections, product lists
+*/
+
+.logo {
+  width: 100px;
+  position: fixed;
+  top: 25px;
+  left: calc(3% + 25px);
+  .center {
+    position: absolute;
+    left: calc(25% - 6px);
+    top: calc(25% - 6px);
+    max-width: 60px;
+  }
+}
+
+img[src*="#header"] {
+   width: 100%;
+   height: auto;
+}
+
+.content {
+  font-size: 1.75rem;
+  margin: auto;
+  width: 720px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.home {
+  h1 {
+    font-size: 4rem;
+    color: $pcolor;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 25vh 0 0 0;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.15rem;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 10% 0 1.5% 0;
+    //margin: 0 0 1.5% 0;
+    //&:not(:first-of-type) {
+    //  margin: 10% 0 1.5% 0;
+    //}
+  }
+  .intro {
+    text-align: left;
+    padding: 3% 0 15vh 0;
+    margin: auto;
+  }
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  margin: 10% auto 0% auto;
+  .logo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-image: url('../images/location/logo.png');
+    background-size: 75px;
+    background-position: center 35px;
+    background-repeat: no-repeat;
+    .svg {
+      max-width: 150px;
+    }
+  }
+  .content {
+    padding-left: 5%;
+    font-size: 3em;
+    a {
+     font-size: .33em;
+    }
+  }
+}
+
+.parallax {
+  padding: 25% 0%;
+  margin-top: -15%;
+  background-image: url('../images/quotebgmultiple.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 60%;
+    margin-left: 40%;
+    line-height: 1.5;
+    img {
+      &.one {
+        width: 65%;
+        height: auto;
+      }
+      &.two {
+        width: 75%;
+        margin-left: -40%;
+        margin-top: 30%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.updates {
+  max-width: 75%;
+  margin: auto;
+  padding: 30% 0% 0% 0%;
+  text-align: center;
+  h3 {
+    padding: 0px;
+    margin: 50px 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    &:before {
+      content: "";
+      background-color: #50565a;
+      width: 1px;
+      height: 200px;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 75px;
+    }
+  }
+  .wedding-updates {
+    .slick-slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 15px;
+      min-height: 250px;
+      position: relative;
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px;
+        width: calc(100% - 80px);
+        height: calc(100% - 80px);
+        background: rgba(0,0,0,.5);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+        p.date {
+          color: $scolor;
+          font-size: .75em;
+        }
+        a {
+          position: relative;
+          color: $scolor;
+          font-size: 1.25em;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            height: 2px;
+            background: $tcolor;
+            width: 0px;
+            @include transitionall(.7s);
+          }
+          &:hover {
+            text-decoration: none;
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.photos {
+  .main {
+    h3 {
+      margin: 5% 0px;
+      text-align: center;
+      .fab {
+        color: #005aff;
+        font-weight: 400;
+      }
+    }
+    p {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      padding: 100px;
+      border-radius: 750px;
+      background: $tcolor;
+      margin: 5% auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      .fal {
+        position: absolute;
+        z-index: 0;
+        font-size: 10em;
+        top: 30%;
+        left: 0;
+        right: 0;
+        color: #f9cdce;
+        text-align: center;
+        @include transitionall(.7s);
+      }
+      &:hover {
+        .fal {
+          top: 27.5%;
+          font-size: 14em;
+        }
+      }
+      a {
+        z-index: 5;
+        color: #fff;
+        font-size: 3em;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  }
+}

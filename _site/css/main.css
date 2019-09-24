@@ -1,0 +1,477 @@
+/*
+    Main
+    ---
+    Compiles the .scss partials and creates the final CSS file.
+*/
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0px; }
+
+/*
+    Base
+    ---
+    Default style rules.
+    E.G. html, body, a
+*/
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0px; }
+
+@keyframes line-grow {
+  0% {
+    height: 0%; }
+  100% {
+    height: 60%; } }
+@keyframes header-fade {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes init-fade {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+body {
+  animation: init-fade 6s 1;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  margin: auto;
+  padding: 3%; }
+
+.strong {
+  font-weight: 900; }
+
+p {
+  line-height: 1.4;
+  margin-top: 30px; }
+
+a {
+  color: #50565a;
+  text-decoration: none; }
+  a.cta {
+    display: inline-block;
+    float: left;
+    margin: 20px 0px;
+    position: relative;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+    a.cta:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      background: #333;
+      width: 0px;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out; }
+    a.cta:hover {
+      text-decoration: none; }
+      a.cta:hover:after {
+        width: 100%; }
+  a.fancy-hover {
+    position: relative;
+    z-index: 2; }
+    a.fancy-hover:before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 10%;
+      background: #50565a;
+      bottom: -25%;
+      left: -10%;
+      z-index: -1;
+      -webkit-transition: all .7s ease-in-out;
+      -moz-transition: all .7s ease-in-out;
+      -o-transition: all .7s ease-in-out;
+      transition: all .7s ease-in-out; }
+    a.fancy-hover:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 65%;
+      background: #333;
+      opacity: 0.05;
+      bottom: -25%;
+      left: -10%;
+      z-index: -1;
+      -webkit-transition: all .7s ease-in-out;
+      -moz-transition: all .7s ease-in-outt;
+      -o-transition: all .7s ease-in-out;
+      transition: all .7s ease-in-out; }
+    a.fancy-hover:hover:before {
+      width: 100%;
+      left: 0%; }
+    a.fancy-hover:hover:after {
+      width: 210%;
+      background: #333; }
+
+/*
+    Layout
+    ---
+    Layout rules divide the page into sections. Layouts hold one or more modules together.
+    E.G. header, footer
+*/
+nav {
+  text-align: center;
+  z-index: 6000; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(125px - 3%);
+    padding-right: 50px; }
+    nav ul li {
+      margin: 0px 15px;
+      font-size: .95rem; }
+      nav ul li a {
+        color: #111;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 1.5px; }
+
+.header {
+  height: 90vh;
+  margin-bottom: 25vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  text-align: center; }
+  .header h1 {
+    animation: header-fade 6s 1;
+    color: #50565a;
+    font-weight: 400;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .header .line {
+    animation: line-grow 5s 1;
+    background-color: #50565a;
+    width: 1px;
+    height: 60%;
+    margin: auto; }
+
+footer {
+  height: 50vh;
+  background: #50565a;
+  padding-top: 20%;
+  text-align: center;
+  font-size: 1.75em; }
+  footer .logo {
+    color: #50565a;
+    display: block;
+    margin-bottom: 10px;
+    cursor: default; }
+  footer a.crafted {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: .4em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+    footer a.crafted:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      background: #50565a;
+      width: 0px;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out; }
+    footer a.crafted:hover {
+      text-decoration: none;
+      color: white; }
+      footer a.crafted:hover:after {
+        width: 100%; }
+
+.project-logo-grid {
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-wrap: wrap; }
+  .project-logo-grid .project-logo {
+    flex-basis: calc(100% / 3 - 4px);
+    background: #50565a;
+    padding: 0px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    justify-content: center; }
+    .project-logo-grid .project-logo a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .project-logo-grid .project-logo a img {
+        width: 100px;
+        height: auto; }
+      .project-logo-grid .project-logo a.has-case-study, .project-logo-grid .project-logo a.case-study-coming-soon {
+        position: relative; }
+        .project-logo-grid .project-logo a.has-case-study::before, .project-logo-grid .project-logo a.case-study-coming-soon::before {
+          content: "Case Study";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          padding: 5px 10px;
+          background: #333;
+          color: #fff;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-size: .5em;
+          font-weight: 900; }
+      .project-logo-grid .project-logo a.case-study-coming-soon::before {
+        content: "Coming Soon"; }
+
+/*
+    Modules
+    ---
+    Modules are the reusable, modular parts of the design.
+    E.G. callouts, sidebar sections, product lists
+*/
+.logo {
+  width: 100px;
+  position: fixed;
+  top: 25px;
+  left: calc(3% + 25px); }
+  .logo .center {
+    position: absolute;
+    left: calc(25% - 6px);
+    top: calc(25% - 6px);
+    max-width: 60px; }
+
+img[src*="#header"] {
+  width: 100%;
+  height: auto; }
+
+.content {
+  font-size: 1.75rem;
+  margin: auto;
+  width: 720px;
+  max-width: 100%;
+  box-sizing: border-box; }
+
+.home h1 {
+  font-size: 4rem;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 25vh 0 0 0;
+  margin: 0; }
+.home h2 {
+  font-size: 1.15rem;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 10% 0 1.5% 0; }
+.home .intro {
+  text-align: left;
+  padding: 3% 0 15vh 0;
+  margin: auto; }
+
+.location {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  margin: 10% auto 0% auto; }
+  .location .logo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-image: url("../images/location/logo.png");
+    background-size: 75px;
+    background-position: center 35px;
+    background-repeat: no-repeat; }
+    .location .logo .svg {
+      max-width: 150px; }
+  .location .content {
+    padding-left: 5%;
+    font-size: 3em; }
+    .location .content a {
+      font-size: .33em; }
+
+.parallax {
+  padding: 25% 0%;
+  margin-top: -15%;
+  background-image: url("../images/quotebgmultiple.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
+  .parallax .content {
+    width: 60%;
+    margin-left: 40%;
+    line-height: 1.5; }
+    .parallax .content img.one {
+      width: 65%;
+      height: auto; }
+    .parallax .content img.two {
+      width: 75%;
+      margin-left: -40%;
+      margin-top: 30%;
+      height: auto; }
+
+.updates {
+  max-width: 75%;
+  margin: auto;
+  padding: 30% 0% 0% 0%;
+  text-align: center; }
+  .updates h3 {
+    padding: 0px;
+    margin: 50px 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative; }
+    .updates h3:before {
+      content: "";
+      background-color: #50565a;
+      width: 1px;
+      height: 200px;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 75px; }
+  .updates .wedding-updates .slick-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 15px;
+    min-height: 250px;
+    position: relative; }
+    .updates .wedding-updates .slick-slide span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 40px;
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      text-align: left; }
+      .updates .wedding-updates .slick-slide span p.date {
+        color: #50565a;
+        font-size: .75em; }
+      .updates .wedding-updates .slick-slide span a {
+        position: relative;
+        color: #50565a;
+        font-size: 1.25em; }
+        .updates .wedding-updates .slick-slide span a:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          height: 2px;
+          background: #333;
+          width: 0px;
+          -webkit-transition: all 0.7s ease-in-out;
+          -moz-transition: all 0.7s ease-in-out;
+          -o-transition: all 0.7s ease-in-out;
+          transition: all 0.7s ease-in-out; }
+        .updates .wedding-updates .slick-slide span a:hover {
+          text-decoration: none; }
+          .updates .wedding-updates .slick-slide span a:hover:after {
+            width: 100%; }
+
+body.photos .main h3 {
+  margin: 5% 0px;
+  text-align: center; }
+  body.photos .main h3 .fab {
+    color: #005aff;
+    font-weight: 400; }
+body.photos .main p {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 100px;
+  border-radius: 750px;
+  background: #333;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+  body.photos .main p .fal {
+    position: absolute;
+    z-index: 0;
+    font-size: 10em;
+    top: 30%;
+    left: 0;
+    right: 0;
+    color: #f9cdce;
+    text-align: center;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  body.photos .main p:hover .fal {
+    top: 27.5%;
+    font-size: 14em; }
+  body.photos .main p a {
+    z-index: 5;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 700; }
+
+/*
+    State
+    ---
+    ways to describe how our modules or layouts will look when in a particular state.
+    E.G. Is it hidden or expanded? Is it active or inactive?
+*/
+
+/*# sourceMappingURL=main.css.map */

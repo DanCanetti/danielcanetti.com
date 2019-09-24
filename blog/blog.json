@@ -1,4 +1,5 @@
 {
     "layout": "bloglayout.liquid",
+    "pageClass": "post",
     "tags": ["posts"]
 }

@@ -1,13 +1,18 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        {% include meta %}
         <title>Daniel Canetti • {{ pageTitle }}</title>
     </head>
-    <body>
+    <body class="{{ pageClass }}">
+      {% include nav %}
+      <div class="header">
         <h1>{{ pageTitle }}</h1>
-	<p class="post-date">{{ postDate }}</p>
-	
+  	    <p class="post-date">{{ postDate }}</p>
+      </div>
+      <div class="content">
         {{ content }}
+      </div>
+      {% include footer %}
     </body>
 </html>

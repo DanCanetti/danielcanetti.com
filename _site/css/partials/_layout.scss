@@ -1,0 +1,154 @@
+/*
+    Layout
+    ---
+    Layout rules divide the page into sections. Layouts hold one or more modules together.
+    E.G. header, footer
+*/
+
+nav {
+  text-align: center;
+  z-index: 6000;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(125px - 3%);
+    padding-right: 50px;
+    li {
+      margin: 0px 15px;
+      font-size: .95rem;
+      a {
+        color: $pcolor;
+        text-transform: uppercase;
+        font-weight: $pfontheavy;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+.header {
+  height: 90vh;
+  margin-bottom: 25vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  text-align: center;
+  h1 {
+    animation: header-fade 6s 1;
+    color: $scolor;
+    font-weight: 400;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .line {
+    animation: line-grow 5s 1;
+    background-color: $scolor;
+    width: 1px;
+    height: 60%;
+    margin: auto;
+  }
+}
+
+footer {
+  height: 50vh;
+  background: $scolor;
+  padding-top: 20%;
+  text-align: center;
+  font-size: 1.75em;
+  .logo {
+    color: $scolor;
+    display: block;
+    margin-bottom: 10px;
+    cursor: default;
+  }
+  a {
+    &.crafted {
+      color: rgba(255,255,255,0.5);
+      font-weight: 400;
+      font-size: .4em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      @include transitionall(.7s);
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        background: $scolor;
+        width: 0px;
+        @include transitionall(.7s);
+      }
+      &:hover {
+        text-decoration: none;
+        color: rgba(255,255,255,1);
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.project-logo-grid {
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  .project-logo {
+    flex-basis: calc(100% / 3 - 4px);
+    background: #50565a;
+    padding: 0px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    justify-content: center;
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100px;
+        height: auto;
+      }
+      &.has-case-study {
+        position: relative;
+        &::before {
+          content: "Case Study";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          padding: 5px 10px;
+          background: $tcolor;
+          color: #fff;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-size: .5em;
+          font-weight: 900;
+        }
+      }
+      &.case-study-coming-soon {
+        @extend .has-case-study;
+        &::before {
+          content: "Coming Soon";
+        }
+      }
+    }
+  }
+}
