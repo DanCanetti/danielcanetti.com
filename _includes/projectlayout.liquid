@@ -8,12 +8,13 @@
     <body class="{{ pageClass }}">
       <div class="wrapper">
         {% include nav %}
-        <div class="header">
-          <h1>{{ pageTitle }}</h1>
-          <p class="subtitle">{{ pageSubTitle }}</p>
-          <a class="project-link fancy-hover" href="{{ projectLink }}">Visit Website</a>
+        <div class="header" style="background-image: url('{{ projectFeatureImage }}');">
+          <div class="content">
+            <h1 class="title">{{ pageTitle }}</h1>
+            <p class="subtitle">{{ pageSubTitle }}</p>
+            <a class="project-link fancy-hover" href="{{ projectLink }}" target="_blank">Visit Website</a>
+          </div>
         </div>
-        <img class="feature-image" src="{{ projectFeatureImage }}" />
         <div class="content">
           {{ content }}
         </div>

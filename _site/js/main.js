@@ -1,19 +1,6 @@
 // Current Year
 $(".curr-year").text( (new Date).getFullYear() );
 
-// Parallax Scroll
-(function(){
-  var parallax = document.querySelectorAll(".parallax"),
-      speed = .3;
-  window.onscroll = function(){
-    [].slice.call(parallax).forEach(function(el,i){
-      var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "0 " + (windowYOffset * speed) + "px";
-      el.style.backgroundPosition = elBackgrounPos;
-    });
-  };
-})();
-
 // Rotate the logo
 $(window).scroll(function() {
   var theta = $(window).scrollTop() / 250 % Math.PI;

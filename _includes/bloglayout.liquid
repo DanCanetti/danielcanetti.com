@@ -2,17 +2,19 @@
 <html lang="en">
     <head>
         {% include meta %}
-        <title>Daniel Canetti • {{ pageTitle }}</title>
+        <title>Daniel Canetti • {{ postTitle }}</title>
     </head>
     <body class="{{ pageClass }}">
       <div class="wrapper">
         {% include nav %}
-        <div class="header">
-          <h1>{{ pageTitle }}</h1>
-    	    <p class="post-date">{{ postDate }}</p>
+        <div id="top" class="header" style="background-image: url('{{ postFeatureImage }}');">
+          <div class="content">
+            <h1 class="title">{{ postTitle }}</h1>
+          </div>
         </div>
         <div class="content">
           {{ content }}
+          <a href="#top" class="top"><img src="/images/top.svg" /></a>
         </div>
         {% include footer %}
       </div>

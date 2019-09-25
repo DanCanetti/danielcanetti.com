@@ -4,7 +4,7 @@ pageSubTitle: A unique fitness experience.
 projectLogo: /images/case-studies/fit4it-fitness/logo-white.svg
 projectLink: https://fit4itfitness.com/
 projectFeatureImage: /images/case-studies/fit4it-fitness/feature.jpg
-projectClass: has-case-study
+projectClass: case-study-coming-soon
 seoIndex: all
 ---
 

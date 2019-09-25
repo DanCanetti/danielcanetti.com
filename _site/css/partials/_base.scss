@@ -69,6 +69,9 @@ $pfontreg: 400;
 $pfontbold: 500;
 $pfontheavy: 900;
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+$serif: 'Roboto Slab', serif;
+
 // Basics
 body {
   animation: init-fade 6s 1;
@@ -84,6 +87,36 @@ body {
 
 .strong {
   font-weight: $pfontheavy;
+}
+
+h1 {
+  font-size: 4rem;
+  color: $pcolor;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 5vh 0;
+  margin: 0;
+  line-height: 1.25;
+}
+h2 {
+  @extend h1;
+  font-size: 2rem;
+  margin: 200px auto 75px auto;
+  padding: 0px;
+  width: 720px;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $highlight;
+    height: 8px;
+    width: 75px;
+    top: -50px;
+    left: 0;
+  }
 }
 
 p {
@@ -117,7 +150,6 @@ a {
       }
     }
   }
-
   &.fancy-hover {
      position: relative;
      z-index: 2;
@@ -126,7 +158,7 @@ a {
        position: absolute;
        width: 0%;
        height: 10%;
-       background: $scolor;
+       background: $highlight;
        bottom: -25%;
        left: -10%;
        z-index: -1;
@@ -140,8 +172,8 @@ a {
        position: absolute;
        width: 100%;
        height: 65%;
-       background: $tcolor;
-       opacity: 0.05;
+       background: #fff;
+       opacity: 0.1;
        bottom: -25%;
        left: -10%;
        z-index: -1;
@@ -160,5 +192,23 @@ a {
          background: $tcolor;
        }
      }
+  }
+}
+
+hr {
+  box-shadow: none;
+  border: 1px solid #ffcf56;
+  height: 0px;
+  margin: 75px 75% 75px 0px;
+}
+
+blockquote {
+  font-family: $serif;
+  margin: 75px 75px 5px 75px;
+  &+ p {
+    font-family: $serif;
+    margin: 25px 75px 75px 75px;
+    color: $scolor;
+    font-size: .7em;
   }
 }

@@ -8,6 +8,7 @@
 nav {
   text-align: center;
   z-index: 6000;
+  position: relative;
   ul {
     list-style: none;
     display: flex;
@@ -27,31 +28,6 @@ nav {
         letter-spacing: 1.5px;
       }
     }
-  }
-}
-
-.header {
-  height: 90vh;
-  margin-bottom: 25vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  text-align: center;
-  h1 {
-    animation: header-fade 6s 1;
-    color: $scolor;
-    font-weight: 400;
-    font-size: .8em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  .line {
-    animation: line-grow 5s 1;
-    background-color: $scolor;
-    width: 1px;
-    height: 60%;
-    margin: auto;
   }
 }
 
@@ -185,6 +161,17 @@ footer {
     list-style: none;
   }
   .latest-post {
+    margin-top: 75px;
+    &:first-of-type {
+      margin-top: 0px;
+    }
+    .post-date {
+      font-size: 1rem;
+      font-weight: $pfontlight;
+      color: $scolor;
+      display: block;
+      margin-top: 15px;
+    }
     a {
       font-size: 1.75rem;
       font-weight: $pfontbold;
