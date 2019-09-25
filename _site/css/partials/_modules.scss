@@ -90,31 +90,105 @@
 }
 
 .post {
-  a {
-    font-style: italic;
-  }
-  em {
-    font-size: .7em;
+  .content {
     a {
-      color: $scolor;
-      margin: 20px 0px;
-      position: relative;
-      @include transitionall(.7s);
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        height: 2px;
-        background: $tcolor;
-        width: 0px;
+      text-decoration: underline;
+    }
+    em {
+      font-size: .7em;
+      a {
+        color: $scolor;
+        margin: 20px 0px;
+        position: relative;
         @include transitionall(.7s);
-      }
-      &:hover {
-        text-decoration: none;
         &:after {
-          width: 100%;
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          height: 2px;
+          background: $tcolor;
+          width: 0px;
+          @include transitionall(.7s);
         }
+        &:hover {
+          text-decoration: none;
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 10px 0px 0px 0px;
+      &+ strong {
+        text-align: center;
+        font-size: 0.5em;
+        color: $scolor;
+        display: block;
+        font-weight: $pfontlight;
+        a {
+          font-style: normal;
+        }
+      }
+    }
+    ul, ol {
+      margin-top: 20px;
+      li {
+        margin-bottom: 15px;
+        &::marker {
+          margin-right: 10px;
+        }
+        ul {
+          margin-left: 60px;
+        }
+      }
+    }
+    pre {
+      background: #eee;
+      padding: 25px 50px 25px 100px;
+      margin: 50px 0px;
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: "Code Example";
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background: $scolor;
+        left: -365px;
+        top: -41px;
+        color: #fff;
+        padding: 30px 20px;
+        font-size: .5em;
+        transform: rotate(-90deg);
+         -webkit-transform: rotate(-90deg);
+         -moz-transform: rotate(-90deg);
+         -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      }
+      code {
+        font-family: $serif;
+        font-size: .5em;
+        line-height: 1.75em;
+        color: $scolor;
+        padding: 0px;
+        background: transparent;
+      }
+    }
+    code {
+      color: $scolor;
+      font-size: .75em;
+      background: #e3e3e3;
+      padding: 2px 6px;
+    }
+    .twitter-tweet {
+      margin-top: 40px!important; // Used !importand to overwrite embed css
+      &:last-of-type {
+        margin-bottom: 25px!important; // Used !importand to overwrite embed css
       }
     }
   }

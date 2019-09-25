@@ -176,6 +176,10 @@ footer {
       font-size: 1.75rem;
       font-weight: $pfontbold;
       color: $pcolor;
+      @include transitionall(.3s);
+      &:hover {
+        color: $highlight;
+      }
     }
   }
 }

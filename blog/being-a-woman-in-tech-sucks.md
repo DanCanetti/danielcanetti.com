@@ -1,6 +1,7 @@
 ---
 postTitle: Being a woman in tech sucks
 postDate: 22nd November 2015
+date: 2015-11-22
 postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
 ---
 
@@ -24,6 +25,8 @@ Paul Boag
 
 The sad truth is that women only account for thirty to forty percent of digital workforce, with some companies having as few as one woman coding within the development team if any at all... [the downside of the digital revolution is isolation](https://boagworld.com/digital-strategy/alone/) and for women this is painfully clear.
 
+![Woman hitting man with boxing glove](/images/posts/being-a-woman-in-tech-sucks/feature.jpg)**[Image Source](http://www.gratisography.com/#people)**
+
 As Byrne points out, “many of the problems I encountered in my tech career were due to the cluelessness of my teammates rather than any malice on their part”, in the research I have done this appears true on more occasions than not. It appears as if men within tech see women as some mythical creature that they could scare away if they treated her the same, or they are intimidated and usure of how due to the historical lack of women within the industry... the latter is more likely.
 
 There are some guys that just have issues with women in their team due to some archaic principles they believe to still be true like the “subordinate who did everything possible to undermine my (Byrne) authority because he hated working for a woman”, but there have also been cases that i’ve read about where guys have thought it is okay to flirt or be suggestive within the office. One such situations involved a coworker leaving [an unsolicited, romantically charged gift](https://www.fastcompany.com/3008216/tracking/minding-gap-how-your-company-can-woo-female-coders) on a woman’s desk, another talks of middle-aged co-workers using [GChat to send her pickup lines](http://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/) when at the office.
@@ -37,6 +40,8 @@ Despite the blatant sexism within the industry there are many strong women in te
 Forever Mogul
 
 The reason I have used Marissa Mayer as an example is due to the [outstanding work she has done at Yahoo](https://www.fastcompany.com/3044281/marissa-mayer) since taking over as CEO in 2012 and although her views on the gender issues in tech are sometimes difficult to measure, stating that “[There are probably industries where gender is more of an issue](http://uk.businessinsider.com/sama-group-ceo-leila-janah-criticizes-marissa-mayers-view-on-gender-in-the-workplace-2015-3?r=US&IR=T)” but also that she “[hopes that the wild growth in technology in her lifetime means more girls going into tech](http://www.makers.com/moments/women-tech)”.
+
+![Marissa Mayer](/images/posts/being-a-woman-in-tech-sucks/marissa-mayer.jpg)**Marissa Mayer | [Image Source](https://www.fastcompany.com/3044281/marissa-mayer)**
 
 Mayer is just one example, with Facebook COO Sheryl Sandberg been named the most powerful woman in technology on the [Forbes' Power Women list](https://www.forbes.com/power-women/) for the fourth consecutive year and a further six Silicon Valley executives making it into the top 25 on the Power Women list there may be a shift underway to finally begin breaking down the gender barriers in tech.
 

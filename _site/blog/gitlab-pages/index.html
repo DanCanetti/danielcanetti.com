@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- JS -->
+<script type="text/javascript" defer src="/js/jquery.min.js"></script>
+<script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" defer src="/js/main.js"></script>
+
+        <title>Daniel Canetti • Blog • GitLab Pages</title>
+    </head>
+    <body class="post">
+      <div class="wrapper">
+        <nav>
+  <div class="logo">
+    <img id="mainlogo" src="/images/logotext.svg" alt="Daniel Canetti • Fullstack Developer • " class="svg" />
+    <img class="center" src="/images/logo.png" alt="" />
+  </div>
+  <ul>
+    <li><a class="cta" href="/">Home</a></li>
+    <li><a class="cta" href="#">Case Studies</a></li>
+    <li><a class="cta" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener noreferrer">Tweet Me</a></li>
+    <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li>
+  </ul>
+</nav>
+
+        <div id="top" class="header" style="background-image: url('/images/posts/gitlab-pages/feature.jpg');">
+          <div class="content">
+            <h1 class="title">GitLab Pages</h1>
+          </div>
+        </div>
+        <div class="content">
+          <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
+<p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
+<p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
+<h2>Prerequisites:</h2>
+<ul>
+<li>As mentioned above, the repo must not use server-side languages. <a href="https://gitlab.com/pages">See here for a complete list of supported languages</a> with example config files.</li>
+<li>A working repo with at least an index.html file.</li>
+</ul>
+<h2>The .gitlab-ci.yml file</h2>
+<p>This is the config file that will deploy the codebase to GitLab pages once pushed to the server, the below mostly consists of the html template GitLab generates and the only change I’ve made is to limit this to the staging branch of the project.</p>
+<pre><code>pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+    - staging
+</code></pre>
+<h2>Creating a .gitlab-ci.yml file</h2>
+<ol>
+<li>To generate this file for yourself, go to your repository and add a new file to the repo by clicking on the <code>+</code> and selecting <code>new file</code>.</li>
+<li>At the top of the next page you can select a template from the <code>choose type</code> dropdown, select <code>.gitlab-ci.yml</code> then click the <code>Apply a GitLab CI Yaml template</code> button and select the project type you’re working on. For this example we’ll choose <code>HTML</code>.</li>
+<li>A file very similar to the above should then be generated — you’ll notice the only difference is the <code>staging</code> branch I use.</li>
+<li>Commit the file to your repo, then navigate to <code>CI/CD</code> on the left navigation and you should see the pipeline is running.</li>
+<li>Once this has completed you should see the <code>Pages</code> option as appeared in the <code>Settings</code> menu on the left side. Inside here you should see a message which states <code>Congratulations! your pages are served under:</code> and a link to your page.</li>
+<li>You’re done!</li>
+</ol>
+<h2>Some things to be aware of</h2>
+<p>You can copy your <code>.gitlab-ci.yml</code> file to other projects, as long as you call your branch the same name it should work just fine.</p>
+<p>If you Group your projects, <strong>GitLab Pages can only be generated from repos in the top level of a group</strong>, I got stuck trying to generate Pages from a subgroup and this is not supported.</p>
+<p>Once you see the <code>Congratulations!</code> message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.</p>
+
+          <a href="#top" class="top"><img src="/images/top.svg" /></a>
+        </div>
+        <footer>
+  FOOTER HERE
+</footer>
+
+      </div>
+    </body>
+</html>
