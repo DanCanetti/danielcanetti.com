@@ -5,6 +5,7 @@ projectLogo: /images/case-studies/kbpro-shop/logo-white.svg
 projectLink: https://www.kbpro.com/shop/
 projectFeatureImage: /images/case-studies/kbpro-shop/feature.jpg
 projectClass: has-case-study
+seoIndex: all
 ---
 
 Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.

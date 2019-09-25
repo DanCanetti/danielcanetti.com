@@ -56,6 +56,7 @@ nav {
 }
 
 footer {
+  margin-top: 200px;
   height: 50vh;
   background: $scolor;
   padding-top: 20%;
@@ -98,7 +99,7 @@ footer {
 }
 
 .project-logo-grid {
-  width: 800px;
+  width: 720px;
   max-width: 100%;
   margin: auto;
   display: flex;
@@ -122,9 +123,23 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       img {
         width: 100px;
         height: auto;
+        max-height: 90px;
+      }
+      &.sideProject-link {
+        color: #fff;
+        img {
+          width: 50px;
+          margin-bottom: 10px;
+        }
+        span {
+          margin: 0 20px;
+          text-align: center;
+          line-height: 1.25;
+        }
       }
       &.has-case-study {
         position: relative;
@@ -149,6 +164,31 @@ footer {
           content: "Coming Soon";
         }
       }
+      &.github-link {
+        @extend .has-case-study;
+        &::before {
+          content: "View on GitHub";
+        }
+      }
+      &.youtube-link {
+        @extend .has-case-study;
+        &::before {
+          content: "Visit Channel";
+        }
+      }
+    }
+  }
+}
+
+.latest-post-grid {
+  ul {
+    list-style: none;
+  }
+  .latest-post {
+    a {
+      font-size: 1.75rem;
+      font-weight: $pfontbold;
+      color: $pcolor;
     }
   }
 }

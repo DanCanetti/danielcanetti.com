@@ -11,6 +11,7 @@
 $pcolor: #111;
 $scolor: #50565a;
 $tcolor: #333;
+$highlight: #ffcf56;
 
 // Mixins
 @mixin transitionall($length) {
@@ -65,6 +66,7 @@ $tcolor: #333;
 $pfont: 'brandon-grotesque', sans-serif;
 $pfontlight: 300;
 $pfontreg: 400;
+$pfontbold: 500;
 $pfontheavy: 900;
 
 // Basics
@@ -72,9 +74,12 @@ body {
   animation: init-fade 6s 1;
   font-family: $pfont;
   font-weight: $pfontlight;
-  background-color: #fff;
-  margin: auto;
-  padding: 3%;
+  background-color: $scolor;
+  .wrapper {
+    background-color: #fff;
+    margin: 1%;
+    padding-top: 3%;
+  }
 }
 
 .strong {

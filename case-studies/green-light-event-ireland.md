@@ -5,6 +5,7 @@ projectLogo: /images/case-studies/green-light-event-ire/logo-white.svg
 projectLink: https://www.greenlightevent.ie/
 projectFeatureImage: /images/case-studies/green-light-event-ire/feature.jpg
 projectClass: case-study-coming-soon
+seoIndex: noindex
 ---
 
 Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.

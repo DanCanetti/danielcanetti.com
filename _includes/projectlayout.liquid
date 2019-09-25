@@ -2,20 +2,23 @@
 <html lang="en">
     <head>
         {% include meta %}
+        <meta name="robots" content="{{ seoIndex }}" />
         <title>Daniel Canetti • Case Studies • {{ pageTitle }}</title>
     </head>
     <body class="{{ pageClass }}">
-      {% include nav %}
-      <div class="header">
-        <h1>{{ pageTitle }}</h1>
-        <p class="subtitle">{{ pageSubTitle }}</p>
-        <a class="project-link fancy-hover" href="{{ projectLink }}">Visit Website</a>
-      </div>
-      <img class="feature-image" src="{{ projectFeatureImage }}" />
-      <div class="content">
-        {{ content }}
-      </div>
+      <div class="wrapper">
+        {% include nav %}
+        <div class="header">
+          <h1>{{ pageTitle }}</h1>
+          <p class="subtitle">{{ pageSubTitle }}</p>
+          <a class="project-link fancy-hover" href="{{ projectLink }}">Visit Website</a>
+        </div>
+        <img class="feature-image" src="{{ projectFeatureImage }}" />
+        <div class="content">
+          {{ content }}
+        </div>
 
-      {% include footer %}
+        {% include footer %}
+      </div>
     </body>
 </html>

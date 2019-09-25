@@ -8,7 +8,7 @@
 .logo {
   width: 100px;
   position: fixed;
-  top: 25px;
+  top: calc(2% + 25px);
   left: calc(3% + 25px);
   .center {
     position: absolute;
@@ -35,28 +35,40 @@ img[src*="#header"] {
   h1 {
     font-size: 4rem;
     color: $pcolor;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     font-weight: 900;
-    padding: 25vh 0 0 0;
+    padding: 5vh 0;
     margin: 0;
+    line-height: 1.25;
   }
   h2 {
-    font-size: 1.15rem;
-    color: #111;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin: 10% 0 1.5% 0;
-    //margin: 0 0 1.5% 0;
-    //&:not(:first-of-type) {
-    //  margin: 10% 0 1.5% 0;
-    //}
+    @extend h1;
+    font-size: 2rem;
+    margin: 200px auto 75px auto;
+    padding: 0px;
+    width: 720px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: $highlight;
+      height: 8px;
+      width: 75px;
+      top: -50px;
+      left: 0;
+    }
   }
   .intro {
     text-align: left;
-    padding: 3% 0 15vh 0;
+    padding: 3% 0 0 0;
     margin: auto;
+    a.cta {
+      display: unset;
+      float: none;
+    }
   }
 }
 

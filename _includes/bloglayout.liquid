@@ -5,14 +5,16 @@
         <title>Daniel Canetti • {{ pageTitle }}</title>
     </head>
     <body class="{{ pageClass }}">
-      {% include nav %}
-      <div class="header">
-        <h1>{{ pageTitle }}</h1>
-  	    <p class="post-date">{{ postDate }}</p>
+      <div class="wrapper">
+        {% include nav %}
+        <div class="header">
+          <h1>{{ pageTitle }}</h1>
+    	    <p class="post-date">{{ postDate }}</p>
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
+        {% include footer %}
       </div>
-      <div class="content">
-        {{ content }}
-      </div>
-      {% include footer %}
     </body>
 </html>

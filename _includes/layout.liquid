@@ -5,8 +5,10 @@
         <title>Daniel Canetti • {{ pageTitle }}</title>
     </head>
     <body class="{{ pageClass }}">
-      {% include nav %}
-      {{ content }}
-      {% include footer %}
+      <div class="wrapper">
+        {% include nav %}
+        {{ content }}
+        {% include footer %}
+      </div>
     </body>
 </html>
