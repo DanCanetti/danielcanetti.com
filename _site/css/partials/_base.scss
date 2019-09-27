@@ -78,11 +78,12 @@ body {
   font-family: $pfont;
   font-weight: $pfontlight;
   background-color: $scolor;
+  padding-bottom: 0px;
   .wrapper {
     position: relative;
     z-index: 5;
     background-color: #fff;
-    margin: 1% 1% 50vh 1%;
+    margin: 1% 1% 75vh 1%;
     padding-top: 3%;
     padding-bottom: 200px;
   }

@@ -34,44 +34,45 @@ nav {
 footer {
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 10%;
   z-index: 0;
-  height: 25vh;
+  height: 50vh;
   background: $scolor;
-  padding: 20% 1% 1% 1%;
+  padding: 1% 1% 1% 1%;
   text-align: center;
   font-size: 1.75em;
-  .logo {
-    color: $scolor;
-    display: block;
-    margin-bottom: 10px;
-    cursor: default;
+  h1 {
+    color: #fff;
   }
-  a {
-    &.crafted {
-      color: rgba(255,255,255,0.5);
-      font-weight: 400;
-      font-size: .4em;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      @include transitionall(.7s);
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        height: 2px;
-        background: $scolor;
-        width: 0px;
-        @include transitionall(.7s);
-      }
+  a.get-in-touch {
+    background: $highlight;
+    color: $pcolor;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: $pfontheavy;
+    padding: 12px 18px;
+    @include transitionall(.3s);
+    &:hover {
+      background-color: $pcolor;
+      color: $highlight
+    }
+  }
+  .social-links {
+    position: relative;
+    margin-top: 100px;
+    a {
+      padding: 6.5px 10px;
+      font-size: .5em;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      color: #fff;
+      background: transparent;
+      @include transitionall(.3s);
       &:hover {
-        text-decoration: none;
-        color: rgba(255,255,255,1);
-        &:after {
-          width: 100%;
-        }
+        background: transparent;
+        color: $highlight;
+        border: 1px solid $highlight
       }
     }
   }
