@@ -136,10 +136,17 @@ footer {
       justify-content: center;
       flex-direction: column;
       h3 {
+        color: #fff;
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 3px;
         margin-bottom: 5px;
+        @include transitionall(.2s);
+      }
+      &:hover {
+        h3 {
+          color: $highlight;
+        }
       }
     }
   }
@@ -157,7 +164,7 @@ footer {
   flex-wrap: wrap;
   .brand-logo {
     flex-basis: calc(100% / 3 - 4px);
-    background: #50565a;
+    background: transparent;
     padding: 0px;
     margin: 2px;
     display: flex;
@@ -175,53 +182,6 @@ footer {
         width: 100px;
         height: auto;
         max-height: 90px;
-      }
-      &.sideProject-link {
-        color: #fff;
-        img {
-          width: 50px;
-          margin-bottom: 10px;
-        }
-        span {
-          margin: 0 20px;
-          text-align: center;
-          line-height: 1.25;
-        }
-      }
-      &.has-case-study {
-        position: relative;
-        &::before {
-          content: "Case Study";
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          padding: 5px 10px;
-          background: $tcolor;
-          color: #fff;
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          font-size: .5em;
-          font-weight: 900;
-        }
-      }
-      &.case-study-coming-soon {
-        @extend .has-case-study;
-        &::before {
-          content: "Coming Soon";
-        }
-      }
-      &.github-link {
-        @extend .has-case-study;
-        &::before {
-          content: "View on GitHub";
-        }
-      }
-      &.youtube-link {
-        @extend .has-case-study;
-        &::before {
-          content: "Visit Channel";
-        }
       }
     }
   }

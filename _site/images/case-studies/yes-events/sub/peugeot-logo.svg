@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1"
 	 id="svg2443" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:version="0.46" sodipodi:docname="peu.svg" sodipodi:version="0.32" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 385.7 37.8"
 	 style="enable-background:new 0 0 385.7 37.8;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#000111;}
 </style>
 <defs>
 	
@@ -21,7 +21,7 @@
 			<g>
 				<g id="g3222">
 					<g id="g3228" transform="translate(734.3307,35.2519)">
-						<path id="path3230" class="st0" d="M0,48.6v-6.7h1.8V44h1.7c3.5,0,5.3,1.1,5.3,2.4s-1.9,2.2-5.1,2.2H0 M1.8,44.7v3.2h1.4
+						<path id="path3230" class="st0" d="M0,48.6v-6.7h1.8V44h1.7c3.5,0,5.3,1.1,5.3,2.4s-1.9,2.2-5.1,2.2L0,48.6 M1.8,44.7v3.2h1.4
 							c1.5,0,3.5-0.3,3.5-1.5c0-0.8-0.6-1.7-3.7-1.7H1.8z"/>
 					</g>
 					<g id="g3232" transform="translate(753.678,28.559)">
@@ -30,7 +30,7 @@
 					</g>
 					<g id="g3236" transform="translate(765.4728,35.2519)">
 						<path id="path3238" class="st0" d="M0,48.6h-1.8V43C-2.4,42.8-3,42.6-4,42.6c-1.4,0-2.8,0.4-2.8,1.6v4.4h-1.8v-4.5
-							c0-1.8,1.8-2.4,3.9-2.4c1.8,0,3.4,0.4,4.7,0.9V48.6z"/>
+							c0-1.8,1.8-2.4,3.9-2.4c1.8,0,3.4,0.4,4.7,0.9C0,42.6,0,48.6,0,48.6z"/>
 					</g>
 					<g id="g3240" transform="translate(770.5976,31.8866)">
 						<path id="path3242" class="st0" d="M0,48.6c0,1.9,1.6,2.7,3.5,2.7c1.6,0,2.8-0.5,3.9-0.8v1.1c-1.2,0.4-2.3,0.6-3.9,0.6

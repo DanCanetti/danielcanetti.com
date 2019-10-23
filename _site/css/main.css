@@ -103,7 +103,7 @@ p {
   margin-top: 30px; }
 
 a {
-  color: #50565a;
+  color: #111;
   text-decoration: none; }
   a.cta {
     display: inline-block;
@@ -309,10 +309,17 @@ footer {
       justify-content: center;
       flex-direction: column; }
       .case-study-grid .case-study a h3 {
+        color: #fff;
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 3px;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+      .case-study-grid .case-study a:hover h3 {
+        color: #ffcf56; }
 
 .brand-logo-grid {
   width: 720px;
@@ -326,7 +333,7 @@ footer {
   flex-wrap: wrap; }
   .brand-logo-grid .brand-logo {
     flex-basis: calc(100% / 3 - 4px);
-    background: #50565a;
+    background: transparent;
     padding: 0px;
     margin: 2px;
     display: flex;
@@ -344,36 +351,6 @@ footer {
         width: 100px;
         height: auto;
         max-height: 90px; }
-      .brand-logo-grid .brand-logo .logo-img.sideProject-link {
-        color: #fff; }
-        .brand-logo-grid .brand-logo .logo-img.sideProject-link img {
-          width: 50px;
-          margin-bottom: 10px; }
-        .brand-logo-grid .brand-logo .logo-img.sideProject-link span {
-          margin: 0 20px;
-          text-align: center;
-          line-height: 1.25; }
-      .brand-logo-grid .brand-logo .logo-img.has-case-study, .brand-logo-grid .brand-logo .logo-img.case-study-coming-soon, .brand-logo-grid .brand-logo .logo-img.github-link, .brand-logo-grid .brand-logo .logo-img.youtube-link {
-        position: relative; }
-        .brand-logo-grid .brand-logo .logo-img.has-case-study::before, .brand-logo-grid .brand-logo .logo-img.case-study-coming-soon::before, .brand-logo-grid .brand-logo .logo-img.github-link::before, .brand-logo-grid .brand-logo .logo-img.youtube-link::before {
-          content: "Case Study";
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          padding: 5px 10px;
-          background: #333;
-          color: #fff;
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          font-size: .5em;
-          font-weight: 900; }
-      .brand-logo-grid .brand-logo .logo-img.case-study-coming-soon::before {
-        content: "Coming Soon"; }
-      .brand-logo-grid .brand-logo .logo-img.github-link::before {
-        content: "View on GitHub"; }
-      .brand-logo-grid .brand-logo .logo-img.youtube-link::before {
-        content: "Visit Channel"; }
 
 .latest-post-grid ul {
   list-style: none; }
@@ -466,6 +443,17 @@ footer {
       max-width: 20px;
       max-height: 20px;
       margin-top: 10px; }
+  .content p a {
+    position: relative;
+    color: #111; }
+    .content p a::before {
+      position: absolute;
+      z-index: 1;
+      left: -30px;
+      bottom: -30px;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); }
 
 .home .intro {
   text-align: left;

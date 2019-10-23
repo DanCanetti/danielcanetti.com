@@ -76,6 +76,21 @@
       margin-top: 10px;
     }
   }
+  p {
+    a {
+      position: relative;
+      color: $pcolor;
+      &::before {
+        position: absolute;
+        z-index: 1;
+        left: -30px;
+        bottom: -30px;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+  }
 }
 
 .home {
