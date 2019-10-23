@@ -1,5 +1,6 @@
 ---
 pageTitle: FIT4IT Fitness
+pageDesc: WordPress Design &amp; Build
 pageSubTitle: A unique fitness experience.
 projectLogo: /images/case-studies/fit4it-fitness/logo-white.svg
 projectLink: https://fit4itfitness.com/

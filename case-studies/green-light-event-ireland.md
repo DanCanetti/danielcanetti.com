@@ -1,5 +1,6 @@
 ---
 pageTitle: Green Light Event
+pageDesc: WordPress Design &amp; Build
 pageSubTitle: An unmatched platform
 projectLogo: /images/case-studies/green-light-event-ire/logo-white.svg
 projectLink: https://www.greenlightevent.ie/

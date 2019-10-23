@@ -105,21 +105,26 @@ h1 {
 }
 h2 {
   @extend h1;
-  font-size: 2rem;
-  margin: 200px auto 75px auto;
+  font-size: 1.75rem;
+  text-transform: none;
+  margin: 0px auto 75px auto;
   padding: 0px;
   width: 720px;
   max-width: 100%;
   box-sizing: border-box;
   position: relative;
+  font-weight: 500;
+  text-align: center;
   &:before {
     content: "";
     position: absolute;
     background-color: $highlight;
-    height: 8px;
+    height: 5px;
     width: 75px;
     top: -50px;
     left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 

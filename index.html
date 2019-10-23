@@ -7,43 +7,52 @@ pageClass: home
 
 
 <div class="content intro">
-  <h1 class="heavy">I make things for the web.</h1>
-  <p>I'm Daniel Canetti, a web developer based in Yorkshire, England. Currently, I'm the Senior Developer at <a href="#" class="cta">Nouveau Beauty Group</a>.</p>
-  <p>I work with a modern technology stack and popular CMS systems to deliver quality results.</p>
+  <!--h1 class="heavy">I make things for the web.</h1>
+  <p>I'm Daniel Canetti, a web developer based in Yorkshire, England. Currently, I'm the Senior Developer at <a href="https://nouveaubeautygroup.com" target="_blank" class="cta">Nouveau Beauty Group</a>.</p>
+  <p>I work with a modern technology stack and popular CMS systems to deliver quality results.</p-->
+  <h1>Hey there, I'm Daniel Canetti. But you can call me Dan.</h1>
+  <p>I'm a web developer based in Yorkshire, England and I work with a modern technology stack and popular CMS systems to deliver quality result. I am proud to have worked with and for some of countries most promising companies.</p>
+  <p>I'm the currently the lead developer at <a href="https://nouveaubeautygroup.com" target="_blank" class="cta">Nouveau Beauty Group</a> and I'm not currently looking for a new role. If you're a recruitment agent feel free to connect over on <a href="https://www.linkedin.com/in/danielcanetti/" target="_blank" class="cta">LinkedIn</a>.</p>
 </div>
 
-<h2>Proud to have worked with</h2>
-<div class="project-logo-grid">
-  {% for post in collections.projects %}
-    <div class="project-logo">
-      <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}">
-        <img src="{{ post.data.projectLogo }}" alt="{{ post.data.pageTitle }}" />
-      </a>
-    </div>
-  {% endfor %}
+<div class="section no-pb">
+  <div class="case-study-grid">
+    {% for post in collections.projects %}
+      <div class="case-study" style="background-image: url('{{ post.data.projectFeatureImage }}');">
+        <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}">
+          <h3>{{ post.data.pageTitle }}</h3>
+          <span>{{ post.data.pageDesc }}</span>
+        </a>
+        <div class="overlay"></div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
-<h2>A few side projects</h2>
-<div class="project-logo-grid">
-  {% for post in collections.side-projects %}
-    <div class="project-logo">
-      <a href="{{ post.data.sideProjectLink }}" target="_blank" class="sideProject-link {{ post.data.sideProjectClass }}">
-        <img src="{{ post.data.sideProjectLogo }}" alt="{{ post.data.pageTitle }}" />
-        <span class="side-project-title">{{ post.data.pageTitle }}</span>
-      </a>
-    </div>
-  {% endfor %}
+<div class="section grey">
+  <h2>Some of the companies I've worked alongside</h2>
+  <div class="brand-logo-grid">
+    {% for post in collections.brands %}
+      <div class="brand-logo">
+        <div class="logo-img {{ post.data.projectClass }}">
+          <img src="{{ post.data.projectLogo }}" alt="{{ post.data.pageTitle }}" />
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
-<h2>Latest Posts</h2>
-<div class="content latest-post-grid">
-  <ul>
-  {% assign blogposts = collections.posts | reverse %}
-  {% for post in blogposts limit: 3 %}
-    <li class="latest-post">
-      <a href="{{ post.url }}">{{ post.data.postTitle }}</a>
-      <span class="post-date">First published on {{ post.data.postDate }}</span>
-    </li>
-  {% endfor %}
-  </ul>
+<div class="section">
+  <h2>Latest Posts</h2>
+  <div class="content latest-post-grid">
+    <ul>
+    {% assign blogposts = collections.posts | reverse %}
+    {% for post in blogposts limit: 3 %}
+      <li class="latest-post">
+        <a href="{{ post.url }}">{{ post.data.postTitle }}</a>
+        <span class="post-date">First published on {{ post.data.postDate }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
 </div>

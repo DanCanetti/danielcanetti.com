@@ -59,14 +59,15 @@
   .top {
     background: $scolor;
     width: 70px;
-    height: 70px;
-    border-radius: 70px;
+    height: 40px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
     padding: 0px;
     position: absolute;
     right: 0;
     left: 0;
     margin: auto;
-    bottom: -240px;
+    bottom: -200px;
     display: flex;
     justify-content: center;
     img {
@@ -79,6 +80,16 @@
 
 .home {
   .intro {
+    h1 {
+      text-transform: none;
+      font-size: 1.75rem;
+      color: #111;
+      text-align: left;
+      font-weight: 500;
+      padding: 10vh 0 0 0;
+      margin: 0;
+      line-height: 1.25;
+    }
     text-align: left;
     padding: 3% 0 0 0;
     margin: auto;
@@ -93,6 +104,9 @@
   .content {
     a {
       text-decoration: underline;
+      &.get-in-touch {
+        text-decoration: none;
+      }
     }
     em {
       font-size: .7em;

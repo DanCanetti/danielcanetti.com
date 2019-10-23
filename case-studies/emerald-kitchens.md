@@ -1,5 +1,6 @@
 ---
 pageTitle: Emerald Kitchens
+pageDesc: WordPress Design &amp; Build
 pageSubTitle: Built To Last
 projectLogo: /images/case-studies/emerald-kitchens/logo-white.svg
 projectLink: https://www.emerald-kitchens.co.uk/

@@ -1,5 +1,6 @@
 ---
 pageTitle: K.B Pro Shop
+pageDesc: Magento 1.9 Redesign
 pageSubTitle: The home of Microblading
 projectLogo: /images/case-studies/kbpro-shop/logo-white.svg
 projectLink: https://www.kbpro.com/shop/

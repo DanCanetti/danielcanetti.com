@@ -5,6 +5,21 @@
     E.G. header, footer
 */
 
+.section {
+  background: #fff;
+  padding: 200px 0px;
+  &.grey {
+    background: #e3e3e3;
+  }
+  &.no-pb {
+    padding-bottom: 0px;
+    margin-bottom: -150px;
+    + .section {
+      padding-top: 350px;
+    }
+  }
+}
+
 nav {
   text-align: center;
   z-index: 6000;
@@ -78,7 +93,59 @@ footer {
   }
 }
 
-.project-logo-grid {
+.case-study-grid {
+  width: 1250px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  .case-study {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-basis: 100%;
+    background: $scolor;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    justify-content: center;
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.6);
+    }
+    a {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.brand-logo-grid {
   width: 720px;
   max-width: 100%;
   margin: auto;
@@ -88,7 +155,7 @@ footer {
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
-  .project-logo {
+  .brand-logo {
     flex-basis: calc(100% / 3 - 4px);
     background: #50565a;
     padding: 0px;
@@ -97,7 +164,7 @@ footer {
     align-items: center;
     min-height: 150px;
     justify-content: center;
-    a {
+    .logo-img {
       width: 100%;
       height: 100%;
       display: flex;
