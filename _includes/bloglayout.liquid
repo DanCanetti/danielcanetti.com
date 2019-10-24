@@ -7,10 +7,10 @@
     <body class="{{ pageClass }}">
       <div class="wrapper">
         {% include nav %}
-        <div id="top" class="header" style="background-image: url('{{ postFeatureImage }}');">
-          <div class="content">
-            <h1 class="title">{{ postTitle }}</h1>
-          </div>
+        <div id="top" class="header">
+          <h1 class="title">{{ postTitle }}</h1>
+          <span>{{ postDate }}</span>
+          <img src="{{ postFeatureImage }}" />
         </div>
         <div class="content">
           {{ content }}

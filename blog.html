@@ -4,15 +4,13 @@ pageTitle: Blog
 pageClass: blog
 ---
 
-<div class="content intro">
-  <h1 class="heavy">Latest Posts</h1>
-</div>
-<div class="content latest-post-grid">
+<div class="content latest-post-grid all">
   <ul>
-  {% for post in collections.posts %}
+  {% assign allblogposts = collections.posts | reverse %}
+  {% for post in allblogposts %}
     <li class="latest-post">
-      <a href="{{ post.url }}">{{ post.data.postTitle }}</a>
-      <span class="post-date">First published on {{ post.data.postDate }}</span>
+        <a href="{{ post.url }}">{{ post.data.postTitle }}</a>
+        <span class="post-date">{{ post.data.postDate }}</span>
     </li>
   {% endfor %}
   </ul>
