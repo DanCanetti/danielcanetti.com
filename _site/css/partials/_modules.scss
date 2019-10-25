@@ -116,7 +116,41 @@
 }
 
 .post {
+  .header {
+      padding: 0;
+      text-align: center;
+     h1 {
+      color: $pcolor;
+      font-size: 3em;
+      text-align: center;
+      margin: auto auto 5px auto;
+      max-width: 750px; 
+    }
+    span {
+      margin: auto auto 7.5% auto;
+      display: block;
+      font-size: 1em;
+      text-align: center;
+      color: $scolor;
+      max-width: 750px;
+    }
+    img {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+    &:before {
+      display: none;    
+    }
+  }
   .content {
+    h2 {
+      margin: 75px auto 25px auto;
+      text-align: left;
+      &::before {
+        display: none;     
+      }
+    }
     a {
       text-decoration: underline;
       &.get-in-touch {
