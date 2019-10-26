@@ -3,6 +3,7 @@ postTitle: Email Isn't Broken
 postDate: 27th August 2019
 date: 2019-08-27
 postFeatureImage: /images/posts/email-isnt-broken/feature.jpg
+postExcerpt: We all hate email, it's our never ending to do list and it's the thing that ruins your Sunday night, here's a few tips on how to fix it.
 ---
 
 Slack exploded onto the scene declaring it would [Kill ‘Company Email’ by 2026](https://www.ccn.com/news/slack-ceo-were-going-to-end-email/2019/06/20/) and it seems it still has a long way to go as we sent more than [120 billion emails](https://www.campaignmonitor.com/blog/email-marketing/2019/05/shocking-truth-about-how-many-emails-sent/) in 2018 alone. We all hate email, it's our never ending to do list and it's the thing that ruins your Sunday night and the last few days of your holiday as you start trying to clear the backlog.

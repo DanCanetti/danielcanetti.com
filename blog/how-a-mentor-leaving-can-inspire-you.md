@@ -3,6 +3,7 @@ postTitle: How a mentor leaving can inspire you
 postDate: 9th May 2016
 date: 2016-05-09
 postFeatureImage: /images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg
+postExcerpt: Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.
 ---
 
 At the beginning of the year I started a new job as a junior designer taking on a different but potentially more fulfilling role, one of the main draws to this job was the ability to work under the Senior Web Designer & Developer there. This was an opportunity for me develop my skills further and learn much more about the industry from someone with greater experience than myself, perfect for someone who has been working in the industry for less that one year since graduating.

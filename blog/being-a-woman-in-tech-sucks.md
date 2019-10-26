@@ -3,6 +3,7 @@ postTitle: Being a woman in tech sucks
 postDate: 22nd November 2015
 date: 2015-11-22
 postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
+postExcerpt: I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?
 ---
 
 Gender roles in tech have been under the spotlight more than ever with articles ranging from sexual assault to the emotional effect this issue can have. According to [The New Yorker](https://www.newyorker.com/magazine/2014/11/24/valley-boys) men hold sixty to seventy percent of jobs at the major tech firms, including Google, Apple, Facebook, and Twitter. With the number of women in high profile roles even more sparse.

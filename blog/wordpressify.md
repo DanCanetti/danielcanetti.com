@@ -3,6 +3,7 @@ postTitle: Wordpressify
 postDate: 9th May 2019
 date: 2019-06-06
 postFeatureImage: /images/posts/wordpressify/feature.jpg
+postExcerpt: A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.
 ---
 
 WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via [WP Pusher](https://wppusher.com/).
