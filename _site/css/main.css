@@ -132,7 +132,8 @@ a {
         width: 100%; }
   a.fancy-hover {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    text-decoration: none; }
     a.fancy-hover:before {
       content: "";
       position: absolute;
@@ -407,6 +408,15 @@ footer {
     left: calc(25% - 6px);
     top: calc(25% - 6px);
     max-width: 60px; }
+    @media (max-width: 576px) {
+      .logo .center {
+        max-width: 100px; } }
+  @media (max-width: 576px) {
+    .logo {
+      width: 180px;
+      left: 0;
+      right: 0;
+      margin: auto; } }
 
 .header {
   margin: 75px 0;
@@ -496,6 +506,8 @@ footer {
 .project .content a {
   text-decoration: underline; }
   .project .content a.get-in-touch {
+    text-decoration: none; }
+  .project .content a.fancy-hover {
     text-decoration: none; }
 
 .post .header {

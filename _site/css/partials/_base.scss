@@ -13,6 +13,14 @@ $scolor: #50565a;
 $tcolor: #333;
 $highlight: #ffcf56;
 
+// Media Queries
+$screen-sm: 576px;
+@mixin sm {
+   @media (max-width: #{$screen-sm}) {
+       @content;
+   }
+}
+
 // Mixins
 @mixin transitionall($length) {
   -webkit-transition: all $length ease-in-out;
@@ -162,6 +170,7 @@ a {
   &.fancy-hover {
      position: relative;
      z-index: 2;
+     text-decoration: none;
      &:before {
        content: "";
        position: absolute;

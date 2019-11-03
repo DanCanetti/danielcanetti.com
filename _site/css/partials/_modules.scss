@@ -15,6 +15,15 @@
     left: calc(25% - 6px);
     top: calc(25% - 6px);
     max-width: 60px;
+      @include sm {
+        max-width: 100px;
+      }
+  }
+  @include sm {    
+    width: 180px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 
@@ -127,7 +136,10 @@
       a {
         text-decoration: underline;
         &.get-in-touch {
-        text-decoration: none;
+          text-decoration: none;
+        }
+        &.fancy-hover {
+          text-decoration: none;      
         }
       }
     }
