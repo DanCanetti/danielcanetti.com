@@ -16,6 +16,9 @@
     margin-bottom: -150px;
     + .section {
       padding-top: 350px;
+      @include sm {
+        padding: 350px 25px 200px 25px;     
+      }
     }
   }
   &:last-of-type {
@@ -44,6 +47,19 @@ nav {
         text-transform: uppercase;
         font-weight: $pfontheavy;
         letter-spacing: 1.5px;
+      }
+    }
+  }
+  @include sm { 
+    margin-top: 25%;
+    ul {
+      padding: 0px;
+      display: flex;
+      justify-content: space-between;
+      li {
+        &:nth-child(3) {
+          display: none;    
+        }
       }
     }
   }
@@ -92,6 +108,12 @@ footer {
         color: $highlight;
         border: 1px solid $highlight
       }
+    }
+  }
+  @include sm { 
+    h1 {
+      font-size: 1.5em;
+      text-align: center;      
     }
   }
 }
@@ -149,6 +171,10 @@ footer {
           color: $highlight;
         }
       }
+      @include sm {
+        text-align: center;
+        max-width: 80%;
+      }
     }
   }
 }
@@ -185,12 +211,18 @@ footer {
         max-height: 90px;
       }
     }
+    @include sm {
+      flex-basis: calc(100% / 2 - 4px);
+    }
   }
 }
 
 .latest-post-grid {
   &.all {
     padding-top: 15vh;
+    @include sm { 
+      padding-top: 5vh;
+    }
   }
   ul {
     list-style: none;
@@ -227,6 +259,12 @@ footer {
       @include transitionall(.3s);
       &:hover {
         bottom: 50px;
+      }
+    }
+    @include sm {
+      flex-basis: calc(100% - 20px);
+      a, .post-date {
+        left: 20px;
       }
     }
   }

@@ -16,7 +16,7 @@ Like most developers, I work on a number of side projects in my spare time. Thes
 
 A font which includes some of the most popular WordPress plugin icons. I created this to work alongside libraries such as [FontAwesome](http://fontawesome.com) and [Technology Icons](http://websiddu.github.io/technology-icons/).
 
-[Visit the Repo](https://github.com/DanCanetti/wp-plugin-icons)
+[View Project](https://www.wordpresspluginicons.com/)
 
 ---
 
