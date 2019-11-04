@@ -280,8 +280,8 @@
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
         @include sm {
           padding: 40px 70px 40px 30px;
-          left: -190px;
-          top: 120px;
+          left: -180px;
+          top: calc(50% - 60px);
           text-align: center;
         }
       }

@@ -17,13 +17,17 @@
     + .section {
       padding-top: 350px;
       @include sm {
-        padding: 350px 25px 200px 25px;     
+        padding: 350px 25px 50px 25px;     
       }
     }
   }
   &:last-of-type {
     padding-bottom: 0px;      
   }
+  @include sm {
+    padding: 150px 0px 50px 0px;     
+  }
+    
 }
 
 nav {
