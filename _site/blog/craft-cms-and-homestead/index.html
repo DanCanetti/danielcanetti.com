@@ -33,13 +33,13 @@
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
-        <title>Daniel Canetti • Blog • Wordpressify</title>
+        <title>Daniel Canetti • Blog • Installing Craft CMS in Homestead</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="Wordpressify" />
-        <meta property="og:description" content="A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac." />
-        <meta property="og:url" content="https://danielcanetti.com/blog/wordpressify/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/wordpressify/feature.jpg" />
+        <meta property="og:title" content="Installing Craft CMS in Homestead" />
+        <meta property="og:description" content="An extract from a larger guide I’m working on for installing Laravel/Homestead." />
+        <meta property="og:url" content="https://danielcanetti.com/blog/craft-cms-and-homestead/" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/craft-cms-and-homestead/feature.jpg" />
     </head>
     <body class="post">
       <div class="wrapper">
@@ -57,50 +57,41 @@
 </nav>
 
         <div id="top" class="header">
-          <h1 class="title">Wordpressify</h1>
-          <span>9th May 2019</span>
-          <img src="/images/posts/wordpressify/feature.jpg" />
+          <h1 class="title">Installing Craft CMS in Homestead</h1>
+          <span>31st October 2019</span>
+          <img src="/images/posts/craft-cms-and-homestead/feature.jpg" />
         </div>
         <div class="content">
-          <p>WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via <a href="https://wppusher.com/">WP Pusher</a>.</p>
-<h2>Setting up MySQL Locally</h2>
-<p>The easiest approach to setting up WordPressify is to have a local instance of MySQL installed, this runs on the Mac and can be controlled MySQL from System Preferences.</p>
+          <h2>Prerequisites</h2>
 <ul>
-<li>Download MySQL Community Server from the <a href="https://dev.mysql.com/downloads/mysql/">official site</a>.</li>
-<li>Follow the installation instructions.</li>
+<li>A working Laravel/Homestead environment.</li>
 </ul>
-<h2>Connecting to local MySQL via Sequel Pro</h2>
-<p>I prefer to use Sequel Pro to connect to MySQL rather than using the command line. You can <a href="https://www.sequelpro.com/">download Sequel Pro for free here</a>.</p>
-<ul>
-<li>Open Sequel Pro.</li>
-<li>Choose the Socket option.</li>
-<li>Enter the Username and Password you created during the MySQL install.</li>
-<li>You should now be connected.</li>
-</ul>
-<h2>Preparing to install WordPressify.</h2>
-<ul>
-<li>Create a new database.</li>
-<li>Create a new user or assign a current user the correct privileges.</li>
-<li>Keep note of the database name, username, and password. You’ll need these on the next step.</li>
-</ul>
-<h2>Installing WordPressify</h2>
-<p>These instructions can be found on the <a href="https://www.wordpressify.co/">WordPressify website</a>, I’ve included here for ease of use. I have a folder which I use for my Laravel Homestead sites and install each instance in here to keep my workflow simple.</p>
-<ul>
-<li>Using the command line navigate to your desired root directory.</li>
-<li>Using the command line navigate to your desired root directory - <code>git clone https://github.com/luangjokaj/wordpressify</code>.</li>
-<li>Install the NPM dependancies - <code>npm install</code>.</li>
-<li>Change the template name. Open the gulpfile.js and edit this line: <code>const themeName = 'wordpressify';</code>.</li>
-<li>Download the latest version of WordPress - <code>npm run install:wordpress</code>.</li>
-<li>Start the workflow and complete the WordPress Install - <code>npm run dev</code>.</li>
-<li>Connecting to local MySQL during the WordPress Install.
-<ul>
-<li>Add the database, username, and password.</li>
-<li>Use <code>127.0.0.1</code> as the host.</li>
-</ul>
-</li>
-<li>Add your site name, user name and password for the initial user.</li>
-<li>Your site should now be installed using WordPressify.</li>
-</ul>
+<h2>Installation</h2>
+<p>In the Homestead.yaml file create a new site mapping to this directory:
+<code>to: /home/vagrant/[project_dir]/[project_name]/public/web</code>.</p>
+<p>Create new homestead site
+<code>composer create-project --prefer-dist laravel/laravel [project_name]</code></p>
+<p>Create a new database for the Homestead site called <code>craft_homestead</code></p>
+<p>Create a second database for the Craft installation called <code>craft</code></p>
+<p>Navigate to your new site’s public directory and edit the <code>.env</code> file. Add the credentials for the <code>craft_homestead</code> database.</p>
+<p>Navigate to the Homestead directory and run <code>vagrant ssh</code>. Now move into the new project directory <code>cd [project_dir]/[project_name]</code> and run the migration: <code>php artisan migrate</code>. Once this has completed <code>exit</code> the ssh connection.</p>
+<p>Navigate to your new site’s public directory and empty the contents
+<code>cd [project_name]/public then run sudo rm -rf *</code></p>
+<p>Move back to the root of the new site and install Craft in the public directory
+<code>composer create-project craftcms/craft public/</code></p>
+<p>You can now run the Craft setup wizard from the browser, go to <code>http://[project_name]/index.php?p=admin/install</code>. When prompted for the database details enter the credentials for the <code>craft</code> database we created earlier.</p>
+<p>Once installed your site will be ready at <code>http://[project_name]/</code>.</p>
+<h2>Updating php.ini directives</h2>
+<p>Once installed Craft may show some errors in the Requirements area of the <em>System Report</em> — <code>admin &gt; Utilities &gt; System Report</code>. To fix these we need to make changes to the php.ini file on the vm.</p>
+<p>Navigate to the Homestead directory and run <code>vagrant ssh</code>.</p>
+<p>The php version Craft is using can be found at the top of the System Report page.</p>
+<p>Edit the php.ini file <code>sudo nano /etc/php/[php_version]/fpm/php.ini</code>.</p>
+<p>On Mac use <code>control + w</code> and search for <code>memory_limit</code>. Change this to 256.</p>
+<p>Again using <code>control + w</code>, search for <code>max_execution_time</code>. Change this to 120.</p>
+<p>Exit nano by using <code>control + x</code>, answer <code>y</code> to save the file and hit <code>enter</code> to save over the existing file.</p>
+<p>exit the ssh connection and reload the machine using <code>vagrant reload</code>. Once the machine has restarted refresh the System Report page and the Requirements should now show as valid.</p>
+<hr>
+<p><em><strong>Last Updated:</strong> Thursday 31st October — Added detail on updating the php.ini directives.</em></p>
 
           <a href="#top" class="top"><img src="/images/top.svg" /></a>
         </div>

@@ -428,7 +428,9 @@ footer {
     .latest-post-grid .latest-post {
       flex-basis: calc(100% - 20px); }
       .latest-post-grid .latest-post a, .latest-post-grid .latest-post .post-date {
-        left: 20px; } }
+        left: 20px; }
+      .latest-post-grid .latest-post a {
+        font-size: 1.5rem; } }
 
 /*
     Modules
