@@ -5,3 +5,6 @@ https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
 
 # Redirect beta subdomain to primary domain
 https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
+
+# Histoorical Redirects
+https://danielcanetti.com/wordpressify https://danielcanetti.com/blog/wordpressify/
