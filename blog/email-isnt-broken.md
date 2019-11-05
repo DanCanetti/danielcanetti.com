@@ -72,4 +72,4 @@ I think these two tweets explain this point perfectly.
 
 Exactly what is says on the tin. I read this very early on in my worklife and it really influenced how I handle my emails - if you find yourself inundated with emails, give this book a try.
 
-[Buy the book on Amazon](https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01FE6V5KI&linkId=8233de69f6a5abf3b694efe449ef827a) • [See all book recommendations](#)
+[Buy the book on Amazon](https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01FE6V5KI&linkId=8233de69f6a5abf3b694efe449ef827a) • [See all book recommendations](/blog/recommended-reading/)
