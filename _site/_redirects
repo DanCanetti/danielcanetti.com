@@ -1,4 +1,7 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-# Optional: Redirect default Netlify subdomain to primary domain
+# Redirect default Netlify subdomain to primary domain
 https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
+
+# Redirect beta subdomain to primary domain
+https://beta.danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
