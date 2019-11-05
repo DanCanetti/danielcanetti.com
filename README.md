@@ -7,7 +7,7 @@
 - **Hosting** - ![Netlify](https://github.com/DanCanetti/wedding-website/blob/cms/readme/netlify.png) [Netlify](https://www.netlify.com/).
 
 ## Eleventy
-eleventy --serve
+`eleventy --serve`
 
 ## Node Sass
 Cd to the `/_site/` directory and run node-sass to compile scss files: `sass --watch css/partials:css`.
