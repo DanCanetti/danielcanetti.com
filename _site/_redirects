@@ -4,4 +4,4 @@
 https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
 
 # Redirect beta subdomain to primary domain
-https://beta.danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
+https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
