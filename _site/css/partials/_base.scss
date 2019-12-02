@@ -94,7 +94,7 @@ body {
     margin: 1% 1% 75vh 1%;
     padding-top: 3%;
     padding-bottom: 200px;
-    @include sm { 
+    @include sm {
       margin: 1% 5% 75vh 5%;
       padding: 25% 5% 25% 5%;
     }
@@ -110,7 +110,7 @@ h1 {
   color: $pcolor;
   text-align: left;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: $pfontheavy;
   padding: 5vh 0;
   margin: 0;
   line-height: 1.25;
@@ -120,15 +120,15 @@ h1 {
 }
 h2 {
   @extend h1;
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   text-transform: none;
   margin: 0px auto 75px auto;
   padding: 0px;
   width: 720px;
   max-width: 100%;
   box-sizing: border-box;
+  font-weight: $pfontheavy;
   position: relative;
-  font-weight: 500;
   text-align: center;
   &:before {
     content: "";
@@ -141,6 +141,10 @@ h2 {
     right: 0;
     margin: auto;
   }
+}
+h3 {
+  font-size: 1em;
+  font-weight: $pfontbold;
 }
 
 p {
