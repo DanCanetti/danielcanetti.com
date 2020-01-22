@@ -1,7 +1,18 @@
 // Current Year
 $(".curr-year").text( (new Date).getFullYear() );
 
-// Rotate the logo
+// Add class to nav on scroll
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 300) {
+        $("nav").addClass("scroll");
+    } else {
+        $("nav").removeClass("scroll");
+    }
+});
+
+// Rotate the circle
 $(window).scroll(function() {
   var theta = $(window).scrollTop() / 250 % Math.PI;
   $('#mainlogo').css({ transform: 'rotate(' + theta + 'rad)' });

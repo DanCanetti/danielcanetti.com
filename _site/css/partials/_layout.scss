@@ -5,6 +5,7 @@
     E.G. header, footer
 */
 
+// Content Section
 .section {
   background: #fff;
   padding: 200px 0px;
@@ -17,70 +18,234 @@
     + .section {
       padding-top: 350px;
       @include sm {
-        padding: 350px 25px 50px 25px;     
+        padding: 350px 25px 50px 25px;
       }
     }
   }
   &:last-of-type {
-    padding-bottom: 0px;      
+    padding-bottom: 0px;
   }
   @include sm {
-    padding: 150px 0px 50px 0px;     
+    padding: 150px 0px 50px 0px;
   }
-    
+
 }
 
+// Navigation
 nav {
-  text-align: center;
+  padding: 0;
+  position: fixed;
   z-index: 6000;
-  position: relative;
-  ul {
-    list-style: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -550px;
+  @include transitionall(.7s);
+  &.scroll {
+    top: 40px;
+  }
+  .nav__content {
+    max-width: $maxwidth;
+    margin: auto;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    height: calc(125px - 3%);
-    padding-right: 50px;
-    li {
-      margin: 0px 15px;
-      font-size: .95rem;
-      a {
-        color: $pcolor;
-        text-transform: uppercase;
-        font-weight: $pfontheavy;
-        letter-spacing: 1.5px;
+    align-content: center;
+    justify-content: space-between;
+    .nav__content__logoarea {
+      position: relative;
+      color: $pcolor;
+      text-align: left;
+      text-transform: uppercase;
+      font-family: $header;
+      font-size: 2em;
+      .nav__content__logoarea--toggle-menu {
+        font-family: $pfont;
+        font-size: .4em;
+        letter-spacing: 3px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -40px;
+        border-top: 1px solid #d7d7d7;
+        padding-top: 10px;
+        cursor: pointer;
       }
     }
-  }
-  @include sm { 
-    margin-top: 25%;
     ul {
-      padding: 0px;
+      list-style: none;
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
       li {
-        &:nth-child(3) {
-          display: none;    
+        margin: 0px 15px;
+        font-size: .95rem;
+        a {
+          color: $pcolor;
+          text-transform: uppercase;
+          font-weight: $pfontheavy;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+    @include sm {
+      margin-top: 25%;
+      ul {
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        li {
+          &:nth-child(3) {
+            display: none;
+          }
         }
       }
     }
   }
 }
 
+// Header
+.header {
+  margin: 75px 0;
+  padding: 7.5% 25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  h1, p, a {
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    &.title {
+      padding-bottom: 0px;
+    }
+    &.subtitle {
+      margin: -5px 0px 50px 0px;
+      font-size: 1.5em;
+      @include sm {
+        margin-top: 5px;
+        font-size: 1em;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Homepage
+.home {
+  .intro {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 750px;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    .intro__content {
+      width: 50%;
+      animation: init-fade 1.5s 1;
+    }
+    h1 {
+      text-transform: none;
+      font-size: 4.5rem;
+      color: $pcolor;
+      text-align: left;
+      font-weight: 900;
+      padding: 0;
+      margin: 0px;
+      margin-left: -5px;    // Line up with below text
+      line-height: 1.25;
+      position: relative;
+      @include sm {
+        font-size: 3rem;
+        padding-top: 5vh;
+      }
+    }
+    &:before {
+      content: "scroll";
+      transform: rotate(90deg);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .6em;
+      font-weight: 400;
+      position: absolute;
+      bottom: 119px;
+      left: 180px;
+      margin-bottom: 0px;
+      animation: init-fade 1.5s 1;
+    }
+    &:after {
+      content: "";
+      width: 375px;
+      height: 300px;
+      border-left: 1px solid $pcolor;
+      position: absolute;
+      bottom: -150px;
+      animation: line-grow 1.5s 1;
+    }
+  }
+  .section--home {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .section--home__content {
+      width: 50%;
+      margin-left: -120px;
+      margin-top: $ds;
+      animation: init-fade 1.5s 1;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      h2 {
+        text-align: left;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Footer
 footer {
-  position: fixed;
   width: 100%;
   bottom: 10%;
   z-index: 0;
-  height: 50vh;
-  background: $scolor;
+  height: 25vh;
   padding: 1% 1% 1% 1%;
   text-align: center;
   font-size: 1.75em;
-  h1 {
-    color: #fff;
+  h3 {
+    color: $pcolor;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $pfontheavy;
+    padding: 5vh 0;
+    margin: 0;
+    line-height: 1.25;
   }
   a.get-in-touch {
     background: $highlight;
@@ -98,181 +263,25 @@ footer {
   }
   .social-links {
     position: relative;
-    margin-top: 100px;
+    //margin-top: 100px;
     a {
       padding: 6.5px 10px;
       font-size: .5em;
-      border: 1px solid #fff;
+      border: 1px solid $pcolor;
       border-radius: 50px;
-      color: #fff;
+      color: $pcolor;
       background: transparent;
       @include transitionall(.3s);
       &:hover {
-        background: transparent;
-        color: $highlight;
-        border: 1px solid $highlight
-      }
-    }
-  }
-  @include sm { 
-    h1 {
-      font-size: 1.5em;
-      text-align: center;      
-    }
-  }
-}
-
-.case-study-grid {
-  width: 100%;
-  max-width: 1500px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  .case-study {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    flex-basis: 100%;
-    background: $scolor;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    min-height: 450px;
-    justify-content: center;
-    .overlay {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,.6);
-    }
-    a {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      h3 {
+        background: $highlight;
         color: #fff;
-        font-size: 2rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 5px;
-        @include transitionall(.2s);
-      }
-      &:hover {
-        h3 {
-          color: $highlight;
-        }
-      }
-      @include sm {
-        text-align: center;
-        max-width: 80%;
       }
     }
   }
-}
-
-.brand-logo-grid {
-  width: 720px;
-  max-width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  .brand-logo {
-    flex-basis: calc(100% / 3 - 4px);
-    background: transparent;
-    padding: 0px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    min-height: 150px;
-    justify-content: center;
-    .logo-img {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      img {
-        width: 100px;
-        height: auto;
-        max-height: 90px;
-      }
-    }
-    @include sm {
-      flex-basis: calc(100% / 2 - 4px);
-    }
-  }
-}
-
-.latest-post-grid {
-  &.all {
-    padding-top: 15vh;
-    @include sm { 
-      padding-top: 5vh;
-    }
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .latest-post {
-    flex-basis: calc(50% - 20px);
-    margin: 10px;
-    min-height: 350px;
-    background-color: $highlight;
-    position: relative;
-    text-transform: uppercase;
-    .post-date {
-      font-size: .75rem;
-      font-weight: $pfontlight;
-      color: $pcolor;
-      position: absolute;
-      top: 40px;
-      left: 40px;
-      right: 40px;
-    }
-    a {
-      font-size: 1.75rem;
-      font-weight: $pfontheavy;
-      color: $pcolor;
-      position: absolute;
-      left: 40px;
-      right: 40px;
-      bottom: 40px;
-      z-index: 5;
-      @include transitionall(.3s);
-      &:hover {
-        bottom: 50px;
-      }
-    }
-    @include sm {
-      flex-basis: calc(100% - 20px);
-      a, .post-date {
-        left: 20px;
-      }
-      a {
-        font-size: 1.5rem;
-      }
+  @include sm {
+    h3 {
+      font-size: 1.5em;
+      text-align: center;
     }
   }
 }

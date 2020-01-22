@@ -8,10 +8,14 @@
 @import 'reset';
 
 // Colour Variables
-$pcolor: #111;
-$scolor: #50565a;
-$tcolor: #333;
-$highlight: #ffcf56;
+$pcolor: #111;        // Black
+$scolor: #50565a;     // Grey
+$tcolor: #333;        // Dark Grey
+$highlight: #c53f3f;  // Red
+
+// Spacing Variables
+$maxwidth: 1250px;
+$ds:       75px;
 
 // Media Queries
 $screen-sm: 576px;
@@ -37,65 +41,68 @@ $screen-sm: 576px;
 }
 
 // Animation
-@keyframes line-grow {
+@keyframes line-grow {       // Grow Line
   0% {
-    height: 0%;
+    height: 0px;
   }
   100% {
-    height: 60%;
+    height: 300px;
   }
 }
 
-@keyframes header-fade {
+@keyframes init-fade {       // Fade in-up
+  0% {
+    opacity: 0;
+    margin-bottom: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes scroll {         // Mouse Scroll
   0% {
     opacity: 0;
   }
   10% {
-    opacity: 0;
+    transform: translateY(0); opacity: 1;
   }
   100% {
-    opacity: 1;
-  }
-}
-
-@keyframes init-fade {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    transform: translateY(15px); opacity: 0;
   }
 }
 
 // Fonts
-$pfont: 'brandon-grotesque', sans-serif;
-$pfontlight: 300;
-$pfontreg: 400;
-$pfontbold: 500;
-$pfontheavy: 900;
+$pfont:       'brandon-grotesque', sans-serif;
+$pfontlight:  300;
+$pfontreg:    400;
+$pfontbold:   500;
+$pfontheavy:  900;
 
+// Serif
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-$serif: 'Roboto Slab', serif;
+$serif:       'Roboto Slab', serif;
+
+// Titles
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+$header:      'Bangers', cursive;
 
 // Basics
 body {
-  animation: init-fade 6s 1;
+  //animation: init-fade 6s 1;
   font-family: $pfont;
   font-weight: $pfontlight;
-  background-color: $scolor;
+  background-color: #fff;
   padding-bottom: 0px;
   .wrapper {
     position: relative;
     z-index: 5;
-    background-color: #fff;
-    margin: 1% 1% 75vh 1%;
-    padding-top: 3%;
+    background-color: #f0f0f0;          // Light grey background
+    margin: 10px;
     padding-bottom: 200px;
     @include sm {
-      margin: 1% 5% 75vh 5%;
+      //margin: 0 0 40vh 0;
       padding: 25% 5% 25% 5%;
     }
   }
@@ -110,7 +117,7 @@ h1 {
   color: $pcolor;
   text-align: left;
   text-transform: uppercase;
-  font-weight: $pfontheavy;
+  font-family: $header;
   padding: 5vh 0;
   margin: 0;
   line-height: 1.25;
@@ -148,6 +155,7 @@ h3 {
 }
 
 p {
+  font-size: 1.75rem;
   line-height: 1.4;
   margin-top: 30px;
 }

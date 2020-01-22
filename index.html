@@ -6,28 +6,42 @@ pageFeatureImage: /images/feature.jpg
 pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies.
 ---
 
-<div class="content intro">
-  <!--h1 class="heavy">I make things for the web.</h1>
-  <p>I'm Daniel Canetti, a web developer based in Yorkshire, England. Currently, I'm the Senior Developer at <a href="https://nouveaubeautygroup.com" target="_blank" class="cta">Nouveau Beauty Group</a>.</p>
-  <p>I work with a modern technology stack and popular CMS systems to deliver quality results.</p-->
-  <h1>Hey there, I'm Daniel Canetti. But you can call me Dan.</h1>
-  <p>I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies.</p>
-  <p>I'm the currently the lead developer at <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a> and I'm not currently looking for a new role. If you're a recruitment agent feel free to connect over on <a href="https://www.linkedin.com/in/danielcanetti/" target="_blank">LinkedIn</a>.</p>
-</div>
-
-<div class="section no-pb">
-  <div class="case-study-grid">
-    {% for post in collections.projects %}
-      <div class="case-study" style="background-image: url('{{ post.data.projectFeatureImage }}');">
-        <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}">
-          <h3>{{ post.data.pageTitle }}</h3>
-          <span>{{ post.data.pageDesc }}</span>
-        </a>
-        <div class="overlay"></div>
-      </div>
-    {% endfor %}
+<div class="intro">
+  <div class="intro__content">
+    <h1>Dan.</h1>
+    <p>A Web Developer living and working in Yorkshire, England.</p>
+    <p>Currently the developer for <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
   </div>
 </div>
+
+<div class="section section--home">
+  <div class="section--home__content">
+    <h2>Projects</h2>
+    <div class="collection-list">
+      {% for post in collections.projects %}
+        <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}"><h3>{{ post.data.pageTitle }}</h3></a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="section--home__content">
+    <h2>Github</h2>
+    <div class="collection-list">
+      <a href="https://www.wordpresspluginicons.com/" class="project-link" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
+      <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link" target="_blank"><h3>Sass Quick Start</h3></a>
+      <a href="https://github.com/DanCanetti/slick-slider-quick-start" class="project-link" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+    </div>
+  </div>
+  <div class="section--home__content">
+    <h2>Writing</h2>
+    <div class="collection-list">
+      {% assign blogposts = collections.posts %}
+      {% for post in blogposts limit: 4 %}
+        <a href="{{ post.url }}" class="project-link"><h3>{{ post.data.postTitle }}</h3></a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 
 <div class="section grey">
   <h2>Some of the companies I've worked alongside</h2>
@@ -39,20 +53,5 @@ pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a m
         </div>
       </div>
     {% endfor %}
-  </div>
-</div>
-
-<div class="section">
-  <h2>Latest Posts</h2>
-  <div class="content latest-post-grid">
-    <ul>
-    {% assign blogposts = collections.posts %}
-    {% for post in blogposts limit: 2 %}
-      <li class="latest-post">
-        <a href="{{ post.url }}">{{ post.data.postTitle }}</a>
-        <span class="post-date">{{ post.data.postDate }}</span>
-      </li>
-    {% endfor %}
-    </ul>
   </div>
 </div>
