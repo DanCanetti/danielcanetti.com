@@ -1,6 +1,6 @@
 ---
 pageTitle: Emerald Kitchens
-pageDesc: WordPress Design &amp; Build
+pageDesc: WordPress
 pageSubTitle: Built To Last
 projectLogo: /images/case-studies/emerald-kitchens/logo-white.svg
 projectLink: https://www.emerald-kitchens.co.uk/
@@ -8,6 +8,7 @@ projectFeatureImage: /images/case-studies/emerald-kitchens/feature.jpg
 projectClass: has-case-study
 projectExcerpt: Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.
 seoIndex: all
+projectid: 1
 ---
 
 Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.

@@ -31,6 +31,7 @@
 <!-- JS -->
 <script type="text/javascript" defer src="/js/jquery.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -89,15 +90,16 @@
 <div class="section section--home">
   <div class="section--home__content">
     <h2>Projects</h2>
-    <div class="collection-list">
+    <div id="project-list" class="collection-list">
       
-        <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study"><h3>Emerald Kitchens</h3></a>
+        <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study" @mouseover="hover1 = true" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description">WordPress</span></h3></a>
+        <img src="/images/case-studies/emerald-kitchens/feature.jpg" v-if="hover1" />
       
-        <a href="/case-studies/kbpro-shop/" class="project-link has-case-study"><h3>K.B Pro Shop</h3></a>
+        <a href="/case-studies/kbpro-shop/" class="project-link has-case-study" @mouseover="hover2 = true" @mouseleave="hover2 = false"><h3>K.B Pro Shop<br><span class="collection-list__description">Magento 1.9</span></h3></a>
+        <img src="/images/case-studies/kbpro-shop/feature.jpg" v-if="hover2" />
       
-        <a href="/case-studies/side-projects/" class="project-link has-case-study"><h3>Side Projects</h3></a>
-      
-        <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study"><h3>Wharncliffe Business Systems</h3></a>
+        <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study" @mouseover="hover3 = true" @mouseleave="hover3 = false"><h3>Wharncliffe Business Systems<br><span class="collection-list__description">WordPress</span></h3></a>
+        <img src="/images/case-studies/wharncliffe/feature.jpg" v-if="hover3" />
       
     </div>
   </div>

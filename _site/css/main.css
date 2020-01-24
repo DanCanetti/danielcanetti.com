@@ -102,7 +102,7 @@ h1, h2 {
   color: #111;
   text-align: left;
   text-transform: uppercase;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "brandon-grotesque", sans-serif;
   padding: 5vh 0;
   margin: 0;
   line-height: 1.25;
@@ -305,7 +305,7 @@ nav .nav__content .nav__content__logoarea {
   color: #111;
   text-align: left;
   text-transform: uppercase;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "brandon-grotesque", sans-serif;
   font-size: 2em;
 }
 nav .nav__content .nav__content__logoarea .nav__content__logoarea--toggle-menu {
@@ -816,6 +816,7 @@ footer .social-links a:hover {
 }
 
 .collection-list {
+  position: relative;
   width: 100%;
   max-width: 1250px;
   margin: auto;
@@ -826,6 +827,19 @@ footer .social-links a:hover {
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
+}
+.collection-list img {
+  width: 200%;
+  position: absolute;
+  right: -175%;
+  top: -10%;
+}
+.collection-list .collection-list__description {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  color: #111;
+  opacity: 0.5;
+  font-size: 0.75em;
 }
 
 .brand-logo-grid {

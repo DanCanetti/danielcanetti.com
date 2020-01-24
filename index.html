@@ -17,9 +17,10 @@ pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a m
 <div class="section section--home">
   <div class="section--home__content">
     <h2>Projects</h2>
-    <div class="collection-list">
+    <div id="project-list" class="collection-list">
       {% for post in collections.projects %}
-        <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}"><h3>{{ post.data.pageTitle }}</h3></a>
+        <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}" @mouseover="hover{{ post.data.projectid }} = true" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
+        <img src="{{ post.data.projectFeatureImage }}" v-if="hover{{ post.data.projectid }}" />
       {% endfor %}
     </div>
   </div>

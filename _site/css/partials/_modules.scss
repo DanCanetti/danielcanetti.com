@@ -284,6 +284,7 @@ $logoheight: 80px;
 
 // Display Collection Items
 .collection-list {
+  position: relative;
   width: 100%;
   max-width: $maxwidth;
   margin: auto;
@@ -294,6 +295,19 @@ $logoheight: 80px;
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
+  img {
+    width: 200%;
+    position: absolute;
+    right: -175%;
+    top: -10%;
+  }
+  .collection-list__description {
+    font-family: $pfont;
+    font-weight: $pfontlight;
+    color: $pcolor;
+    opacity: .5;
+    font-size: .75em;
+  }
 }
 
 // Brands I've worked for grid

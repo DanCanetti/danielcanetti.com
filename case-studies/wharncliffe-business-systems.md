@@ -1,6 +1,6 @@
 ---
 pageTitle: Wharncliffe Business Systems
-pageDesc: WordPress Build
+pageDesc: WordPress
 pageSubTitle: Making sage work for business
 projectLogo: /images/case-studies/wharncliffe/logo-white.svg
 projectLink: https://wharncliffe.co.uk/
@@ -8,6 +8,7 @@ projectFeatureImage: /images/case-studies/wharncliffe/feature.jpg
 projectClass: has-case-study
 projectExcerpt: Coming Soon
 seoIndex: all
+projectid: 3
 ---
 
 Wharncliffe Business Systems were looking for a site that would allow for both content and design updates to made internally. I worked closely with their internal designer to create the site and continue to work with Wharncliffe on improvements every now and then.

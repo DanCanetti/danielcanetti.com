@@ -1,3 +1,16 @@
+// Toggle Project Images
+new Vue({
+  el: '#project-list',
+  data() {
+    return {
+      hover1: false, // Emerald Kitchens
+      hover2: false, // K.B Pro
+      hover3: false, // Wharncliffe
+    };
+  }
+});
+
+
 // Current Year
 $(".curr-year").text( (new Date).getFullYear() );
 
