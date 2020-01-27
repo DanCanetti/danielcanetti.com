@@ -14,8 +14,9 @@ $tcolor: #333;        // Dark Grey
 $highlight: #c53f3f;  // Red
 
 // Spacing Variables
-$maxwidth: 1250px;
-$ds:       75px;
+$maxwidth:       1250px;
+$maxwidthnarrow: 1000px;
+$ds:             75px;
 
 // Media Queries
 $screen-sm: 576px;
@@ -127,6 +128,7 @@ h1 {
 }
 h2 {
   @extend h1;
+  font-family: $pfont;
   font-size: 2.2rem;
   text-transform: none;
   margin: 0px auto 75px auto;

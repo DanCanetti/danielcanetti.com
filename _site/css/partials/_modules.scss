@@ -41,6 +41,92 @@ $logoheight: 80px;
   }
 }
 
+// Burger Menu Variables
+$bar-height: 1px;                      // Height of bars
+$bar-width: 24px;                        // Width of large bars
+$short-bar-width: #{$bar-width - 7px};   // Width of final bar
+$bar-spacing: -6px;                      // Space between all bars
+
+// Burger Menu
+$burgertransitions: .4s;
+
+.toggle-menu {
+  cursor: pointer;
+  position: relative;
+  margin-left: -6px; // Line up with main nav content
+  .toggle-menu__toggle-menu-icon {
+    display: inline-block;
+    z-index: 500;
+    position: relative;
+    margin-right: 10px;
+    .toggle-menu-icon__toggle-menu-icon-inner {
+      margin-top: -2.5px;
+      width: $bar-width;
+      height: $bar-height;
+      background: $pcolor;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 7px;
+      z-index: 50;
+      position: relative;
+      @include transitionall($burgertransitions);
+      &:before {
+        content: "";
+        position: absolute;
+        top: $bar-spacing;
+        left: 0;
+        width: $bar-width;
+        height: $bar-height;
+        background: $pcolor;
+        opacity: 1;
+        @include transitionall($burgertransitions);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: $bar-spacing;
+        left: 0;
+        width: $short-bar-width;
+        height: $bar-height;
+        background: $pcolor;
+        @include transitionall($burgertransitions);
+      }
+    }
+    &.toggle-menu-icon--toggle {
+      .toggle-menu-icon__toggle-menu-icon-inner {
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari prior 9.0 */
+        transform: rotate(45deg); /* Standard syntax */
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          bottom: 0;
+          width: $bar-width;
+          -ms-transform: rotate(90deg); /* IE 9 */
+          -webkit-transform: rotate(90deg); /* Safari prior 9.0 */
+          transform: rotate(90deg); /* Standard syntax */
+        }
+      }
+    }
+  }
+  &:before {
+    content: "Close";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    color: $pcolor;
+    background: #fff;
+    opacity: 0;
+    @include transitionall($burgertransitions);
+  }
+  &.toggle-menu--toggle {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
 // Strikethrough
 .strike {
   color: rgba(0,0,0,0.5);
@@ -66,11 +152,7 @@ $logoheight: 80px;
   position: relative;
   overflow-wrap: break-word;
   .top {
-    background: $scolor;
-    width: 70px;
-    height: 40px;
-    border-top-left-radius: 70px;
-    border-top-right-radius: 70px;
+    height: $ds;
     padding: 0px;
     position: absolute;
     right: 0;
@@ -79,6 +161,9 @@ $logoheight: 80px;
     bottom: -200px;
     display: flex;
     justify-content: center;
+    letter-spacing: 2px;
+    font-size: .4em;
+    text-transform: uppercase;
     img {
       max-width: 20px;
       max-height: 20px;
@@ -167,116 +252,125 @@ $logoheight: 80px;
         display: none;
       }
     }
-    a {
-      text-decoration: underline;
-      &.get-in-touch {
-        text-decoration: none;
-      }
-    }
-    em {
-      font-size: .7em;
-      a {
-        color: $scolor;
-        margin: 20px 0px;
-        position: relative;
-        @include transitionall(.7s);
-        &:after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          height: 2px;
-          background: $tcolor;
-          width: 0px;
-          @include transitionall(.7s);
-        }
-        &:hover {
+    &.post {
+     a {
+        text-decoration: underline;
+        &.top {
           text-decoration: none;
+        }
+      }
+      em {
+        font-size: .7em;
+        a {
+          color: $scolor;
+          margin: 20px 0px;
+          position: relative;
+          @include transitionall(.7s);
           &:after {
-            width: 100%;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            height: 2px;
+            background: $tcolor;
+            width: 0px;
+            @include transitionall(.7s);
+          }
+          &:hover {
+            text-decoration: none;
+            &:after {
+              width: 100%;
+            }
           }
         }
       }
-    }
-    img {
-      width: 100%;
-      height: auto;
-      margin: 10px 0px 0px 0px;
-      &+ strong {
-        text-align: center;
-        font-size: 0.5em;
-        color: $scolor;
-        display: block;
-        font-weight: $pfontlight;
-        a {
-          font-style: normal;
-        }
-      }
-    }
-    ul, ol {
-      margin-top: 20px;
-      @include sm {
-        margin-left: 30px;
-      }
-      li {
-        margin-bottom: 15px;
-        &::marker {
-          margin-right: 10px;
-        }
-        ul {
-          margin-left: 60px;
-        }
-      }
-    }
-    pre {
-      background: #eee;
-      padding: 25px 50px 25px 100px;
-      margin: 50px 0px;
-      position: relative;
-      overflow: hidden;
-      &:before {
-        content: "Code Example";
-        position: absolute;
+      img {
         width: 100%;
-        height: 0px;
-        background: $scolor;
-        left: -406px;
-        top: -41px;
-        color: #fff;
-        padding: 30px 20px 30px 100px;
-        font-size: .5em;
-        transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-        @include sm {
-          padding: 40px 70px 40px 30px;
-          left: -180px;
-          top: calc(50% - 60px);
+        height: auto;
+        margin: 10px 0px 0px 0px;
+        &+ strong {
           text-align: center;
+          font-size: 0.5em;
+          color: $scolor;
+          display: block;
+          font-weight: $pfontlight;
+          a {
+            font-style: normal;
+          }
+        }
+      }
+      ul, ol {
+        margin-top: 20px;
+        @include sm {
+          margin-left: 30px;
+        }
+        li {
+          margin-bottom: 15px;
+          &::marker {
+            margin-right: 10px;
+          }
+          ul {
+            margin-left: 60px;
+          }
+        }
+      }
+      pre {
+        background: #fff;
+        padding: 25px 50px 25px 100px;
+        margin: 50px 0px;
+        position: relative;
+        overflow: hidden;
+        &:after {                                 //  Call Icon
+          display: none;
+          content: "\f1c9";
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 400;    
+        }
+        svg {                                     //  Display Icon
+          position: absolute;
+          width: 12px;
+          color: #fff;
+          left: 11px;
+          top: 30px;      
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 100%;
+          background: $pcolor;
+          left: 0;
+          top: 0;
+          color: #fff;
+          padding: 15px;
+          font-size: .5em;
+          @include sm {
+            padding: 40px 70px 40px 30px;
+            left: -180px;
+            top: calc(50% - 60px);
+            text-align: center;
+          }
+        }
+        code {
+          font-family: $serif;
+          font-size: .5em;
+          line-height: 1.75em;
+          color: $scolor;
+          padding: 0px;
+          background: transparent;
         }
       }
       code {
-        font-family: $serif;
-        font-size: .5em;
-        line-height: 1.75em;
         color: $scolor;
-        padding: 0px;
-        background: transparent;
+        font-size: .75em;
+        background: #e3e3e3;
+        padding: 2px 6px;
       }
-    }
-    code {
-      color: $scolor;
-      font-size: .75em;
-      background: #e3e3e3;
-      padding: 2px 6px;
-    }
-    .twitter-tweet {
-      margin-top: 40px!important; // Used !importand to overwrite embed css
-      &:last-of-type {
-        margin-bottom: 25px!important; // Used !importand to overwrite embed css
+      .twitter-tweet {
+        margin-top: 40px!important; // Used !importand to overwrite embed css
+        &:last-of-type {
+          margin-bottom: 25px!important; // Used !importand to overwrite embed css
+        }
       }
     }
   }

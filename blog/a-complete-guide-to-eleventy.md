@@ -48,11 +48,39 @@ Using Liquid and json to pull content from pages and posts.
 
 As mentioned in the previous section, each page can be assigned a layout in at the top of the html or markdown file. See below for an example, we'll break this down after.
 
-![Fig 1.](/images/posts/a-complete-guide-to-eleventy/fig1.png)**Fig 1.**
+
+```
+Fig 1.
+
+---
+layout: homepage.liquid
+pageTitle: Eleventy Boilerplate
+pageClass: homepage
+FeatureImage: /images/feature.jpg
+pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
+---
+## The page content starts here
+```
 
 The layout calls a liquid template from the `_includes` directory. The liquid template creates the outline for the page and can be called on as many pages as you'd like, below is a basic example of what the `homepage.liquid` file might look like:
 
-![Fig 2.](/images/posts/a-complete-guide-to-eleventy/fig2.png)**Fig 2.**
+```
+Fig 2.
+
+<!doctype html>
+<html lang="en">
+<head>
+    { % include meta % }
+    <title>Eleventy Boilerplate • { { pageTitle } }</title>
+</head>
+<body class="{{ pageClass }}">
+    <div class="wrapper">
+        { % include nav % } { { content } }
+    </div>
+    { % include footer % }
+</body>
+</html>
+```
 
 As you can see in `**Fig 2**`, we're calling the meta from the `_includes` directory in the head of the document. Any include can be called in a template when using liquid as I do - [find out more here](https://www.11ty.io/docs/languages/liquid/).
 
@@ -62,7 +90,15 @@ You'll also notice that we're calling the other variables from the top of the do
 
 When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from `**Fig 1**` to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:
 
-![Fig 3.](/images/posts/a-complete-guide-to-eleventy/fig3.png)**Fig 3.**
+```
+Fig 3.
+
+{    
+    "layout": "bloglayout.liquid",
+    "pageClass": "post",
+    "tags": ["posts"]
+}
+```
 
 You'll notice the `tags` are declared here, a set of files within a tag can be looped through on other pages - this can be used in a variety of ways such as case studies or blog posts.
 
@@ -70,13 +106,43 @@ You'll notice the `tags` are declared here, a set of files within a tag can be l
 
 A loop will display certain elements from a group of files. For example, we can loop through all of the blog posts created like this:
 
-![Fig 4.](/images/posts/a-complete-guide-to-eleventy/fig4.png)**Fig 4.**
+```
+Fig 4.
+
+<div class="section">
+  <div class="content latest-post-grid all">
+    <ul>
+    { % assign allblogposts = collections.posts % }
+    { % for post in allblogposts % }
+      <li class="latest-post">
+          <a href="{ { post.url } }">{ { post.data.postTitle } }</a><span class="post-date">{ { post.data.postDate } }</span>
+      </li>
+    { % endfor % }
+    </ul>
+  </div>
+</div>
+```
 
 Here we're looping though all the blog posts and by creating a collection from the posts tag. Once we're looping through we can call the variable from each of the posts, in this example (**Fig 4.**) we're creating list element for each post with a link to the posts url. We're also pulling in the `postDate` here, a custom variable added to the liquid template we're calling in the json file. 
 
 Now we have the basic loop in place we can add some 'filters' to tweak the loop such as limit and reverse. 
 
-![Fig 5.](/images/posts/a-complete-guide-to-eleventy/fig5.png)**Fig 5.**
+```
+Fig 5.
+
+<div class="section">
+  <div class="content latest-post-grid all">
+    <ul>
+    { % assign allblogposts = collections.posts limit: 2 | reverse % }
+    { % for post in allblogposts % }
+      <li class="latest-post">
+          <a href="{ { post.url } }">{ { post.data.postTitle } }</a><span class="post-date">{ { post.data.postDate } }</span>
+      </li>
+    { % endfor % }
+    </ul>
+  </div>
+</div>
+```
 
 ### Reverse
 

@@ -10,9 +10,20 @@ new Vue({
   }
 });
 
+// Enable FontAwesome Pseudo
+window.FontAwesomeConfig = {
+  searchPseudoElements: true
+}
 
-// Current Year
-$(".curr-year").text( (new Date).getFullYear() );
+// Toggle menu
+$(document).ready(function(){
+    $(".toggle-menu").click(function(){
+    $(".toggle-menu").toggleClass("toggle-menu--toggle");
+    $(".toggle-menu__toggle-menu-icon").toggleClass("toggle-menu-icon--toggle");
+    $("body").toggleClass("body--nav-toggle");
+    $(".main-nav").toggleClass("main-nav--toggle");
+  });
+});
 
 // Add class to nav on scroll
 $(window).scroll(function() {
@@ -24,6 +35,9 @@ $(window).scroll(function() {
         $("nav").removeClass("scroll");
     }
 });
+
+// Current Year
+$(".curr-year").text( (new Date).getFullYear() );
 
 // Rotate the circle
 $(window).scroll(function() {

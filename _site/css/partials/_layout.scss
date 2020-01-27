@@ -33,8 +33,9 @@
 
 // Navigation
 nav {
-  padding: 0;
+  padding: 40px 10px;
   position: fixed;
+  background: transparent;
   z-index: 6000;
   width: 100%;
   left: 0;
@@ -42,10 +43,11 @@ nav {
   top: -550px;
   @include transitionall(.7s);
   &.scroll {
-    top: 40px;
+    top: 0;
+    background: #fff;
   }
   .nav__content {
-    max-width: $maxwidth;
+    max-width: $maxwidthnarrow;
     margin: auto;
     text-align: center;
     display: flex;
@@ -108,7 +110,7 @@ nav {
 
 // Header
 .header {
-  margin: 75px 0;
+  margin: 0;
   padding: 7.5% 25px;
   background-size: cover;
   background-position: center;

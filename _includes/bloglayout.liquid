@@ -25,9 +25,9 @@
           <span>{{ postDate }}</span>
           <img src="{{ postFeatureImage }}" />
         </div>
-        <div class="content">
+        <div class="content {{ pageClass }}">
           {{ content }}
-          <a href="#top" class="top"><img src="/images/top.svg" /></a>
+          <a href="#top" class="top">Back to top</a>
         </div>
       </div>
       {% include footer %}

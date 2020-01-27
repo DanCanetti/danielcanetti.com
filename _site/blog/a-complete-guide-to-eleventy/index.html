@@ -64,8 +64,7 @@
         <nav>
   <div class="nav__content">
     <div class="nav__content__logoarea">
-    Dan.
-    <span class="nav__content__logoarea--toggle-menu">Menu</span>
+      Dan.
     </div>
     <ul>
       <!--li><a class="cta" href="/">Home</a></li>
@@ -74,6 +73,12 @@
       <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li-->
       <li><a href="https://github.com/DanCanetti" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a></li>
       <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank"><i class="fab fa-twitter" aria-label="Twitter"></i></a></li>
+      <li class="toggle-menu">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
+        </span>
+        Menu
+    </li>
     </ul>
   </div>
 </nav>
@@ -83,7 +88,7 @@
           <span>2nd December 2019</span>
           <img src="/images/posts/a-complete-guide-to-eleventy/feature.jpg" />
         </div>
-        <div class="content">
+        <div class="content post">
           <h2>What is Eleventy?</h2>
 <p><a href="https://www.11ty.io/">eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
 <h2>Quick Start</h2>
@@ -105,21 +110,81 @@
 <h3>Templating</h3>
 <p>Using Liquid and json to pull content from pages and posts.</p>
 <p>As mentioned in the previous section, each page can be assigned a layout in at the top of the html or markdown file. See below for an example, we'll break this down after.</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig1.png" alt="Fig 1."><strong>Fig 1.</strong></p>
+<pre><code>Fig 1.
+
+---
+layout: homepage.liquid
+pageTitle: Eleventy Boilerplate
+pageClass: homepage
+FeatureImage: /images/feature.jpg
+pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
+---
+## The page content starts here
+</code></pre>
 <p>The layout calls a liquid template from the <code>_includes</code> directory. The liquid template creates the outline for the page and can be called on as many pages as you'd like, below is a basic example of what the <code>homepage.liquid</code> file might look like:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig2.png" alt="Fig 2."><strong>Fig 2.</strong></p>
+<pre><code>Fig 2.
+
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    { % include meta % }
+    &lt;title&gt;Eleventy Boilerplate • { { pageTitle } }&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;post&quot;&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
+        { % include nav % } { { content } }
+    &lt;/div&gt;
+    { % include footer % }
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>As you can see in <code>**Fig 2**</code>, we're calling the meta from the <code>_includes</code> directory in the head of the document. Any include can be called in a template when using liquid as I do - <a href="https://www.11ty.io/docs/languages/liquid/">find out more here</a>.</p>
 <p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `post` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
 <h2>Subpages</h2>
 <p>When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from <code>**Fig 1**</code> to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig3.png" alt="Fig 3."><strong>Fig 3.</strong></p>
+<pre><code>Fig 3.
+
+{    
+    &quot;layout&quot;: &quot;bloglayout.liquid&quot;,
+    &quot;pageClass&quot;: &quot;post&quot;,
+    &quot;tags&quot;: [&quot;posts&quot;]
+}
+</code></pre>
 <p>You'll notice the <code>tags</code> are declared here, a set of files within a tag can be looped through on other pages - this can be used in a variety of ways such as case studies or blog posts.</p>
 <h2>Loops</h2>
 <p>A loop will display certain elements from a group of files. For example, we can loop through all of the blog posts created like this:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig4.png" alt="Fig 4."><strong>Fig 4.</strong></p>
+<pre><code>Fig 4.
+
+&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;content latest-post-grid all&quot;&gt;
+    &lt;ul&gt;
+    { % assign allblogposts = collections.posts % }
+    { % for post in allblogposts % }
+      &lt;li class=&quot;latest-post&quot;&gt;
+          &lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.data.postTitle } }&lt;/a&gt;&lt;span class=&quot;post-date&quot;&gt;{ { post.data.postDate } }&lt;/span&gt;
+      &lt;/li&gt;
+    { % endfor % }
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Here we're looping though all the blog posts and by creating a collection from the posts tag. Once we're looping through we can call the variable from each of the posts, in this example (<strong>Fig 4.</strong>) we're creating list element for each post with a link to the posts url. We're also pulling in the <code>postDate</code> here, a custom variable added to the liquid template we're calling in the json file.</p>
 <p>Now we have the basic loop in place we can add some 'filters' to tweak the loop such as limit and reverse.</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig5.png" alt="Fig 5."><strong>Fig 5.</strong></p>
+<pre><code>Fig 5.
+
+&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;content latest-post-grid all&quot;&gt;
+    &lt;ul&gt;
+    { % assign allblogposts = collections.posts limit: 2 | reverse % }
+    { % for post in allblogposts % }
+      &lt;li class=&quot;latest-post&quot;&gt;
+          &lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.data.postTitle } }&lt;/a&gt;&lt;span class=&quot;post-date&quot;&gt;{ { post.data.postDate } }&lt;/span&gt;
+      &lt;/li&gt;
+    { % endfor % }
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <h3>Reverse</h3>
 <p>This will change the default loop order from date ascending to date descending.</p>
 <h3>Limit</h3>
@@ -142,7 +207,7 @@
 <p>If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.</p>
 <p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer.</p>
 
-          <a href="#top" class="top"><img src="/images/top.svg" /></a>
+          <a href="#top" class="top">Back to top</a>
         </div>
       </div>
       <footer>
