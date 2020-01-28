@@ -2,6 +2,7 @@
 postTitle: Three things web development students should learn before graduation
 postDate: 30th October 2015
 date: 2015-10-30
+postTag: Development
 postFeatureImage: /images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg
 postExcerpt: The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.
 ---

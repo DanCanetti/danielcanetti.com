@@ -193,7 +193,7 @@ $burgertransitions: .4s;
 // Case Study/Project
 .project {
     h2 {
-      margin: 75px auto 25px auto;
+      margin: $ds auto 25px auto;
       text-align: left;
       &::before {
         display: none;
@@ -221,14 +221,15 @@ $burgertransitions: .4s;
       color: $pcolor;
       font-size: 3em;
       text-align: center;
-      margin: auto auto 5px auto;
+      margin: auto;
+      padding-top: $ds;
       max-width: 750px;
       @include sm {
         font-size: 2em;
       }
     }
     span {
-      margin: auto auto 7.5% auto;
+      margin: auto auto $ds auto;
       display: block;
       font-size: 1em;
       text-align: center;
@@ -246,7 +247,7 @@ $burgertransitions: .4s;
   }
   .content {
     h2 {
-      margin: 75px auto 25px auto;
+      margin: $ds auto 25px auto;
       text-align: left;
       &::before {
         display: none;
@@ -389,6 +390,37 @@ $burgertransitions: .4s;
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
+  h3 {
+    display: inline-block;
+    vertical-align: middle;
+    .collection-list__link__post-type {
+        height: 1em;
+        width: 1em;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+        margin-right: 20px;
+        margin-left: -40px;
+        margin-top: -2px;
+        &.collection-list__link__post-type--Tutorial {
+         background: red;
+        }
+        &.collection-list__link__post-type--Life {
+         background: blue;
+        }
+        &.collection-list__link__post-type--Development {
+         background: orange;
+        }
+        &.collection-list__link__post-type--Opinion {
+         background: green;
+        }
+     }
+  }
+  &.posts {
+      h3 {
+         padding-left: 40px;  
+      }   
+  }
   img {
     width: 200%;
     position: absolute;

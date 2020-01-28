@@ -635,13 +635,14 @@ footer {
     color: #111;
     font-size: 3em;
     text-align: center;
-    margin: auto auto 5px auto;
+    margin: auto;
+    padding-top: 75px;
     max-width: 750px; }
     @media (max-width: 576px) {
       .post .header h1, .post .header h2 {
         font-size: 2em; } }
   .post .header span {
-    margin: auto auto 7.5% auto;
+    margin: auto auto 75px auto;
     display: block;
     font-size: 1em;
     text-align: center;
@@ -774,6 +775,28 @@ footer {
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap; }
+  .collection-list h3 {
+    display: inline-block;
+    vertical-align: middle; }
+    .collection-list h3 .collection-list__link__post-type {
+      height: 1em;
+      width: 1em;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 100%;
+      margin-right: 20px;
+      margin-left: -40px;
+      margin-top: -2px; }
+      .collection-list h3 .collection-list__link__post-type.collection-list__link__post-type--Tutorial {
+        background: red; }
+      .collection-list h3 .collection-list__link__post-type.collection-list__link__post-type--Life {
+        background: blue; }
+      .collection-list h3 .collection-list__link__post-type.collection-list__link__post-type--Development {
+        background: orange; }
+      .collection-list h3 .collection-list__link__post-type.collection-list__link__post-type--Opinion {
+        background: green; }
+  .collection-list.posts h3 {
+    padding-left: 40px; }
   .collection-list img {
     width: 200%;
     position: absolute;

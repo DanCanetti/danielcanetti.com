@@ -2,6 +2,7 @@
 postTitle: GitLab Pages
 postDate: 6th February 2019
 date: 2019-02-06
+postTag: Tutorial
 postFeatureImage: /images/posts/gitlab-pages/feature.jpg
 postExcerpt: GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.
 ---

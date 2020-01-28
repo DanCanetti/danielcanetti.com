@@ -34,10 +34,10 @@ pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a m
   </div>
   <div class="section--home__content">
     <h2>Writing</h2>
-    <div class="collection-list">
+    <div class="collection-list posts">
       {% assign blogposts = collections.posts %}
       {% for post in blogposts limit: 4 %}
-        <a href="{{ post.url }}" class="project-link"><h3>{{ post.data.postTitle }}</h3></a>
+        <a href="{{ post.url }}" class="collection-list__link"><h3><span class="collection-list__link__post-type collection-list__link__post-type--{{ post.data.postTag }}"></span> {{ post.data.postTitle }}</h3></a>
       {% endfor %}
     </div>
   </div>
