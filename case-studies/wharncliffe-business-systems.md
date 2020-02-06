@@ -5,6 +5,7 @@ pageSubTitle: Making sage work for business
 projectLogo: /images/case-studies/wharncliffe/logo-white.svg
 projectLink: https://wharncliffe.co.uk/
 projectFeatureImage: /images/case-studies/wharncliffe/feature.jpg
+projectFeatureImageRetina: /images/case-studies/wharncliffe/feature.jpg
 projectClass: has-case-study
 projectExcerpt: Coming Soon
 seoIndex: all

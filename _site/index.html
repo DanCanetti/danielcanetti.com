@@ -22,7 +22,7 @@
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
-<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous" SameSite="none Secure"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
@@ -84,135 +84,149 @@
 </nav>
 
         
-<div class="intro">
-  <div class="intro__content">
-    <h1>Dan.</h1>
-    <p>A Web Developer living and working in Yorkshire, England.</p>
-    <p>Currently the developer for <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
-  </div>
+<div class="header-spacing"></div>
+
+<div class="zoom">
+    <h1 class="zoom__content">Dan.</h1>
 </div>
 
-<div class="section section--home">
-  <div class="section--home__content">
-    <h2>Projects</h2>
-    <div id="project-list" class="collection-list">
-      
-        <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study" @mouseover="hover1 = true" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description">WordPress</span></h3></a>
-        <img src="/images/case-studies/emerald-kitchens/feature.jpg" v-if="hover1" />
-      
-        <a href="/case-studies/kbpro-shop/" class="project-link has-case-study" @mouseover="hover2 = true" @mouseleave="hover2 = false"><h3>K.B Pro Shop<br><span class="collection-list__description">Magento 1.9</span></h3></a>
-        <img src="/images/case-studies/kbpro-shop/feature.jpg" v-if="hover2" />
-      
-        <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study" @mouseover="hover3 = true" @mouseleave="hover3 = false"><h3>Wharncliffe Business Systems<br><span class="collection-list__description">WordPress</span></h3></a>
-        <img src="/images/case-studies/wharncliffe/feature.jpg" v-if="hover3" />
-      
+<div class="scroll-hint"></div>
+
+<div class="body">
+    <div class="intro">
+      <div class="intro__content">
+        <p>A Web Developer living and working in Yorkshire, England.</p>
+        <p>Currently the developer for <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
+      </div>
     </div>
-  </div>
-  <div class="section--home__content">
-    <h2>Github</h2>
-    <div class="collection-list">
-      <a href="https://www.wordpresspluginicons.com/" class="project-link" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
-      <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link" target="_blank"><h3>Sass Quick Start</h3></a>
-      <a href="https://github.com/DanCanetti/slick-slider-quick-start" class="project-link" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+
+    <div class="section--home">
+      <div class="section--home__content">
+        <h2>Projects</h2>
+        <div id="project-list" class="collection-list">
+          
+            <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description">WordPress</span></h3></a>
+            <transition name="fade">
+              <img src="/images/case-studies/emerald-kitchens/feature.jpg" srcset="/images/case-studies/emerald-kitchens/feature.jpg 2x" alt="" v-if="hover1">
+            </transition>
+          
+            <a href="/case-studies/kbpro-shop/" class="project-link has-case-study" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro Shop<br><span class="collection-list__description">Magento 1.9</span></h3></a>
+            <transition name="fade">
+              <img src="/images/case-studies/kbpro-shop/feature.jpg" srcset="/images/case-studies/kbpro-shop/feature.jpg 2x" alt="" v-if="hover2">
+            </transition>
+          
+            <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Wharncliffe Business Systems<br><span class="collection-list__description">WordPress</span></h3></a>
+            <transition name="fade">
+              <img src="/images/case-studies/wharncliffe/feature.jpg" srcset="/images/case-studies/wharncliffe/feature.jpg 2x" alt="" v-if="hover3">
+            </transition>
+          
+        </div>
+      </div>
+      <div class="section--home__content">
+        <h2>Github</h2>
+        <div class="collection-list">
+          <a href="https://www.wordpresspluginicons.com/" class="project-link" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
+          <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link" target="_blank"><h3>Sass Quick Start</h3></a>
+          <a href="https://github.com/DanCanetti/slick-slider-quick-start" class="project-link" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+        </div>
+      </div>
+      <div class="section--home__content">
+        <h2>Writing</h2>
+        <div class="collection-list posts">
+          
+          
+            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="collection-list__link"><h3>Three things web development students should learn before graduation<br><span class="collection-list__link__post-date">January 28, 2020 - Web Development</span></h3></a>
+          
+            <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="collection-list__link"><h3>How a mentor leaving can inspire you<br><span class="collection-list__link__post-date">January 28, 2020 - Culture</span></h3></a>
+          
+            <a href="/blog/being-a-woman-in-tech-sucks/" class="collection-list__link"><h3>Being a woman in tech sucks<br><span class="collection-list__link__post-date">January 28, 2020 - Culture</span></h3></a>
+          
+            <a href="/blog/gitlab-pages/" class="collection-list__link"><h3>GitLab Pages<br><span class="collection-list__link__post-date">January 28, 2020 - Web Development</span></h3></a>
+          
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="section--home__content">
-    <h2>Writing</h2>
-    <div class="collection-list posts">
-      
-      
-        <a href="/blog/a-complete-guide-to-eleventy/" class="collection-list__link"><h3><span class="collection-list__link__post-type collection-list__link__post-type--Tutorial"></span> A complete guide to Eleventy</h3></a>
-      
-        <a href="/blog/craft-cms-and-homestead/" class="collection-list__link"><h3><span class="collection-list__link__post-type collection-list__link__post-type--Tutorial"></span> Installing Craft CMS in Homestead</h3></a>
-      
-        <a href="/blog/no-css-or-js-on-magento-2-after-install/" class="collection-list__link"><h3><span class="collection-list__link__post-type collection-list__link__post-type--Tutorial"></span> No CSS or JS on Magento 2 after install</h3></a>
-      
-        <a href="/blog/recommended-reading/" class="collection-list__link"><h3><span class="collection-list__link__post-type collection-list__link__post-type--Life"></span> Recommended Reading</h3></a>
-      
+
+
+    <div class="section grey">
+      <h2>Some of the companies I've worked alongside</h2>
+      <div class="brand-logo-grid">
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/yes-events/sub/align-logo.svg" alt="Align" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/yes-events/sub/citroen-logo.svg" alt="CCS Media" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img has-case-study">
+              <img src="/images/case-studies/emerald-kitchens/logo-white.svg" alt="Emerald Kitchens" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img case-study-coming-soon">
+              <img src="/images/case-studies/fit4it-fitness/logo-black-alt.png" alt="FIT4IT Fitness" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img coming-soon">
+              <img src="/images/case-studies/karen-betts/logo-white.svg" alt="Karen Betts" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img has-case-study">
+              <img src="/images/case-studies/kbpro-shop/logo-white.svg" alt="K.B Pro Shop" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/yes-events/sub/loreal-logo.svg" alt="L'Oréal" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/yes-events/sub/peugeot-logo.svg" alt="Peugeot" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/q-connect/logo-white.png" alt="Q-Connect" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/vow/logo-wholesale-white.png" alt="VOW" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img case-study-coming-soon">
+              <img src="/images/case-studies/wharncliffe/logo-white.svg" alt="Wharncliffe Business Systems" />
+            </div>
+          </div>
+        
+          <div class="brand-logo">
+            <div class="logo-img no-case-study">
+              <img src="/images/case-studies/yes-events/logo.png" alt="YES Events" />
+            </div>
+          </div>
+        
+      </div>
     </div>
-  </div>
 </div>
-
-
-<div class="section grey">
-  <h2>Some of the companies I've worked alongside</h2>
-  <div class="brand-logo-grid">
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/align-logo.svg" alt="Align" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/citroen-logo.svg" alt="CCS Media" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img has-case-study">
-          <img src="/images/case-studies/emerald-kitchens/logo-white.svg" alt="Emerald Kitchens" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img case-study-coming-soon">
-          <img src="/images/case-studies/fit4it-fitness/logo-black-alt.png" alt="FIT4IT Fitness" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img coming-soon">
-          <img src="/images/case-studies/karen-betts/logo-white.svg" alt="Karen Betts" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img has-case-study">
-          <img src="/images/case-studies/kbpro-shop/logo-white.svg" alt="K.B Pro Shop" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/loreal-logo.svg" alt="L'Oréal" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/peugeot-logo.svg" alt="Peugeot" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/q-connect/logo-white.png" alt="Q-Connect" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/vow/logo-wholesale-white.png" alt="VOW" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img case-study-coming-soon">
-          <img src="/images/case-studies/wharncliffe/logo-white.svg" alt="Wharncliffe Business Systems" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/logo.png" alt="YES Events" />
-        </div>
-      </div>
-    
-  </div>
-</div>
-
       </div>
       <footer>
   <div class="content">

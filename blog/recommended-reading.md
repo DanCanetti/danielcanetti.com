@@ -1,7 +1,6 @@
 ---
 postTitle: Recommended Reading
-postDate: 30th September 2019
-date: 2019-09-30
+date: Last Modified
 postTag: Life
 postFeatureImage: /images/posts/recommended-reading/feature.jpg
 postExcerpt: I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.

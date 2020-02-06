@@ -393,39 +393,13 @@ $burgertransitions: .4s;
   h3 {
     display: inline-block;
     vertical-align: middle;
-    .collection-list__link__post-type {
-        height: 1em;
-        width: 1em;
-        display: inline-block;
-        vertical-align: middle;
-        border-radius: 100%;
-        margin-right: 20px;
-        margin-left: -40px;
-        margin-top: -2px;
-        &.collection-list__link__post-type--Tutorial {
-         background: red;
-        }
-        &.collection-list__link__post-type--Life {
-         background: blue;
-        }
-        &.collection-list__link__post-type--Development {
-         background: orange;
-        }
-        &.collection-list__link__post-type--Opinion {
-         background: green;
-        }
-     }
-  }
-  &.posts {
-      h3 {
-         padding-left: 40px;  
-      }   
   }
   img {
-    width: 200%;
+    width: 100vw;
     position: absolute;
-    right: -175%;
-    top: -10%;
+    left: -31vw;
+    top: -35vh;
+    z-index: -1;
   }
   .collection-list__description {
     font-family: $pfont;
@@ -433,6 +407,16 @@ $burgertransitions: .4s;
     color: $pcolor;
     opacity: .5;
     font-size: .75em;
+  }
+  &.posts {
+    .collection-list__link {
+     .collection-list__link__post-date {
+       color: $pcolor;
+       font-weight: $pfontlight;
+       opacity: 0.5;
+       font-size: .75em;
+     }
+    }      
   }
 }
 

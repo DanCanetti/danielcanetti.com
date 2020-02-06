@@ -144,9 +144,81 @@ nav {
   }
 }
 
-// Homepage
-.home {
-  .intro {
+// Space for zoom
+.header-spacing {
+    position: relative;
+    height: 200vh;
+    width: 100vw;
+}
+
+// Zoom 
+.zoom {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(45%);
+    .zoom__content {
+        opacity: 1;
+        -webkit-transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+        &.fade {
+            opacity: 0;
+        }
+    }
+}
+
+// Scroll Hint
+.scroll-hint {
+    position: fixed;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: -150px;
+    height: 300px;
+    width: 1px;
+    background: $pcolor;
+    animation: line-grow 2.5s 1;
+    transform: translateX(50%);
+    -webkit-transition: bottom .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out;
+    -o-transition: bottom .3s ease-in-out;
+    transition: bottom .3s ease-in-out;
+    &:before {
+      content: "scroll";
+      transform: rotate(90deg);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .6em;
+      font-weight: 400;
+      position: absolute;
+      top: 17px;
+      left: 0px;
+      margin-bottom: 0px;
+      opacity: 1;
+      animation: scroll-show 2.5s 1;
+    }
+    &.hide {
+        bottom: -325px;
+    }
+}
+
+// Main Content
+.body {
+    margin-top: -50%;
+    padding-top: 50%;
+    background-color: #f0f0f0;          // Light grey background
+    @include transitionall(.3s);
+    &.dark {
+        background-color: $pcolor;
+        color: #fff;
+    }
+    .intro {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -157,49 +229,13 @@ nav {
     align-items: center;
     margin: auto;
     padding: 0;
-    .intro__content {
-      width: 50%;
-      animation: init-fade 1.5s 1;
-    }
-    h1 {
-      text-transform: none;
-      font-size: 4.5rem;
-      color: $pcolor;
-      text-align: left;
-      font-weight: 900;
-      padding: 0;
-      margin: 0px;
-      margin-left: -5px;    // Line up with below text
-      line-height: 1.25;
-      position: relative;
-      @include sm {
-        font-size: 3rem;
-        padding-top: 5vh;
-      }
-    }
-    &:before {
-      content: "scroll";
-      transform: rotate(90deg);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .6em;
-      font-weight: 400;
-      position: absolute;
-      bottom: 119px;
-      left: 180px;
-      margin-bottom: 0px;
-      animation: init-fade 1.5s 1;
-    }
-    &:after {
-      content: "";
-      width: 375px;
-      height: 300px;
-      border-left: 1px solid $pcolor;
-      position: absolute;
-      bottom: -150px;
-      animation: line-grow 1.5s 1;
-    }
+    padding-top: 50%;
   }
+}
+
+// Homepage
+.home {
+  
   .section--home {
     display: flex;
     flex-direction: column;
@@ -218,7 +254,7 @@ nav {
       }
       h2 {
         text-align: left;
-        font-weight: 300;
+        font-weight: $pfontheavy;
         letter-spacing: 0.05em;
         margin-bottom: 10px;
         margin-left: 5px;

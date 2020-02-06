@@ -1,8 +1,7 @@
 ---
 postTitle: Wordpressify
-postDate: 9th May 2019
-date: 2019-06-06
-postTag: Tutorial
+date: Last Modified
+postTag: Web Development
 postFeatureImage: /images/posts/wordpressify/feature.jpg
 postExcerpt: A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.
 ---
