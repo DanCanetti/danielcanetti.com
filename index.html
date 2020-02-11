@@ -3,7 +3,7 @@ layout: homepage.liquid
 pageTitle: A Web Developer
 pageClass: home
 pageFeatureImage: /images/feature.jpg
-pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies.
+pageExcerpt: A Web Developer living and working in Yorkshire, England.
 ---
 
 <div class="header-spacing"></div>
@@ -15,55 +15,48 @@ pageExcerpt: I'm a web developer based in Yorkshire, England and I work with a m
 <div class="scroll-hint"></div>
 
 <div class="body">
-    <div class="intro">
-      <div class="intro__content">
-        <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p>Currently the developer for <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
-      </div>
+    <div class="body__section body__section--intro">
+      <p>A Web Developer living and working in Yorkshire, England.</p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
     </div>
-
-    <div class="section--home">
-      <div class="section--home__content">
-        <h2>Projects</h2>
+    <div class="body__section body__section--projects">
+        <h2>Projects.</h2>
         <div id="project-list" class="collection-list">
-          {% for post in collections.projects %}
+            {% for post in collections.projects %}
             <a href="{{ post.url }}" class="project-link {{ post.data.projectClass }}" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
             <transition name="fade">
-              <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="" v-if="hover{{ post.data.projectid }}">
+                <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="" v-if="hover{{ post.data.projectid }}">
             </transition>
-          {% endfor %}
+            {% endfor %}
         </div>
-      </div>
-      <div class="section--home__content">
-        <h2>Github</h2>
-        <div class="collection-list">
-          <a href="https://www.wordpresspluginicons.com/" class="project-link" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
-          <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link" target="_blank"><h3>Sass Quick Start</h3></a>
-          <a href="https://github.com/DanCanetti/slick-slider-quick-start" class="project-link" target="_blank"><h3>Slick Slider Quick Start</h3></a>
-        </div>
-      </div>
-      <div class="section--home__content">
-        <h2>Writing</h2>
+        <a href="/case-studies/" class="l l--t" aria-label="View more blog posts.">View All</a>
+    </div>
+    <div class="body__section">
+        <h2>Writing.</h2>
         <div class="collection-list posts">
           {% assign blogposts = collections.posts %}
-          {% for post in blogposts limit: 4 %}
-            <a href="{{ post.url }}" class="collection-list__link"><h3>{{ post.data.postTitle }}<br><span class="collection-list__link__post-date">{{ post.date | date: '%B %d, %Y' }} - {{ post.data.postTag }}</span></h3></a>
+          {% for post in blogposts limit: 3 %}
+            <a href="{{ post.url }}" class="collection-list__link"><h3>{{ post.data.postTitle }}<br><span class="collection-list__description">{{ post.data.postTag }}</span></h3></a>
+            <!-- For reference - date {{ post.date | date: '%B %d, %Y' }} -->
           {% endfor %}
         </div>
-      </div>
+        <a href="/blog/" class="l l--t" aria-label="View more blog posts.">View All</a>
     </div>
-
-
-    <div class="section grey">
-      <h2>Some of the companies I've worked alongside</h2>
-      <div class="brand-logo-grid">
-        {% for post in collections.brands %}
-          <div class="brand-logo">
-            <div class="logo-img {{ post.data.projectClass }}">
-              <img src="{{ post.data.projectLogo }}" alt="{{ post.data.pageTitle }}" />
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+    <div class="body__section">
+        <h2>Shop.</h2>
+        <div class="collection-list">
+          <a href="#" target="_blank"><h3>Eleventy Basic Theme</h3></a>
+        </div>
+        <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
     </div>
+    <div class="body__section">
+        <h2>Github.</h2>
+        <div class="collection-list">
+          <a href="https://www.wordpresspluginicons.com/" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
+          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank"><h3>Sass Quick Start</h3></a>
+          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+        </div>
+        <a href="#" class="l l--t" aria-label="View more blog posts.">View All</a>
+    </div>
+    {% include footer %}
 </div>

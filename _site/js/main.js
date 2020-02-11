@@ -27,6 +27,16 @@ $(function() {
     });
 })
 
+// Hide zoom layer behind body after x scroll 
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 1000) {
+    $('.zoom').addClass('move');
+   }
+   else {
+    $('.zoom').removeClass('move');
+   }
+});
+
 // Toggle Project Images
 new Vue({
   el: '#project-list',

@@ -5,39 +5,13 @@
     E.G. header, footer
 */
 
-// Content Section
-.section {
-  background: #fff;
-  padding: 200px 0px;
-  &.grey {
-    background: #e3e3e3;
-  }
-  &.no-pb {
-    padding-bottom: 0px;
-    margin-bottom: -150px;
-    + .section {
-      padding-top: 350px;
-      @include sm {
-        padding: 350px 25px 50px 25px;
-      }
-    }
-  }
-  &:last-of-type {
-    padding-bottom: 0px;
-  }
-  @include sm {
-    padding: 150px 0px 50px 0px;
-  }
-
-}
-
 // Navigation
 nav {
   padding: 40px 10px;
   position: fixed;
   background: transparent;
   z-index: 6000;
-  width: 100%;
+  width: 250px;
   left: 0;
   right: 0;
   top: -550px;
@@ -52,10 +26,10 @@ nav {
     text-align: center;
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
     .nav__content__logoarea {
       position: relative;
-      color: $pcolor;
+      color: $dancanettiblack;
       text-align: left;
       text-transform: uppercase;
       font-family: $header;
@@ -85,7 +59,7 @@ nav {
         margin: 0px 15px;
         font-size: .95rem;
         a {
-          color: $pcolor;
+          color: $dancanettiblack;
           text-transform: uppercase;
           font-weight: $pfontheavy;
           letter-spacing: 1.5px;
@@ -161,6 +135,10 @@ nav {
     justify-content: center;
     align-items: center;
     transform: translateX(45%);
+    &.move {
+        z-index: -1;
+        opacity: 0;
+    }
     .zoom__content {
         opacity: 1;
         -webkit-transition: opacity .3s ease-in-out;
@@ -182,7 +160,7 @@ nav {
     bottom: -150px;
     height: 300px;
     width: 1px;
-    background: $pcolor;
+    background: $dancanettiblack;
     animation: line-grow 2.5s 1;
     transform: translateX(50%);
     -webkit-transition: bottom .3s ease-in-out;
@@ -211,115 +189,55 @@ nav {
 // Main Content
 .body {
     margin-top: -50%;
-    padding-top: 50%;
-    background-color: #f0f0f0;          // Light grey background
+    padding: 50% 200px 0 400px;
+    background-color: $dancanettigrey;
     @include transitionall(.3s);
     &.dark {
-        background-color: $pcolor;
+        background-color: $dancanettiblack;
         color: #fff;
     }
-    .intro {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    max-width: 750px;
-    height: 100vh;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 0;
-    padding-top: 50%;
-  }
+    .body__section {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        max-width: 750px;
+        align-items: flex-start;
+        margin: 100px auto 0 auto;
+        padding: $ds 0 0 0;
+        &.body__section--intro {
+            padding-top: 50%;
+            margin-bottom: 200px;
+        }
+        @include sm {
+            padding: 150px 0px 50px 0px;
+        }
+    }
 }
 
-// Homepage
-.home {
-  
-  .section--home {
-    display: flex;
-    flex-direction: column;
-    max-width: 750px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    .section--home__content {
-      width: 50%;
-      margin-left: -120px;
-      margin-top: $ds;
-      animation: init-fade 1.5s 1;
-      &:first-of-type {
-        margin-top: 0;
-      }
-      h2 {
-        text-align: left;
-        font-weight: $pfontheavy;
-        letter-spacing: 0.05em;
-        margin-bottom: 10px;
-        margin-left: 5px;
-        &:before {
-          display: none;
-        }
-      }
-    }
-  }
-}
 
 // Footer
 footer {
-  width: 100%;
-  bottom: 10%;
-  z-index: 0;
-  height: 25vh;
-  padding: 1% 1% 1% 1%;
-  text-align: center;
-  font-size: 1.75em;
-  h3 {
-    color: $pcolor;
-    font-size: 3.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: $pfontheavy;
-    padding: 5vh 0;
-    margin: 0;
-    line-height: 1.25;
-  }
-  a.get-in-touch {
-    background: $highlight;
-    color: $pcolor;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: $pfontheavy;
-    padding: 12px 18px;
-    @include transitionall(.3s);
-    &:hover {
-      background-color: $pcolor;
-      color: $highlight
+    z-index: 5000000;
+    height: calc(100vh - 10px);
+    width: 100%;
+    z-index: 0;
+    text-align: left;
+    font-size: 1.75em;
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        .footer__content__item {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &:last-of-type {
+                margin-top: calc(#{$ds} / 2);
+            }
+        }
     }
-  }
-  .social-links {
-    position: relative;
-    //margin-top: 100px;
-    a {
-      padding: 6.5px 10px;
-      font-size: .5em;
-      border: 1px solid $pcolor;
-      border-radius: 50px;
-      color: $pcolor;
-      background: transparent;
-      @include transitionall(.3s);
-      &:hover {
-        background: $highlight;
-        color: #fff;
-      }
-    }
-  }
-  @include sm {
-    h3 {
-      font-size: 1.5em;
-      text-align: center;
-    }
-  }
 }
