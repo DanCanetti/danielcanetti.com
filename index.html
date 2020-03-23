@@ -22,10 +22,10 @@ pageExcerpt: A Web Developer living and working in Yorkshire, England.
     <div class="body__section body__section--projects">
         <h2>Projects.</h2>
         <div id="project-list" class="collection-list">
-            {% for post in collections.projects %}
+            {% for post in collections.projects limit: 3 %}
             <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" target="_blank" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
             <transition name="fade">
-                <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="" v-if="hover{{ post.data.projectid }}">
+                <img src="{{ post.data.projectFeatureImageHome }}" srcset="{{ post.data.projectFeatureImageHomeRetina }} 2x" alt="" v-if="hover{{ post.data.projectid }}">
             </transition>
             {% endfor %}
         </div>

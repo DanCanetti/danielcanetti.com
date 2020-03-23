@@ -628,6 +628,9 @@ footer {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat; }
+      .case-study-item .case-study-item__img .case-study-item__img__image img {
+        object-fit: cover;
+        height: 100%; }
   .case-study-item .case-study-item__data {
     display: flex;
     flex-direction: row;

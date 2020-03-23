@@ -183,6 +183,10 @@ $burgertransitions: .4s;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
     }
   }
   .case-study-item__data {

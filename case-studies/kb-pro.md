@@ -6,6 +6,8 @@ projectLogo: /images/case-studies/kbpro/logo-white.svg
 projectLink: https://www.kbpro.com/
 projectFeatureImage: /images/case-studies/kbpro/feature.jpg
 projectFeatureImageRetina: /images/case-studies/kbpro/feature.jpg
+projectFeatureImageHome: /images/case-studies/kbpro/featureHome.jpg
+projectFeatureImageHomeRetina: /images/case-studies/kbpro/featureHome@2x.jpg
 projectClass: has-case-study
 projectExcerpt: The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.
 seoIndex: all
