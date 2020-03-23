@@ -18,19 +18,16 @@
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="{{ pageClass }}">
-      <div class="wrapper">
-        {% include nav %}
-        <div class="header" style="background-image: url('{{ projectFeatureImage }}');">
-          <div class="content">
-            <h1 class="title">{{ pageTitle }}</h1>
-            <p class="subtitle">{{ pageSubTitle }}</p>
-            <a class="project-link fancy-hover" href="{{ projectLink }}" target="_blank">Visit Website</a>
-          </div>
+    <body class="sub {{ pageClass }}">
+      {% include nav %}
+      <div class="body">
+        <div class="body__section body__section--intro">
+          <h1 class="title">{{ pageTitle }}</h1>
+          <a class="l" href="{{ projectLink }}" target="_blank">Visit Website</a>
         </div>
-        <div class="content">
-          {{ content }}
-        </div>
+      </div>
+      <div class="body__section body__section--content">
+        {{ content }}
       </div>
       {% include footer %}
     </body>

@@ -115,11 +115,18 @@ $burgertransitions: .4s;
   flex-wrap: wrap;
   a {
       margin-bottom: $ds;
+      &:hover {
+        h3 {
+          color: $dancanettialt;
+        }
+      }
   }
   h3 {
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 0;
+      opacity: 1;
+      @include transitionall(.3s);
   }
   img {
       position: fixed;
@@ -144,5 +151,61 @@ $burgertransitions: .4s;
        font-size: .75em;
      }
     }      
+  }
+}
+
+// Case Studies
+.case-study-item {
+  width: calc(50% - 15px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px; // 4x 15px
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .case-study-item__img {
+    width: 100%;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      //padding-top: 100%; 	/* ratio of 1:1*/
+      padding-top: 130%;
+    }
+    .case-study-item__img__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $dancanettialt;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .case-study-item__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    .case-study-item__data--content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        margin: 25px 0;
+        font-size: 1.2rem;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 1rem;
+      }
+      a {
+        align-self: flex-start;
+      }
+    }
   }
 }

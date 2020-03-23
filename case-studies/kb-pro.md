@@ -1,6 +1,6 @@
 ---
 pageTitle: K.B Pro
-pageDesc: Wordpress & Magento
+pageType: site
 pageSubTitle: The home of Microblading
 projectLogo: /images/case-studies/kbpro/logo-white.svg
 projectLink: https://www.kbpro.com/
@@ -10,6 +10,7 @@ projectClass: has-case-study
 projectExcerpt: The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.
 seoIndex: all
 projectid: 2
+date: 2020-01-01
 ---
 
 The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.

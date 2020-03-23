@@ -1,6 +1,6 @@
 ---
 pageTitle: Side Projects
-pageDesc: Passion Projects
+pageType: project
 pageSubTitle: Passion Projects
 projectLogo: /images/case-studies/smashing-joysticks/logo-white.svg
 projectLink: https://github.com/DanCanetti

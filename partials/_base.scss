@@ -11,7 +11,7 @@
 $dancanettiblack:   #111;         // Black
 $dancanettigrey:    #f0f0f0;      // Grey
 $dancanettiwhite:   #fff;         // White
-$dancanettialt:     #c53f3f;      // Alt
+$dancanettialt:     #F92A82;      // Alt
 
 // Social 
 $dribbble:          #ea4c89;      // Dribbble
@@ -135,6 +135,7 @@ $serif:       'Roboto Slab', serif;
 $header:       'Abril Fatface', cursive;
 
 // Basics
+
 body {
     //animation: init-fade 6s 1;
     font-family: $pfont;
@@ -164,6 +165,16 @@ h1 {
     line-height: 1.25;
     @include sm {
         font-size: 2rem;
+    }
+    &.--sub {
+      position: fixed;
+      top: 140px;
+      left: 55px;
+      color: $dancanettiwhite;
+      font-family: $pfont;
+      font-weight: $pfontheavy;
+      font-size: 1rem;
+      letter-spacing: .25rem;
     }
 }
 
@@ -195,6 +206,9 @@ a {
     color: $dancanettiwhite;
     text-decoration: none;
     position: relative;
+    &:hover {
+        cursor: pointer;
+    }
     &.l {
         @include transitionall(.3s);
         z-index: 1;
@@ -211,6 +225,7 @@ a {
         &:hover {
             &:before {
                 opacity: 1;
+                background: $dancanettialt;
             }
         }
         &.l--t {
@@ -224,7 +239,7 @@ a {
             &:hover {
                 opacity: 1;
                 &:before {
-                    opacity: 0.3;
+                  background: $dancanettialt;
                 }
             }
         }
@@ -270,6 +285,7 @@ a {
         }
         &:hover {
             color: $dancanettiblack;
+            cursor: none;
             &.sl--d {
                color: $dancanettiwhite;
             }

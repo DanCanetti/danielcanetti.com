@@ -18,7 +18,7 @@ nav {
   @include transitionall(.7s);
   &.scroll {
     top: 0;
-    background: #fff;
+    background: $dancanettiwhite;
   }
   .nav__content {
     max-width: $maxwidthnarrow;
@@ -194,7 +194,7 @@ nav {
     @include transitionall(.3s);
     &.dark {
         background-color: $dancanettiblack;
-        color: #fff;
+        color: $dancanettiwhite;
     }
     .body__section {
         position: relative;
@@ -205,9 +205,21 @@ nav {
         align-items: flex-start;
         margin: 100px auto 0 auto;
         padding: $ds 0 0 0;
+        opacity: 1;
+        @include transitionall(.3s);
+        &.fade {
+            opacity: .3;
+        }
         &.body__section--intro {
             padding-top: 50%;
             margin-bottom: 200px;
+        }
+        &.body__section--case-study-items {
+          margin-top: 170px;
+          padding-top: 0;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
         }
         @include sm {
             padding: 150px 0px 50px 0px;
@@ -239,5 +251,13 @@ footer {
                 margin-top: calc(#{$ds} / 2);
             }
         }
+    }
+}
+
+// Sub Pages
+.sub {
+    nav {
+        top: 0!important;
+        background: $dancanettiwhite;
     }
 }

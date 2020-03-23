@@ -19,6 +19,7 @@
 <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Canetti • A Web Developer</title>
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
@@ -44,6 +45,7 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
+        <script type="text/javascript" defer src="/js/home.js"></script>
         <title>Daniel Canetti • A Web Developer</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
@@ -63,9 +65,11 @@
         <div class="wrapper">
             <nav>
   <div class="nav__content">
-    <div class="nav__content__logoarea">
-      Dan.
-    </div>
+    <a href="/">
+        <div class="nav__content__logoarea">
+          Dan.
+        </div>
+    </a>
     <ul>
       <li class="toggle-menu">
         <span class="toggle-menu__toggle-menu-icon">
@@ -94,48 +98,73 @@
         <h2>Projects.</h2>
         <div id="project-list" class="collection-list">
             
-            <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description">WordPress</span></h3></a>
-            <transition name="fade">
-                <img src="/images/case-studies/emerald-kitchens/feature.jpg" srcset="/images/case-studies/emerald-kitchens/feature.jpg 2x" alt="" v-if="hover1">
-            </transition>
-            
-            <a href="/case-studies/kb-pro/" class="project-link has-case-study" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description">Wordpress & Magento</span></h3></a>
+            <a href="https://www.kbpro.com/" class="project-link has-case-study" target="_blank" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
                 <img src="/images/case-studies/kbpro/feature.jpg" srcset="/images/case-studies/kbpro/feature.jpg 2x" alt="" v-if="hover2">
             </transition>
             
-            <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Wharncliffe Business Systems<br><span class="collection-list__description">WordPress</span></h3></a>
+            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/emerald-kitchens/feature.jpg" srcset="/images/case-studies/emerald-kitchens/feature.jpg 2x" alt="" v-if="hover1">
+            </transition>
+            
+            <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link has-case-study" target="_blank" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Sass & SMACSS Quick Start<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/sass-quick-start/feature.jpg" srcset="/images/case-studies/sass-quick-start/feature.jpg 2x" alt="" v-if="hover3">
+            </transition>
+            
+            <a href="http://workingwithhomestead.com" class="project-link has-case-study" target="_blank" @mouseover="hover = true" @mouseover="hoverOver" @mouseleave="hover = false"><h3>Working With Homestead<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/working-with-homestead/feature.jpg" srcset="/images/case-studies/working-with-homestead/feature.jpg 2x" alt="" v-if="hover">
+            </transition>
+            
+            <a href="https://fit4itfitness.com/" class="project-link has-case-study" target="_blank" @mouseover="hover4 = true" @mouseover="hoverOver" @mouseleave="hover4 = false"><h3>FIT4IT Fitness<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/fit4it-fitness/feature.jpg" srcset="/images/case-studies/fit4it-fitness/feature.jpg 2x" alt="" v-if="hover4">
+            </transition>
+            
+            <a href="https://wharncliffe.co.uk/" class="project-link has-case-study" target="_blank" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Wharncliffe Business Systems<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
                 <img src="/images/case-studies/wharncliffe/feature.jpg" srcset="/images/case-studies/wharncliffe/feature.jpg 2x" alt="" v-if="hover3">
             </transition>
             
+            <a href="https://www.wordpresspluginicons.com/" class="project-link has-case-study" target="_blank" @mouseover="hover4 = true" @mouseover="hoverOver" @mouseleave="hover4 = false"><h3>WordPress Plugin Icon Font<br><span class="collection-list__description">Icon Font</span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/wordpress-plugin-icon-font/feature.jpg" srcset="/images/case-studies/wordpress-plugin-icon-font/feature.jpg 2x" alt="" v-if="hover4">
+            </transition>
+            
+            <a href="https://github.com/DanCanetti/slick-slider-quick-start" class="project-link has-case-study" target="_blank" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Slick Slider Quick Start<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/slick-slider-quick-start/feature.jpg" srcset="/images/case-studies/slick-slider-quick-start/feature.jpg 2x" alt="" v-if="hover3">
+            </transition>
+            
         </div>
-        <a href="/case-studies/" class="l l--t" aria-label="View more blog posts.">View All</a>
+        <a href="/projects/" class="l l--t" aria-label="View more blog posts.">View All</a>
     </div>
     <div class="body__section">
         <h2>Writing.</h2>
         <div class="collection-list posts">
           
           
-            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="collection-list__link"><h3>Three things web development students should learn before graduation<br><span class="collection-list__description">Web Development</span></h3></a>
+            <a href="/blog/a-complete-guide-to-eleventy/" class="collection-list__link"><h3>A complete guide to Eleventy<br><span class="collection-list__description">Web Development</span></h3></a>
             <!-- For reference - date January 28, 2020 -->
           
-            <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="collection-list__link"><h3>How a mentor leaving can inspire you<br><span class="collection-list__description">Culture</span></h3></a>
+            <a href="/blog/craft-cms-and-homestead/" class="collection-list__link"><h3>Installing Craft CMS in Homestead<br><span class="collection-list__description">Web Development</span></h3></a>
             <!-- For reference - date January 28, 2020 -->
           
-            <a href="/blog/being-a-woman-in-tech-sucks/" class="collection-list__link"><h3>Being a woman in tech sucks<br><span class="collection-list__description">Culture</span></h3></a>
+            <a href="/blog/my-favourite-grand-designs/" class="collection-list__link"><h3>My Favourite Grand Designs<br><span class="collection-list__description">Life</span></h3></a>
             <!-- For reference - date January 28, 2020 -->
           
         </div>
         <a href="/blog/" class="l l--t" aria-label="View more blog posts.">View All</a>
     </div>
-    <div class="body__section">
+    <!--div class="body__section">
         <h2>Shop.</h2>
         <div class="collection-list">
           <a href="#" target="_blank"><h3>Eleventy Basic Theme</h3></a>
         </div>
         <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
-    </div>
+    </div-->
     <div class="body__section">
         <h2>Github.</h2>
         <div class="collection-list">
@@ -143,7 +172,7 @@
           <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank"><h3>Sass Quick Start</h3></a>
           <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank"><h3>Slick Slider Quick Start</h3></a>
         </div>
-        <a href="#" class="l l--t" aria-label="View more blog posts.">View All</a>
+        <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" aria-label="View more blog posts.">View All</a>
     </div>
     <footer>
     <div class="footer__content">
@@ -153,11 +182,11 @@
             <a class="l" href="#">Mail</a>
         </div>
         <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a>
-            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
-            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
         </div>
     </div>
 </footer>

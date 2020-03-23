@@ -1,0 +1,27 @@
+---
+layout: sub.liquid
+pageTitle: Projects
+pageClass: sub
+pageFeatureImage: /images/feature.jpg
+pageExcerpt: A Web Developer living and working in Yorkshire, England.
+---
+
+<div class="body dark">
+    <div class="body__section body__section--case-study-items">
+      {% for post in collections.projects %}
+        <div class="case-study-item case-study-item--{{ post.data.pageType }}">
+          <div class="case-study-item__img">
+            <div class="case-study-item__img__image" style="background-image: url('{{ post.data.projectFeatureImage }}');"></div>
+          </div>
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2>{{ post.data.pageTitle }}</h2>
+              <p>{{ post.data.projectExcerpt }}</p>
+              <a href="{{ post.data.projectLink }}" class="l" target="_blank" >Visit {{ post.data.pageType }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include footer %}
+</div>
