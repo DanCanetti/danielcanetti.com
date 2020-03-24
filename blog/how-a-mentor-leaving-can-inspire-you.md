@@ -1,6 +1,7 @@
 ---
 postTitle: How a mentor leaving can inspire you
-date: Last Modified
+#date: Last Modified
+date: 2016-06-09
 postTag: Culture
 postFeatureImage: /images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg
 postFeatureImageRetina: /images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg

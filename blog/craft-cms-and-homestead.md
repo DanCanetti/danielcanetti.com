@@ -1,6 +1,7 @@
 ---
 postTitle: Installing Craft CMS in Homestead
-date: Last Modified
+#date: Last Modified
+date: 2019-10-31
 postTag: Web Development
 postFeatureImage: /images/posts/craft-cms-and-homestead/feature.jpg
 postFeatureImageRetina: /images/posts/craft-cms-and-homestead/feature.jpg

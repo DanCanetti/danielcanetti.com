@@ -1,6 +1,7 @@
 ---
 postTitle: A complete guide to Eleventy
-date: Last Modified
+#date: Last Modified
+date: 2019-12-02
 postTag: Web Development
 postFeatureImage: /images/posts/a-complete-guide-to-eleventy/feature.jpg
 postFeatureImageRetina: /images/posts/a-complete-guide-to-eleventy/feature.jpg

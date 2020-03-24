@@ -1,6 +1,7 @@
 ---
 postTitle: Recommended Reading
-date: Last Modified
+#date: Last Modified
+date: 2019-09-30
 postTag: Life
 postFeatureImage: /images/posts/recommended-reading/feature.jpg
 postFeatureImageRetina: /images/posts/recommended-reading/feature.jpg

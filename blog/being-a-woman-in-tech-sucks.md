@@ -1,6 +1,7 @@
 ---
 postTitle: Being a woman in tech sucks
-date: Last Modified
+#date: Last Modified
+date: 2015-11-22
 postTag: Culture
 postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
 postFeatureImageRetina: /images/posts/being-a-woman-in-tech-sucks/feature.jpg

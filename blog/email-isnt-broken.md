@@ -1,6 +1,7 @@
 ---
 postTitle: Email Isn't Broken
-date: Last Modified
+#date: Last Modified
+date: 2019-08-27
 postTag: Culture
 postFeatureImage: /images/posts/email-isnt-broken/feature.jpg
 postFeatureImageRetina: /images/posts/email-isnt-broken/feature.jpg

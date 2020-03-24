@@ -1,6 +1,7 @@
 ---
 postTitle: My Favourite Grand Designs
-date: Last Modified
+#date: Last Modified
+date: 2019-09-02
 postTag: Life
 postFeatureImage: /images/posts/my-favourite-grand-designs/feature.jpg
 postFeatureImageRetina: /images/posts/my-favourite-grand-designs/feature.jpg

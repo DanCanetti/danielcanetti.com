@@ -189,6 +189,14 @@ $burgertransitions: .4s;
         height: 100%;
       }
     }
+    .case-study-item__meta {
+      position: absolute;
+      font-size: .8rem;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
   .case-study-item__data {
     display: flex;

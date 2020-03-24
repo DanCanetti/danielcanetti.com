@@ -1,6 +1,7 @@
 ---
 postTitle: My Current Setup
-date: Last Modified
+#date: Last Modified
+date: 2019-09-26
 postTag: Life
 postFeatureImage: /images/posts/current-setup/feature.jpg
 postFeatureImageRetina: /images/posts/current-setup/feature.jpg
