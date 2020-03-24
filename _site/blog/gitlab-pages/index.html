@@ -45,24 +45,23 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <title>Daniel Canetti • Blog • GitLab Pages</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="GitLab Pages" />
-        <meta property="og:description" content="GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites." />
-        <meta property="og:url" content="https://danielcanetti.com/blog/gitlab-pages/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature.jpg" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com" />
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="GitLab Pages">
-        <meta property="twitter:description" content="GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature.jpg">
-        <meta property="twitter:url" content="https://danielcanetti.com/blog/gitlab-pages/">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="">
+        <meta property="twitter:image" content="https://danielcanetti.com">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="post">
-      <div class="wrapper">
-        <nav>
+    <body class="sub">
+        <div class="wrapper">
+            <nav>
   <div class="nav__content">
     <a href="/">
         <div class="nav__content__logoarea">
@@ -79,13 +78,10 @@
   </div>
 </nav>
 
-        <div id="top" class="header">
-          <h1 class="title">GitLab Pages</h1>
-          <span></span>
-          <img src="/images/posts/gitlab-pages/feature.jpg" />
-        </div>
-        <div class="content post">
-          <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
+            <h1 class="--sub"></h1>
+            <div class="body dark">
+                <div class="body__section">
+                    <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
 <p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
 <p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
 <h2>Prerequisites:</h2>
@@ -121,10 +117,8 @@
 <p>If you Group your projects, <strong>GitLab Pages can only be generated from repos in the top level of a group</strong>, I got stuck trying to generate Pages from a subgroup and this is not supported.</p>
 <p>Once you see the <code>Congratulations!</code> message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.</p>
 
-          <a href="#top" class="top">Back to top</a>
-        </div>
-      </div>
-      <footer>
+                </div>
+                <footer>
     <div class="footer__content">
         <div class="footer__content__item footer__content__plinks">
             <a class="l" href="#">Who</a>
@@ -141,5 +135,7 @@
     </div>
 </footer>
 
+            </div>
+        </div>
     </body>
 </html>

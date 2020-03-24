@@ -3,6 +3,7 @@ postTitle: Wordpressify
 date: Last Modified
 postTag: Web Development
 postFeatureImage: /images/posts/wordpressify/feature.jpg
+postFeatureImageRetina: /images/posts/wordpressify/feature.jpg
 postExcerpt: A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.
 ---
 

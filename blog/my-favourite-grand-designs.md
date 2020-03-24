@@ -3,6 +3,7 @@ postTitle: My Favourite Grand Designs
 date: Last Modified
 postTag: Life
 postFeatureImage: /images/posts/my-favourite-grand-designs/feature.jpg
+postFeatureImageRetina: /images/posts/my-favourite-grand-designs/feature.jpg
 postExcerpt: Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.
 ---
 

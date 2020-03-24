@@ -613,7 +613,8 @@ footer {
     height: auto; }
   .case-study-item .case-study-item__img {
     width: 100%;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .case-study-item .case-study-item__img:before {
       content: "";
       display: block;

@@ -45,24 +45,23 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <title>Daniel Canetti • Blog • A complete guide to Eleventy</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="A complete guide to Eleventy" />
-        <meta property="og:description" content="From installation to continuous deployment - everything you need to get started with the static site generator." />
-        <meta property="og:url" content="https://danielcanetti.com/blog/a-complete-guide-to-eleventy/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature.jpg" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com" />
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="A complete guide to Eleventy">
-        <meta property="twitter:description" content="From installation to continuous deployment - everything you need to get started with the static site generator.">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature.jpg">
-        <meta property="twitter:url" content="https://danielcanetti.com/blog/a-complete-guide-to-eleventy/">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="">
+        <meta property="twitter:image" content="https://danielcanetti.com">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="post">
-      <div class="wrapper">
-        <nav>
+    <body class="sub">
+        <div class="wrapper">
+            <nav>
   <div class="nav__content">
     <a href="/">
         <div class="nav__content__logoarea">
@@ -79,13 +78,10 @@
   </div>
 </nav>
 
-        <div id="top" class="header">
-          <h1 class="title">A complete guide to Eleventy</h1>
-          <span></span>
-          <img src="/images/posts/a-complete-guide-to-eleventy/feature.jpg" />
-        </div>
-        <div class="content post">
-          <h2>What is Eleventy?</h2>
+            <h1 class="--sub"></h1>
+            <div class="body dark">
+                <div class="body__section">
+                    <h2>What is Eleventy?</h2>
 <p><a href="https://www.11ty.io/">eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
 <h2>Quick Start</h2>
 <p><a href="https://github.com/DanCanetti/eleventy-boilerplate/">https://github.com/DanCanetti/eleventy-boilerplate/</a></p>
@@ -126,7 +122,7 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
     { % include meta % }
     &lt;title&gt;Eleventy Boilerplate • { { pageTitle } }&lt;/title&gt;
 &lt;/head&gt;
-&lt;body class=&quot;post&quot;&gt;
+&lt;body class=&quot;sub&quot;&gt;
     &lt;div class=&quot;wrapper&quot;&gt;
         { % include nav % } { { content } }
     &lt;/div&gt;
@@ -135,7 +131,7 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 &lt;/html&gt;
 </code></pre>
 <p>As you can see in <code>**Fig 2**</code>, we're calling the meta from the <code>_includes</code> directory in the head of the document. Any include can be called in a template when using liquid as I do - <a href="https://www.11ty.io/docs/languages/liquid/">find out more here</a>.</p>
-<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `post` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
+<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `sub` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
 <h2>Subpages</h2>
 <p>When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from <code>**Fig 1**</code> to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:</p>
 <pre><code>Fig 3.
@@ -203,10 +199,8 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 <p>If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.</p>
 <p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer.</p>
 
-          <a href="#top" class="top">Back to top</a>
-        </div>
-      </div>
-      <footer>
+                </div>
+                <footer>
     <div class="footer__content">
         <div class="footer__content__item footer__content__plinks">
             <a class="l" href="#">Who</a>
@@ -223,5 +217,7 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
     </div>
 </footer>
 
+            </div>
+        </div>
     </body>
 </html>

@@ -3,6 +3,7 @@ postTitle: Being a woman in tech sucks
 date: Last Modified
 postTag: Culture
 postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
+postFeatureImageRetina: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
 postExcerpt: I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?
 ---
 
