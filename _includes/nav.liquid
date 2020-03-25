@@ -5,12 +5,44 @@
           Dan.
         </div>
     </a>
-    <ul>
-      <li class="toggle-menu">
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
         <span class="toggle-menu__toggle-menu-icon">
           <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
         </span>
-    </li>
-    </ul>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            {% assign navprojects = collections.projects %}
+            {% for post in navprojects limit: 3 %}
+              <li><a href="{{ post.data.projectLink }}" target="_blank">{{ post.data.pageTitle }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            {% assign navblogposts = collections.posts %}
+            {% for post in navblogposts limit: 3 %}
+              <li><a href="{{ post.url }}">{{ post.data.postTitle }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+          <a href="https://unsplash.com/@dan_canetti" target="_blank" aria-label="Unplash" rel="noreferrer"><svg aria-label="Unsplash" class="social-img" xmlns="http://www.w3.org/2000/svg" viewBox="20 21 96 96"><g fill-rule="evenodd"><path d="M50 21h36v27H50zM20 63h30.087v27.24h36.079V63H116v54H20z"/></g></svg></a>
+        </ul>
+      </nav>
+    </div>
   </div>
 </nav>

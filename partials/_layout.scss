@@ -14,7 +14,7 @@ nav {
   width: 250px;
   left: 0;
   right: 0;
-  top: -550px;
+  top: -750px;
   @include transitionall(.7s);
   &.scroll {
     top: 0;
@@ -29,6 +29,7 @@ nav {
     justify-content: center;
     .nav__content__logoarea {
       position: relative;
+      z-index: 60000;
       color: $dancanettiblack;
       text-align: left;
       text-transform: uppercase;
@@ -251,6 +252,12 @@ footer {
                 margin-top: calc(#{$ds} / 2);
             }
         }
+    }
+    .copyright {
+      font-size: .75rem;
+      margin-top: 40px;
+      color: #fff;
+      opacity: 0.5;
     }
 }
 

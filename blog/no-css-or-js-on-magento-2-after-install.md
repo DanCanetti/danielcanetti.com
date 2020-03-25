@@ -1,5 +1,5 @@
 ---
-postTitle: No CSS or JS on Magento 2 after install
+postTitle: No CSS or JS on Magento 2
 #date: Last Modified
 date: 2019-10-22
 postTag: Web Development

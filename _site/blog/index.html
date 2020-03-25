@@ -19,7 +19,6 @@
 <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel Canetti • Blog</title>
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
@@ -45,6 +44,7 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
+        <title>Daniel Canetti • Blog</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
@@ -68,13 +68,53 @@
           Dan.
         </div>
     </a>
-    <ul>
-      <li class="toggle-menu">
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
         <span class="toggle-menu__toggle-menu-icon">
           <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
         </span>
-    </li>
-    </ul>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            
+            
+              <li><a href="https://www.kbpro.com/" target="_blank">K.B Pro</a></li>
+            
+              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank">Emerald Kitchens</a></li>
+            
+              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank">Sass, BEM, and SMACSS Quick Start</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            
+            
+              <li><a href="/blog/a-complete-guide-to-eleventy/">A complete guide to Eleventy</a></li>
+            
+              <li><a href="/blog/craft-cms-and-homestead/">Installing Craft CMS in Homestead</a></li>
+            
+              <li><a href="/blog/no-css-or-js-on-magento-2-after-install/">No CSS or JS on Magento 2</a></li>
+            
+            </ul>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+          <a href="https://unsplash.com/@dan_canetti" target="_blank" aria-label="Unplash" rel="noreferrer"><svg aria-label="Unsplash" class="social-img" xmlns="http://www.w3.org/2000/svg" viewBox="20 21 96 96"><g fill-rule="evenodd"><path d="M50 21h36v27H50zM20 63h30.087v27.24h36.079V63H116v54H20z"/></g></svg></a>
+        </ul>
+      </nav>
+    </div>
   </div>
 </nav>
 
@@ -91,14 +131,16 @@
               <span>Web Development</span>
               <span>December 02, 2019</span>
             </div>
-            <img src="/images/posts/a-complete-guide-to-eleventy/feature.jpg" srcset="/images/posts/a-complete-guide-to-eleventy/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/a-complete-guide-to-eleventy/">
+              <img src="/images/posts/a-complete-guide-to-eleventy/feature.jpg" srcset="/images/posts/a-complete-guide-to-eleventy/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>A complete guide to Eleventy</h2>
             <p>From installation to continuous deployment - everything you need to get started with the static site generator.</p>
-            <a href="/blog/a-complete-guide-to-eleventy/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/a-complete-guide-to-eleventy/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -110,14 +152,16 @@
               <span>Web Development</span>
               <span>October 31, 2019</span>
             </div>
-            <img src="/images/posts/craft-cms-and-homestead/feature.jpg" srcset="/images/posts/craft-cms-and-homestead/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/craft-cms-and-homestead/">
+              <img src="/images/posts/craft-cms-and-homestead/feature.jpg" srcset="/images/posts/craft-cms-and-homestead/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Installing Craft CMS in Homestead</h2>
             <p>An extract from a larger guide I’m working on for installing Laravel/Homestead.</p>
-            <a href="/blog/craft-cms-and-homestead/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/craft-cms-and-homestead/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -129,14 +173,16 @@
               <span>Web Development</span>
               <span>October 22, 2019</span>
             </div>
-            <img src="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature.jpg" srcset="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/no-css-or-js-on-magento-2-after-install/">
+              <img src="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature.jpg" srcset="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
-            <h2>No CSS or JS on Magento 2 after install</h2>
+            <h2>No CSS or JS on Magento 2</h2>
             <p>I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
-            <a href="/blog/no-css-or-js-on-magento-2-after-install/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/no-css-or-js-on-magento-2-after-install/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -148,14 +194,16 @@
               <span>Life</span>
               <span>September 30, 2019</span>
             </div>
-            <img src="/images/posts/recommended-reading/feature.jpg" srcset="/images/posts/recommended-reading/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/recommended-reading/">
+              <img src="/images/posts/recommended-reading/feature.jpg" srcset="/images/posts/recommended-reading/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Recommended Reading</h2>
             <p>I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.</p>
-            <a href="/blog/recommended-reading/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/recommended-reading/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -167,14 +215,16 @@
               <span>Life</span>
               <span>September 26, 2019</span>
             </div>
-            <img src="/images/posts/current-setup/feature.jpg" srcset="/images/posts/current-setup/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/current-setup/">
+              <img src="/images/posts/current-setup/feature.jpg" srcset="/images/posts/current-setup/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>My Current Setup</h2>
             <p>Everyone works differently and I love it. I follow a few too many set-up focussed Instagram accounts and have been watching Setup Wars, TLD, and Oliur for as long as I can remember. I'm still working on my ideal set-up and I'll keep this page updated with all the latest tech and workflow tools I use.</p>
-            <a href="/blog/current-setup/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/current-setup/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -186,14 +236,16 @@
               <span>Life</span>
               <span>September 02, 2019</span>
             </div>
-            <img src="/images/posts/my-favourite-grand-designs/feature.jpg" srcset="/images/posts/my-favourite-grand-designs/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/my-favourite-grand-designs/">
+              <img src="/images/posts/my-favourite-grand-designs/feature.jpg" srcset="/images/posts/my-favourite-grand-designs/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>My Favourite Grand Designs</h2>
-            <p>Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.</p>
-            <a href="/blog/my-favourite-grand-designs/" class="l" target="_blank" >Read More</a>
+            <p>Grand Designs is one of the staple design and architecture shows on TV and over the years there have been some truly incredible houses built. Here are some of my favourites.</p>
+            <a href="/blog/my-favourite-grand-designs/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -205,14 +257,16 @@
               <span>Culture</span>
               <span>August 27, 2019</span>
             </div>
-            <img src="/images/posts/email-isnt-broken/feature.jpg" srcset="/images/posts/email-isnt-broken/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/email-isnt-broken/">
+              <img src="/images/posts/email-isnt-broken/feature.jpg" srcset="/images/posts/email-isnt-broken/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Email Isn't Broken</h2>
             <p>We all hate email, it's our never ending to do list and it's the thing that ruins your Sunday night, here's a few tips on how to fix it.</p>
-            <a href="/blog/email-isnt-broken/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/email-isnt-broken/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -224,14 +278,16 @@
               <span>Web Development</span>
               <span>May 09, 2019</span>
             </div>
-            <img src="/images/posts/wordpressify/feature.jpg" srcset="/images/posts/wordpressify/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/wordpressify/">
+              <img src="/images/posts/wordpressify/feature.jpg" srcset="/images/posts/wordpressify/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Wordpressify</h2>
             <p>A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.</p>
-            <a href="/blog/wordpressify/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/wordpressify/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -243,14 +299,16 @@
               <span>Web Development</span>
               <span>February 06, 2019</span>
             </div>
-            <img src="/images/posts/gitlab-pages/feature.jpg" srcset="/images/posts/gitlab-pages/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/gitlab-pages/">
+              <img src="/images/posts/gitlab-pages/feature.jpg" srcset="/images/posts/gitlab-pages/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>GitLab Pages</h2>
             <p>GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.</p>
-            <a href="/blog/gitlab-pages/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/gitlab-pages/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -262,14 +320,16 @@
               <span>Culture</span>
               <span>June 09, 2016</span>
             </div>
-            <img src="/images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg" srcset="/images/posts/how-a-mentor-leaving-can-inspire-you/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/how-a-mentor-leaving-can-inspire-you/">
+              <img src="/images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg" srcset="/images/posts/how-a-mentor-leaving-can-inspire-you/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>How a mentor leaving can inspire you</h2>
             <p>Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.</p>
-            <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -281,14 +341,16 @@
               <span>Culture</span>
               <span>November 22, 2015</span>
             </div>
-            <img src="/images/posts/being-a-woman-in-tech-sucks/feature.jpg" srcset="/images/posts/being-a-woman-in-tech-sucks/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/being-a-woman-in-tech-sucks/">
+              <img src="/images/posts/being-a-woman-in-tech-sucks/feature.jpg" srcset="/images/posts/being-a-woman-in-tech-sucks/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Being a woman in tech sucks</h2>
             <p>I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?</p>
-            <a href="/blog/being-a-woman-in-tech-sucks/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/being-a-woman-in-tech-sucks/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -300,14 +362,16 @@
               <span>Web Development</span>
               <span>October 30, 2015</span>
             </div>
-            <img src="/images/posts/advice-for-web-developmen-students/feature.jpg" srcset="/images/posts/advice-for-web-developmen-students/feature@2x.jpg 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/">
+              <img src="/images/posts/advice-for-web-developmen-students/feature.jpg" srcset="/images/posts/advice-for-web-developmen-students/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>Advice for web development students</h2>
             <p>The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.</p>
-            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l" target="_blank" >Read More</a>
+            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l">Read More</a>
           </div>
         </div>
       </div>
@@ -327,6 +391,7 @@
             <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
             <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
         </div>
+        <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>
 </footer>
 

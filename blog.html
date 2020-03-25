@@ -16,14 +16,16 @@ pageExcerpt: A Web Developer living and working in Yorkshire, England.
               <span>{{ post.data.postTag }}</span>
               <span>{{ post.date | date: '%B %d, %Y' }}</span>
             </div>
-            <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+            <a href="{{ post.url }}">
+              <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="" aria-label="Read More" />
+            </a>
           </div>
         </div>
         <div class="case-study-item__data">
           <div class="case-study-item__data--content">
             <h2>{{ post.data.postTitle }}</h2>
             <p>{{ post.data.postExcerpt }}</p>
-            <a href="{{ post.url }}" class="l" target="_blank" >Read More</a>
+            <a href="{{ post.url }}" class="l">Read More</a>
           </div>
         </div>
       </div>
