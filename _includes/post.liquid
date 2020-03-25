@@ -7,11 +7,11 @@
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="{{ pageExcerpt }}" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com{{ pageFeatureImage }}" />
+        <meta property="og:image" content="https://danielcanetti.com{{ postFeatureImageFull }}" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="{{ pageExcerpt }}">
-        <meta property="twitter:image" content="https://danielcanetti.com{{ pageFeatureImage }}">
+        <meta property="twitter:image" content="https://danielcanetti.com{{ postFeatureImageFull }}">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -19,10 +19,22 @@
     <body class="{{ pageClass }}">
         <div class="wrapper">
             {% include nav %}
-            <h1 class="--sub">{{ pageTitle }}</h1>
+            <h1 class="--sub">Suggest other post<br><br>--or--<br><br>place affiliate link<br><br>NOT H1</h1>
             <div class="body dark">
                 <div class="body__section">
+                    <h1>{{ postTitle }}</h1>
                     {{ content }}
+                    <div class="share__blog">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
+                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
+                        </a>
+                        <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
+                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
+                        </a>
+                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
+                        </a>
+                    </div>
                 </div>
                 {% include footer %}
             </div>

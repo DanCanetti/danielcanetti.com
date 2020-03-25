@@ -50,11 +50,11 @@
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature-full.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -78,9 +78,10 @@
   </div>
 </nav>
 
-            <h1 class="--sub"></h1>
+            <h1 class="--sub">Suggest other post<br><br>--or--<br><br>place affiliate link<br><br>NOT H1</h1>
             <div class="body dark">
                 <div class="body__section">
+                    <h1>GitLab Pages</h1>
                     <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
 <p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
 <p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
@@ -117,6 +118,17 @@
 <p>If you Group your projects, <strong>GitLab Pages can only be generated from repos in the top level of a group</strong>, I got stuck trying to generate Pages from a subgroup and this is not supported.</p>
 <p>Once you see the <code>Congratulations!</code> message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.</p>
 
+                    <div class="share__blog">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
+                        </a>
+                        <a class="l" href="https://twitter.com/intent/tweet?text=GitLab Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
+                        </a>
+                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
+                        </a>
+                    </div>
                 </div>
                 <footer>
     <div class="footer__content">

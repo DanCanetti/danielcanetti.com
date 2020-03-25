@@ -4,7 +4,8 @@ postTitle: Recommended Reading
 date: 2019-09-30
 postTag: Life
 postFeatureImage: /images/posts/recommended-reading/feature.jpg
-postFeatureImageRetina: /images/posts/recommended-reading/feature.jpg
+postFeatureImageRetina: /images/posts/recommended-reading/feature@2x.jpg
+postFeatureImageFull: /images/posts/recommended-reading/feature-full.jpg
 postExcerpt: I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.
 ---
 

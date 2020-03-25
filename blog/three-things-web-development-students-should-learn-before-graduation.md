@@ -3,8 +3,9 @@ postTitle: Advice for web development students
 #date: Last Modified
 date: 2015-10-30
 postTag: Web Development
-postFeatureImage: /images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg
-postFeatureImageRetina: /images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg
+postFeatureImage: /images/posts/advice-for-web-developmen-students/feature.jpg
+postFeatureImageRetina: /images/posts/advice-for-web-developmen-students/feature@2x.jpg
+postFeatureImageFull: /images/posts/advice-for-web-developmen-students/feature-full.jpg
 postExcerpt: The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.
 ---
 

@@ -658,6 +658,23 @@ footer {
       .case-study-item .case-study-item__data .case-study-item__data--content a {
         align-self: flex-start; }
 
+.share__blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 100px; }
+  .share__blog a svg {
+    margin-right: 8px;
+    color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .share__blog a:hover svg {
+    color: #F92A82; }
+  .share__blog a:not(:last-of-type) {
+    margin-right: 20px; }
+
 /*
     State
     ---

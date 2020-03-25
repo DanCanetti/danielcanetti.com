@@ -4,7 +4,8 @@ postTitle: My Current Setup
 date: 2019-09-26
 postTag: Life
 postFeatureImage: /images/posts/current-setup/feature.jpg
-postFeatureImageRetina: /images/posts/current-setup/feature.jpg
+postFeatureImageRetina: /images/posts/current-setup/feature@2x.jpg
+postFeatureImageFull: /images/posts/current-setup/feature-full.jpg
 postExcerpt: Everyone works differently and I love it. I follow a few too many set-up focussed Instagram accounts and have been watching Setup Wars, TLD, and Oliur for as long as I can remember. I'm still working on my ideal set-up and I'll keep this page updated with all the latest tech and workflow tools I use.
 ---
 

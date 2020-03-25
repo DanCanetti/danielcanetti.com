@@ -4,7 +4,8 @@ postTitle: Being a woman in tech sucks
 date: 2015-11-22
 postTag: Culture
 postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
-postFeatureImageRetina: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
+postFeatureImageRetina: /images/posts/being-a-woman-in-tech-sucks/feature@2x.jpg
+postFeatureImageFull: /images/posts/being-a-woman-in-tech-sucks/feature-full.jpg
 postExcerpt: I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?
 ---
 
@@ -28,7 +29,7 @@ Paul Boag
 
 The sad truth is that women only account for thirty to forty percent of digital workforce, with some companies having as few as one woman coding within the development team if any at all... [the downside of the digital revolution is isolation](https://boagworld.com/digital-strategy/alone/) and for women this is painfully clear.
 
-![Woman hitting man with boxing glove](/images/posts/being-a-woman-in-tech-sucks/feature.jpg)**[Image Source](http://www.gratisography.com/#people)**
+![Woman hitting man with boxing glove](/images/posts/being-a-woman-in-tech-sucks/feature-full.jpg)**[Image Source](http://www.gratisography.com/#people)**
 
 As Byrne points out, “many of the problems I encountered in my tech career were due to the cluelessness of my teammates rather than any malice on their part”, in the research I have done this appears true on more occasions than not. It appears as if men within tech see women as some mythical creature that they could scare away if they treated her the same, or they are intimidated and usure of how due to the historical lack of women within the industry... the latter is more likely.
 

@@ -222,3 +222,26 @@ $burgertransitions: .4s;
     }
   }
 }
+
+// Blog 
+.share__blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 100px;
+  a {
+    svg {
+      margin-right: 8px;
+      color: #fff;
+      @include transitionall(.3s);
+    }
+    &:hover {
+      svg {
+        color: $dancanettialt;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}
