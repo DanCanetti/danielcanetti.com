@@ -43,4 +43,4 @@ When I started working in my current role during my final year I had to learn AS
 
 ---
 
-*Update 27/08/2019: I'm now using Trello for project management - view all my gear [here](#).*
+*Update 27/08/2019: I'm now using Trello for project management - [view all my gear here](/blog/current-setup/).*

@@ -138,7 +138,7 @@ h3 {
   letter-spacing: .05rem; }
 
 p {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 30px; }
 
@@ -233,9 +233,10 @@ a {
 
 hr {
   box-shadow: none;
-  border: 1px solid #ffcf56;
+  border: 1px solid #f0f0f0;
   height: 0px;
-  margin: 75px 75% 75px 0px; }
+  width: 12.5%;
+  margin: 75px 0 25px 0px; }
 
 blockquote {
   font-family: "Roboto Slab", serif;
@@ -245,6 +246,23 @@ blockquote {
     margin: 25px 75px 75px 75px;
     color: #fff;
     font-size: .7em; }
+
+code {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.1); }
+
+pre {
+  padding: 15px;
+  margin-top: 35px;
+  width: 100%;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.1); }
+  pre code {
+    font-size: 1rem;
+    background: transparent; }
+
+s {
+  opacity: 0.5; }
 
 /*
     Layout
@@ -446,6 +464,50 @@ nav {
     @media (max-width: 576px) {
       .body .body__section {
         padding: 150px 0px 50px 0px; } }
+    .body .body__section.body__section--post h1, .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
+      font-family: "brandon-grotesque", sans-serif;
+      font-weight: 900;
+      color: #fff;
+      font-size: 3rem;
+      margin-top: -50px;
+      margin-bottom: 0px;
+      padding-bottom: 10px; }
+      .body .body__section.body__section--post h1 + span, .body .body__section.body__section--post h2 + span, .body .body__section.body__section--post h3 + span {
+        margin-bottom: 75px; }
+    .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      padding-bottom: 0px;
+      margin-top: 75px; }
+    .body .body__section.body__section--post a {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      z-index: 1; }
+      .body .body__section.body__section--post a:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
+        opacity: 0.3;
+        background: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+      .body .body__section.body__section--post a:hover:before {
+        opacity: 1;
+        background: #F92A82; }
+    .body .body__section.body__section--post ul, .body .body__section.body__section--post ol {
+      margin-top: 30px;
+      padding-left: 25px; }
+      .body .body__section.body__section--post ul li, .body .body__section.body__section--post ol li {
+        font-size: 1.25rem; }
+    .body .body__section.body__section--post img {
+      width: 100%;
+      height: auto; }
 
 footer {
   z-index: 5000000;
@@ -784,6 +846,29 @@ footer {
     color: #F92A82; }
   .share__blog a:not(:last-of-type) {
     margin-right: 20px; }
+
+.affiliate {
+  width: 240px;
+  position: fixed;
+  left: 10px;
+  top: 120px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .affiliate img {
+    width: 100%;
+    height: auto; }
+  .affiliate .affiliate__content {
+    padding: 20px;
+    color: #fff; }
+    .affiliate .affiliate__content p {
+      margin-top: 0;
+      font-size: 1em;
+      margin-bottom: 20px; }
+  .affiliate.show {
+    opacity: 1; }
 
 /*
     State

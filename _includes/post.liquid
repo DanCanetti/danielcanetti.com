@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         {% include meta %}
+        <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • {{ postTitle }}</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
@@ -20,10 +21,19 @@
     <body class="{{ pageClass }}">
         <div class="wrapper">
             {% include nav %}
-            <h1 class="--sub">Suggest other post<br><br>--or--<br><br>place affiliate link<br><br>NOT H1</h1>
+            <div class="affiliate">
+                <a href="https://share.getf.ly/t13u7j" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://share.getf.ly/t13u7j" target="_blank">Find out more</a>
+                </div>
+            </div>
             <div class="body dark">
-                <div class="body__section">
+                <div class="body__section body__section--post">
                     <h1>{{ postTitle }}</h1>
+                    <span>{{ date | date: '%B %d, %Y' }}</span>
                     {{ content }}
                     <div class="share__blog">
                         <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">

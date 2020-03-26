@@ -11,11 +11,7 @@ postExcerpt: From installation to continuous deployment - everything you need to
 
 ## What is Eleventy?
 
-[eleventy](https://www.11ty.io/) is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.
-
-## Quick Start
-
-<https://github.com/DanCanetti/eleventy-boilerplate/>
+[Eleventy](https://www.11ty.io/) is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.
 
 ## Installing Eleventy
 
@@ -171,15 +167,19 @@ I always use one of these two solutions for hosting my Eleventy sites, by creati
 
 My portfolio is hosted here, for free. It's more powerful than Github pages offering tools such as redirects, forms and split testing on the free tier - with more available on the [paid service](https://www.netlify.com/pricing/). I would recommend this solution for sites with more than one page.
 
-<https://www.netlify.com/>
+[Netlify](https://www.netlify.com/)
 
 ### Github Pages
 
 I'd only recommend this for simple or single page sites. This is also free and you can create as many sites as you like, however your repo must be public. I recently [upgraded to Pro](https://github.com/pricing) and can now create publicly accessible, single page sites from private repos. Keeping my source code private but allowing me to host single page sites for free.
 
-I've [created a bash script](https://github.com/DanCanetti/eleventy-github-pages-deploy) which copies the `_site` directory to create the docs directory required for building sites via Github pages.
+~~I've [created a bash script](https://github.com/DanCanetti/eleventy-github-pages-deploy) which copies the `_site` directory to create the docs directory required for building sites via Github pages.~~
 
-<https://pages.github.com/>
+As it turns out, my bash script is unnecessary as you can change the default output of an Eleventy site to the docs folder by adding some config.
+
+[11ty Output Directory](https://www.11ty.dev/docs/config/#output-directory)
+
+[Github Pages](https://pages.github.com/)
 
 ## To conclude
 

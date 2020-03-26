@@ -204,7 +204,7 @@ h3 {
 }
 
 p {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     line-height: 1.4;
     margin-top: 30px;
 }
@@ -321,9 +321,10 @@ a {
 
 hr {
     box-shadow: none;
-    border: 1px solid #ffcf56;
+    border: 1px solid $dancanettigrey;
     height: 0px;
-    margin: 75px 75% 75px 0px;
+    width: 12.5%;
+    margin: 75px 0 25px 0px;
 }
 
 blockquote {
@@ -335,4 +336,25 @@ blockquote {
         color: $dancanettiwhite;
         font-size: .7em;
     }
+}
+
+code {
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+}
+
+pre {
+  padding: 15px;
+  margin-top: 35px;
+  width: 100%;
+  overflow-y: scroll;
+  background: rgba(255,255,255,0.1);
+  code {
+    font-size: 1rem;
+    background: transparent;
+  }
+}
+
+s {   // Strikethrough
+  opacity: 0.5;
 }

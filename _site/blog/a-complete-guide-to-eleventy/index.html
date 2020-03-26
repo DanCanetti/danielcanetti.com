@@ -44,6 +44,7 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
+        <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • A complete guide to Eleventy</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
@@ -118,14 +119,21 @@
   </div>
 </nav>
 
-            <h1 class="--sub">Suggest other post<br><br>--or--<br><br>place affiliate link<br><br>NOT H1</h1>
+            <div class="affiliate">
+                <a href="https://share.getf.ly/t13u7j" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://share.getf.ly/t13u7j" target="_blank">Find out more</a>
+                </div>
+            </div>
             <div class="body dark">
-                <div class="body__section">
+                <div class="body__section body__section--post">
                     <h1>A complete guide to Eleventy</h1>
+                    <span>December 02, 2019</span>
                     <h2>What is Eleventy?</h2>
-<p><a href="https://www.11ty.io/">eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
-<h2>Quick Start</h2>
-<p><a href="https://github.com/DanCanetti/eleventy-boilerplate/">https://github.com/DanCanetti/eleventy-boilerplate/</a></p>
+<p><a href="https://www.11ty.io/">Eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
 <h2>Installing Eleventy</h2>
 <p>Eleventy can be downloaded via the command line. Create a new project directory <code>mkdir [project_name]</code> and <code>cd</code> into it. Once in there install eleventy - <code>npm install -g @11ty/eleventy</code>.</p>
 <p>Eleventy is now installed in this directory and can be tested by creating a <code>test.md</code> file and then running the command <code>eleventy</code>. You'll know eleventy is working as it'll show you this: Writing <code>_site/temp/index.html from ./temp.md</code>.</p>
@@ -230,11 +238,13 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 <p>I always use one of these two solutions for hosting my Eleventy sites, by creating a Github repo for your site you'll be able to enjoy the benefits of automated deployment.</p>
 <h3>Netlify</h3>
 <p>My portfolio is hosted here, for free. It's more powerful than Github pages offering tools such as redirects, forms and split testing on the free tier - with more available on the <a href="https://www.netlify.com/pricing/">paid service</a>. I would recommend this solution for sites with more than one page.</p>
-<p><a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
+<p><a href="https://www.netlify.com/">Netlify</a></p>
 <h3>Github Pages</h3>
 <p>I'd only recommend this for simple or single page sites. This is also free and you can create as many sites as you like, however your repo must be public. I recently <a href="https://github.com/pricing">upgraded to Pro</a> and can now create publicly accessible, single page sites from private repos. Keeping my source code private but allowing me to host single page sites for free.</p>
-<p>I've <a href="https://github.com/DanCanetti/eleventy-github-pages-deploy">created a bash script</a> which copies the <code>_site</code> directory to create the docs directory required for building sites via Github pages.</p>
-<p><a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<p><s>I've <a href="https://github.com/DanCanetti/eleventy-github-pages-deploy">created a bash script</a> which copies the <code>_site</code> directory to create the docs directory required for building sites via Github pages.</s></p>
+<p>As it turns out, my bash script is unnecessary as you can change the default output of an Eleventy site to the docs folder by adding some config.</p>
+<p><a href="https://www.11ty.dev/docs/config/#output-directory">11ty Output Directory</a></p>
+<p><a href="https://pages.github.com/">Github Pages</a></p>
 <h2>To conclude</h2>
 <p>For many years I've been focussed on WordPress development, since switching to Eleventy I've been able to tailor the site build to suit what I need and rapidly develop sites without the need for databases and a bloated codebase. I'd definitely recommend giving it a try.</p>
 <p>If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.</p>

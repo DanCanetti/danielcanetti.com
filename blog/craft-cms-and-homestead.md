@@ -55,7 +55,7 @@ Again using `control + w`, search for `max_execution_time`. Change this to 120.
 
 Exit nano by using `control + x`, answer `y` to save the file and hit `enter` to save over the existing file.
 
-exit the ssh connection and reload the machine using `vagrant reload`. Once the machine has restarted refresh the System Report page and the Requirements should now show as valid.
+`exit` the ssh connection and reload the machine using `vagrant reload`. Once the machine has restarted refresh the System Report page and the Requirements should now show as valid.
 
 ---
 

@@ -225,6 +225,57 @@ nav {
         @include sm {
             padding: 150px 0px 50px 0px;
         }
+        &.body__section--post {
+          h1 {
+            font-family: $pfont;
+            font-weight: $pfontheavy;
+            color: #fff;
+            font-size: 3rem;
+            margin-top: -50px;
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+            & + span {  // Date
+              margin-bottom: 75px;
+            }
+          }
+          h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0;
+            padding-bottom: 0px;
+            margin-top: 75px;
+          }
+          a {
+            @include transitionall(.3s);
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                height: 1px;
+                width: 100%;
+                opacity: 0.3;
+                background: $dancanettiwhite;
+                @include transitionall(.3s);
+            }
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    background: $dancanettialt;
+                }
+            }
+          }
+          ul, ol {
+            margin-top: 30px;
+            padding-left: 25px;
+            li {
+              font-size: 1.25rem;
+            }
+          }
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
     }
 }
 

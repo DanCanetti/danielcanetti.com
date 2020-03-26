@@ -364,3 +364,28 @@ $burgertransitions: .4s;
     }
   }
 }
+
+.affiliate {
+  width: 240px;
+  position: fixed;
+  left: 10px;
+  top: 120px;
+  opacity: 0;
+  @include transitionall(.3s);
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .affiliate__content {
+    padding: 20px;
+    color: #fff;
+    p {
+      margin-top: 0;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+  }
+  &.show {
+    opacity: 1;
+  }
+}
