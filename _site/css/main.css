@@ -83,6 +83,11 @@ p {
   100% {
     transform: translateY(15px);
     opacity: 0; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 body {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
@@ -115,7 +120,7 @@ h1, h2, h3 {
       font-size: 2rem; } }
   h1.--sub, h2.--sub, h3.--sub {
     position: fixed;
-    top: 140px;
+    top: 40px;
     left: 55px;
     color: #fff;
     font-family: "brandon-grotesque", sans-serif;
@@ -227,6 +232,39 @@ a {
         left: -10px;
         width: 40px;
         height: 40px; }
+
+button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0 0 5px 0;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1; }
+  button:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    opacity: 0.3;
+    background: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  button:hover {
+    cursor: pointer; }
+    button:hover:before {
+      opacity: 1;
+      background: #F92A82; }
 
 .strong {
   font-weight: 900; }
@@ -869,6 +907,52 @@ footer {
       margin-bottom: 20px; }
   .affiliate.show {
     opacity: 1; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 75%;
+  margin-top: 50px; }
+  .form .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; }
+    .form .form-group label {
+      font-size: 1rem; }
+    .form .form-group input, .form .form-group textarea {
+      height: 50px;
+      background: none;
+      box-shadow: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      font-size: 1rem;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .form .form-group input.parsley-error, .form .form-group textarea.parsley-error {
+        border-bottom: 1px solid #F92A82; }
+    .form .form-group textarea {
+      resize: vertical; }
+    .form .form-group button {
+      align-self: flex-end; }
+    .form .form-group ul.parsley-errors-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      animation: fade-in .3s 1; }
+      .form .form-group ul.parsley-errors-list li {
+        font-size: .75rem;
+        padding: .15rem .25rem;
+        background: #F92A82;
+        color: #fff; }
 
 /*
     State

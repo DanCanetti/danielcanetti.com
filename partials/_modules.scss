@@ -365,6 +365,7 @@ $burgertransitions: .4s;
   }
 }
 
+// Affiliate promos on posts
 .affiliate {
   width: 240px;
   position: fixed;
@@ -387,5 +388,58 @@ $burgertransitions: .4s;
   }
   &.show {
     opacity: 1;
+  }
+}
+
+// Form 
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 75%;
+  margin-top: 50px;
+  .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    label {
+      font-size: 1rem;
+    }
+    input, textarea {
+      height: 50px;
+      background: none;
+      box-shadow: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      font-size: 1rem;
+      @include transitionall(.3s);
+      &.parsley-error {
+        border-bottom: 1px solid $dancanettialt;
+      }
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      align-self: flex-end;
+    }
+    ul.parsley-errors-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      animation: fade-in .3s 1;
+      li {
+        font-size: .75rem;
+        padding: .15rem .25rem;
+        background: $dancanettialt;
+        color: #fff;
+      }
+    }
   }
 }

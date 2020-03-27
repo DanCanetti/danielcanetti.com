@@ -12,3 +12,7 @@ $(window).scroll(function(){
         $('.affiliate').removeClass('show');
     }
 });
+
+// Randomize Affiliate 
+var random = Math.floor(Math.random() * $('.affiliate').length);
+$('.affiliate').hide().eq(random).show();

@@ -1,0 +1,48 @@
+---
+layout: sub.liquid
+pageTitle: Contact
+pageClass: sub
+pageExcerpt: I always love to hear from people, even if it's just to say Hi! 
+---
+
+<div class="body dark">
+    <div class="body__section body__section--post">
+        <h1>Contact</h1>
+        <p>Reach out to start a project, see if I can help or to just say hi.</p>
+        <form id="dancanetti_contact" class="form" name="contact" method="POST" netlify data-parsley-validate>
+            <div class="form-group">
+                <label for="dancanetti_contact_name">Name</label>
+                <input type="text" id="dancanetti_contact_name" name="dancanetti_contact_name" required data-parsley-required />
+            </div>
+            <div class="form-group">
+                <label for="dancanetti_contact_email">Email</label>
+                <input type="email" data-parsley-type="email" id="dancanetti_contact_email" name="dancanetti_contact_email" required data-parsley-required />
+            </div>
+            <div class="form-group">
+                <label for="dancanetti_contact_message">Message:</label>
+                <textarea id="dancanetti_contact_message" name="dancanetti_contact_message" required data-parsley-required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+    <div class="body__section body__section--post">
+        <div>
+            <h2>The 'no fixed date' newsletter.</h2>
+            <form id="dancanetti_newsletter" class="form" name="newsletter" method="POST" netlify data-parsley-validate>
+                <div class="form-group">
+                    <label for="dancanetti_newsletter_email">Email</label>
+                    <input type="email" data-parsley-type="email" id="dancanetti_newsletter_email" name="dancanetti_newsletter_email" required data-parsley-required />
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="body__section">
+        <h2>SOCIAL LINKS</h2>
+    </div>
+    {% include footer %}
+</div>
