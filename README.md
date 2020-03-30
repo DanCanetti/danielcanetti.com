@@ -1,5 +1,7 @@
 # Daniel Canetti Portfolio
 
+## Version: 0.0.1
+
 ## Status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/32c1a90d-a757-43b2-a099-5dd9d014729d/deploy-status)](https://app.netlify.com/sites/danielcanetti/deploys)

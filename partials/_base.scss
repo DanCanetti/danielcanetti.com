@@ -158,7 +158,7 @@ body {
         margin: 10px;
         overflow: hidden;
         @include sm {
-            padding: 25% 5% 25% 5%;
+            padding: 25% 5% 0 5%;
         }
     }
 }
@@ -180,7 +180,7 @@ h1 {
     margin: 0;
     line-height: 1.25;
     @include sm {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     &.--sub {
       position: fixed;
@@ -217,6 +217,11 @@ p {
     font-size: 1.25rem;
     line-height: 1.4;
     margin-top: 30px;
+    img {
+      & + strong {
+        font-size: .75rem;
+      }
+    }
 }
 
 a {
@@ -371,11 +376,17 @@ hr {
 blockquote {
     font-family: $serif;
     margin: 75px 75px 5px 75px;
-    &+ p {
+    & + p {
         font-family: $serif;
         margin: 25px 75px 75px 75px;
         color: $dancanettiwhite;
         font-size: .7em;
+    }
+    @include sm {
+      margin: 75px 25px 5px 25px;
+      & + p {
+        margin: 25px 25px 75px 25px;
+      }
     }
 }
 
@@ -398,4 +409,14 @@ pre {
 
 s {   // Strikethrough
   opacity: 0.5;
+}
+
+.social-img {
+  height: .95rem;
+  @include transitionall(.3s);
+  &.hov-enabled {
+    &:hover {
+      fill: $dancanettialt;
+    }
+  }
 }

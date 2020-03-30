@@ -157,7 +157,7 @@ I've found the easiest solution to media, javascript and CSS files is to include
 
 ### Node Sass
 
-For the past few years I've been using [Node Sass](https://www.npmjs.com/package/node-sass) on almost every project I work and implement a [SMACSS](http://smacss.com/) methodology for structuring my partials. If you're interested in learning more [reach out](https://twitter.com/Dan_Canetti) or have a look at my [quick start repo](https://github.com/DanCanetti/sass-quick-start).
+For the past few years I've been using [Node Sass](https://www.npmjs.com/package/node-sass) on almost every project I work on and implement a [SMACSS](http://smacss.com/) methodology for structure and BEM naming convention throughout. To keep the size of the live site small, I now create the `partials` directory outside the `_site` directory and then compile into it using `sass --watch partials:_site/css`.
 
 ## Deployment through Github and Netlify
 
@@ -185,6 +185,6 @@ As it turns out, my bash script is unnecessary as you can change the default out
 
 For many years I've been focussed on WordPress development, since switching to Eleventy I've been able to tailor the site build to suit what I need and rapidly develop sites without the need for databases and a bloated codebase. I'd definitely recommend giving it a try.
 
-If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.
+If you feel like you need to hook a CMS into the site have a look at [forestry.io](https://forestry.io/). I've had a quick look and it's a pretty slick integration.
 
-I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer.
+I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer. I'm still learning 11ty but the more I use it, the more I fall in love with it.

@@ -116,7 +116,6 @@
           <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
           <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
           <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
-          <a href="https://unsplash.com/@dan_canetti" target="_blank" aria-label="Unplash" rel="noreferrer"><svg aria-label="Unsplash" class="social-img" xmlns="http://www.w3.org/2000/svg" viewBox="20 21 96 96"><g fill-rule="evenodd"><path d="M50 21h36v27H50zM20 63h30.087v27.24h36.079V63H116v54H20z"/></g></svg></a>
         </ul>
       </nav>
     </div>
@@ -246,7 +245,7 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 <h2>Sass and Media</h2>
 <p>I've found the easiest solution to media, javascript and CSS files is to include then directly in the <code>_site</code> directory. When developing your pages remember that the <code>_site</code> will be the root of the site on compile - for example you should use <code>/images/feature.jpg</code> rather than <code>_site/images/feature.jpg</code>.</p>
 <h3>Node Sass</h3>
-<p>For the past few years I've been using <a href="https://www.npmjs.com/package/node-sass">Node Sass</a> on almost every project I work and implement a <a href="http://smacss.com/">SMACSS</a> methodology for structuring my partials. If you're interested in learning more <a href="https://twitter.com/Dan_Canetti">reach out</a> or have a look at my <a href="https://github.com/DanCanetti/sass-quick-start">quick start repo</a>.</p>
+<p>For the past few years I've been using <a href="https://www.npmjs.com/package/node-sass">Node Sass</a> on almost every project I work on and implement a <a href="http://smacss.com/">SMACSS</a> methodology for structure and BEM naming convention throughout. To keep the size of the live site small, I now create the <code>partials</code> directory outside the <code>_site</code> directory and then compile into it using <code>sass --watch partials:_site/css</code>.</p>
 <h2>Deployment through Github and Netlify</h2>
 <p>I always use one of these two solutions for hosting my Eleventy sites, by creating a Github repo for your site you'll be able to enjoy the benefits of automated deployment.</p>
 <h3>Netlify</h3>
@@ -260,8 +259,8 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 <p><a href="https://pages.github.com/">Github Pages</a></p>
 <h2>To conclude</h2>
 <p>For many years I've been focussed on WordPress development, since switching to Eleventy I've been able to tailor the site build to suit what I need and rapidly develop sites without the need for databases and a bloated codebase. I'd definitely recommend giving it a try.</p>
-<p>If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.</p>
-<p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer.</p>
+<p>If you feel like you need to hook a CMS into the site have a look at <a href="https://forestry.io/">forestry.io</a>. I've had a quick look and it's a pretty slick integration.</p>
+<p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer. I'm still learning 11ty but the more I use it, the more I fall in love with it.</p>
 
                     <div class="share__blog">
                         <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/a-complete-guide-to-eleventy/" target="_blank">

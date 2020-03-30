@@ -67,19 +67,6 @@ nav {
         }
       }
     }
-    @include sm {
-      margin-top: 25%;
-      ul {
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-        li {
-          &:nth-child(3) {
-            display: none;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -150,6 +137,9 @@ nav {
             opacity: 0;
         }
     }
+    @include sm {
+      width: 25vh;
+    }
 }
 
 // Scroll Hint
@@ -193,6 +183,12 @@ nav {
     padding: 50% 200px 0 400px;
     background-color: $dancanettigrey;
     @include transitionall(.3s);
+    @include sm {
+      margin-left: -10%;
+      padding: 100% 50px 0 70px;
+      width: 120%;
+      height: 100%;
+    }
     &.dark {
         background-color: $dancanettiblack;
         color: $dancanettiwhite;
@@ -221,11 +217,19 @@ nav {
           flex-direction: row;
           justify-content: space-between;
           flex-wrap: wrap;
+          @include sm {
+            margin-top: 0;
+            flex-direction: column;
+          }
         }
         @include sm {
             padding: 150px 0px 50px 0px;
         }
         &.body__section--post {
+          @include sm {
+            margin-top: 0;
+            padding-top: 50px;
+          }
           h1 {
             font-family: $pfont;
             font-weight: $pfontheavy;
@@ -234,6 +238,9 @@ nav {
             margin-top: -50px;
             margin-bottom: 0px;
             padding-bottom: 10px;
+            @include sm {
+              font-size: 2.25rem;
+            }
             & + span {  // Date
               margin-bottom: 75px;
             }
@@ -243,6 +250,15 @@ nav {
             margin-bottom: 0;
             padding-bottom: 0px;
             margin-top: 75px;
+            @include sm {
+              font-size: 1.5rem;
+            }
+          }
+          p {
+            max-width: 100%;
+            @include sm {
+            //  overflow-x: scroll;
+            }
           }
           a {
             @include transitionall(.3s);
@@ -317,5 +333,10 @@ footer {
     nav {
         top: 0!important;
         background: $dancanettiwhite;
+    }
+    @include sm {
+      .body {
+        padding-top: 75%;
+      }
     }
 }
