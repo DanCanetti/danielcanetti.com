@@ -1,16 +1,19 @@
 ---
 postTitle: My Favourite Grand Designs
-postDate: 2nd September 2019
+#date: Last Modified
 date: 2019-09-02
+postTag: Life
 postFeatureImage: /images/posts/my-favourite-grand-designs/feature.jpg
-postExcerpt: Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.
+postFeatureImageRetina: /images/posts/my-favourite-grand-designs/feature@2x.jpg
+postFeatureImageFull: /images/posts/my-favourite-grand-designs/feature-full.jpg
+postExcerpt: Grand Designs is one of the staple design and architecture shows on TV and over the years there have been some truly incredible houses built. Here are some of my favourites.
 ---
 
 Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.
 
 ## Container House
 
-![Container House](/images/posts/my-favourite-grand-designs/feature.jpg)
+![Container House](/images/posts/my-favourite-grand-designs/favourite.jpg)
 
 A young farmer and architect in Northern Ireland hopes to make a home out of four large shipping containers welded together to form a giant cross.
 

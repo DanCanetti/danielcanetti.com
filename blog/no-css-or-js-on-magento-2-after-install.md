@@ -1,8 +1,11 @@
 ---
-postTitle: No CSS or JS on Magento 2 after install
-postDate: 22nd October 2019
+postTitle: No CSS or JS on Magento 2
+#date: Last Modified
 date: 2019-10-22
+postTag: Web Development
 postFeatureImage: /images/posts/no-ccs-or-js-on-magento-2-after-install/feature.jpg
+postFeatureImageRetina: /images/posts/no-ccs-or-js-on-magento-2-after-install/feature@2x.jpg
+postFeatureImageFull: /images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg
 postExcerpt: I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.
 ---
 

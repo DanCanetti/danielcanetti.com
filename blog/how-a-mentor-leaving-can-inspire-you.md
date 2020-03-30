@@ -1,8 +1,11 @@
 ---
 postTitle: How a mentor leaving can inspire you
-postDate: 9th May 2016
-date: 2016-05-09
+#date: Last Modified
+date: 2016-06-09
+postTag: Culture
 postFeatureImage: /images/posts/how-a-mentor-leaving-can-inspire-you/feature.jpg
+postFeatureImageRetina: /images/posts/how-a-mentor-leaving-can-inspire-you/feature@2x.jpg
+postFeatureImageFull: /images/posts/how-a-mentor-leaving-can-inspire-you/feature-full.jpg
 postExcerpt: Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.
 ---
 

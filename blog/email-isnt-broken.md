@@ -1,8 +1,11 @@
 ---
 postTitle: Email Isn't Broken
-postDate: 27th August 2019
+#date: Last Modified
 date: 2019-08-27
+postTag: Culture
 postFeatureImage: /images/posts/email-isnt-broken/feature.jpg
+postFeatureImageRetina: /images/posts/email-isnt-broken/feature@2x.jpg
+postFeatureImageFull: /images/posts/email-isnt-broken/feature-full.jpg
 postExcerpt: We all hate email, it's our never ending to do list and it's the thing that ruins your Sunday night, here's a few tips on how to fix it.
 ---
 

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        <script type="text/javascript" defer src="/js/post.js"></script>
+        <title>Daniel Canetti • {{ postTitle }}</title>
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content="Daniel Canetti" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="{{ pageExcerpt }}" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com{{ postFeatureImageFull }}" />
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="{{ pageExcerpt }}">
+        <meta property="twitter:image" content="https://danielcanetti.com{{ postFeatureImageFull }}">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
+        <meta property="twitter:site" content="@Dan_Canetti">
+        <meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="{{ pageClass }}">
+        <div class="wrapper">
+            {% include nav %}
+            <div class="affiliate flywheel">
+                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="affiliate digital-ocean">
+                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
+                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
+                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="body dark">
+                <div class="body__section body__section--post">
+                    <h1>{{ postTitle }}</h1>
+                    <span>{{ date | date: '%B %d, %Y' }}</span>
+                    {{ content }}
+                    <div class="share__blog">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
+                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
+                        </a>
+                        <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
+                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
+                        </a>
+                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
+                        </a>
+                    </div>
+                </div>
+                {% include footer %}
+            </div>
+        </div>
+    </body>
+</html>

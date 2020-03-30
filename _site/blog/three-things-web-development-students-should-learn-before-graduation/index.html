@@ -22,15 +22,17 @@
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
-<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous" SameSite="none Secure"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,43 +45,106 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <title>Daniel Canetti • Blog • Three things web development students should learn before graduation</title>
+        <script type="text/javascript" defer src="/js/post.js"></script>
+        <title>Daniel Canetti • Advice for web development students</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="Three things web development students should learn before graduation" />
-        <meta property="og:description" content="The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects." />
-        <meta property="og:url" content="https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/advice-for-web-developmen-students/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Three things web development students should learn before graduation">
-        <meta property="twitter:description" content="The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg">
-        <meta property="twitter:url" content="https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/advice-for-web-developmen-students/feature-full.jpg">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="post">
-      <div class="wrapper">
-        <nav>
-  <div class="logo">
-    <img id="mainlogo" src="/images/logotext.svg" alt="Daniel Canetti • Fullstack Developer • " class="svg" />
-     <a href="#top"><img class="center" src="/images/logo.png" alt="" /></a>
+    <body class="sub">
+        <div class="wrapper">
+            <nav>
+  <div class="nav__content">
+    <a href="/">
+        <div class="nav__content__logoarea">
+          Dan.
+        </div>
+    </a>
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
+        </span>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            
+            
+              <li><a href="https://www.kbpro.com/" target="_blank">K.B Pro</a></li>
+            
+              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank">Emerald Kitchens</a></li>
+            
+              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank">Sass, BEM, and SMACSS Quick Start</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            
+            
+              <li><a href="/blog/a-complete-guide-to-eleventy/">A complete guide to Eleventy</a></li>
+            
+              <li><a href="/blog/craft-cms-and-homestead/">Installing Craft CMS in Homestead</a></li>
+            
+              <li><a href="/blog/no-css-or-js-on-magento-2-after-install/">No CSS or JS on Magento 2</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <ul>
-    <li><a class="cta" href="/">Home</a></li>
-    <li><a class="cta" href="/blog/">Blog</a></li>
-    <li><a class="cta" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener noreferrer">Tweet Me</a></li>
-    <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li>
-  </ul>
 </nav>
 
-        <div id="top" class="header">
-          <h1 class="title">Three things web development students should learn before graduation</h1>
-          <span>30th October 2015</span>
-          <img src="/images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg" />
-        </div>
-        <div class="content">
-          <p>Developing at university and working in the real world is a big change, bigger than you may realize. Tighter deadlines, technical documentation, and fellow developers will all have a profound effect on the way you proceed after university and will help to shape you into a successful developer. The following three things will help the transition be a little smoother and may even improve your job prospects.</p>
+            <div class="affiliate flywheel">
+                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="affiliate digital-ocean">
+                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
+                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
+                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="body dark">
+                <div class="body__section body__section--post">
+                    <h1>Advice for web development students</h1>
+                    <span>October 30, 2015</span>
+                    <p>Developing at university and working in the real world is a big change, bigger than you may realize. Tighter deadlines, technical documentation, and fellow developers will all have a profound effect on the way you proceed after university and will help to shape you into a successful developer. The following three things will help the transition be a little smoother and may even improve your job prospects.</p>
 <h2>Version Control</h2>
 <p>Version control is, or should be, used by all development teams. Although Git and Team Foundation are commonly used there us a huge number of version control systems available; fortunately they are one and the same, get used to one and you should be able to use any of them. Personally I would recommend learning to use Git as it has been a requirement for over half of the jobs I have applied for.</p>
 <blockquote>
@@ -102,24 +167,39 @@
 <p>Dustin Wax</p>
 <p>When I started working in my current role during my final year I had to learn ASP.NET along side working on University projects and my dissertation. Since then I have continued to work for the same company, my skill-set however has continued to expand as I use my portfolio site to expand my knowledge. I have vastly improved my jQuery knowledge, redeveloped my portfolio in SASS (which was new to me), used some new PHP code to incorporate my blog into my site, and pushed my CSS/Bootstrap capabilities to a new level. I achieved this by reading blogs such as A List Apart, seek advice through CodeProject, and using free tutorial sites like CodeAcademy.</p>
 <hr>
-<p><em>Update 27/08/2019: I'm now using Trello for project management - view all my gear <a href="#">here</a>.</em></p>
+<p><em>Update 27/08/2019: I'm now using Trello for project management - <a href="/blog/current-setup/">view all my gear here</a>.</em></p>
 
-          <a href="#top" class="top"><img src="/images/top.svg" /></a>
+                    <div class="share__blog">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank">
+                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
+                        </a>
+                        <a class="l" href="https://twitter.com/intent/tweet?text=Advice for web development students%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank">
+                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
+                        </a>
+                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
+                        </a>
+                    </div>
+                </div>
+                <footer>
+    <div class="footer__content">
+        <div class="footer__content__item footer__content__plinks">
+            <a class="l" href="#">Who</a>
+            <a class="l" href="#">Work</a>
+            <a class="l" href="#">Mail</a>
         </div>
-      </div>
-      <footer>
-  <div class="content">
-    <h1>Let's Work Together</h1>
-    <a class="get-in-touch" href="mailto:info@danielcanetti.com?subject=Let's%20work%20together!" target="_blank">Get In Touch</a>
-    <div class="social-links">
-    <a href="https://github.com/DanCanetti" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a>
-    <a href="https://dribbble.com/dan_canetti" target="_blank"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
-    <a href="https://www.instagram.com/dan_canetti/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-    <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-    <a href="https://www.linkedin.com/in/danielcanetti" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        <div class="footer__content__item footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </div>
+        <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>
-  </div>
 </footer>
 
+            </div>
+        </div>
     </body>
 </html>

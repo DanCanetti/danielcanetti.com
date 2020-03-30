@@ -22,15 +22,17 @@
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
-<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous" SameSite="none Secure"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,46 +45,107 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <title>Daniel Canetti • Blog • A complete guide to Eleventy</title>
+        <script type="text/javascript" defer src="/js/post.js"></script>
+        <title>Daniel Canetti • A complete guide to Eleventy</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="A complete guide to Eleventy" />
-        <meta property="og:description" content="From installation to continuous deployment - everything you need to get started with the static site generator." />
-        <meta property="og:url" content="https://danielcanetti.com/blog/a-complete-guide-to-eleventy/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature.jpg" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="A complete guide to Eleventy">
-        <meta property="twitter:description" content="From installation to continuous deployment - everything you need to get started with the static site generator.">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature.jpg">
-        <meta property="twitter:url" content="https://danielcanetti.com/blog/a-complete-guide-to-eleventy/">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/a-complete-guide-to-eleventy/feature-full.jpg">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="post">
-      <div class="wrapper">
-        <nav>
-  <div class="logo">
-    <img id="mainlogo" src="/images/logotext.svg" alt="Daniel Canetti • Fullstack Developer • " class="svg" />
-     <a href="#top"><img class="center" src="/images/logo.png" alt="" /></a>
+    <body class="sub">
+        <div class="wrapper">
+            <nav>
+  <div class="nav__content">
+    <a href="/">
+        <div class="nav__content__logoarea">
+          Dan.
+        </div>
+    </a>
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
+        </span>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            
+            
+              <li><a href="https://www.kbpro.com/" target="_blank">K.B Pro</a></li>
+            
+              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank">Emerald Kitchens</a></li>
+            
+              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank">Sass, BEM, and SMACSS Quick Start</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            
+            
+              <li><a href="/blog/a-complete-guide-to-eleventy/">A complete guide to Eleventy</a></li>
+            
+              <li><a href="/blog/craft-cms-and-homestead/">Installing Craft CMS in Homestead</a></li>
+            
+              <li><a href="/blog/no-css-or-js-on-magento-2-after-install/">No CSS or JS on Magento 2</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <ul>
-    <li><a class="cta" href="/">Home</a></li>
-    <li><a class="cta" href="/blog/">Blog</a></li>
-    <li><a class="cta" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener noreferrer">Tweet Me</a></li>
-    <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li>
-  </ul>
 </nav>
 
-        <div id="top" class="header">
-          <h1 class="title">A complete guide to Eleventy</h1>
-          <span>2nd December 2019</span>
-          <img src="/images/posts/a-complete-guide-to-eleventy/feature.jpg" />
-        </div>
-        <div class="content">
-          <h2>What is Eleventy?</h2>
-<p><a href="https://www.11ty.io/">eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
-<h2>Quick Start</h2>
-<p><a href="https://github.com/DanCanetti/eleventy-boilerplate/">https://github.com/DanCanetti/eleventy-boilerplate/</a></p>
+            <div class="affiliate flywheel">
+                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="affiliate digital-ocean">
+                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
+                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
+                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="body dark">
+                <div class="body__section body__section--post">
+                    <h1>A complete guide to Eleventy</h1>
+                    <span>December 02, 2019</span>
+                    <h2>What is Eleventy?</h2>
+<p><a href="https://www.11ty.io/">Eleventy</a> is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.</p>
 <h2>Installing Eleventy</h2>
 <p>Eleventy can be downloaded via the command line. Create a new project directory <code>mkdir [project_name]</code> and <code>cd</code> into it. Once in there install eleventy - <code>npm install -g @11ty/eleventy</code>.</p>
 <p>Eleventy is now installed in this directory and can be tested by creating a <code>test.md</code> file and then running the command <code>eleventy</code>. You'll know eleventy is working as it'll show you this: Writing <code>_site/temp/index.html from ./temp.md</code>.</p>
@@ -100,21 +163,81 @@
 <h3>Templating</h3>
 <p>Using Liquid and json to pull content from pages and posts.</p>
 <p>As mentioned in the previous section, each page can be assigned a layout in at the top of the html or markdown file. See below for an example, we'll break this down after.</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig1.png" alt="Fig 1."><strong>Fig 1.</strong></p>
+<pre><code>Fig 1.
+
+---
+layout: homepage.liquid
+pageTitle: Eleventy Boilerplate
+pageClass: homepage
+FeatureImage: /images/feature.jpg
+pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
+---
+## The page content starts here
+</code></pre>
 <p>The layout calls a liquid template from the <code>_includes</code> directory. The liquid template creates the outline for the page and can be called on as many pages as you'd like, below is a basic example of what the <code>homepage.liquid</code> file might look like:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig2.png" alt="Fig 2."><strong>Fig 2.</strong></p>
+<pre><code>Fig 2.
+
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    { % include meta % }
+    &lt;title&gt;Eleventy Boilerplate • { { pageTitle } }&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;sub&quot;&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
+        { % include nav % } { { content } }
+    &lt;/div&gt;
+    { % include footer % }
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>As you can see in <code>**Fig 2**</code>, we're calling the meta from the <code>_includes</code> directory in the head of the document. Any include can be called in a template when using liquid as I do - <a href="https://www.11ty.io/docs/languages/liquid/">find out more here</a>.</p>
-<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `post` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
+<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `sub` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
 <h2>Subpages</h2>
 <p>When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from <code>**Fig 1**</code> to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig3.png" alt="Fig 3."><strong>Fig 3.</strong></p>
+<pre><code>Fig 3.
+
+{    
+    &quot;layout&quot;: &quot;bloglayout.liquid&quot;,
+    &quot;pageClass&quot;: &quot;post&quot;,
+    &quot;tags&quot;: [&quot;posts&quot;]
+}
+</code></pre>
 <p>You'll notice the <code>tags</code> are declared here, a set of files within a tag can be looped through on other pages - this can be used in a variety of ways such as case studies or blog posts.</p>
 <h2>Loops</h2>
 <p>A loop will display certain elements from a group of files. For example, we can loop through all of the blog posts created like this:</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig4.png" alt="Fig 4."><strong>Fig 4.</strong></p>
+<pre><code>Fig 4.
+
+&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;content latest-post-grid all&quot;&gt;
+    &lt;ul&gt;
+    { % assign allblogposts = collections.posts % }
+    { % for post in allblogposts % }
+      &lt;li class=&quot;latest-post&quot;&gt;
+          &lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.data.postTitle } }&lt;/a&gt;&lt;span class=&quot;post-date&quot;&gt;{ { post.data.postDate } }&lt;/span&gt;
+      &lt;/li&gt;
+    { % endfor % }
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Here we're looping though all the blog posts and by creating a collection from the posts tag. Once we're looping through we can call the variable from each of the posts, in this example (<strong>Fig 4.</strong>) we're creating list element for each post with a link to the posts url. We're also pulling in the <code>postDate</code> here, a custom variable added to the liquid template we're calling in the json file.</p>
 <p>Now we have the basic loop in place we can add some 'filters' to tweak the loop such as limit and reverse.</p>
-<p><img src="/images/posts/a-complete-guide-to-eleventy/fig5.png" alt="Fig 5."><strong>Fig 5.</strong></p>
+<pre><code>Fig 5.
+
+&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;content latest-post-grid all&quot;&gt;
+    &lt;ul&gt;
+    { % assign allblogposts = collections.posts limit: 2 | reverse % }
+    { % for post in allblogposts % }
+      &lt;li class=&quot;latest-post&quot;&gt;
+          &lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.data.postTitle } }&lt;/a&gt;&lt;span class=&quot;post-date&quot;&gt;{ { post.data.postDate } }&lt;/span&gt;
+      &lt;/li&gt;
+    { % endfor % }
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <h3>Reverse</h3>
 <p>This will change the default loop order from date ascending to date descending.</p>
 <h3>Limit</h3>
@@ -122,37 +245,54 @@
 <h2>Sass and Media</h2>
 <p>I've found the easiest solution to media, javascript and CSS files is to include then directly in the <code>_site</code> directory. When developing your pages remember that the <code>_site</code> will be the root of the site on compile - for example you should use <code>/images/feature.jpg</code> rather than <code>_site/images/feature.jpg</code>.</p>
 <h3>Node Sass</h3>
-<p>For the past few years I've been using <a href="https://www.npmjs.com/package/node-sass">Node Sass</a> on almost every project I work and implement a <a href="http://smacss.com/">SMACSS</a> methodology for structuring my partials. If you're interested in learning more <a href="https://twitter.com/Dan_Canetti">reach out</a> or have a look at my <a href="https://github.com/DanCanetti/sass-quick-start">quick start repo</a>.</p>
+<p>For the past few years I've been using <a href="https://www.npmjs.com/package/node-sass">Node Sass</a> on almost every project I work on and implement a <a href="http://smacss.com/">SMACSS</a> methodology for structure and BEM naming convention throughout. To keep the size of the live site small, I now create the <code>partials</code> directory outside the <code>_site</code> directory and then compile into it using <code>sass --watch partials:_site/css</code>.</p>
 <h2>Deployment through Github and Netlify</h2>
 <p>I always use one of these two solutions for hosting my Eleventy sites, by creating a Github repo for your site you'll be able to enjoy the benefits of automated deployment.</p>
 <h3>Netlify</h3>
 <p>My portfolio is hosted here, for free. It's more powerful than Github pages offering tools such as redirects, forms and split testing on the free tier - with more available on the <a href="https://www.netlify.com/pricing/">paid service</a>. I would recommend this solution for sites with more than one page.</p>
-<p><a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
+<p><a href="https://www.netlify.com/">Netlify</a></p>
 <h3>Github Pages</h3>
 <p>I'd only recommend this for simple or single page sites. This is also free and you can create as many sites as you like, however your repo must be public. I recently <a href="https://github.com/pricing">upgraded to Pro</a> and can now create publicly accessible, single page sites from private repos. Keeping my source code private but allowing me to host single page sites for free.</p>
-<p>I've <a href="https://github.com/DanCanetti/eleventy-github-pages-deploy">created a bash script</a> which copies the <code>_site</code> directory to create the docs directory required for building sites via Github pages.</p>
-<p><a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<p><s>I've <a href="https://github.com/DanCanetti/eleventy-github-pages-deploy">created a bash script</a> which copies the <code>_site</code> directory to create the docs directory required for building sites via Github pages.</s></p>
+<p>As it turns out, my bash script is unnecessary as you can change the default output of an Eleventy site to the docs folder by adding some config.</p>
+<p><a href="https://www.11ty.dev/docs/config/#output-directory">11ty Output Directory</a></p>
+<p><a href="https://pages.github.com/">Github Pages</a></p>
 <h2>To conclude</h2>
 <p>For many years I've been focussed on WordPress development, since switching to Eleventy I've been able to tailor the site build to suit what I need and rapidly develop sites without the need for databases and a bloated codebase. I'd definitely recommend giving it a try.</p>
-<p>If you feel like you need to hook a CMS into the site have a look at forestry.io. I've hooked it into my wedding website and love it so far.</p>
-<p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer.</p>
+<p>If you feel like you need to hook a CMS into the site have a look at <a href="https://forestry.io/">forestry.io</a>. I've had a quick look and it's a pretty slick integration.</p>
+<p>I hope this article helps get you started, reach out to me if you have any questions. I'll do my best to answer. I'm still learning 11ty but the more I use it, the more I fall in love with it.</p>
 
-          <a href="#top" class="top"><img src="/images/top.svg" /></a>
+                    <div class="share__blog">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/a-complete-guide-to-eleventy/" target="_blank">
+                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
+                        </a>
+                        <a class="l" href="https://twitter.com/intent/tweet?text=A complete guide to Eleventy%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/a-complete-guide-to-eleventy/" target="_blank">
+                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
+                        </a>
+                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
+                        </a>
+                    </div>
+                </div>
+                <footer>
+    <div class="footer__content">
+        <div class="footer__content__item footer__content__plinks">
+            <a class="l" href="#">Who</a>
+            <a class="l" href="#">Work</a>
+            <a class="l" href="#">Mail</a>
         </div>
-      </div>
-      <footer>
-  <div class="content">
-    <h1>Let's Work Together</h1>
-    <a class="get-in-touch" href="mailto:info@danielcanetti.com?subject=Let's%20work%20together!" target="_blank">Get In Touch</a>
-    <div class="social-links">
-    <a href="https://github.com/DanCanetti" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a>
-    <a href="https://dribbble.com/dan_canetti" target="_blank"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
-    <a href="https://www.instagram.com/dan_canetti/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-    <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-    <a href="https://www.linkedin.com/in/danielcanetti" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        <div class="footer__content__item footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </div>
+        <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>
-  </div>
 </footer>
 
+            </div>
+        </div>
     </body>
 </html>

@@ -1,8 +1,11 @@
 ---
-postTitle: Three things web development students should learn before graduation
-postDate: 30th October 2015
+postTitle: Advice for web development students
+#date: Last Modified
 date: 2015-10-30
-postFeatureImage: /images/posts/three-things-web-development-students-should-learn-before-graduation/feature.jpg
+postTag: Web Development
+postFeatureImage: /images/posts/advice-for-web-developmen-students/feature.jpg
+postFeatureImageRetina: /images/posts/advice-for-web-developmen-students/feature@2x.jpg
+postFeatureImageFull: /images/posts/advice-for-web-developmen-students/feature-full.jpg
 postExcerpt: The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.
 ---
 
@@ -40,4 +43,4 @@ When I started working in my current role during my final year I had to learn AS
 
 ---
 
-*Update 27/08/2019: I'm now using Trello for project management - view all my gear [here](#).*
+*Update 27/08/2019: I'm now using Trello for project management - [view all my gear here](/blog/current-setup/).*

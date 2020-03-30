@@ -1,12 +1,50 @@
 <nav>
-  <div class="logo">
-    <img id="mainlogo" src="/images/logotext.svg" alt="Daniel Canetti • Fullstack Developer • " class="svg" />
-     <a href="#top"><img class="center" src="/images/logo.png" alt="" /></a>
+  <div class="nav__content">
+    <a href="/">
+        <div class="nav__content__logoarea">
+          Dan.
+        </div>
+    </a>
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
+        </span>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            {% assign navprojects = collections.projects %}
+            {% for post in navprojects limit: 3 %}
+              <li><a href="{{ post.data.projectLink }}" target="_blank">{{ post.data.pageTitle }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            {% assign navblogposts = collections.posts %}
+            {% for post in navblogposts limit: 3 %}
+              <li><a href="{{ post.url }}">{{ post.data.postTitle }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <ul>
-    <li><a class="cta" href="/">Home</a></li>
-    <li><a class="cta" href="/blog/">Blog</a></li>
-    <li><a class="cta" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener noreferrer">Tweet Me</a></li>
-    <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li>
-  </ul>
 </nav>

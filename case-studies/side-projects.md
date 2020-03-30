@@ -1,16 +1,17 @@
 ---
 pageTitle: Side Projects
-pageDesc: Passion Projects
+pageType: project
 pageSubTitle: Passion Projects
 projectLogo: /images/case-studies/smashing-joysticks/logo-white.svg
 projectLink: https://github.com/DanCanetti
 projectFeatureImage: /images/case-studies/smashing-joysticks/feature.jpg
 projectClass: has-case-study
-projectExcerpt: Like most developers, I work on a number of side projects in my spare time. These are all passion or personal projects. 
+projectExcerpt: Like most developers, I work on a number of side projects in my spare time. These are all passion or personal projects.
 seoIndex: all
+eleventyExcludeFromCollections: true
 ---
 
-Like most developers, I work on a number of side projects in my spare time. These are all passion or personal projects. 
+Like most developers, I work on a number of side projects in my spare time. These are all passion or personal projects.
 
 ## Sass Quick Start
 

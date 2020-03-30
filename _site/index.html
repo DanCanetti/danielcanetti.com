@@ -22,15 +22,17 @@
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/zom8nys.css">
-<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/da62f73182.js" crossorigin="anonymous" SameSite="none Secure"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,197 +45,171 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
+        <script type="text/javascript" defer src="/js/home.js"></script>
         <title>Daniel Canetti • A Web Developer</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
-        <meta property="og:description" content="I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies." />
+        <meta property="og:description" content="A Web Developer living and working in Yorkshire, England." />
         <meta property="og:url" content="https://danielcanetti.com/" />
         <meta property="og:image" content="https://danielcanetti.com/images/feature.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
-        <meta property="twitter:description" content="I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies.">
+        <meta property="twitter:description" content="A Web Developer living and working in Yorkshire, England.">
         <meta property="twitter:image" content="https://danielcanetti.com/images/feature.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="home">
-      <div class="wrapper">
-        <nav>
-  <div class="logo">
-    <img id="mainlogo" src="/images/logotext.svg" alt="Daniel Canetti • Fullstack Developer • " class="svg" />
-     <a href="#top"><img class="center" src="/images/logo.png" alt="" /></a>
-  </div>
-  <ul>
-    <li><a class="cta" href="/">Home</a></li>
-    <li><a class="cta" href="/blog/">Blog</a></li>
-    <li><a class="cta" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener noreferrer">Tweet Me</a></li>
-    <li><a class="cta" href="mailto:info@danielcanetti.com?body=Hi%20Dan!%0A%0AI've%20just%20been%20visiting%20your%20website%20and%20wanted%20to%20reach%20out.%0A%0A%5B%5B%20YOUR%20EMAIL%20HERE%20%5D%5D%0A%0AThanks%2C%0A%5B%5B%20YOUR%20NAME%20%5D%5D." target="_blank" rel="noopener noreferrer">Email Me</a></li>
-  </ul>
-</nav>
-
-        
-<div class="content intro">
-  <!--h1 class="heavy">I make things for the web.</h1>
-  <p>I'm Daniel Canetti, a web developer based in Yorkshire, England. Currently, I'm the Senior Developer at <a href="https://nouveaubeautygroup.com" target="_blank" class="cta">Nouveau Beauty Group</a>.</p>
-  <p>I work with a modern technology stack and popular CMS systems to deliver quality results.</p-->
-  <h1>Hey there, I'm Daniel Canetti. But you can call me Dan.</h1>
-  <p>I'm a web developer based in Yorkshire, England and I work with a modern technology stack to deliver quality results. I am proud to have worked with and for some of countries most promising companies.</p>
-  <p>I'm the currently the lead developer at <a href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a> and I'm not currently looking for a new role. If you're a recruitment agent feel free to connect over on <a href="https://www.linkedin.com/in/danielcanetti/" target="_blank">LinkedIn</a>.</p>
-</div>
-
-<div class="section no-pb">
-  <div class="case-study-grid">
-    
-      <div class="case-study" style="background-image: url('/images/case-studies/emerald-kitchens/feature.jpg');">
-        <a href="/case-studies/emerald-kitchens/" class="project-link has-case-study">
-          <h3>Emerald Kitchens</h3>
-          <span>WordPress Design &amp; Build</span>
-        </a>
-        <div class="overlay"></div>
-      </div>
-    
-      <div class="case-study" style="background-image: url('/images/case-studies/kbpro-shop/feature.jpg');">
-        <a href="/case-studies/kbpro-shop/" class="project-link has-case-study">
-          <h3>K.B Pro Shop</h3>
-          <span>Magento 1.9 Redesign</span>
-        </a>
-        <div class="overlay"></div>
-      </div>
-    
-      <div class="case-study" style="background-image: url('/images/case-studies/smashing-joysticks/feature.jpg');">
-        <a href="/case-studies/side-projects/" class="project-link has-case-study">
-          <h3>Side Projects</h3>
-          <span>Passion Projects</span>
-        </a>
-        <div class="overlay"></div>
-      </div>
-    
-      <div class="case-study" style="background-image: url('/images/case-studies/wharncliffe/feature.jpg');">
-        <a href="/case-studies/wharncliffe-business-systems/" class="project-link has-case-study">
-          <h3>Wharncliffe Business Systems</h3>
-          <span>WordPress Build</span>
-        </a>
-        <div class="overlay"></div>
-      </div>
-    
-  </div>
-</div>
-
-<div class="section grey">
-  <h2>Some of the companies I've worked alongside</h2>
-  <div class="brand-logo-grid">
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/align-logo.svg" alt="Align" />
+        <div class="wrapper">
+            <nav>
+  <div class="nav__content">
+    <a href="/">
+        <div class="nav__content__logoarea">
+          Dan.
         </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/citroen-logo.svg" alt="CCS Media" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img has-case-study">
-          <img src="/images/case-studies/emerald-kitchens/logo-white.svg" alt="Emerald Kitchens" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img case-study-coming-soon">
-          <img src="/images/case-studies/fit4it-fitness/logo-black-alt.png" alt="FIT4IT Fitness" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img coming-soon">
-          <img src="/images/case-studies/karen-betts/logo-white.svg" alt="Karen Betts" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img has-case-study">
-          <img src="/images/case-studies/kbpro-shop/logo-white.svg" alt="K.B Pro Shop" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/loreal-logo.svg" alt="L'Oréal" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/sub/peugeot-logo.svg" alt="Peugeot" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/q-connect/logo-white.png" alt="Q-Connect" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/vow/logo-wholesale-white.png" alt="VOW" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img case-study-coming-soon">
-          <img src="/images/case-studies/wharncliffe/logo-white.svg" alt="Wharncliffe Business Systems" />
-        </div>
-      </div>
-    
-      <div class="brand-logo">
-        <div class="logo-img no-case-study">
-          <img src="/images/case-studies/yes-events/logo.png" alt="YES Events" />
-        </div>
-      </div>
-    
-  </div>
-</div>
-
-<div class="section">
-  <h2>Latest Posts</h2>
-  <div class="content latest-post-grid">
-    <ul>
-    
-    
-      <li class="latest-post">
-        <a href="/blog/three-things-web-development-students-should-learn-before-graduation/">Three things web development students should learn before graduation</a>
-        <span class="post-date">30th October 2015</span>
-      </li>
-    
-      <li class="latest-post">
-        <a href="/blog/being-a-woman-in-tech-sucks/">Being a woman in tech sucks</a>
-        <span class="post-date">22nd November 2015</span>
-      </li>
-    
-    </ul>
-  </div>
-</div>
-
-      </div>
-      <footer>
-  <div class="content">
-    <h1>Let's Work Together</h1>
-    <a class="get-in-touch" href="mailto:info@danielcanetti.com?subject=Let's%20work%20together!" target="_blank">Get In Touch</a>
-    <div class="social-links">
-    <a href="https://github.com/DanCanetti" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a>
-    <a href="https://dribbble.com/dan_canetti" target="_blank"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
-    <a href="https://www.instagram.com/dan_canetti/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-    <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-    <a href="https://www.linkedin.com/in/danielcanetti" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+    </a>
+    <div class="njs-toggle-menu">
+      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+      <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
+        </span>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/">Projects</a>
+            <ul>
+            
+            
+              <li><a href="https://www.kbpro.com/" target="_blank">K.B Pro</a></li>
+            
+              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank">Emerald Kitchens</a></li>
+            
+              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank">Sass, BEM, and SMACSS Quick Start</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+            <ul>
+            
+            
+              <li><a href="/blog/a-complete-guide-to-eleventy/">A complete guide to Eleventy</a></li>
+            
+              <li><a href="/blog/craft-cms-and-homestead/">Installing Craft CMS in Homestead</a></li>
+            
+              <li><a href="/blog/no-css-or-js-on-magento-2-after-install/">No CSS or JS on Magento 2</a></li>
+            
+            </ul>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+          <a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+          <a href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+          <a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </ul>
+      </nav>
     </div>
   </div>
+</nav>
+
+            
+<div class="header-spacing"></div>
+
+<div class="zoom">
+    <h1 class="zoom__content">Dan.</h1>
+</div>
+
+<div class="scroll-hint"></div>
+
+<div class="body">
+    <div class="body__section body__section--intro">
+      <p>A Web Developer living and working in Yorkshire, England.</p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
+    </div>
+    <div class="body__section body__section--projects">
+        <h2>Projects.</h2>
+        <div id="project-list" class="collection-list">
+            
+            <a href="https://www.kbpro.com/" class="project-link has-case-study" target="_blank" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="" v-if="hover2">
+            </transition>
+            
+            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="" v-if="hover1">
+            </transition>
+            
+            <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link has-case-study" target="_blank" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Sass, BEM, and SMACSS Quick Start<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+                <img src="/images/case-studies/sass-quick-start/featureHome.jpg" srcset="/images/case-studies/sass-quick-start/featureHome@2x.jpg 2x" alt="" v-if="hover3">
+            </transition>
+            
+        </div>
+        <a href="/projects/" class="l l--t" aria-label="View more blog posts.">View All</a>
+    </div>
+    <div class="body__section">
+        <h2>Writing.</h2>
+        <div class="collection-list posts">
+          
+          
+            <a href="/blog/a-complete-guide-to-eleventy/" class="collection-list__link"><h3>A complete guide to Eleventy<br><span class="collection-list__description">Web Development</span></h3></a>
+            <!-- For reference - date December 02, 2019 -->
+          
+            <a href="/blog/craft-cms-and-homestead/" class="collection-list__link"><h3>Installing Craft CMS in Homestead<br><span class="collection-list__description">Web Development</span></h3></a>
+            <!-- For reference - date October 31, 2019 -->
+          
+            <a href="/blog/no-css-or-js-on-magento-2-after-install/" class="collection-list__link"><h3>No CSS or JS on Magento 2<br><span class="collection-list__description">Web Development</span></h3></a>
+            <!-- For reference - date October 22, 2019 -->
+          
+        </div>
+        <a href="/blog/" class="l l--t" aria-label="View more blog posts.">View All</a>
+    </div>
+    <!--div class="body__section">
+        <h2>Shop.</h2>
+        <div class="collection-list">
+          <a href="#" target="_blank"><h3>Eleventy Basic Theme</h3></a>
+        </div>
+        <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
+    </div-->
+    <div class="body__section">
+        <h2>Github.</h2>
+        <div class="collection-list">
+          <a href="https://www.wordpresspluginicons.com/" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
+          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank"><h3>Sass Quick Start</h3></a>
+          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+        </div>
+        <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" aria-label="View more blog posts.">View All</a>
+    </div>
+    <footer>
+    <div class="footer__content">
+        <div class="footer__content__item footer__content__plinks">
+            <a class="l" href="#">Who</a>
+            <a class="l" href="#">Work</a>
+            <a class="l" href="#">Mail</a>
+        </div>
+        <div class="footer__content__item footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
+            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
+            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+        </div>
+        <span class="copyright">Daniel Canetti &copy; 2020</span>
+    </div>
 </footer>
 
+</div>
+        </div>
     </body>
 </html>
