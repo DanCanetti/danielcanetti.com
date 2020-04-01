@@ -307,6 +307,8 @@ footer {
         justify-content: center;
         width: 100%;
         height: 100%;
+        max-width: 750px;   // Large screen alignment
+        margin: auto;
         .footer__content__item {
             width: 200px;
             display: flex;

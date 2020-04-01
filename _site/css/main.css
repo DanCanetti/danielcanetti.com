@@ -588,7 +588,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    max-width: 750px;
+    margin: auto; }
     footer .footer__content .footer__content__item {
       width: 200px;
       display: flex;
@@ -754,6 +756,8 @@ footer {
             @media (max-width: 576px) {
               .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social {
                 margin-top: 25px; } }
+            .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social li {
+              margin: 0 0 15px 0; }
             .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social a {
               color: #111;
               -webkit-transition: all 0.3s ease-in-out;
@@ -815,6 +819,8 @@ footer {
   align-content: flex-start;
   flex-wrap: wrap; }
   .collection-list a {
+    opacity: 1;
+    animation: init-fade 1.5s 1;
     margin-bottom: 75px; }
     .collection-list a:hover h3 {
       color: #F92A82; }
@@ -882,6 +888,7 @@ footer {
         height: 100%; }
     .case-study-item .case-study-item__img .case-study-item__meta {
       position: absolute;
+      z-index: 5;
       font-size: .8rem;
       padding: 15px 25px;
       display: flex;

@@ -156,6 +156,9 @@ $burgertransitions: .4s;
             @include sm {
               margin-top: 25px;
             }
+            li {
+              margin: 0 0 15px 0;
+            }
             a {
               color: $dancanettiblack;
               @include transitionall(.3s);
@@ -234,6 +237,8 @@ $burgertransitions: .4s;
   align-content: flex-start;
   flex-wrap: wrap;
   a {
+      opacity: 1;
+      animation: init-fade 1.5s 1;
       margin-bottom: $ds;
       &:hover {
         h3 {
@@ -317,6 +322,7 @@ $burgertransitions: .4s;
     }
     .case-study-item__meta {
       position: absolute;
+      z-index: 5;
       font-size: .8rem;
       padding: 15px 25px;
       display: flex;
