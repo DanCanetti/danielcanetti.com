@@ -86,11 +86,11 @@
             <ul>
             
             
-              <li><a href="https://www.kbpro.com/" target="_blank">K.B Pro</a></li>
+              <li><a href="https://www.kbpro.com/" target="_blank" rel="noopener">K.B Pro</a></li>
             
-              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank">Emerald Kitchens</a></li>
+              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank" rel="noopener">Emerald Kitchens</a></li>
             
-              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank">Sass, BEM, and SMACSS Quick Start</a></li>
+              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank" rel="noopener">Sass, BEM, and SMACSS Quick Start</a></li>
             
             </ul>
           </li>
@@ -135,7 +135,7 @@
 <div class="body">
     <div class="body__section body__section--intro">
       <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
     </div>
     <div class="body__section body__section--projects">
         <h2>Projects.</h2>
@@ -143,17 +143,26 @@
             
             <a href="https://www.kbpro.com/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
-                <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="" v-if="hover2">
+              <picture v-if="hover2">
+                <source media='(max-width: 776px)' srcset=''/>
+                <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
+              </picture>
             </transition>
             
             <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
-                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="" v-if="hover1">
+              <picture v-if="hover1">
+                <source media='(max-width: 776px)' srcset=''/>
+                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="">
+              </picture>
             </transition>
             
             <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Sass, BEM, and SMACSS Quick Start<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
-                <img src="/images/case-studies/sass-quick-start/featureHome.jpg" srcset="/images/case-studies/sass-quick-start/featureHome@2x.jpg 2x" alt="" v-if="hover3">
+              <picture v-if="hover3">
+                <source media='(max-width: 776px)' srcset=''/>
+                <img src="/images/case-studies/sass-quick-start/featureHome.jpg" srcset="/images/case-studies/sass-quick-start/featureHome@2x.jpg 2x" alt="">
+              </picture>
             </transition>
             
         </div>
@@ -186,9 +195,9 @@
     <div class="body__section">
         <h2>Github.</h2>
         <div class="collection-list">
-          <a href="https://www.wordpresspluginicons.com/" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
-          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank"><h3>Sass Quick Start</h3></a>
-          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+          <a href="https://www.wordpresspluginicons.com/" target="_blank" rel="noopener"><h3>WordPress Plugin Icon Font</h3></a>
+          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank" rel="noopener"><h3>Sass Quick Start</h3></a>
+          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank" rel="noopener"><h3>Slick Slider Quick Start</h3></a>
         </div>
         <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" rel="noopener" aria-label="View more blog posts.">View All</a>
     </div>
