@@ -88,6 +88,16 @@ p {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes init-hide {
+  0% {
+    opacity: 0;
+    display: none; }
+  99% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: flex; } }
 body {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
@@ -817,10 +827,11 @@ footer {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  animation: init-hide 3s 1;
+  opacity: 1; }
   .collection-list a {
     opacity: 1;
-    animation: init-fade 1.5s 1;
     margin-bottom: 75px; }
     .collection-list a:hover h3 {
       color: #F92A82; }
@@ -833,15 +844,17 @@ footer {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .collection-list img {
+  .collection-list picture {
     position: fixed;
-    width: calc(100% - 20px);
     left: 10px;
     top: 0;
     z-index: -1; }
-    @media (max-width: 576px) {
-      .collection-list img {
-        display: none; } }
+    .collection-list picture img {
+      width: auto;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      max-width: calc(100vw - 20px); }
   .collection-list .collection-list__description {
     font-family: "brandon-grotesque", sans-serif;
     font-weight: 300;

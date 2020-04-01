@@ -4,4 +4,4 @@ window.FontAwesomeConfig = {
 }
 
 // Enable touchstart on mobile
-$('body').on('touchstart', function() {});
+//$('body').on('touchstart', function() {});

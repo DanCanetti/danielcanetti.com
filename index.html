@@ -17,7 +17,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
 <div class="body">
     <div class="body__section body__section--intro">
       <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
     </div>
     <div class="body__section body__section--projects">
         <h2>Projects.</h2>
@@ -25,7 +25,10 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
             {% for post in collections.projects limit: 3 %}
             <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" target="_blank" rel="noopener" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
             <transition name="fade">
-                <img src="{{ post.data.projectFeatureImageHome }}" srcset="{{ post.data.projectFeatureImageHomeRetina }} 2x" alt="" v-if="hover{{ post.data.projectid }}">
+              <picture v-if="hover{{ post.data.projectid }}">
+                <source media='(max-width: 776px)' srcset=''/>
+                <img src="{{ post.data.projectFeatureImageHome }}" srcset="{{ post.data.projectFeatureImageHomeRetina }} 2x" alt="">
+              </picture>
             </transition>
             {% endfor %}
         </div>
@@ -52,9 +55,9 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
     <div class="body__section">
         <h2>Github.</h2>
         <div class="collection-list">
-          <a href="https://www.wordpresspluginicons.com/" target="_blank"><h3>WordPress Plugin Icon Font</h3></a>
-          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank"><h3>Sass Quick Start</h3></a>
-          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank"><h3>Slick Slider Quick Start</h3></a>
+          <a href="https://www.wordpresspluginicons.com/" target="_blank" rel="noopener"><h3>WordPress Plugin Icon Font</h3></a>
+          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank" rel="noopener"><h3>Sass Quick Start</h3></a>
+          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank" rel="noopener"><h3>Slick Slider Quick Start</h3></a>
         </div>
         <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" rel="noopener" aria-label="View more blog posts.">View All</a>
     </div>
