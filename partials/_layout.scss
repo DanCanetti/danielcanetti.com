@@ -109,7 +109,7 @@ nav {
 // Space for zoom
 .header-spacing {
     position: relative;
-    height: 200vh;
+    height: 225vh;
     width: 100vw;
 }
 
@@ -117,12 +117,12 @@ nav {
 .zoom {
     position: fixed;
     top: 0;
+    left: 0;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(45%);
     &.move {
         z-index: -1;
         opacity: 0;
@@ -136,9 +136,6 @@ nav {
         &.fade {
             opacity: 0;
         }
-    }
-    @include sm {
-      width: 25vh;
     }
 }
 

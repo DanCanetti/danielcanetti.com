@@ -415,18 +415,18 @@ nav {
 
 .header-spacing {
   position: relative;
-  height: 200vh;
+  height: 225vh;
   width: 100vw; }
 
 .zoom {
   position: fixed;
   top: 0;
+  left: 0;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transform: translateX(45%); }
+  align-items: center; }
   .zoom.move {
     z-index: -1;
     opacity: 0; }
@@ -438,9 +438,6 @@ nav {
     transition: opacity .3s ease-in-out; }
     .zoom .zoom__content.fade {
       opacity: 0; }
-  @media (max-width: 576px) {
-    .zoom {
-      width: 25vh; } }
 
 .scroll-hint {
   position: fixed;
@@ -701,7 +698,8 @@ footer {
       z-index: 5000000; }
       .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav {
         position: fixed;
-        height: 100vh;
+        height: auto;
+        max-height: 100vh;
         width: 250px;
         opacity: 1;
         text-align: left;
@@ -713,6 +711,10 @@ footer {
         -moz-transition: all 0.6s ease-in-out;
         -o-transition: all 0.6s ease-in-out;
         transition: all 0.6s ease-in-out; }
+        @media (max-width: 576px) {
+          .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav {
+            overflow-y: scroll;
+            padding-bottom: 25px; } }
         .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul {
           list-style: none;
           height: 90%;
@@ -748,6 +750,9 @@ footer {
             justify-content: space-between;
             align-items: center;
             padding: 0 50px 0px 15px; }
+            @media (max-width: 576px) {
+              .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social {
+                margin-top: 25px; } }
             .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social a {
               color: #111;
               -webkit-transition: all 0.3s ease-in-out;
@@ -827,6 +832,9 @@ footer {
     left: 10px;
     top: 0;
     z-index: -1; }
+    @media (max-width: 576px) {
+      .collection-list img {
+        display: none; } }
   .collection-list .collection-list__description {
     font-family: "brandon-grotesque", sans-serif;
     font-weight: 300;
