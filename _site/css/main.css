@@ -698,8 +698,7 @@ footer {
       z-index: 5000000; }
       .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav {
         position: fixed;
-        height: auto;
-        max-height: 100vh;
+        height: 100vh;
         width: 250px;
         opacity: 1;
         text-align: left;
@@ -714,7 +713,9 @@ footer {
         @media (max-width: 576px) {
           .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav {
             overflow-y: scroll;
-            padding-bottom: 25px; } }
+            padding-bottom: 25px;
+            height: auto;
+            max-height: 100vh; } }
         .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul {
           list-style: none;
           height: 90%;
