@@ -2,7 +2,7 @@
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 	$(".zoom").css({
-		transform: 'translate3d(45%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/1)/100+')',
+		transform: 'translate3d(0, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/1)/100+')',
 	});
 });
 
