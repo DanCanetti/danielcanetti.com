@@ -26,7 +26,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
             <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" target="_blank" rel="noopener" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
             <transition name="fade">
               <picture v-if="hover{{ post.data.projectid }}">
-                <source media='(max-width: 776px)' srcset=''/>
+                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
                 <img src="{{ post.data.projectFeatureImageHome }}" srcset="{{ post.data.projectFeatureImageHomeRetina }} 2x" alt="">
               </picture>
             </transition>
