@@ -581,7 +581,8 @@ nav {
       margin-top: 30px;
       padding-left: 25px; }
       .body .body__section.body__section--post ul li, .body .body__section.body__section--post ol li {
-        font-size: 1.25rem; }
+        font-size: 1.25rem;
+        margin-bottom: 15px; }
     .body .body__section.body__section--post img {
       width: 100%;
       height: auto; }
