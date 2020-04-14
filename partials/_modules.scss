@@ -124,10 +124,15 @@ $burgertransitions: .4s;
           margin-left: 50px;
           li {
             margin-bottom: 15px;
+            margin-top: 15px;
+            &:first-of-type {
+              margin-top: 0;
+            }
             ul {
               margin-top: 10px;
               margin-left: 0;
               li {
+                margin-top: 0;
                 margin-left: 0;
                 &:last-of-type {
                   margin-bottom: 0;
