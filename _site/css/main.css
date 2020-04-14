@@ -240,7 +240,7 @@ a {
       a.sl:hover.sl--l {
         color: #fff; }
       a.sl:hover:before {
-        top: -1px;
+        top: -4px;
         left: -10px;
         width: 40px;
         height: 40px; }
@@ -554,6 +554,14 @@ nav {
       @media (max-width: 576px) {
         .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
           font-size: 1.5rem; } }
+    .body .body__section.body__section--post h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+      padding-bottom: 0px;
+      margin-top: 75px; }
+      @media (max-width: 576px) {
+        .body .body__section.body__section--post h3 {
+          font-size: 1.05rem; } }
     .body .body__section.body__section--post p {
       max-width: 100%; }
     .body .body__section.body__section--post a {
@@ -738,11 +746,15 @@ footer {
           align-items: flex-start;
           margin-left: 50px; }
           .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul li {
-            margin-bottom: 15px; }
+            margin-bottom: 15px;
+            margin-top: 15px; }
+            .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul li:first-of-type {
+              margin-top: 0; }
             .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul li ul {
               margin-top: 10px;
               margin-left: 0; }
               .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul li ul li {
+                margin-top: 0;
                 margin-left: 0; }
                 .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul li ul li:last-of-type {
                   margin-bottom: 0; }
