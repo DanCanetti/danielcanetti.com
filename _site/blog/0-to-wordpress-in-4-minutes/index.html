@@ -46,18 +46,18 @@
 </script>
 
         <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • GitLab Pages</title>
-        <meta name="description" content="GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.">
+        <title>Daniel Canetti • 0 to WordPress in 4 minutes</title>
+        <meta name="description" content="Go from nothing to a working local WordPress site in a matter of minutes.">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature-full.jpg" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/0-to-wordpress-in-4-minutes/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/gitlab-pages/feature-full.jpg">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/0-to-wordpress-in-4-minutes/feature-full.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -143,49 +143,65 @@
             </div>
             <div class="body dark">
                 <div class="body__section body__section--post">
-                    <h1>GitLab Pages</h1>
-                    <span>February 06, 2019</span>
-                    <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
-<p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
-<p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
-<h2>Prerequisites:</h2>
+                    <h1>0 to WordPress in 4 minutes</h1>
+                    <span>February 01, 2020</span>
+                    <h2>Step One — Preparation</h2>
+<p>Download both MAMP and WordPress.</p>
 <ul>
-<li>As mentioned above, the repo must not use server-side languages. <a href="https://gitlab.com/pages">See here for a complete list of supported languages</a> with example config files.</li>
-<li>A working repo with at least an index.html file.</li>
+<li><a href="https://en-gb.wordpress.org/download/">Download MAMP here</a></li>
+<li><a href="https://en-gb.wordpress.org/download/">Download WordPress here</a></li>
 </ul>
-<h2>The .gitlab-ci.yml file</h2>
-<p>This is the config file that will deploy the codebase to GitLab pages once pushed to the server, the below mostly consists of the html template GitLab generates and the only change I’ve made is to limit this to the staging branch of the project.</p>
-<pre><code>pages:
-  stage: deploy
-  script:
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
-  artifacts:
-    paths:
-    - public
-  only:
-    - staging
-</code></pre>
-<h2>Creating a .gitlab-ci.yml file</h2>
+<h2>Step Two — Setup</h2>
+<p>Firstly we’re going to set up MAMP. Double click on the installer in your downloads folder and follow the instructions.</p>
+<p><em>Optional:</em>
+I usually remove the MAMP Pro application by dropping it into the trash as we aren’t going to use this.</p>
+<p>Ready to continue? Great! Let’s move on.</p>
+<p>Unzip your WordPress download and move it the location you want to base your project. For me this is Documents &gt; Projects. Once you’ve moved the <code>wordpress</code> folder rename it to suit your project, e.g. <code>example-project</code>.</p>
+<p>Go to Applications &gt; MAMP &gt; MAMP (The MAMP application is stored within an MAMP folder). When this opens up, in the top bar of your Mac next to the apple logo click on MAMP &gt; Preferences &gt; Web Server.</p>
+<p>From here we can tell MAMP the source for our projects, to keep it simple we’ll tell it to use the WordPress download we moved earlier. Click on <code>select</code> and find the folder we moved to Documents &gt; Projects and click <code>select</code>. Then click okay and the Preferences window should close.</p>
+<p>Now we’re ready to fire up our servers. Click <code>Start Servers</code> — both the Apache and MySQL servers should go green and the MAMP homepage should open in the browser.</p>
+<h2>Step Three — Installation</h2>
+<p>Once your servers are running you’ll see the MAMP homepage. From here we’ll need to do a couple of things, firstly we’ll set up a database for your new WordPress site.</p>
+<h3>Database Setup</h3>
 <ol>
-<li>To generate this file for yourself, go to your repository and add a new file to the repo by clicking on the <code>+</code> and selecting <code>new file</code>.</li>
-<li>At the top of the next page you can select a template from the <code>choose type</code> dropdown, select <code>.gitlab-ci.yml</code> then click the <code>Apply a GitLab CI Yaml template</code> button and select the project type you’re working on. For this example we’ll choose <code>HTML</code>.</li>
-<li>A file very similar to the above should then be generated — you’ll notice the only difference is the <code>staging</code> branch I use.</li>
-<li>Commit the file to your repo, then navigate to <code>CI/CD</code> on the left navigation and you should see the pipeline is running.</li>
-<li>Once this has completed you should see the <code>Pages</code> option as appeared in the <code>Settings</code> menu on the left side. Inside here you should see a message which states <code>Congratulations! your pages are served under:</code> and a link to your page.</li>
-<li>You’re done!</li>
+<li>Click on Tools &gt; PHPMYADMIN</li>
+<li>Click *New in the left menu</li>
+<li>You’ll then see Create Database in the main area</li>
+<li>Add your database name without spaces (e.g <code>example_database</code>)</li>
+<li>Leave the dropdown next to this as <code>utf8_general_ci</code> and hit create</li>
+<li>Now go back to your MAMP tab. We’re ready to setup WordPress</li>
 </ol>
-<h2>Some things to be aware of</h2>
-<p>You can copy your <code>.gitlab-ci.yml</code> file to other projects, as long as you call your branch the same name it should work just fine.</p>
-<p>If you Group your projects, <strong>GitLab Pages can only be generated from repos in the top level of a group</strong>, I got stuck trying to generate Pages from a subgroup and this is not supported.</p>
-<p>Once you see the <code>Congratulations!</code> message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.</p>
+<h3>WordPress Setup</h3>
+<ol>
+<li>On the MAMP screen click on MYWEBSITE. You should now see the WordPress setup page. Click on Let’s Go.</li>
+<li>On the next screen we’re going to add your Database credentials.</li>
+<li>The database name is the one created in the last section (e.g <code>example_database</code>)</li>
+<li>The username is <code>root</code> and the password is also <code>root</code></li>
+<li>Leave the host as <code>localhost</code> and leave the prefix as <code>wp_</code></li>
+<li>Click <code>submit</code> then you should see the next screen. Click <code>run installation</code>.</li>
+</ol>
+<h2>Setting up your WordPress site</h2>
+<p>Congrats! Your WordPress site should now be installed and you’re ready to get started. All the steps in this section can be changed at a later date, so no need to worry.</p>
+<ol>
+<li>Enter the site title (e.g. My WordPress Site)</li>
+<li>Enter the username for your user (e.g. Joe Bloggs)</li>
+<li>Enter the password — make sure you can remember this as you’ll need to login in shortly!</li>
+<li>Enter an email — this should be a real email address you have access to in case you need to reset your password.</li>
+<li>Click <code>Install WordPress</code>.</li>
+</ol>
+<p>Hooray! You’re good to go! Log in with credentials you created above and get started on your site.</p>
+<h2>Common errors and how to solve them</h2>
+<p>I’ve downloaded and setup MAMP more times than I can count, some times we can hit some unexpected errors. Here are some of the more common errors and how to solve them:</p>
+<h3>Port 8888 is being used by another application</h3>
+<p>Go MAMP &gt; Preferences &gt; Ports and change both Apache and NGINX to 8080. Quit MAMP, re-open and try to start your servers again.</p>
+<h3>The MySQL Server won’t start</h3>
+<p>Quit MAMP. Open up Terminal (Applications &gt; Utilities &gt; Terminal) and enter sudo killall -9 mysqld. Re-open MAMP and try to start your servers again.</p>
 
                     <div class="share__blog">
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/0-to-wordpress-in-4-minutes/" target="_blank">
                             <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
                         </a>
-                        <a class="l" href="https://twitter.com/intent/tweet?text=GitLab Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                        <a class="l" href="https://twitter.com/intent/tweet?text=0 to WordPress in 4 minutes%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/0-to-wordpress-in-4-minutes/" target="_blank">
                             <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
                         </a>
                         <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">

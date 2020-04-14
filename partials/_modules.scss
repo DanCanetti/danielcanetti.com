@@ -98,7 +98,7 @@ $burgertransitions: .4s;
 			z-index: 5000000;
 			&+.main-nav {
 				position: fixed;
-				height: 100vh;
+        height: 100vh;
         width: 250px;
         opacity: 1;
 				text-align: left;
@@ -108,6 +108,12 @@ $burgertransitions: .4s;
 				font-weight: 900;
         //@include transitionall($burgertransitions);
         @include transitionall(.6s);
+        @include sm {
+          overflow-y: scroll;
+          padding-bottom: 25px;
+          height: auto;
+          max-height: 100vh;
+        }
         ul {
           list-style: none;
           height: 90%;
@@ -118,10 +124,15 @@ $burgertransitions: .4s;
           margin-left: 50px;
           li {
             margin-bottom: 15px;
+            margin-top: 15px;
+            &:first-of-type {
+              margin-top: 0;
+            }
             ul {
               margin-top: 10px;
               margin-left: 0;
               li {
+                margin-top: 0;
                 margin-left: 0;
                 &:last-of-type {
                   margin-bottom: 0;
@@ -147,6 +158,12 @@ $burgertransitions: .4s;
             justify-content: space-between;
             align-items: center;
             padding: 0 50px 0px 15px;
+            @include sm {
+              margin-top: 25px;
+            }
+            li {
+              margin: 0 0 15px 0;
+            }
             a {
               color: $dancanettiblack;
               @include transitionall(.3s);
@@ -224,7 +241,10 @@ $burgertransitions: .4s;
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
+  animation: init-hide 3s 1;
+  opacity: 1;
   a {
+      opacity: 1;
       margin-bottom: $ds;
       &:hover {
         h3 {
@@ -239,12 +259,18 @@ $burgertransitions: .4s;
       opacity: 1;
       @include transitionall(.3s);
   }
-  img {
+  picture {
       position: fixed;
-      width: calc(100% - 20px);
       left: 10px;
       top: 0;
       z-index: -1;
+      img {
+        width: auto;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        max-width: calc(100vw - 20px);
+      }
   }
   .collection-list__description {
     font-family: $pfont;
@@ -305,6 +331,7 @@ $burgertransitions: .4s;
     }
     .case-study-item__meta {
       position: absolute;
+      z-index: 5;
       font-size: .8rem;
       padding: 15px 25px;
       display: flex;
