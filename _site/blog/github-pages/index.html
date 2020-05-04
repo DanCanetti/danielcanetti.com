@@ -46,18 +46,18 @@
 </script>
 
         <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • No CSS or JS on Magento 2</title>
-        <meta name="description" content="I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.">
+        <title>Daniel Canetti • Github Pages</title>
+        <meta name="description" content="Github pages allows you to host your site directly from the repo. Here's how to set this up for your site.">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/github-pages/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/github-pages/feature-full.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -143,40 +143,53 @@
             </div>
             <div id="post" class="body dark">
                 <div class="body__section body__section--post">
-                    <h1>No CSS or JS on Magento 2</h1>
+                    <h1>Github Pages</h1>
                     <div>
-                        <span>October 22, 2019</span>
+                        <span>May 03, 2020</span>
                         <span class="reading-time"></span>
                     </div>
-                    <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
-<p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
-<h2>Pointing to the correct config</h2>
-<p>Navigate to <code>/etc/nginx/sites-available/</code> and run <code>sudo nano [your-site-config]</code>. Use the below config file to point to the <code>nginx.conf.sample</code> file provided in Magento 2 — remember to change [your-site-path] to suit your set-up. In Homestead this is usually <code>/home/vagrant/[your-projects-directory]/[your-site-name]/public/</code>.</p>
-<pre><code>upstream fastcgi_backend {
-   server  unix:/run/php/php7.1-fpm.sock;
-}
-
-server {
-    listen 80;
-    server_name  magento2.local;
-
-    set $MAGE_ROOT [your-site-path];
-    set $MAGE_MODE developer;
-    include [your-site-path]/nginx.conf.sample;
-}
+                    <p>GitHub pages allows you to host your site directly from the repo. It'll build initially with a GitHub url which is great when creating staging or demo sites, but you can also set these up with an Apex domain and run as a live site.</p>
+<p><a href="https://pages.github.com/">Learn more about GitHub Pages</a>.</p>
+<h2>Prerequisites:</h2>
+<ul>
+<li>The repo must not use server-side languages such as PHP.</li>
+<li>A repo with at least an index.html file.</li>
+</ul>
+<h2>Setting up pages</h2>
+<p>The first thing we want to do is tell GitHub that we want to create a site from this repo. To do this head to your repo and then to the settings tab. About half way down this page there's a GitHub Pages option, to create a page you'll need to select a source from the dropdown, by default this is set to <code>None</code>:</p>
+<ol>
+<li><code>master branch</code> - choose this option if you want to build directly from the branch.</li>
+<li><code>mast branch /docs folder</code> - choose this option if you have other items in your repo you don't want on the site. For example, I usually compile my 11ty sites into a docs folder.</li>
+</ol>
+<p>Once you've chosen an option you should see a green box show above this select saying <code>Your site is published at https://[GitHub Userame].github.io/[Repo Name]/</code></p>
+<p>That's it - your site should be ready to use. But what if we want to use an apex domain for this site, such as <code>www.dummyname.com</code>?</p>
+<h2>Using an apex domain with GitHub Pages</h2>
+<p>Once your site is built you'll see an option for <strong>Custom Domain</strong> show underneath, here's where you can add the domain you wish to use for the site. Once you've added this also check the <strong>Enforce HTTPS</strong> option beneath, I can't think of a reason why you wouldn't want to do this.</p>
+<p><strong>Note:</strong> You will need to perform a pull of the repo after this has been added as a <code>CNAME</code> file is created in the source directory (either repo or docs folder).</p>
+<p>Now you've added the domain we need to point the domain to the site by changing your DNS settings. You'll need to add the below IP addresses, all as A records for the domain.</p>
+<pre><code>185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
 </code></pre>
-<p>After you’ve changed the config file you’ll need to restart the service: <code>sudo systemctl restart nginx.service</code>.</p>
-<h2>Homestead Notes</h2>
-<p>One issue I have come across with Homestead is that it will rebuild the config file whenever the Vagrant box is halted and started. You’ll need to re-do this change each time.</p>
-<hr>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October — added service restart command.</em></p>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October —included note on NGINX config rebuild eachtime Homestead is restarted.</em></p>
+<p>Domain propogation can take up to 24 hours depending on the provider, so you might want to put this to oneside now until tomorrow. Keep giving the domain a refresh and eventually you should see the site is ready to go.</p>
+<h3>Using Cloudflare</h3>
+<p>I use Cloudflare to manage my domains and I highly recommend it as the propogation is almost immediate.</p>
+<p><strong>Note:</strong> If you are using Cloudflare to manage your DNS you need to <em>turn off</em> proxying for these A records as this can cause issues with GitHub Pages.</p>
+<h3>Optional</h3>
+<p>I typically set up a non-www redirect to www (or vice versa) using Cloudflare page rules. Set up this redirect to which ever domain you've added as the Custom Domain in GitHub - I.E. If you've added www.customdomain.com then add a non-www redirect to www.</p>
+<h3>Some things to be aware of</h3>
+<ol>
+<li>It can take a few minutes for the site to show after GitHub says it's ready. This is normal.</li>
+<li>When you tick Enforce HTTPS it can take a while for the SSL to be generated.</li>
+<li>Even if your repo is private the GitHub Pages site will be public and accessible from the web.</li>
+</ol>
 
                     <div class="share__blog">
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/github-pages/" target="_blank">
                             <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
                         </a>
-                        <a class="l" href="https://twitter.com/intent/tweet?text=No CSS or JS on Magento 2%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
+                        <a class="l" href="https://twitter.com/intent/tweet?text=Github Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/github-pages/" target="_blank">
                             <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
                         </a>
                         <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">

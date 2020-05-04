@@ -16,3 +16,21 @@ $(window).scroll(function(){
 // Randomize Affiliate 
 var random = Math.floor(Math.random() * $('.affiliate').length);
 $('.affiliate').hide().eq(random).show();
+
+// Reading Time 
+const post = document.getElementById("post");
+const readingTimeSummary = document.querySelector(".reading-time");
+const avgWordsPerMin = 250;
+
+setReadingTime();
+
+function setReadingTime(){
+    let count = getWordCount();
+    let time = Math.ceil(count / avgWordsPerMin);
+
+    readingTimeSummary.innerText = time + " min read";
+}
+
+function getWordCount(){
+  return post.innerText.match(/\w+/g).length;
+}
