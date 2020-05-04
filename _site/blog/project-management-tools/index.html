@@ -46,18 +46,18 @@
 </script>
 
         <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • No CSS or JS on Magento 2</title>
-        <meta name="description" content="I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.">
+        <title>Daniel Canetti • Project Management Tools</title>
+        <meta name="description" content="To try and save some people mucking about as I have - here's a quick run down of three project management tools.">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" />
+        <meta property="og:image" content="https://danielcanetti.com/images/posts/project-management-tools/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/project-management-tools/feature-full.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -143,40 +143,72 @@
             </div>
             <div id="post" class="body dark">
                 <div class="body__section body__section--post">
-                    <h1>No CSS or JS on Magento 2</h1>
+                    <h1>Project Management Tools</h1>
                     <div>
-                        <span>October 22, 2019</span>
+                        <span>April 18, 2020</span>
                         <span class="reading-time"></span>
                     </div>
-                    <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
-<p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
-<h2>Pointing to the correct config</h2>
-<p>Navigate to <code>/etc/nginx/sites-available/</code> and run <code>sudo nano [your-site-config]</code>. Use the below config file to point to the <code>nginx.conf.sample</code> file provided in Magento 2 — remember to change [your-site-path] to suit your set-up. In Homestead this is usually <code>/home/vagrant/[your-projects-directory]/[your-site-name]/public/</code>.</p>
-<pre><code>upstream fastcgi_backend {
-   server  unix:/run/php/php7.1-fpm.sock;
-}
-
-server {
-    listen 80;
-    server_name  magento2.local;
-
-    set $MAGE_ROOT [your-site-path];
-    set $MAGE_MODE developer;
-    include [your-site-path]/nginx.conf.sample;
-}
-</code></pre>
-<p>After you’ve changed the config file you’ll need to restart the service: <code>sudo systemctl restart nginx.service</code>.</p>
-<h2>Homestead Notes</h2>
-<p>One issue I have come across with Homestead is that it will rebuild the config file whenever the Vagrant box is halted and started. You’ll need to re-do this change each time.</p>
+                    <p>I've gone through my fair share of project management tools in the past few years. This is, as memory serves, the tools I've used so far in order:</p>
+<ul>
+<li>Zoho Projects</li>
+<li>Asana</li>
+<li><s>Wunderlist</s> 💛💔</li>
+<li>Asana (Again)</li>
+<li>Trello</li>
+<li>Basecamp</li>
+<li>Trello (Again)</li>
+</ul>
+<p>As you can see, I go back and forth alot. At the time of writing I'm in the process of moving from Basecamp to Trello, I originally moved to Basecamp because my company did so and I find it easier to use the same tool everywhere. That was a mistake.</p>
+<p>So, to try and save some people mucking about as I have going back and forth I thought I'd do a quick run down of three of these project management tools.</p>
+<h2>Trello</h2>
+<p>By far my favourite (RIP <a href="https://www.wunderlist.com/">Wunderlist 💔</a>), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what's been done to what's on hold.</p>
+<ul>
+<li>✅ My favourite</li>
+<li>✅ Agile approach</li>
+<li>✅ Easy to understand</li>
+<li>✅ Visually appealing</li>
+<li>✅ Free version offers a lot of functionality</li>
+<li>✅ New templating feature is really useful</li>
+<li>✅ 'Butler' automation is slick</li>
+<li>✅ Quick to set up initally</li>
+<li>❌ Mobile App can be a bit fiddly</li>
+<li>❌ Can only install one power-up on free version (choose wisely!)</li>
+</ul>
+<p><a href="https://trello.com/danielcanetti/recommend">Get started with Trello</a>*</p>
+<h2>Asana</h2>
+<p>I started using Asana when I found out it was developed by Facebook founder Dustin Moskovitz, whilst I was Googling everyone in <em><a href="https://www.imdb.com/title/tt1285016/">The Social Network</a></em>, and it turned out to be a pretty good piece of kit. Unfortunately, it's probably too powerful for the needs of a single person... it's very pleasing to look at though 😍</p>
+<ul>
+<li>✅ My go to for years</li>
+<li>✅ Great for larger teams</li>
+<li>✅ Visually appealing</li>
+<li>✅ Easy to understand priorities</li>
+<li>✅ Can choose Agile approach</li>
+<li>✅ Mobile app is good</li>
+<li>❌ Can be a bit overwhelming for small projects</li>
+<li>❌ Not too clear these days where I stand on the free plan</li>
+<li>❌ Initial Set-up takes longer than the other two</li>
+</ul>
+<p><a href="https://asana.com/">Get started with Asana</a></p>
+<h2>Basecamp</h2>
+<p>I'd been hearing about Basecamp for years, when the company stated that we were going to be using this for all projects I gave it a whirl. It in the office I found it difficult to keep on top of my work, had no clue what was a priority and there just seemed to be lists everywhere but I had no clue what was what. Avoid if you're in a team any bigger than 3. That being said, when using it for myself on a much smaller scale I actually wuite liked it.</p>
+<ul>
+<li>✅ Good for small projects</li>
+<li>✅ Mobile app is good</li>
+<li>✅ Quick to set up initally</li>
+<li>❌ Easy to get lost in threads</li>
+<li>❌ Free version is limited to three projects</li>
+<li>❌ Difficult to find priorities</li>
+<li>❌ Way too many emails!</li>
+</ul>
+<p><a href="https://basecamp.com/">Get started with Basecamp</a></p>
 <hr>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October — added service restart command.</em></p>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October —included note on NGINX config rebuild eachtime Homestead is restarted.</em></p>
+<p>*<em>This is an affiliate link for which I may receive a small commission, at no extra cost to you, should you decide to sign up. I only use affiliate links on products/tools I actually use and recommend ✌️</em></p>
 
                     <div class="share__blog">
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/project-management-tools/" target="_blank">
                             <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
                         </a>
-                        <a class="l" href="https://twitter.com/intent/tweet?text=No CSS or JS on Magento 2%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
+                        <a class="l" href="https://twitter.com/intent/tweet?text=Project Management Tools%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/project-management-tools/" target="_blank">
                             <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
                         </a>
                         <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">

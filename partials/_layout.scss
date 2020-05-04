@@ -238,8 +238,15 @@ nav {
             @include sm {
               font-size: 2.25rem;
             }
-            & + span {  // Date
+            & + div {  // Date & Reading Time
               margin-bottom: 75px;
+              display: flex;
+              flex-direction: row;
+              span {
+                &:first-of-type {
+                  margin-right: 25px;
+                }
+              }
             }
           }
           h2 {

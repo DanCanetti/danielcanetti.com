@@ -40,10 +40,13 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div class="body dark">
+            <div id="post" class="body dark">
                 <div class="body__section body__section--post">
                     <h1>{{ postTitle }}</h1>
-                    <span>{{ date | date: '%B %d, %Y' }}</span>
+                    <div>
+                        <span>{{ date | date: '%B %d, %Y' }}</span>
+                        <span class="reading-time"></span>
+                    </div>
                     {{ content }}
                     <div class="share__blog">
                         <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
