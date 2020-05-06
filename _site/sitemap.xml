@@ -1,102 +1,172 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://danielcanetti.com/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/case-studies/emerald-kitchens/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/case-studies/kbpro-shop/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/case-studies/side-projects/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/case-studies/wharncliffe-business-systems/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/a-complete-guide-to-eleventy/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/craft-cms-and-homestead/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/recommended-reading/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/current-setup/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/my-favourite-grand-designs/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/email-isnt-broken/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/wordpressify/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/gitlab-pages/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/how-a-mentor-leaving-can-inspire-you/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/being-a-woman-in-tech-sucks/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
-  <lastmod>2019-12-02T22:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
+            <lastmod>2015-10-30T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/being-a-woman-in-tech-sucks/</loc>
+            <lastmod>2015-11-22T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
+            <lastmod>2016-06-09T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/gitlab-pages/</loc>
+            <lastmod>2019-02-06T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/wordpressify/</loc>
+            <lastmod>2019-05-09T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/email-isnt-broken/</loc>
+            <lastmod>2019-08-27T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/my-favourite-grand-designs/</loc>
+            <lastmod>2019-09-02T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/current-setup/</loc>
+            <lastmod>2019-09-26T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/recommended-reading/</loc>
+            <lastmod>2019-09-30T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/no-css-or-js-on-magento-2-after-install/</loc>
+            <lastmod>2019-10-22T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/craft-cms-and-homestead/</loc>
+            <lastmod>2019-10-31T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/a-complete-guide-to-eleventy/</loc>
+            <lastmod>2019-12-02T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/kb-pro/</loc>
+            <lastmod>2020-01-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/emerald-kitchens/</loc>
+            <lastmod>2020-01-02T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/sass-quick-start/</loc>
+            <lastmod>2020-01-03T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/working-with-homestead/</loc>
+            <lastmod>2020-01-03T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/fit4it-fitness/</loc>
+            <lastmod>2020-01-04T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/wharncliffe-business-systems/</loc>
+            <lastmod>2020-01-05T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/wordpress-plugin-icons/</loc>
+            <lastmod>2020-01-06T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/slick-slider-quick-start/</loc>
+            <lastmod>2020-01-07T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/0-to-wordpress-in-4-minutes/</loc>
+            <lastmod>2020-02-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/</loc>
+            <lastmod>2020-04-14T14:41:58.418Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/contact/</loc>
+            <lastmod>2020-04-14T14:41:58.436Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/</loc>
+            <lastmod>2020-04-14T14:41:58.436Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/projects/</loc>
+            <lastmod>2020-04-14T14:41:58.439Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/project-management-tools/</loc>
+            <lastmod>2020-04-18T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/github-pages/</loc>
+            <lastmod>2020-05-03T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/404/</loc>
+            <lastmod>2020-05-06T21:27:34.842Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
 </urlset>
