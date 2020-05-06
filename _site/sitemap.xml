@@ -2,6 +2,240 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
+            <loc>/node_modules/@11ty/eleventy-plugin-rss/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/feed.xml</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/post.html</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/debug/CHANGELOG/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/debug/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/node_modules/domelementtype/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/node_modules/entities/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domelementtype/readme/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/entities/readme/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/htmlparser2/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/inherits/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/CHANGELOG/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/build/readme/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/license/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/ms/license/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/ms/readme/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/index.js/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/index.js/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-render/CHANGELOG/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-render/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml/CHANGELOG/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/CONTRIBUTING/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/GOVERNANCE/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/safe-buffer/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/string_decoder/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/util-deprecate/README/</loc>
+            <lastmod>2014-11-25T20:05:41.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/any-promise/README/</loc>
+            <lastmod>2014-12-31T17:40:19.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/list-to-array/README/</loc>
+            <lastmod>2015-08-14T15:44:37.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/promise-each/README/</loc>
+            <lastmod>2015-09-19T13:31:54.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/util-deprecate/History/</loc>
+            <lastmod>2015-10-07T18:37:27.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
             <lastmod>2015-10-30T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -14,8 +248,38 @@
         </url>
     
         <url>
+            <loc>/node_modules/http-equiv-refresh/README/</loc>
+            <lastmod>2015-12-14T22:09:51.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
             <lastmod>2016-06-09T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/parse-srcset/README/</loc>
+            <lastmod>2016-12-10T23:14:08.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domutils/readme/</loc>
+            <lastmod>2017-04-30T23:38:45.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domhandler/readme/</loc>
+            <lastmod>2017-05-07T02:18:55.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-urls/README/</loc>
+            <lastmod>2018-01-27T19:08:47.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
@@ -166,6 +430,12 @@
         <url>
             <loc>/404/</loc>
             <lastmod>2020-05-06T21:27:34.842Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/feed/</loc>
+            <lastmod>2020-05-06T22:26:45.994Z</lastmod>
             <changefreq></changefreq>
         </url>
     
