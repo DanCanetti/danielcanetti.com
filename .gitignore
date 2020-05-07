@@ -2,3 +2,4 @@
 .DS_Store
 node_modules/**/README.md
 node_modules/**/CHANGELOG.md
+node_modules/
