@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>My Blog Title</title>
-  <subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
-  <link href="https://example.com/feed.xml" rel="self"/>
+  <title>Blog</title>
+  <subtitle>Tutorials, thoughts on tech culture, dev and business tools.</subtitle>
+  <link href="https://danielcanetti.com/feed.xml" rel="self"/>
   <link href="http://example.com/"/>
-  <updated>1985-10-26T09:15:00+01:00</updated>
-  <id>https://example.com/</id>
+  <updated>2020-05-07T08:45:00+01:00</updated>
+  <id>https://danielcanetti.com/</id>
   <author>
-    <name>My Name</name>
-    <email>myemailaddress@example.com</email>
+    <name>Daniel Canetti</name>
+    <email>info@danielcanetti.com</email>
   </author>
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/github-pages/"/>
+    <link href="https://danielcanetti.com/blog/github-pages/"/>
     <updated>2020-05-03T01:00:00+01:00</updated>
-    <id>http://example.com/blog/github-pages/</id>
+    <id>https://danielcanetti.com/blog/github-pages/</id>
     <content type="html">&lt;p&gt;GitHub pages allows you to host your site directly from the repo. It&#39;ll build initially with a GitHub url which is great when creating staging or demo sites, but you can also set these up with an Apex domain and run as a live site.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Learn more about GitHub Pages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Prerequisites:&lt;/h2&gt;
@@ -57,9 +57,9 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/project-management-tools/"/>
+    <link href="https://danielcanetti.com/blog/project-management-tools/"/>
     <updated>2020-04-18T01:00:00+01:00</updated>
-    <id>http://example.com/blog/project-management-tools/</id>
+    <id>https://danielcanetti.com/blog/project-management-tools/</id>
     <content type="html">&lt;p&gt;I&#39;ve gone through my fair share of project management tools in the past few years. This is, as memory serves, the tools I&#39;ve used so far in order:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Zoho Projects&lt;/li&gt;
@@ -120,9 +120,9 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/0-to-wordpress-in-4-minutes/"/>
+    <link href="https://danielcanetti.com/blog/0-to-wordpress-in-4-minutes/"/>
     <updated>2020-02-01T00:00:00-00:00</updated>
-    <id>http://example.com/blog/0-to-wordpress-in-4-minutes/</id>
+    <id>https://danielcanetti.com/blog/0-to-wordpress-in-4-minutes/</id>
     <content type="html">&lt;h2&gt;Step One — Preparation&lt;/h2&gt;
 &lt;p&gt;Download both MAMP and WordPress.&lt;/p&gt;
 &lt;ul&gt;
@@ -179,9 +179,9 @@ I usually remove the MAMP Pro application by dropping it into the trash as we ar
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/a-complete-guide-to-eleventy/"/>
+    <link href="https://danielcanetti.com/blog/a-complete-guide-to-eleventy/"/>
     <updated>2019-12-02T00:00:00-00:00</updated>
-    <id>http://example.com/blog/a-complete-guide-to-eleventy/</id>
+    <id>https://danielcanetti.com/blog/a-complete-guide-to-eleventy/</id>
     <content type="html">&lt;h2&gt;What is Eleventy?&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.11ty.io/&quot;&gt;Eleventy&lt;/a&gt; is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it&#39;s own server for local development.&lt;/p&gt;
 &lt;h2&gt;Installing Eleventy&lt;/h2&gt;
@@ -304,9 +304,9 @@ pageExcerpt: Pabst paleo seitan shoreditch 90&#39;s shabby chic.
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/craft-cms-and-homestead/"/>
+    <link href="https://danielcanetti.com/blog/craft-cms-and-homestead/"/>
     <updated>2019-10-31T00:00:00-00:00</updated>
-    <id>http://example.com/blog/craft-cms-and-homestead/</id>
+    <id>https://danielcanetti.com/blog/craft-cms-and-homestead/</id>
     <content type="html">&lt;h2&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A working Laravel/Homestead environment.&lt;/li&gt;
@@ -342,9 +342,9 @@ pageExcerpt: Pabst paleo seitan shoreditch 90&#39;s shabby chic.
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/no-css-or-js-on-magento-2-after-install/"/>
+    <link href="https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/"/>
     <updated>2019-10-22T01:00:00+01:00</updated>
-    <id>http://example.com/blog/no-css-or-js-on-magento-2-after-install/</id>
+    <id>https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/</id>
     <content type="html">&lt;p&gt;Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.&lt;/p&gt;
 &lt;p&gt;This turned out to be because NGINX was ignoring the &lt;code&gt;.htaccess&lt;/code&gt; file in the &lt;code&gt;/pub/static/&lt;/code&gt; directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.&lt;/p&gt;
 &lt;h2&gt;Pointing to the correct config&lt;/h2&gt;
@@ -373,9 +373,9 @@ server {
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/recommended-reading/"/>
+    <link href="https://danielcanetti.com/blog/recommended-reading/"/>
     <updated>2019-09-30T01:00:00+01:00</updated>
-    <id>http://example.com/blog/recommended-reading/</id>
+    <id>https://danielcanetti.com/blog/recommended-reading/</id>
     <content type="html">&lt;p&gt;I try to read as often as I can, typically a chapter a night of whichever book I&#39;m reading on my Kindle or listening to via Audible. I&#39;m really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.&lt;/p&gt;
 &lt;h2&gt;The Launch Pad&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://example.com/images/posts/recommended-reading/book-launchpad.jpg&quot; alt=&quot;The Launch Pad&quot;&gt;&lt;/p&gt;
@@ -419,9 +419,9 @@ server {
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/current-setup/"/>
+    <link href="https://danielcanetti.com/blog/current-setup/"/>
     <updated>2019-09-26T01:00:00+01:00</updated>
-    <id>http://example.com/blog/current-setup/</id>
+    <id>https://danielcanetti.com/blog/current-setup/</id>
     <content type="html">&lt;p&gt;Everyone works differently and I love it. I follow a few too many set-up focussed Instagram accounts and have been watching &lt;a href=&quot;https://www.youtube.com/playlist?list=PLTW2MN17j-L12h8Jq5fGGt8VV1ISZT-De&quot;&gt;Setup Wars&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/channel/UCDlQwv99CovKafGvxyaiNDA&quot;&gt;TLD&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/channel/UCzJjUHizQfPYywqt1mSEMww&quot;&gt;Oliur&lt;/a&gt; for as long as I can remember. I&#39;m still working on my ideal set-up and I&#39;ll keep this page updated with all the latest tech and workflow tools I use.&lt;/p&gt;
 &lt;h2&gt;Mac Mini&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://example.com/images/posts/current-setup/mac-mini.jpg&quot; alt=&quot;Mac Mini&quot;&gt;&lt;/p&gt;
@@ -464,9 +464,9 @@ server {
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/my-favourite-grand-designs/"/>
+    <link href="https://danielcanetti.com/blog/my-favourite-grand-designs/"/>
     <updated>2019-09-02T01:00:00+01:00</updated>
-    <id>http://example.com/blog/my-favourite-grand-designs/</id>
+    <id>https://danielcanetti.com/blog/my-favourite-grand-designs/</id>
     <content type="html">&lt;p&gt;Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.&lt;/p&gt;
 &lt;h2&gt;Container House&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://example.com/images/posts/my-favourite-grand-designs/favourite.jpg&quot; alt=&quot;Container House&quot;&gt;&lt;/p&gt;
@@ -499,9 +499,9 @@ server {
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/email-isnt-broken/"/>
+    <link href="https://danielcanetti.com/blog/email-isnt-broken/"/>
     <updated>2019-08-27T01:00:00+01:00</updated>
-    <id>http://example.com/blog/email-isnt-broken/</id>
+    <id>https://danielcanetti.com/blog/email-isnt-broken/</id>
     <content type="html">&lt;p&gt;Slack exploded onto the scene declaring it would &lt;a href=&quot;https://www.ccn.com/news/slack-ceo-were-going-to-end-email/2019/06/20/&quot;&gt;Kill ‘Company Email’ by 2026&lt;/a&gt; and it seems it still has a long way to go as we sent more than &lt;a href=&quot;https://www.campaignmonitor.com/blog/email-marketing/2019/05/shocking-truth-about-how-many-emails-sent/&quot;&gt;120 billion emails&lt;/a&gt; in 2018 alone. We all hate email, it&#39;s our never ending to do list and it&#39;s the thing that ruins your Sunday night and the last few days of your holiday as you start trying to clear the backlog.&lt;/p&gt;
 &lt;p&gt;However, I think email is great and we&#39;re just using it wrong. To try and help us all out I&#39;ve come up with a few quick tips when you&#39;re emailing in the office that will make everyone happier.&lt;/p&gt;
 &lt;h2&gt;Email is Long-Form&lt;/h2&gt;
@@ -536,15 +536,15 @@ Dan.&lt;/p&gt;
 &lt;h2&gt;Suggested Reading&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Unsubscribe&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Exactly what is says on the tin. I read this very early on in my worklife and it really influenced how I handle my emails - if you find yourself inundated with emails, give this book a try.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B01FE6V5KI&amp;amp;linkId=8233de69f6a5abf3b694efe449ef827a&quot;&gt;Buy the book on Amazon&lt;/a&gt; • &lt;a href=&quot;http://example.com/blog/recommended-reading/&quot;&gt;See all book recommendations&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B01FE6V5KI&amp;amp;linkId=8233de69f6a5abf3b694efe449ef827a&quot;&gt;Buy the book on Amazon&lt;/a&gt; • &lt;a href=&quot;https://danielcanetti.com/blog/recommended-reading/&quot;&gt;See all book recommendations&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/wordpressify/"/>
+    <link href="https://danielcanetti.com/blog/wordpressify/"/>
     <updated>2019-05-09T01:00:00+01:00</updated>
-    <id>http://example.com/blog/wordpressify/</id>
+    <id>https://danielcanetti.com/blog/wordpressify/</id>
     <content type="html">&lt;p&gt;WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via &lt;a href=&quot;https://wppusher.com/&quot;&gt;WP Pusher&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Setting up MySQL Locally&lt;/h2&gt;
 &lt;p&gt;The easiest approach to setting up WordPressify is to have a local instance of MySQL installed, this runs on the Mac and can be controlled MySQL from System Preferences.&lt;/p&gt;
@@ -589,9 +589,9 @@ Dan.&lt;/p&gt;
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/gitlab-pages/"/>
+    <link href="https://danielcanetti.com/blog/gitlab-pages/"/>
     <updated>2019-02-06T00:00:00-00:00</updated>
-    <id>http://example.com/blog/gitlab-pages/</id>
+    <id>https://danielcanetti.com/blog/gitlab-pages/</id>
     <content type="html">&lt;p&gt;GitLab is a git-repository manager with some differences to GitHub, although the recent &lt;a href=&quot;https://blog.github.com/2019-01-07-new-year-new-github/&quot;&gt;GitHub announcements&lt;/a&gt; bring the two more in line with one another.&lt;/p&gt;
 &lt;p&gt;If you’re not aware of GitLab pages, they allow you to &lt;a href=&quot;https://docs.gitlab.com/ee/user/project/pages/&quot;&gt;publish static websites directly from a repository&lt;/a&gt; in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.&lt;/p&gt;
 &lt;p&gt;Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and &lt;a href=&quot;https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline&quot;&gt;point out where I got stuck&lt;/a&gt; when first setting this up.&lt;/p&gt;
@@ -632,9 +632,9 @@ Dan.&lt;/p&gt;
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/how-a-mentor-leaving-can-inspire-you/"/>
+    <link href="https://danielcanetti.com/blog/how-a-mentor-leaving-can-inspire-you/"/>
     <updated>2016-06-09T01:00:00+01:00</updated>
-    <id>http://example.com/blog/how-a-mentor-leaving-can-inspire-you/</id>
+    <id>https://danielcanetti.com/blog/how-a-mentor-leaving-can-inspire-you/</id>
     <content type="html">&lt;p&gt;At the beginning of the year I started a new job as a junior designer taking on a different but potentially more fulfilling role, one of the main draws to this job was the ability to work under the Senior Web Designer &amp;amp; Developer there. This was an opportunity for me develop my skills further and learn much more about the industry from someone with greater experience than myself, perfect for someone who has been working in the industry for less that one year since graduating.&lt;/p&gt;
 &lt;p&gt;About three months in to the role and I have settled in, we’re working well together and pushing the work out quickly and to a high standard. I was very happy and every day I was learning new things about the industry, both to aid with my development in my current role and beyond. Then a bombshell, the senior designer &amp;amp; developer is leaving… he’s been offered a better position elsewhere and no one can argue that it wasn’t perfect for him. Four weeks later he’s gone and I have now been left in the position to take over the workload and keep on top of the everyday tasks as well as picking up some bigger projects.&lt;/p&gt;
 &lt;p&gt;Initially I’m a little concerned that I’m not experienced enough for this and I kept telling myself that there was a reason that I was brought in to help out as there is just too much work, however I quickly realised that this is the opportunity that I have been waiting for. I took a deep breath and looked at the workload from a different angle, learning new skills and increasing my organisational abilities along the way. I stepped up and emailed my mangers just to let them know that I will not let the workload go back to how it was and I will do my upmost to keep everything in order and on track which they really appreciated.&lt;/p&gt;
@@ -648,9 +648,9 @@ Dan.&lt;/p&gt;
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/being-a-woman-in-tech-sucks/"/>
+    <link href="https://danielcanetti.com/blog/being-a-woman-in-tech-sucks/"/>
     <updated>2015-11-22T00:00:00-00:00</updated>
-    <id>http://example.com/blog/being-a-woman-in-tech-sucks/</id>
+    <id>https://danielcanetti.com/blog/being-a-woman-in-tech-sucks/</id>
     <content type="html">&lt;p&gt;Gender roles in tech have been under the spotlight more than ever with articles ranging from sexual assault to the emotional effect this issue can have. According to &lt;a href=&quot;https://www.newyorker.com/magazine/2014/11/24/valley-boys&quot;&gt;The New Yorker&lt;/a&gt; men hold sixty to seventy percent of jobs at the major tech firms, including Google, Apple, Facebook, and Twitter. With the number of women in high profile roles even more sparse.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;quot;Notwithstanding rock stars like Facebook’s Sheryl Sandberg and Yahoo’s Marissa Mayer, senior leadership is even more overwhelmingly male.&amp;quot;&lt;/p&gt;
@@ -688,15 +688,15 @@ Dan.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://www.fastcompany.com/3044281/marissa-mayer&quot;&gt;How Marissa Mayer Mobilized Yahoo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/&quot;&gt;A female computer science major at Stanford: “Floored” by the sexism&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://medium.com/@saraheadler/never-read-the-comments-9cba93b5712a&quot;&gt;Never Read The Comments&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://example.com/blog/being-a-woman-in-tech-sucks/newyorker.com/magazine/2014/11/24/valley-boys&quot;&gt;Valley Boys&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://danielcanetti.com/blog/being-a-woman-in-tech-sucks/newyorker.com/magazine/2014/11/24/valley-boys&quot;&gt;Valley Boys&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://example.com/blog/three-things-web-development-students-should-learn-before-graduation/"/>
+    <link href="https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/"/>
     <updated>2015-10-30T00:00:00-00:00</updated>
-    <id>http://example.com/blog/three-things-web-development-students-should-learn-before-graduation/</id>
+    <id>https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/</id>
     <content type="html">&lt;p&gt;Developing at university and working in the real world is a big change, bigger than you may realize. Tighter deadlines, technical documentation, and fellow developers will all have a profound effect on the way you proceed after university and will help to shape you into a successful developer. The following three things will help the transition be a little smoother and may even improve your job prospects.&lt;/p&gt;
 &lt;h2&gt;Version Control&lt;/h2&gt;
 &lt;p&gt;Version control is, or should be, used by all development teams. Although Git and Team Foundation are commonly used there us a huge number of version control systems available; fortunately they are one and the same, get used to one and you should be able to use any of them. Personally I would recommend learning to use Git as it has been a requirement for over half of the jobs I have applied for.&lt;/p&gt;
@@ -720,7 +720,7 @@ Dan.&lt;/p&gt;
 &lt;p&gt;Dustin Wax&lt;/p&gt;
 &lt;p&gt;When I started working in my current role during my final year I had to learn ASP.NET along side working on University projects and my dissertation. Since then I have continued to work for the same company, my skill-set however has continued to expand as I use my portfolio site to expand my knowledge. I have vastly improved my jQuery knowledge, redeveloped my portfolio in SASS (which was new to me), used some new PHP code to incorporate my blog into my site, and pushed my CSS/Bootstrap capabilities to a new level. I achieved this by reading blogs such as A List Apart, seek advice through CodeProject, and using free tutorial sites like CodeAcademy.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Update 27/08/2019: I&#39;m now using Trello for project management - &lt;a href=&quot;http://example.com/blog/current-setup/&quot;&gt;view all my gear here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update 27/08/2019: I&#39;m now using Trello for project management - &lt;a href=&quot;https://danielcanetti.com/blog/current-setup/&quot;&gt;view all my gear here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </content>
   </entry>
   
