@@ -1,0 +1,741 @@
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Blog",
+    "subtitle": "Tutorials, thoughts on tech culture, dev and business tools.",
+    "url": "https://danielcanetti.com/",
+    "feedUrl": "https://danielcanetti.com/feed.xml",
+    "author": {
+      "name": "Daniel Canetti",
+      "email": "info@danielcanetti.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <subtitle></subtitle>
+  <link href="" rel="self"/>
+  <link href=""/>
+  <updated>2015-10-30T00:00:00-00:00</updated>
+  <id></id>
+  <author>
+    <name></name>
+    <email></email>
+  </author>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/github-pages/"/>
+    <updated>2020-05-03T01:00:00+01:00</updated>
+    <id>/blog/github-pages/</id>
+    <content type="html">&lt;p&gt;GitHub pages allows you to host your site directly from the repo. It&#39;ll build initially with a GitHub url which is great when creating staging or demo sites, but you can also set these up with an Apex domain and run as a live site.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Learn more about GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Prerequisites:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The repo must not use server-side languages such as PHP.&lt;/li&gt;
+&lt;li&gt;A repo with at least an index.html file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Setting up pages&lt;/h2&gt;
+&lt;p&gt;The first thing we want to do is tell GitHub that we want to create a site from this repo. To do this head to your repo and then to the settings tab. About half way down this page there&#39;s a GitHub Pages option, to create a page you&#39;ll need to select a source from the dropdown, by default this is set to &lt;code&gt;None&lt;/code&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;master branch&lt;/code&gt; - choose this option if you want to build directly from the branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mast branch /docs folder&lt;/code&gt; - choose this option if you have other items in your repo you don&#39;t want on the site. For example, I usually compile my 11ty sites into a docs folder.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you&#39;ve chosen an option you should see a green box show above this select saying &lt;code&gt;Your site is published at https://[GitHub Userame].github.io/[Repo Name]/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That&#39;s it - your site should be ready to use. But what if we want to use an apex domain for this site, such as &lt;code&gt;www.dummyname.com&lt;/code&gt;?&lt;/p&gt;
+&lt;h2&gt;Using an apex domain with GitHub Pages&lt;/h2&gt;
+&lt;p&gt;Once your site is built you&#39;ll see an option for &lt;strong&gt;Custom Domain&lt;/strong&gt; show underneath, here&#39;s where you can add the domain you wish to use for the site. Once you&#39;ve added this also check the &lt;strong&gt;Enforce HTTPS&lt;/strong&gt; option beneath, I can&#39;t think of a reason why you wouldn&#39;t want to do this.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You will need to perform a pull of the repo after this has been added as a &lt;code&gt;CNAME&lt;/code&gt; file is created in the source directory (either repo or docs folder).&lt;/p&gt;
+&lt;p&gt;Now you&#39;ve added the domain we need to point the domain to the site by changing your DNS settings. You&#39;ll need to add the below IP addresses, all as A records for the domain.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Domain propogation can take up to 24 hours depending on the provider, so you might want to put this to oneside now until tomorrow. Keep giving the domain a refresh and eventually you should see the site is ready to go.&lt;/p&gt;
+&lt;h3&gt;Using Cloudflare&lt;/h3&gt;
+&lt;p&gt;I use Cloudflare to manage my domains and I highly recommend it as the propogation is almost immediate.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you are using Cloudflare to manage your DNS you need to &lt;em&gt;turn off&lt;/em&gt; proxying for these A records as this can cause issues with GitHub Pages.&lt;/p&gt;
+&lt;h3&gt;Optional&lt;/h3&gt;
+&lt;p&gt;I typically set up a non-www redirect to www (or vice versa) using Cloudflare page rules. Set up this redirect to which ever domain you&#39;ve added as the Custom Domain in GitHub - I.E. If you&#39;ve added www.customdomain.com then add a non-www redirect to www.&lt;/p&gt;
+&lt;h3&gt;Some things to be aware of&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;It can take a few minutes for the site to show after GitHub says it&#39;s ready. This is normal.&lt;/li&gt;
+&lt;li&gt;When you tick Enforce HTTPS it can take a while for the SSL to be generated.&lt;/li&gt;
+&lt;li&gt;Even if your repo is private the GitHub Pages site will be public and accessible from the web.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/project-management-tools/"/>
+    <updated>2020-04-18T01:00:00+01:00</updated>
+    <id>/blog/project-management-tools/</id>
+    <content type="html">&lt;p&gt;I&#39;ve gone through my fair share of project management tools in the past few years. This is, as memory serves, the tools I&#39;ve used so far in order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Zoho Projects&lt;/li&gt;
+&lt;li&gt;Asana&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;Wunderlist&lt;/s&gt; 💛💔&lt;/li&gt;
+&lt;li&gt;Asana (Again)&lt;/li&gt;
+&lt;li&gt;Trello&lt;/li&gt;
+&lt;li&gt;Basecamp&lt;/li&gt;
+&lt;li&gt;Trello (Again)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As you can see, I go back and forth alot. At the time of writing I&#39;m in the process of moving from Basecamp to Trello, I originally moved to Basecamp because my company did so and I find it easier to use the same tool everywhere. That was a mistake.&lt;/p&gt;
+&lt;p&gt;So, to try and save some people mucking about as I have going back and forth I thought I&#39;d do a quick run down of three of these project management tools.&lt;/p&gt;
+&lt;h2&gt;Trello&lt;/h2&gt;
+&lt;p&gt;By far my favourite (RIP &lt;a href=&quot;https://www.wunderlist.com/&quot;&gt;Wunderlist 💔&lt;/a&gt;), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what&#39;s been done to what&#39;s on hold.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ My favourite&lt;/li&gt;
+&lt;li&gt;✅ Agile approach&lt;/li&gt;
+&lt;li&gt;✅ Easy to understand&lt;/li&gt;
+&lt;li&gt;✅ Visually appealing&lt;/li&gt;
+&lt;li&gt;✅ Free version offers a lot of functionality&lt;/li&gt;
+&lt;li&gt;✅ New templating feature is really useful&lt;/li&gt;
+&lt;li&gt;✅ &#39;Butler&#39; automation is slick&lt;/li&gt;
+&lt;li&gt;✅ Quick to set up initally&lt;/li&gt;
+&lt;li&gt;❌ Mobile App can be a bit fiddly&lt;/li&gt;
+&lt;li&gt;❌ Can only install one power-up on free version (choose wisely!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://trello.com/danielcanetti/recommend&quot;&gt;Get started with Trello&lt;/a&gt;*&lt;/p&gt;
+&lt;h2&gt;Asana&lt;/h2&gt;
+&lt;p&gt;I started using Asana when I found out it was developed by Facebook founder Dustin Moskovitz, whilst I was Googling everyone in &lt;em&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1285016/&quot;&gt;The Social Network&lt;/a&gt;&lt;/em&gt;, and it turned out to be a pretty good piece of kit. Unfortunately, it&#39;s probably too powerful for the needs of a single person... it&#39;s very pleasing to look at though 😍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ My go to for years&lt;/li&gt;
+&lt;li&gt;✅ Great for larger teams&lt;/li&gt;
+&lt;li&gt;✅ Visually appealing&lt;/li&gt;
+&lt;li&gt;✅ Easy to understand priorities&lt;/li&gt;
+&lt;li&gt;✅ Can choose Agile approach&lt;/li&gt;
+&lt;li&gt;✅ Mobile app is good&lt;/li&gt;
+&lt;li&gt;❌ Can be a bit overwhelming for small projects&lt;/li&gt;
+&lt;li&gt;❌ Not too clear these days where I stand on the free plan&lt;/li&gt;
+&lt;li&gt;❌ Initial Set-up takes longer than the other two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://asana.com/&quot;&gt;Get started with Asana&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Basecamp&lt;/h2&gt;
+&lt;p&gt;I&#39;d been hearing about Basecamp for years, when the company stated that we were going to be using this for all projects I gave it a whirl. It in the office I found it difficult to keep on top of my work, had no clue what was a priority and there just seemed to be lists everywhere but I had no clue what was what. Avoid if you&#39;re in a team any bigger than 3. That being said, when using it for myself on a much smaller scale I actually wuite liked it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Good for small projects&lt;/li&gt;
+&lt;li&gt;✅ Mobile app is good&lt;/li&gt;
+&lt;li&gt;✅ Quick to set up initally&lt;/li&gt;
+&lt;li&gt;❌ Easy to get lost in threads&lt;/li&gt;
+&lt;li&gt;❌ Free version is limited to three projects&lt;/li&gt;
+&lt;li&gt;❌ Difficult to find priorities&lt;/li&gt;
+&lt;li&gt;❌ Way too many emails!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://basecamp.com/&quot;&gt;Get started with Basecamp&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;*&lt;em&gt;This is an affiliate link for which I may receive a small commission, at no extra cost to you, should you decide to sign up. I only use affiliate links on products/tools I actually use and recommend ✌️&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/0-to-wordpress-in-4-minutes/"/>
+    <updated>2020-02-01T00:00:00-00:00</updated>
+    <id>/blog/0-to-wordpress-in-4-minutes/</id>
+    <content type="html">&lt;h2&gt;Step One — Preparation&lt;/h2&gt;
+&lt;p&gt;Download both MAMP and WordPress.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en-gb.wordpress.org/download/&quot;&gt;Download MAMP here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en-gb.wordpress.org/download/&quot;&gt;Download WordPress here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Step Two — Setup&lt;/h2&gt;
+&lt;p&gt;Firstly we’re going to set up MAMP. Double click on the installer in your downloads folder and follow the instructions.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Optional:&lt;/em&gt;
+I usually remove the MAMP Pro application by dropping it into the trash as we aren’t going to use this.&lt;/p&gt;
+&lt;p&gt;Ready to continue? Great! Let’s move on.&lt;/p&gt;
+&lt;p&gt;Unzip your WordPress download and move it the location you want to base your project. For me this is Documents &amp;gt; Projects. Once you’ve moved the &lt;code&gt;wordpress&lt;/code&gt; folder rename it to suit your project, e.g. &lt;code&gt;example-project&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Go to Applications &amp;gt; MAMP &amp;gt; MAMP (The MAMP application is stored within an MAMP folder). When this opens up, in the top bar of your Mac next to the apple logo click on MAMP &amp;gt; Preferences &amp;gt; Web Server.&lt;/p&gt;
+&lt;p&gt;From here we can tell MAMP the source for our projects, to keep it simple we’ll tell it to use the WordPress download we moved earlier. Click on &lt;code&gt;select&lt;/code&gt; and find the folder we moved to Documents &amp;gt; Projects and click &lt;code&gt;select&lt;/code&gt;. Then click okay and the Preferences window should close.&lt;/p&gt;
+&lt;p&gt;Now we’re ready to fire up our servers. Click &lt;code&gt;Start Servers&lt;/code&gt; — both the Apache and MySQL servers should go green and the MAMP homepage should open in the browser.&lt;/p&gt;
+&lt;h2&gt;Step Three — Installation&lt;/h2&gt;
+&lt;p&gt;Once your servers are running you’ll see the MAMP homepage. From here we’ll need to do a couple of things, firstly we’ll set up a database for your new WordPress site.&lt;/p&gt;
+&lt;h3&gt;Database Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on Tools &amp;gt; PHPMYADMIN&lt;/li&gt;
+&lt;li&gt;Click *New in the left menu&lt;/li&gt;
+&lt;li&gt;You’ll then see Create Database in the main area&lt;/li&gt;
+&lt;li&gt;Add your database name without spaces (e.g &lt;code&gt;example_database&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Leave the dropdown next to this as &lt;code&gt;utf8_general_ci&lt;/code&gt; and hit create&lt;/li&gt;
+&lt;li&gt;Now go back to your MAMP tab. We’re ready to setup WordPress&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;WordPress Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;On the MAMP screen click on MYWEBSITE. You should now see the WordPress setup page. Click on Let’s Go.&lt;/li&gt;
+&lt;li&gt;On the next screen we’re going to add your Database credentials.&lt;/li&gt;
+&lt;li&gt;The database name is the one created in the last section (e.g &lt;code&gt;example_database&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;The username is &lt;code&gt;root&lt;/code&gt; and the password is also &lt;code&gt;root&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Leave the host as &lt;code&gt;localhost&lt;/code&gt; and leave the prefix as &lt;code&gt;wp_&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;code&gt;submit&lt;/code&gt; then you should see the next screen. Click &lt;code&gt;run installation&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Setting up your WordPress site&lt;/h2&gt;
+&lt;p&gt;Congrats! Your WordPress site should now be installed and you’re ready to get started. All the steps in this section can be changed at a later date, so no need to worry.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Enter the site title (e.g. My WordPress Site)&lt;/li&gt;
+&lt;li&gt;Enter the username for your user (e.g. Joe Bloggs)&lt;/li&gt;
+&lt;li&gt;Enter the password — make sure you can remember this as you’ll need to login in shortly!&lt;/li&gt;
+&lt;li&gt;Enter an email — this should be a real email address you have access to in case you need to reset your password.&lt;/li&gt;
+&lt;li&gt;Click &lt;code&gt;Install WordPress&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Hooray! You’re good to go! Log in with credentials you created above and get started on your site.&lt;/p&gt;
+&lt;h2&gt;Common errors and how to solve them&lt;/h2&gt;
+&lt;p&gt;I’ve downloaded and setup MAMP more times than I can count, some times we can hit some unexpected errors. Here are some of the more common errors and how to solve them:&lt;/p&gt;
+&lt;h3&gt;Port 8888 is being used by another application&lt;/h3&gt;
+&lt;p&gt;Go MAMP &amp;gt; Preferences &amp;gt; Ports and change both Apache and NGINX to 8080. Quit MAMP, re-open and try to start your servers again.&lt;/p&gt;
+&lt;h3&gt;The MySQL Server won’t start&lt;/h3&gt;
+&lt;p&gt;Quit MAMP. Open up Terminal (Applications &amp;gt; Utilities &amp;gt; Terminal) and enter sudo killall -9 mysqld. Re-open MAMP and try to start your servers again.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/a-complete-guide-to-eleventy/"/>
+    <updated>2019-12-02T00:00:00-00:00</updated>
+    <id>/blog/a-complete-guide-to-eleventy/</id>
+    <content type="html">&lt;h2&gt;What is Eleventy?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.11ty.io/&quot;&gt;Eleventy&lt;/a&gt; is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it&#39;s own server for local development.&lt;/p&gt;
+&lt;h2&gt;Installing Eleventy&lt;/h2&gt;
+&lt;p&gt;Eleventy can be downloaded via the command line. Create a new project directory &lt;code&gt;mkdir [project_name]&lt;/code&gt; and &lt;code&gt;cd&lt;/code&gt; into it. Once in there install eleventy - &lt;code&gt;npm install -g @11ty/eleventy&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Eleventy is now installed in this directory and can be tested by creating a &lt;code&gt;test.md&lt;/code&gt; file and then running the command &lt;code&gt;eleventy&lt;/code&gt;. You&#39;ll know eleventy is working as it&#39;ll show you this: Writing &lt;code&gt;_site/temp/index.html from ./temp.md&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Basic Structure&lt;/h3&gt;
+&lt;p&gt;Eleventy uses a pretty basic file structure and all files, unless indicated otherwise, in the root will be compiled in to the &lt;code&gt;_site&lt;/code&gt; directory.&lt;/p&gt;
+&lt;h3&gt;Site directory&lt;/h3&gt;
+&lt;p&gt;This directory is served to the web and is essentially your live site. It holds the compiled pages along with and css and media files you may have.&lt;/p&gt;
+&lt;h3&gt;Includes directory&lt;/h3&gt;
+&lt;p&gt;Template files are stored here - I typically have the meta, nav, header, footer and any layout files in here.&lt;/p&gt;
+&lt;h3&gt;Pages&lt;/h3&gt;
+&lt;p&gt;Usually I create any of the major pages as in html, using the templating to pull in any global modules. For example, in the boilerplate I have the &lt;code&gt;index.html&lt;/code&gt; file and a &lt;code&gt;blog.html&lt;/code&gt; file - each of these pulls in the meta, nav and footer includes via their page template, we&#39;ll cover more on this in the next section.&lt;/p&gt;
+&lt;p&gt;Subpages, such as blog posts, should be held in a directory created in the root of the site. This directory should not have an underscore before it.&lt;/p&gt;
+&lt;h3&gt;eleventyignore&lt;/h3&gt;
+&lt;p&gt;Use this file to let eleventy know which files you do not want to compile - a README.md file for example.&lt;/p&gt;
+&lt;h3&gt;Templating&lt;/h3&gt;
+&lt;p&gt;Using Liquid and json to pull content from pages and posts.&lt;/p&gt;
+&lt;p&gt;As mentioned in the previous section, each page can be assigned a layout in at the top of the html or markdown file. See below for an example, we&#39;ll break this down after.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fig 1.
+
+---
+layout: homepage.liquid
+pageTitle: Eleventy Boilerplate
+pageClass: homepage
+FeatureImage: /images/feature.jpg
+pageExcerpt: Pabst paleo seitan shoreditch 90&#39;s shabby chic.
+---
+## The page content starts here
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The layout calls a liquid template from the &lt;code&gt;_includes&lt;/code&gt; directory. The liquid template creates the outline for the page and can be called on as many pages as you&#39;d like, below is a basic example of what the &lt;code&gt;homepage.liquid&lt;/code&gt; file might look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fig 2.
+
+&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    { % include meta % }
+    &amp;lt;title&amp;gt;Eleventy Boilerplate • { { pageTitle } }&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body class=&amp;quot;sub&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;
+        { % include nav % } { { content } }
+    &amp;lt;/div&amp;gt;
+    { % include footer % }
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see in &lt;code&gt;**Fig 2**&lt;/code&gt;, we&#39;re calling the meta from the &lt;code&gt;_includes&lt;/code&gt; directory in the head of the document. Any include can be called in a template when using liquid as I do - &lt;a href=&quot;https://www.11ty.io/docs/languages/liquid/&quot;&gt;find out more here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You&#39;ll also notice that we&#39;re calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we&#39;re calling the &lt;code&gt;, `sub` and&lt;/code&gt;. In &lt;code&gt;**Fig 1**&lt;/code&gt; we&#39;ve defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after &lt;code&gt;**Fig 1**&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Subpages&lt;/h2&gt;
+&lt;p&gt;When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from &lt;code&gt;**Fig 1**&lt;/code&gt; to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fig 3.
+
+{    
+    &amp;quot;layout&amp;quot;: &amp;quot;bloglayout.liquid&amp;quot;,
+    &amp;quot;pageClass&amp;quot;: &amp;quot;post&amp;quot;,
+    &amp;quot;tags&amp;quot;: [&amp;quot;posts&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You&#39;ll notice the &lt;code&gt;tags&lt;/code&gt; are declared here, a set of files within a tag can be looped through on other pages - this can be used in a variety of ways such as case studies or blog posts.&lt;/p&gt;
+&lt;h2&gt;Loops&lt;/h2&gt;
+&lt;p&gt;A loop will display certain elements from a group of files. For example, we can loop through all of the blog posts created like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fig 4.
+
+&amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;content latest-post-grid all&amp;quot;&amp;gt;
+    &amp;lt;ul&amp;gt;
+    { % assign allblogposts = collections.posts % }
+    { % for post in allblogposts % }
+      &amp;lt;li class=&amp;quot;latest-post&amp;quot;&amp;gt;
+          &amp;lt;a href=&amp;quot;{ { post.url } }&amp;quot;&amp;gt;{ { post.data.postTitle } }&amp;lt;/a&amp;gt;&amp;lt;span class=&amp;quot;post-date&amp;quot;&amp;gt;{ { post.data.postDate } }&amp;lt;/span&amp;gt;
+      &amp;lt;/li&amp;gt;
+    { % endfor % }
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we&#39;re looping though all the blog posts and by creating a collection from the posts tag. Once we&#39;re looping through we can call the variable from each of the posts, in this example (&lt;strong&gt;Fig 4.&lt;/strong&gt;) we&#39;re creating list element for each post with a link to the posts url. We&#39;re also pulling in the &lt;code&gt;postDate&lt;/code&gt; here, a custom variable added to the liquid template we&#39;re calling in the json file.&lt;/p&gt;
+&lt;p&gt;Now we have the basic loop in place we can add some &#39;filters&#39; to tweak the loop such as limit and reverse.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fig 5.
+
+&amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;content latest-post-grid all&amp;quot;&amp;gt;
+    &amp;lt;ul&amp;gt;
+    { % assign allblogposts = collections.posts limit: 2 | reverse % }
+    { % for post in allblogposts % }
+      &amp;lt;li class=&amp;quot;latest-post&amp;quot;&amp;gt;
+          &amp;lt;a href=&amp;quot;{ { post.url } }&amp;quot;&amp;gt;{ { post.data.postTitle } }&amp;lt;/a&amp;gt;&amp;lt;span class=&amp;quot;post-date&amp;quot;&amp;gt;{ { post.data.postDate } }&amp;lt;/span&amp;gt;
+      &amp;lt;/li&amp;gt;
+    { % endfor % }
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Reverse&lt;/h3&gt;
+&lt;p&gt;This will change the default loop order from date ascending to date descending.&lt;/p&gt;
+&lt;h3&gt;Limit&lt;/h3&gt;
+&lt;p&gt;Limit the number of posts shown. A great use is to show the first 2/3 posts or pages on the homepage.&lt;/p&gt;
+&lt;h2&gt;Sass and Media&lt;/h2&gt;
+&lt;p&gt;I&#39;ve found the easiest solution to media, javascript and CSS files is to include then directly in the &lt;code&gt;_site&lt;/code&gt; directory. When developing your pages remember that the &lt;code&gt;_site&lt;/code&gt; will be the root of the site on compile - for example you should use &lt;code&gt;/images/feature.jpg&lt;/code&gt; rather than &lt;code&gt;_site/images/feature.jpg&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Node Sass&lt;/h3&gt;
+&lt;p&gt;For the past few years I&#39;ve been using &lt;a href=&quot;https://www.npmjs.com/package/node-sass&quot;&gt;Node Sass&lt;/a&gt; on almost every project I work on and implement a &lt;a href=&quot;http://smacss.com/&quot;&gt;SMACSS&lt;/a&gt; methodology for structure and BEM naming convention throughout. To keep the size of the live site small, I now create the &lt;code&gt;partials&lt;/code&gt; directory outside the &lt;code&gt;_site&lt;/code&gt; directory and then compile into it using &lt;code&gt;sass --watch partials:_site/css&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Deployment through Github and Netlify&lt;/h2&gt;
+&lt;p&gt;I always use one of these two solutions for hosting my Eleventy sites, by creating a Github repo for your site you&#39;ll be able to enjoy the benefits of automated deployment.&lt;/p&gt;
+&lt;h3&gt;Netlify&lt;/h3&gt;
+&lt;p&gt;My portfolio is hosted here, for free. It&#39;s more powerful than Github pages offering tools such as redirects, forms and split testing on the free tier - with more available on the &lt;a href=&quot;https://www.netlify.com/pricing/&quot;&gt;paid service&lt;/a&gt;. I would recommend this solution for sites with more than one page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Github Pages&lt;/h3&gt;
+&lt;p&gt;I&#39;d only recommend this for simple or single page sites. This is also free and you can create as many sites as you like, however your repo must be public. I recently &lt;a href=&quot;https://github.com/pricing&quot;&gt;upgraded to Pro&lt;/a&gt; and can now create publicly accessible, single page sites from private repos. Keeping my source code private but allowing me to host single page sites for free.&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;I&#39;ve &lt;a href=&quot;https://github.com/DanCanetti/eleventy-github-pages-deploy&quot;&gt;created a bash script&lt;/a&gt; which copies the &lt;code&gt;_site&lt;/code&gt; directory to create the docs directory required for building sites via Github pages.&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;As it turns out, my bash script is unnecessary as you can change the default output of an Eleventy site to the docs folder by adding some config.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.11ty.dev/docs/config/#output-directory&quot;&gt;11ty Output Directory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;To conclude&lt;/h2&gt;
+&lt;p&gt;For many years I&#39;ve been focussed on WordPress development, since switching to Eleventy I&#39;ve been able to tailor the site build to suit what I need and rapidly develop sites without the need for databases and a bloated codebase. I&#39;d definitely recommend giving it a try.&lt;/p&gt;
+&lt;p&gt;If you feel like you need to hook a CMS into the site have a look at &lt;a href=&quot;https://forestry.io/&quot;&gt;forestry.io&lt;/a&gt;. I&#39;ve had a quick look and it&#39;s a pretty slick integration.&lt;/p&gt;
+&lt;p&gt;I hope this article helps get you started, reach out to me if you have any questions. I&#39;ll do my best to answer. I&#39;m still learning 11ty but the more I use it, the more I fall in love with it.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/craft-cms-and-homestead/"/>
+    <updated>2019-10-31T00:00:00-00:00</updated>
+    <id>/blog/craft-cms-and-homestead/</id>
+    <content type="html">&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A working Laravel/Homestead environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;In the Homestead.yaml file create a new site mapping to this directory:
+&lt;code&gt;to: /home/vagrant/[project_dir]/[project_name]/public/web&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Create new homestead site
+&lt;code&gt;composer create-project --prefer-dist laravel/laravel [project_name]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Create a new database for the Homestead site called &lt;code&gt;craft_homestead&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Create a second database for the Craft installation called &lt;code&gt;craft&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Navigate to your new site’s public directory and edit the &lt;code&gt;.env&lt;/code&gt; file. Add the credentials for the &lt;code&gt;craft_homestead&lt;/code&gt; database.&lt;/p&gt;
+&lt;p&gt;Navigate to the Homestead directory and run &lt;code&gt;vagrant ssh&lt;/code&gt;. Now move into the new project directory &lt;code&gt;cd [project_dir]/[project_name]&lt;/code&gt; and run the migration: &lt;code&gt;php artisan migrate&lt;/code&gt;. Once this has completed &lt;code&gt;exit&lt;/code&gt; the ssh connection.&lt;/p&gt;
+&lt;p&gt;Navigate to your new site’s public directory and empty the contents
+&lt;code&gt;cd [project_name]/public then run sudo rm -rf *&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Move back to the root of the new site and install Craft in the public directory
+&lt;code&gt;composer create-project craftcms/craft public/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can now run the Craft setup wizard from the browser, go to &lt;code&gt;http://[project_name]/index.php?p=admin/install&lt;/code&gt;. When prompted for the database details enter the credentials for the &lt;code&gt;craft&lt;/code&gt; database we created earlier.&lt;/p&gt;
+&lt;p&gt;Once installed your site will be ready at &lt;code&gt;http://[project_name]/&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Updating php.ini directives&lt;/h2&gt;
+&lt;p&gt;Once installed Craft may show some errors in the Requirements area of the &lt;em&gt;System Report&lt;/em&gt; — &lt;code&gt;admin &amp;gt; Utilities &amp;gt; System Report&lt;/code&gt;. To fix these we need to make changes to the php.ini file on the vm.&lt;/p&gt;
+&lt;p&gt;Navigate to the Homestead directory and run &lt;code&gt;vagrant ssh&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The php version Craft is using can be found at the top of the System Report page.&lt;/p&gt;
+&lt;p&gt;Edit the php.ini file &lt;code&gt;sudo nano /etc/php/[php_version]/fpm/php.ini&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On Mac use &lt;code&gt;control + w&lt;/code&gt; and search for &lt;code&gt;memory_limit&lt;/code&gt;. Change this to 256.&lt;/p&gt;
+&lt;p&gt;Again using &lt;code&gt;control + w&lt;/code&gt;, search for &lt;code&gt;max_execution_time&lt;/code&gt;. Change this to 120.&lt;/p&gt;
+&lt;p&gt;Exit nano by using &lt;code&gt;control + x&lt;/code&gt;, answer &lt;code&gt;y&lt;/code&gt; to save the file and hit &lt;code&gt;enter&lt;/code&gt; to save over the existing file.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;exit&lt;/code&gt; the ssh connection and reload the machine using &lt;code&gt;vagrant reload&lt;/code&gt;. Once the machine has restarted refresh the System Report page and the Requirements should now show as valid.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; Thursday 31st October — Added detail on updating the php.ini directives.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/no-css-or-js-on-magento-2-after-install/"/>
+    <updated>2019-10-22T01:00:00+01:00</updated>
+    <id>/blog/no-css-or-js-on-magento-2-after-install/</id>
+    <content type="html">&lt;p&gt;Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.&lt;/p&gt;
+&lt;p&gt;This turned out to be because NGINX was ignoring the &lt;code&gt;.htaccess&lt;/code&gt; file in the &lt;code&gt;/pub/static/&lt;/code&gt; directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.&lt;/p&gt;
+&lt;h2&gt;Pointing to the correct config&lt;/h2&gt;
+&lt;p&gt;Navigate to &lt;code&gt;/etc/nginx/sites-available/&lt;/code&gt; and run &lt;code&gt;sudo nano [your-site-config]&lt;/code&gt;. Use the below config file to point to the &lt;code&gt;nginx.conf.sample&lt;/code&gt; file provided in Magento 2 — remember to change [your-site-path] to suit your set-up. In Homestead this is usually &lt;code&gt;/home/vagrant/[your-projects-directory]/[your-site-name]/public/&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;upstream fastcgi_backend {
+   server  unix:/run/php/php7.1-fpm.sock;
+}
+
+server {
+    listen 80;
+    server_name  magento2.local;
+
+    set $MAGE_ROOT [your-site-path];
+    set $MAGE_MODE developer;
+    include [your-site-path]/nginx.conf.sample;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After you’ve changed the config file you’ll need to restart the service: &lt;code&gt;sudo systemctl restart nginx.service&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Homestead Notes&lt;/h2&gt;
+&lt;p&gt;One issue I have come across with Homestead is that it will rebuild the config file whenever the Vagrant box is halted and started. You’ll need to re-do this change each time.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; Tuesday 22nd October — added service restart command.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; Tuesday 22nd October —included note on NGINX config rebuild eachtime Homestead is restarted.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/recommended-reading/"/>
+    <updated>2019-09-30T01:00:00+01:00</updated>
+    <id>/blog/recommended-reading/</id>
+    <content type="html">&lt;p&gt;I try to read as often as I can, typically a chapter a night of whichever book I&#39;m reading on my Kindle or listening to via Audible. I&#39;m really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.&lt;/p&gt;
+&lt;h2&gt;The Launch Pad&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-launchpad.jpg&quot; alt=&quot;The Launch Pad&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A fast-paced yet insightful look into the mysterious Y Combinator and some of the latest batches business ideas. There&#39;s some great tips in here for anyone starting a company, particularly anyone who will be looking for seed investment.&lt;/p&gt;
+&lt;p&gt;I blazed through this on Audible in less than a week and would listen or read it again at some stage.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0670923494&amp;amp;linkId=674a67918e6c06893ed84c33a53a4071&quot;&gt;Buy The Launch Pad.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Onward&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-onward.jpg&quot; alt=&quot;Onward&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Howard Shultz talks through his return as CEO of Starbucks, the effect the financial crisis of 2008 took on the business, and how they endevoured to remain faithful to their guiding principles throughout.&lt;/p&gt;
+&lt;p&gt;This is a long read, but one I enjoyed and would recommend should you have an interest in Starbucks.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://whttps//www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0470977647&amp;amp;linkId=b543eddf855961466f8cb43884ee754cww.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0670923494&amp;amp;linkId=674a67918e6c06893ed84c33a53a4071&quot;&gt;Buy Onward.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Start With Why&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-startwithwhy.jpg&quot; alt=&quot;Start With Why&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If you&#39;ve seen any of Simon Sineks talks you&#39;ll be familiar with some of the stories he tells here. Even so, Simon delivers the Audible reading of this book with the same passion that had me hooked from the first time I saw his Ted Talk.&lt;/p&gt;
+&lt;p&gt;For anyone in a management position or who aspires to one day be a manager I&#39;d encourage you to read this book, there are some fantastic theories and pricinples to consider applying in your workplace.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/0241958229/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0241958229&amp;amp;linkId=09ba3da2391879d7b3fc7369be52bd75&quot;&gt;Buy Start With Why.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Becoming&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-becoming.jpg&quot; alt=&quot;Becoming&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I was really excited for this book to be released and I wasn&#39;t disappointed when I finally got the chance to listen to this on Audible.&lt;/p&gt;
+&lt;p&gt;At a mammoth 19hr runtime it&#39;s by far the longest book I&#39;ve listened to and Michelle does a great job detaching herself from Barack until the time is right. The pacing of the book is just right and is peppered with small intricate details which allow the reader to see how Michelle got to where she is today.&lt;/p&gt;
+&lt;p&gt;There aren&#39;t many take-aways from this book, but it&#39;s a great read for your next vacation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/0241334144/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0241334144&amp;amp;linkId=d07c6596bdf28a7b14da00ec13eae1bb&quot;&gt;Buy Becoming.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;The Upstarts&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-theupstarts.jpg&quot; alt=&quot;The Upstarts&quot;&gt;&lt;/p&gt;
+&lt;p&gt;First of all, I must say that this is not as enjoyable as Hatching Twitter. That being said, the parts about Uber in particular are very interesting given their controversial history and learning about how Air B&amp;amp;B grew from an air mattress to a billion dollar company is aspirational.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/0552172588/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0552172588&amp;amp;linkId=174e7a1aee1251304d543d889d4c4cc2&quot;&gt;Buy The Upstarts.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Hatching Twitter&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-hatchingtwitter.jpg&quot; alt=&quot;Hatching Twitter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;One of my all time favourites - a story of friendship, betrayal, deceit, and the founding of Twitter. It&#39;s all true and it&#39;s a real page turner.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/1444761978/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=1444761978&amp;amp;linkId=ec4a7bbcad8c42b07c1f81ebfb2b46c1&quot;&gt;Buy Hatching Twitter.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Unsubscribe&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-unsubscribe.jpg&quot; alt=&quot;Unsubscribe&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Exactly what is says on the tin. I read this very early on in my worklife and it really influenced how I handle my emails - if you find yourself inundated with emails, give this book a try.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B01FE6V5KI&amp;amp;linkId=8233de69f6a5abf3b694efe449ef827a&quot;&gt;Buy Unsubscribe.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Don&#39;t Make Me Think&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/recommended-reading/book-dontmakemethink.jpg&quot; alt=&quot;Don&#39;t Make Me Think&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If you went to University to study web design or development you&#39;ll should have read this already, if not it&#39;s definitely worth a read.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/0321344758/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=0321344758&amp;amp;linkId=779a6452e129a18a325c9f8a78626f63&quot;&gt;Buy Don&#39;t Make Me Think.&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/current-setup/"/>
+    <updated>2019-09-26T01:00:00+01:00</updated>
+    <id>/blog/current-setup/</id>
+    <content type="html">&lt;p&gt;Everyone works differently and I love it. I follow a few too many set-up focussed Instagram accounts and have been watching &lt;a href=&quot;https://www.youtube.com/playlist?list=PLTW2MN17j-L12h8Jq5fGGt8VV1ISZT-De&quot;&gt;Setup Wars&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/channel/UCDlQwv99CovKafGvxyaiNDA&quot;&gt;TLD&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/channel/UCzJjUHizQfPYywqt1mSEMww&quot;&gt;Oliur&lt;/a&gt; for as long as I can remember. I&#39;m still working on my ideal set-up and I&#39;ll keep this page updated with all the latest tech and workflow tools I use.&lt;/p&gt;
+&lt;h2&gt;Mac Mini&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/mac-mini.jpg&quot; alt=&quot;Mac Mini&quot;&gt;&lt;/p&gt;
+&lt;p&gt;My daily driver. All of my design and development work is done on this machine and to keep it clean and fast I store everything on Google Drive.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B07K97BF47/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B07K97BF47&amp;amp;linkId=5979bb48c8910e787fb7746a71200a4c&quot;&gt;Buy Mac Mini.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;iPad Mini&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/ipad-mini.jpg&quot; alt=&quot;iPad Mini&quot;&gt;&lt;/p&gt;
+&lt;p&gt;My version of a second screen. I have this little iPad sat just to the bottom left of my monitor, with either Trello or Netflix on it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B07NHQQ776/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B07NHQQ776&amp;amp;linkId=f285b545e78f6f0171bbcb0b982808bd&quot;&gt;Buy iPad Mini.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Sony WH-1000XM2 Headphones&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/sony-mx.jpg&quot; alt=&quot;Sony WH-1000XM2 Headphones&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I was gifted these for Christmas last year, and man do I love them. Useful for blocking out the surrounding noise both in a busy office and on my travels.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B074ZRG5MN/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B074ZRG5MN&amp;amp;linkId=dc9119ce03a10908d0d035d3c0e5e0e5&quot;&gt;Buy Sony WH-1000XM2 Headphones.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Magic Mouse&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/magic-mouse.jpg&quot; alt=&quot;Magic Mouse&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I never realised how useful being able to scroll horizonally could be until I used one of these and the battery life is suprisingly good. The only downside to these is the charging port being underneath the mouse - rendering it useless while charging.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B07BRLMY93/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B07BRLMY93&amp;amp;linkId=0ab294658e5a6b43697087a2f5d7f706&quot;&gt;Buy Magic Mouse.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Magic Keyboard&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/magic-keyboard.jpg&quot; alt=&quot;Magic Keyboard&quot;&gt;&lt;/p&gt;
+&lt;p&gt;What&#39;s so magic about it? I can&#39;t tell you. It functions like every other keyboard... it just looks awesome and if you invest in the space grey Magic Mouse you need one of these to match!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B07BR9ZBZ4/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B07BR9ZBZ4&amp;amp;linkId=1587f69b74b7de3ddbc263f5168f1d4d&quot;&gt;Buy Magic Keyboard.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Monzo&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/monzo.jpg&quot; alt=&quot;Monzo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I use Monzo primarily for my day-to-day spending, but I&#39;m a particular fan of their &#39;Pots&#39; which you can set up really quickly to money aside and the best part - you can automatically round up transactions and put the difference in a Pot... you can save without knowing it!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://join.monzo.com/r/41mwavc&quot;&gt;Get a Monzo account.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Atom&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/atom.jpg&quot; alt=&quot;Atom&quot;&gt;&lt;/p&gt;
+&lt;p&gt;My code editor of choice, it&#39;s super powerful and has free extensions for everything you need. I can recommend the file-icons extension, it improves the gui and allows me to quickly identify file types in the tree.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Download Atom.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Trello&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/trello.jpg&quot; alt=&quot;Trello&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After being introduced to Trello whilst working at Nouveau Beauty Group I began to move away from Asana and use Trello for my freelance work too. It&#39;s simplicity and ease-of-use were just winners for me.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://trello.com/danielcanetti/recommend&quot;&gt;Get started with Trello.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Google Drive&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/current-setup/drive.jpg&quot; alt=&quot;Google Drive&quot;&gt;&lt;/p&gt;
+&lt;p&gt;As I menioned earlier, to keep my Mac Mini clean and running as fast as possible I store most of my files on Google Drive. I&#39;m currently investigating what else G Suite has to offer.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://refergsuite.app.goo.gl/Vfa4&quot;&gt;Get started with G Suite.&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/my-favourite-grand-designs/"/>
+    <updated>2019-09-02T01:00:00+01:00</updated>
+    <id>/blog/my-favourite-grand-designs/</id>
+    <content type="html">&lt;p&gt;Grand Designs has been one of the staple design and architecture shows on TV since I can remember and over the years there have been some truly incredible houses built. Here are some of my favourites.&lt;/p&gt;
+&lt;h2&gt;Container House&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/favourite.jpg&quot; alt=&quot;Container House&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A young farmer and architect in Northern Ireland hopes to make a home out of four large shipping containers welded together to form a giant cross.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.channel4.com/programmes/grand-designs/on-demand/57386-006&quot;&gt;Watch the episode.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Corkellis House&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/corkellis-house.jpg&quot; alt=&quot;Corkellis House&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Interior designer Kathryn has decided to design and build her own Scandinavian-inspired house on a hillside plot in her parents&#39; back garden in Falmouth, Cornwall.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.channel4.com/programmes/grand-designs/on-demand/46761-029&quot;&gt;Watch the episode.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;The Loch House&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/loch-house.png&quot; alt=&quot;The Loch House&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A million pound house built on the edge of a sleepy Scottish Loch as a cure for the stress-related illness of the owner and a healthy, tranquil life for his family.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.channel4.com/programmes/grand-designs/on-demand/41975-019&quot;&gt;Watch the episode.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Turf House&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/turf-house.jpg&quot; alt=&quot;Turf House&quot;&gt;&lt;/p&gt;
+&lt;p&gt;On the Isle of Skye, one of the most beautiful landscapes in Britain, Rebecca and Indi are building a turf-roofed contemporary home to withstand gale force winds and some sceptical locals.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.channel4.com/programmes/grand-designs/on-demand/49841-002&quot;&gt;Watch the episode.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Corn Yard&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/corn-yard.jpg&quot; alt=&quot;Corn Yard&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Identical twins Nik and Jon build near identical houses in Sheffield. Raised on steel stilts, these two extraordinary properties pay tribute to Sheffield&#39;s industrial past.&lt;/p&gt;
+&lt;p&gt;This episode is not available on demand yet.&lt;/p&gt;
+&lt;h2&gt;Scotland Cliff Top House&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/my-favourite-grand-designs/cliff-top-house.jpg&quot; alt=&quot;Scotland Cliff Top House&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Andy and Jeanette plan a precarious cliff-top build on the west coast of Scotland. There are battles with extreme weather, budget overruns, and a sudden emotional shock.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.channel4.com/programmes/grand-designs/on-demand/65182-006&quot;&gt;Watch the episode.&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; Monday 9th September to add Scotland Cliff Top House.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/email-isnt-broken/"/>
+    <updated>2019-08-27T01:00:00+01:00</updated>
+    <id>/blog/email-isnt-broken/</id>
+    <content type="html">&lt;p&gt;Slack exploded onto the scene declaring it would &lt;a href=&quot;https://www.ccn.com/news/slack-ceo-were-going-to-end-email/2019/06/20/&quot;&gt;Kill ‘Company Email’ by 2026&lt;/a&gt; and it seems it still has a long way to go as we sent more than &lt;a href=&quot;https://www.campaignmonitor.com/blog/email-marketing/2019/05/shocking-truth-about-how-many-emails-sent/&quot;&gt;120 billion emails&lt;/a&gt; in 2018 alone. We all hate email, it&#39;s our never ending to do list and it&#39;s the thing that ruins your Sunday night and the last few days of your holiday as you start trying to clear the backlog.&lt;/p&gt;
+&lt;p&gt;However, I think email is great and we&#39;re just using it wrong. To try and help us all out I&#39;ve come up with a few quick tips when you&#39;re emailing in the office that will make everyone happier.&lt;/p&gt;
+&lt;h2&gt;Email is Long-Form&lt;/h2&gt;
+&lt;p&gt;We all have access to tools like &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt;, &lt;a href=&quot;https://products.office.com/en-US/microsoft-teams/group-chat-software&quot;&gt;Teams&lt;/a&gt; for quick messages or questions but some people still choose to send an email with a single sentence in, or worse just the subject and no further copy.&lt;/p&gt;
+&lt;p&gt;Use the tools you have as they were designed - emails were designed to be long-form, messaging apps weren&#39;t. If you need to message or ask someone a quick question, pick up the phone or use one of the apps mentioned above, don&#39;t clog up someones inbox.&lt;/p&gt;
+&lt;h2&gt;Provide detail&lt;/h2&gt;
+&lt;p&gt;When sending an email to a colleague or organisation try to include as much detail as you can rather than sending a basic request that requires a response before anything can be actioned.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;I&#39;ve been trying to upload images to this page: [URL] but when I try to submit it says &amp;quot;Error 101&amp;quot;.&lt;/p&gt;
+&lt;p&gt;I was hoping you&#39;d be able to help. If you need any further information please let me know.&lt;/p&gt;
+&lt;p&gt;Thanks,
+Dan.&lt;/p&gt;
+&lt;p&gt;The more information you can provide within the initial email the less back and forth you&#39;ll have to partake in. By including links, screenshots where necessary, and a complete description of the issue you&#39;re having or the information you&#39;re looking for you can really speed up the process for both you and the recipient.&lt;/p&gt;
+&lt;h2&gt;Get to the point&lt;/h2&gt;
+&lt;p&gt;I&#39;ve taken this from a &lt;a href=&quot;https://simonsinek.com/&quot;&gt;Simon Sinek&lt;/a&gt; talk I watched a while ago. If you&#39;re asking someone to do something as a favour or to benefit you, leave the pleasantries until afterwards. You&#39;ll come across as more sincere and the recipient will quickly be able to establish what this email is about.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Afternoon John,&lt;/p&gt;
+&lt;p&gt;As you&#39;re aware, the deadline for Project X is quickly approaching. It would be greatly appreciated if you would be able to work a few hours extra alongside myself and the team this evening to make sure we clear the remaining issues?&lt;/p&gt;
+&lt;p&gt;I hope you had a great weekend.&lt;/p&gt;
+&lt;p&gt;Thanks,
+Dan.&lt;/p&gt;
+&lt;h2&gt;If it&#39;s big, don&#39;t attach it&lt;/h2&gt;
+&lt;p&gt;Most of us are now using &lt;a href=&quot;https://onedrive.live.com/about/en-gb/&quot;&gt;OneDrive&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/drive/&quot;&gt;Google Drive&lt;/a&gt;, maybe even &lt;a href=&quot;https://db.tt/U5J7lrNp&quot;&gt;DropBox&lt;/a&gt; - if the attachment you wish to send is large drop it onto the cloud and send a link rather than attaching it to your email. If your company allows, you could even use &lt;a href=&quot;https://wetransfer.com/&quot;&gt;WeTransfer&lt;/a&gt; to share large files via email, however this does require to share files outside of the company network.&lt;/p&gt;
+&lt;p&gt;Sending a link to a large file will free up space on your companies email server and keep everyones emails running quickly. This is especially true if you&#39;re sharing a large file with several people as there will X amount of duplicates of that file being sent across the network.&lt;/p&gt;
+&lt;h2&gt;How long is a piece of string?&lt;/h2&gt;
+&lt;p&gt;Please don&#39;t include a full email thread and just forward with &#39;see below&#39; as your email. Sure, include the thread for reference, but if you want an answer to a question or to highlight a specific part of the thread - copy this into your email so the recipient can easily see it and understand what is required of them and not waste time trying to find what you&#39;re referencing.&lt;/p&gt;
+&lt;h2&gt;Reply All?&lt;/h2&gt;
+&lt;p&gt;I think these two tweets explain this point perfectly.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;PEOPLE WHO DON&amp;#39;T PRESS &amp;#39;REPLY ALL&amp;#39; AND CONSTANTLY LEAVE ONE PERSON OUT OF THE EMAIL CHAIN SO I HAVE TO RELAY EVERYTHING&lt;br&gt;&lt;br&gt;YOU ARE ON THE LIST&lt;/p&gt;&amp;mdash; Holly Brockwell (@holly) &lt;a href=&quot;https://twitter.com/holly/status/1166277633358872581?ref_src=twsrc%5Etfw&quot;&gt;August 27, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Also, people who press &amp;#39;reply all&amp;#39; when their response is to one person. &lt;a href=&quot;https://t.co/HtimYaQDqL&quot;&gt;https://t.co/HtimYaQDqL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniel Canetti (@Dan_Canetti) &lt;a href=&quot;https://twitter.com/Dan_Canetti/status/1166278200424579072?ref_src=twsrc%5Etfw&quot;&gt;August 27, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;h2&gt;Suggested Reading&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Unsubscribe&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Exactly what is says on the tin. I read this very early on in my worklife and it really influenced how I handle my emails - if you find yourself inundated with emails, give this book a try.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&amp;amp;tag=danielcanet01-21&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;linkCode=as2&amp;amp;creativeASIN=B01FE6V5KI&amp;amp;linkId=8233de69f6a5abf3b694efe449ef827a&quot;&gt;Buy the book on Amazon&lt;/a&gt; • &lt;a href=&quot;/blog/recommended-reading/&quot;&gt;See all book recommendations&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/wordpressify/"/>
+    <updated>2019-05-09T01:00:00+01:00</updated>
+    <id>/blog/wordpressify/</id>
+    <content type="html">&lt;p&gt;WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via &lt;a href=&quot;https://wppusher.com/&quot;&gt;WP Pusher&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Setting up MySQL Locally&lt;/h2&gt;
+&lt;p&gt;The easiest approach to setting up WordPressify is to have a local instance of MySQL installed, this runs on the Mac and can be controlled MySQL from System Preferences.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download MySQL Community Server from the &lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot;&gt;official site&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Follow the installation instructions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Connecting to local MySQL via Sequel Pro&lt;/h2&gt;
+&lt;p&gt;I prefer to use Sequel Pro to connect to MySQL rather than using the command line. You can &lt;a href=&quot;https://www.sequelpro.com/&quot;&gt;download Sequel Pro for free here&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Sequel Pro.&lt;/li&gt;
+&lt;li&gt;Choose the Socket option.&lt;/li&gt;
+&lt;li&gt;Enter the Username and Password you created during the MySQL install.&lt;/li&gt;
+&lt;li&gt;You should now be connected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Preparing to install WordPressify.&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new database.&lt;/li&gt;
+&lt;li&gt;Create a new user or assign a current user the correct privileges.&lt;/li&gt;
+&lt;li&gt;Keep note of the database name, username, and password. You’ll need these on the next step.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Installing WordPressify&lt;/h2&gt;
+&lt;p&gt;These instructions can be found on the &lt;a href=&quot;https://www.wordpressify.co/&quot;&gt;WordPressify website&lt;/a&gt;, I’ve included here for ease of use. I have a folder which I use for my Laravel Homestead sites and install each instance in here to keep my workflow simple.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using the command line navigate to your desired root directory.&lt;/li&gt;
+&lt;li&gt;Using the command line navigate to your desired root directory - &lt;code&gt;git clone https://github.com/luangjokaj/wordpressify&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Install the NPM dependancies - &lt;code&gt;npm install&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Change the template name. Open the gulpfile.js and edit this line: &lt;code&gt;const themeName = &#39;wordpressify&#39;;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Download the latest version of WordPress - &lt;code&gt;npm run install:wordpress&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Start the workflow and complete the WordPress Install - &lt;code&gt;npm run dev&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Connecting to local MySQL during the WordPress Install.
+&lt;ul&gt;
+&lt;li&gt;Add the database, username, and password.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;127.0.0.1&lt;/code&gt; as the host.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add your site name, user name and password for the initial user.&lt;/li&gt;
+&lt;li&gt;Your site should now be installed using WordPressify.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/gitlab-pages/"/>
+    <updated>2019-02-06T00:00:00-00:00</updated>
+    <id>/blog/gitlab-pages/</id>
+    <content type="html">&lt;p&gt;GitLab is a git-repository manager with some differences to GitHub, although the recent &lt;a href=&quot;https://blog.github.com/2019-01-07-new-year-new-github/&quot;&gt;GitHub announcements&lt;/a&gt; bring the two more in line with one another.&lt;/p&gt;
+&lt;p&gt;If you’re not aware of GitLab pages, they allow you to &lt;a href=&quot;https://docs.gitlab.com/ee/user/project/pages/&quot;&gt;publish static websites directly from a repository&lt;/a&gt; in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.&lt;/p&gt;
+&lt;p&gt;Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and &lt;a href=&quot;https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline&quot;&gt;point out where I got stuck&lt;/a&gt; when first setting this up.&lt;/p&gt;
+&lt;h2&gt;Prerequisites:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;As mentioned above, the repo must not use server-side languages. &lt;a href=&quot;https://gitlab.com/pages&quot;&gt;See here for a complete list of supported languages&lt;/a&gt; with example config files.&lt;/li&gt;
+&lt;li&gt;A working repo with at least an index.html file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The .gitlab-ci.yml file&lt;/h2&gt;
+&lt;p&gt;This is the config file that will deploy the codebase to GitLab pages once pushed to the server, the below mostly consists of the html template GitLab generates and the only change I’ve made is to limit this to the staging branch of the project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+    - staging
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Creating a .gitlab-ci.yml file&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;To generate this file for yourself, go to your repository and add a new file to the repo by clicking on the &lt;code&gt;+&lt;/code&gt; and selecting &lt;code&gt;new file&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;At the top of the next page you can select a template from the &lt;code&gt;choose type&lt;/code&gt; dropdown, select &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; then click the &lt;code&gt;Apply a GitLab CI Yaml template&lt;/code&gt; button and select the project type you’re working on. For this example we’ll choose &lt;code&gt;HTML&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A file very similar to the above should then be generated — you’ll notice the only difference is the &lt;code&gt;staging&lt;/code&gt; branch I use.&lt;/li&gt;
+&lt;li&gt;Commit the file to your repo, then navigate to &lt;code&gt;CI/CD&lt;/code&gt; on the left navigation and you should see the pipeline is running.&lt;/li&gt;
+&lt;li&gt;Once this has completed you should see the &lt;code&gt;Pages&lt;/code&gt; option as appeared in the &lt;code&gt;Settings&lt;/code&gt; menu on the left side. Inside here you should see a message which states &lt;code&gt;Congratulations! your pages are served under:&lt;/code&gt; and a link to your page.&lt;/li&gt;
+&lt;li&gt;You’re done!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Some things to be aware of&lt;/h2&gt;
+&lt;p&gt;You can copy your &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; file to other projects, as long as you call your branch the same name it should work just fine.&lt;/p&gt;
+&lt;p&gt;If you Group your projects, &lt;strong&gt;GitLab Pages can only be generated from repos in the top level of a group&lt;/strong&gt;, I got stuck trying to generate Pages from a subgroup and this is not supported.&lt;/p&gt;
+&lt;p&gt;Once you see the &lt;code&gt;Congratulations!&lt;/code&gt; message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/how-a-mentor-leaving-can-inspire-you/"/>
+    <updated>2016-06-09T01:00:00+01:00</updated>
+    <id>/blog/how-a-mentor-leaving-can-inspire-you/</id>
+    <content type="html">&lt;p&gt;At the beginning of the year I started a new job as a junior designer taking on a different but potentially more fulfilling role, one of the main draws to this job was the ability to work under the Senior Web Designer &amp;amp; Developer there. This was an opportunity for me develop my skills further and learn much more about the industry from someone with greater experience than myself, perfect for someone who has been working in the industry for less that one year since graduating.&lt;/p&gt;
+&lt;p&gt;About three months in to the role and I have settled in, we’re working well together and pushing the work out quickly and to a high standard. I was very happy and every day I was learning new things about the industry, both to aid with my development in my current role and beyond. Then a bombshell, the senior designer &amp;amp; developer is leaving… he’s been offered a better position elsewhere and no one can argue that it wasn’t perfect for him. Four weeks later he’s gone and I have now been left in the position to take over the workload and keep on top of the everyday tasks as well as picking up some bigger projects.&lt;/p&gt;
+&lt;p&gt;Initially I’m a little concerned that I’m not experienced enough for this and I kept telling myself that there was a reason that I was brought in to help out as there is just too much work, however I quickly realised that this is the opportunity that I have been waiting for. I took a deep breath and looked at the workload from a different angle, learning new skills and increasing my organisational abilities along the way. I stepped up and emailed my mangers just to let them know that I will not let the workload go back to how it was and I will do my upmost to keep everything in order and on track which they really appreciated.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Someone really has to believe in you as an individual too. It’s an intangible thing having talent, especially if we’re in a position to teach and mentor others. Also powerful skills and habits can be picked up very quickly when thrown in the deep end. Never stop learning and never quit on yourself, Believe in yourself and others will believe in you.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dan Cunningham&lt;/p&gt;
+&lt;p&gt;Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat, I quickly realised that the people I look up to most in the industry and didn’t get there by waiting around to ‘be experienced enough’… they jumped in at the deep end and took the risk. But every risk comes with a greater reward and if you persevere and work hard the rewards can be yours, as for me… I’ve just been promoted to the Senior position and at 22 years old I’m proud of that. Don’t think for a moment that I’m going to sit back and adore my work though, I’m fully aware that there is more work to be done and I’m going to continue to develop as an individual and hopefully one day I will become a mentor for someone else!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/being-a-woman-in-tech-sucks/"/>
+    <updated>2015-11-22T00:00:00-00:00</updated>
+    <id>/blog/being-a-woman-in-tech-sucks/</id>
+    <content type="html">&lt;p&gt;Gender roles in tech have been under the spotlight more than ever with articles ranging from sexual assault to the emotional effect this issue can have. According to &lt;a href=&quot;https://www.newyorker.com/magazine/2014/11/24/valley-boys&quot;&gt;The New Yorker&lt;/a&gt; men hold sixty to seventy percent of jobs at the major tech firms, including Google, Apple, Facebook, and Twitter. With the number of women in high profile roles even more sparse.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Notwithstanding rock stars like Facebook’s Sheryl Sandberg and Yahoo’s Marissa Mayer, senior leadership is even more overwhelmingly male.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;James Surowiecki&lt;/p&gt;
+&lt;p&gt;One of the most interesting articles I read while researching this piece was the &lt;a href=&quot;http://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/&quot;&gt;story of a female computer science major who documented the sexism she encountered in tech over a period of time&lt;/a&gt;. I found it remarkable the number of times the conversations would occur without any knowledge or acknowledgement the things being said were sexist. Is the culture in tech really at the point where men no longer realize that they are demeaning a woman who is just as, if not more capable; the following extract from Coligado’s article is a perfect example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When a boy — let’s call him Rush (like Rush Limbaugh) — heard my friend had interned at Facebook, his mouth dropped. “Wow! Facebook! You must be really smart!” He then turned to me and asked the exact same question:What did you do this summer? Except when I responded the same — “Facebook” — I got a completely different response. “Oh… well then I should have applied for that internship.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lea Coligado&lt;/p&gt;
+&lt;p&gt;Following this incident and while still at Stanford, Coligado goes on to give further examples, this time from within the industry itself. Such as married co-workers openly ‘flirting’ with her in the office and more subtle occurrences like “the guys were praised more on their progress although I was pushing the same amount of code.”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;The downside of the digital revolution is isolation.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Paul Boag&lt;/p&gt;
+&lt;p&gt;The sad truth is that women only account for thirty to forty percent of digital workforce, with some companies having as few as one woman coding within the development team if any at all... &lt;a href=&quot;https://boagworld.com/digital-strategy/alone/&quot;&gt;the downside of the digital revolution is isolation&lt;/a&gt; and for women this is painfully clear.&lt;/p&gt;
+&lt;p&gt;As Byrne points out, “many of the problems I encountered in my tech career were due to the cluelessness of my teammates rather than any malice on their part”, in the research I have done this appears true on more occasions than not. It appears as if men within tech see women as some mythical creature that they could scare away if they treated her the same, or they are intimidated and usure of how due to the historical lack of women within the industry... the latter is more likely.&lt;/p&gt;
+&lt;p&gt;There are some guys that just have issues with women in their team due to some archaic principles they believe to still be true like the “subordinate who did everything possible to undermine my (Byrne) authority because he hated working for a woman”, but there have also been cases that i’ve read about where guys have thought it is okay to flirt or be suggestive within the office. One such situations involved a coworker leaving &lt;a href=&quot;https://www.fastcompany.com/3008216/tracking/minding-gap-how-your-company-can-woo-female-coders&quot;&gt;an unsolicited, romantically charged gift&lt;/a&gt; on a woman’s desk, another talks of middle-aged co-workers using &lt;a href=&quot;http://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/&quot;&gt;GChat to send her pickup lines&lt;/a&gt; when at the office.&lt;/p&gt;
+&lt;p&gt;Coligado also praises the wonderful female (and male) engineers, entrepreneurs and executives that have helped her during her time in the industry and continue to do so.&lt;/p&gt;
+&lt;p&gt;Despite the blatant sexism within the industry there are many strong women in tech with outstanding careers, such as &lt;a href=&quot;https://www.forbes.com/profile/marissa-mayer/&quot;&gt;Marissa Mayer&lt;/a&gt;, and with organizations such as &lt;a href=&quot;http://girlswhocode.com/&quot;&gt;Girls Who Code&lt;/a&gt; I expect this number will continue to increase.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Marissa Mayer has upgraded content — including hiring journalists Katie Couric and Matt Bai — and pursued an aggressive acquisition strategy aimed at boosting mobile revenues.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Forever Mogul&lt;/p&gt;
+&lt;p&gt;The reason I have used Marissa Mayer as an example is due to the &lt;a href=&quot;https://www.fastcompany.com/3044281/marissa-mayer&quot;&gt;outstanding work she has done at Yahoo&lt;/a&gt; since taking over as CEO in 2012 and although her views on the gender issues in tech are sometimes difficult to measure, stating that “&lt;a href=&quot;http://uk.businessinsider.com/sama-group-ceo-leila-janah-criticizes-marissa-mayers-view-on-gender-in-the-workplace-2015-3?r=US&amp;amp;IR=T&quot;&gt;There are probably industries where gender is more of an issue&lt;/a&gt;” but also that she “&lt;a href=&quot;http://www.makers.com/moments/women-tech&quot;&gt;hopes that the wild growth in technology in her lifetime means more girls going into tech&lt;/a&gt;”.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/being-a-woman-in-tech-sucks/marissa-mayer.jpg&quot; alt=&quot;Marissa Mayer&quot;&gt;&lt;strong&gt;Marissa Mayer | &lt;a href=&quot;https://www.fastcompany.com/3044281/marissa-mayer&quot;&gt;Image Source&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mayer is just one example, with Facebook COO Sheryl Sandberg been named the most powerful woman in technology on the &lt;a href=&quot;https://www.forbes.com/power-women/&quot;&gt;Forbes&#39; Power Women list&lt;/a&gt; for the fourth consecutive year and a further six Silicon Valley executives making it into the top 25 on the Power Women list there may be a shift underway to finally begin breaking down the gender barriers in tech.&lt;/p&gt;
+&lt;p&gt;Sandberg, the first woman to serve on Facebook’s board, is known for being an outspoken activist when it comes to women in tech and in society as a whole, becoming a household name with &lt;a href=&quot;https://www.ted.com/talks/sheryl_sandberg_why_we_have_too_few_women_leaders?language=en&quot;&gt;one of the most popular TED Talks&lt;/a&gt;, that delves into the reasons why a smaller percentage of women than men reach the top of their professions and offering some powerful and inspiring advice to women looking to advance their careers, it’s definitely worth a watch.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Reading List&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.webstock.org.nz/talks/how-designers-destroyed-the-world/&quot;&gt;How Designers Destroyed the World&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://medium.com/@FastCompany/tech-s-big-gender-diversity-push-one-year-in-7a0275b0534c&quot;&gt;Tech&#39;s Big Gender Diversity Push, One Year in&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://boagworld.com/digital-strategy/alone/&quot;&gt;Don’t do it alone. Find yourself support.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://www.fastcompany.com/3008216/the-loneliness-of-the-female-coder&quot;&gt;The Loneliness Of The Female Coder&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://www.fastcompany.com/3044281/marissa-mayer&quot;&gt;How Marissa Mayer Mobilized Yahoo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/&quot;&gt;A female computer science major at Stanford: “Floored” by the sexism&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://medium.com/@saraheadler/never-read-the-comments-9cba93b5712a&quot;&gt;Never Read The Comments&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;newyorker.com/magazine/2014/11/24/valley-boys&quot;&gt;Valley Boys&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/blog/three-things-web-development-students-should-learn-before-graduation/"/>
+    <updated>2015-10-30T00:00:00-00:00</updated>
+    <id>/blog/three-things-web-development-students-should-learn-before-graduation/</id>
+    <content type="html">&lt;p&gt;Developing at university and working in the real world is a big change, bigger than you may realize. Tighter deadlines, technical documentation, and fellow developers will all have a profound effect on the way you proceed after university and will help to shape you into a successful developer. The following three things will help the transition be a little smoother and may even improve your job prospects.&lt;/p&gt;
+&lt;h2&gt;Version Control&lt;/h2&gt;
+&lt;p&gt;Version control is, or should be, used by all development teams. Although Git and Team Foundation are commonly used there us a huge number of version control systems available; fortunately they are one and the same, get used to one and you should be able to use any of them. Personally I would recommend learning to use Git as it has been a requirement for over half of the jobs I have applied for.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Git is the new fast-rising star of version control systems. Initially developed by Linux kernel creator Linus Torvalds, Git has recently taken the Web development community by storm.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Smashing Magazine&lt;/p&gt;
+&lt;p&gt;Version Control allows you to save your code at different stages (versions) then continue to work on it, this way if anything goes wrong in future developments a previous working version can be accessed. This is also useful when working on team projects as the source code and be branched to multiple developers allowing them all to make changes, then the system will merge the changes back to the source code. I didn’t use version control on projects at University and thinking back it would save me many hours of retracing my steps if I had, it would also have helped greatly to tie this in with the project management system and allow me to keep tabs on the state the code was in for each task.&lt;/p&gt;
+&lt;h2&gt;Project Management&lt;/h2&gt;
+&lt;p&gt;This is crucial at University and at work and is the reason my Dissertation was completed successfully, there are a lot to choose from but I will just discuss the two I have used. Throughout university I used Zoho Projects but have since moved on to Asana (Developed by original Facebook developer Dustin Moskovitz) which I would recommend to anyone, the sleek redesign has drastically improved the product and impressed me enough to spend the time transferring tasks from Zoho. Regardless of the system you are using ensure that you keep it up to date with the latest projects you have been set.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Asana specializes in helping teams manage workflows, and it’s the preeminent tool for the job.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PC Mag&lt;/p&gt;
+&lt;p&gt;When a new assignment brief is released break it down into manageable sections in your notebook, then break each section into tasks and use the Project Management System (PMS) to keep track of which tasks are due when and the progress you have made. Make use of the description to fully layout your vision for the brief and the task, this way you can refer back easily without having to flick through a bloated notebook and then mark each task as complete; you will be able to refer back to completed tasks if they contain useful data.&lt;/p&gt;
+&lt;h2&gt;Teach Yourself&lt;/h2&gt;
+&lt;p&gt;In my opinion this could be the most useful skill for a postgraduate. Technology is constantly advancing and as developers it is our job to stay ahead of the curve and be in a position to implement new languages and technologies as they arrive in the marketplace. In order to do this many developers are self-taught in languages as their current role may not allow them to expand their knowledge as they wish.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Most of the skills I use to make a living are skills I’ve learned on my own: Web design, desktop publishing, marketing, personal productivity skills, even teaching!&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dustin Wax&lt;/p&gt;
+&lt;p&gt;When I started working in my current role during my final year I had to learn ASP.NET along side working on University projects and my dissertation. Since then I have continued to work for the same company, my skill-set however has continued to expand as I use my portfolio site to expand my knowledge. I have vastly improved my jQuery knowledge, redeveloped my portfolio in SASS (which was new to me), used some new PHP code to incorporate my blog into my site, and pushed my CSS/Bootstrap capabilities to a new level. I achieved this by reading blogs such as A List Apart, seek advice through CodeProject, and using free tutorial sites like CodeAcademy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Update 27/08/2019: I&#39;m now using Trello for project management - &lt;a href=&quot;/blog/current-setup/&quot;&gt;view all my gear here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>
