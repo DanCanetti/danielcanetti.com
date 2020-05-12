@@ -1,5 +1,2 @@
 .sass-cache
 .DS_Store
-node_modules/
-feed.njk
-.eleventy.js
