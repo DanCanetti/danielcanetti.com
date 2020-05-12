@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
+            <loc>/node_modules/eleventy-plugin-monetization/README/</loc>
+            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
             <lastmod>2015-10-30T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -28,6 +34,12 @@
         <url>
             <loc>/blog/wordpressify/</loc>
             <lastmod>2019-05-09T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/demo/monetize-plugin/</loc>
+            <lastmod>2019-05-12T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
@@ -426,5 +438,4 @@
             <lastmod>2020-05-12T13:24:34.228Z</lastmod>
             <changefreq></changefreq>
         </url>
-    
 </urlset>
