@@ -140,6 +140,12 @@
         </url>
     
         <url>
+            <loc>/feed/</loc>
+            <lastmod>2020-05-06T22:26:45.994Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/404.html</loc>
             <lastmod>2020-05-12T12:56:56.984Z</lastmod>
             <changefreq></changefreq>
