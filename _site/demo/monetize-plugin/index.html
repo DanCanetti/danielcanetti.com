@@ -46,21 +46,26 @@
 </script>
 
         <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • Installing Craft CMS in Homestead</title>
-        <meta name="description" content="An extract from a larger guide I’m working on for installing Laravel/Homestead.">
+        <title>Daniel Canetti • Monetize Plugin</title>
+        <meta name="description" content="Demo page for Grand For The Web x Dev Hackacthon">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/craft-cms-and-homestead/feature-full.jpg" />
+        <meta property="og:image" content="https://danielcanetti.com/images/demos/monetize-plugin/feature-full.jpg" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/craft-cms-and-homestead/feature-full.jpg">
+        <meta property="twitter:image" content="https://danielcanetti.com/images/demos/monetize-plugin/feature-full.jpg">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
+        
+            <meta name="monetization" content="$coil.xrptipbot.com/3hLUKqMhT_W6yRqcFuqgYA">
+            <link rel="stylesheet" href="/assets/monetization.css">
+            <script type="text/javascript" defer src="/assets/monetization.js"></script>
+        
    
     </head>
     <body class="sub">
@@ -143,48 +148,32 @@
                 </div>
             </div>
             <div id="post" class="body dark">
-                <div class="body__section body__section--post">
-                    <h1>Installing Craft CMS in Homestead</h1>
+                <div id="monetization-loading" class="body__section body__section--post monetization--hidden">
+                    <p>
+                        Loading exclusive content...
+                    </p>
+                </div>
+
+                <div id="monetization-cta" class="body__section body__section--post monetization--hidden">
+                    <p>
+                        This content is exclusive to my supporters.
+                    </p>
+                    <p>
+                        Please install a <a href="https://chrome.google.com/webstore/detail/coil/locbifcbeldmnphbgkdigjmkbfkhbnca?hl=en" target="_blank">Web Monetization extension</a> to support me!
+                    </p>
+                </div>
+                <div id="monetization-exclusive" class="body__section body__section--post monetization--hidden">
+                    <h1>Monetize Plugin</h1>
                     <div>
-                        <span>October 31, 2019</span>
+                        <span>May 12, 2020</span>
                         <span class="reading-time"></span>
                     </div>
-                    <h2>Prerequisites</h2>
-<ul>
-<li>A working Laravel/Homestead environment.</li>
-</ul>
-<h2>Installation</h2>
-<p>In the Homestead.yaml file create a new site mapping to this directory:
-<code>to: /home/vagrant/[project_dir]/[project_name]/public/web</code>.</p>
-<p>Create new homestead site
-<code>composer create-project --prefer-dist laravel/laravel [project_name]</code></p>
-<p>Create a new database for the Homestead site called <code>craft_homestead</code></p>
-<p>Create a second database for the Craft installation called <code>craft</code></p>
-<p>Navigate to your new site’s public directory and edit the <code>.env</code> file. Add the credentials for the <code>craft_homestead</code> database.</p>
-<p>Navigate to the Homestead directory and run <code>vagrant ssh</code>. Now move into the new project directory <code>cd [project_dir]/[project_name]</code> and run the migration: <code>php artisan migrate</code>. Once this has completed <code>exit</code> the ssh connection.</p>
-<p>Navigate to your new site’s public directory and empty the contents
-<code>cd [project_name]/public then run sudo rm -rf *</code></p>
-<p>Move back to the root of the new site and install Craft in the public directory
-<code>composer create-project craftcms/craft public/</code></p>
-<p>You can now run the Craft setup wizard from the browser, go to <code>http://[project_name]/index.php?p=admin/install</code>. When prompted for the database details enter the credentials for the <code>craft</code> database we created earlier.</p>
-<p>Once installed your site will be ready at <code>http://[project_name]/</code>.</p>
-<h2>Updating php.ini directives</h2>
-<p>Once installed Craft may show some errors in the Requirements area of the <em>System Report</em> — <code>admin &gt; Utilities &gt; System Report</code>. To fix these we need to make changes to the php.ini file on the vm.</p>
-<p>Navigate to the Homestead directory and run <code>vagrant ssh</code>.</p>
-<p>The php version Craft is using can be found at the top of the System Report page.</p>
-<p>Edit the php.ini file <code>sudo nano /etc/php/[php_version]/fpm/php.ini</code>.</p>
-<p>On Mac use <code>control + w</code> and search for <code>memory_limit</code>. Change this to 256.</p>
-<p>Again using <code>control + w</code>, search for <code>max_execution_time</code>. Change this to 120.</p>
-<p>Exit nano by using <code>control + x</code>, answer <code>y</code> to save the file and hit <code>enter</code> to save over the existing file.</p>
-<p><code>exit</code> the ssh connection and reload the machine using <code>vagrant reload</code>. Once the machine has restarted refresh the System Report page and the Requirements should now show as valid.</p>
-<hr>
-<p><em><strong>Last Updated:</strong> Thursday 31st October — Added detail on updating the php.ini directives.</em></p>
-
+                    
                     <div class="share__blog">
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/craft-cms-and-homestead/" target="_blank">
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/demo/monetize-plugin/" target="_blank">
                             <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
                         </a>
-                        <a class="l" href="https://twitter.com/intent/tweet?text=Installing Craft CMS in Homestead%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/craft-cms-and-homestead/" target="_blank">
+                        <a class="l" href="https://twitter.com/intent/tweet?text=Monetize Plugin%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/demo/monetize-plugin/" target="_blank">
                             <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
                         </a>
                         <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">

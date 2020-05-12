@@ -18,6 +18,7 @@
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
+        {% monetize11ty "$coil.xrptipbot.com", "3hLUKqMhT_W6yRqcFuqgYA" %}
    
     </head>
     <body class="{{ pageClass }}">
@@ -42,7 +43,21 @@
                 </div>
             </div>
             <div id="post" class="body dark">
-                <div class="body__section body__section--post">
+                <div id="monetization-loading" class="body__section body__section--post monetization--hidden">
+                    <p>
+                        Loading exclusive content...
+                    </p>
+                </div>
+
+                <div id="monetization-cta" class="body__section body__section--post monetization--hidden">
+                    <p>
+                        This content is exclusive to my supporters.
+                    </p>
+                    <p>
+                        Please install a <a href="https://chrome.google.com/webstore/detail/coil/locbifcbeldmnphbgkdigjmkbfkhbnca?hl=en" target="_blank">Web Monetization extension</a> to support me!
+                    </p>
+                </div>
+                <div id="monetization-exclusive" class="body__section body__section--post monetization--hidden">
                     <h1>{{ postTitle }}</h1>
                     <div>
                         <span>{{ date | date: '%B %d, %Y' }}</span>

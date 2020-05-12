@@ -169,4 +169,16 @@
             <changefreq></changefreq>
         </url>
     
+        <url>
+            <loc>/demo/monetize-plugin/</loc>
+            <lastmod>2020-05-12T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/demo/</loc>
+            <lastmod>2020-05-12T11:10:40.408Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
 </urlset>
