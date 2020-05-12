@@ -45,19 +45,19 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • No CSS or JS on Magento 2</title>
-        <meta name="description" content="I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.">
+        <script type="text/javascript" defer src="/js/sub.js"></script>
+        <title>Daniel Canetti • Blog</title>
+        <meta name="description" content="Demos for plugins and open source.">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
         <meta property="og:title" content="Daniel Canetti • A Web Developer" />
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" />
+        <meta property="og:image" content="https://danielcanetti.com" />
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
         <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg">
+        <meta property="twitter:image" content="https://danielcanetti.com">
         <meta property="twitter:url" content="https://danielcanetti.com/">
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
@@ -123,68 +123,31 @@
   </div>
 </nav>
 
-            <div class="affiliate flywheel">
-                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
-                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
-                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
-            <div class="affiliate digital-ocean">
-                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
-                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
-                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
-            <div id="post" class="body dark">
-                <div class="body__section body__section--post">
-                    <h1>No CSS or JS on Magento 2</h1>
-                    <div>
-                        <span>October 22, 2019</span>
-                        <span class="reading-time"></span>
-                    </div>
-                    <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
-<p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
-<h2>Pointing to the correct config</h2>
-<p>Navigate to <code>/etc/nginx/sites-available/</code> and run <code>sudo nano [your-site-config]</code>. Use the below config file to point to the <code>nginx.conf.sample</code> file provided in Magento 2 — remember to change [your-site-path] to suit your set-up. In Homestead this is usually <code>/home/vagrant/[your-projects-directory]/[your-site-name]/public/</code>.</p>
-<pre><code>upstream fastcgi_backend {
-   server  unix:/run/php/php7.1-fpm.sock;
-}
-
-server {
-    listen 80;
-    server_name  magento2.local;
-
-    set $MAGE_ROOT [your-site-path];
-    set $MAGE_MODE developer;
-    include [your-site-path]/nginx.conf.sample;
-}
-</code></pre>
-<p>After you’ve changed the config file you’ll need to restart the service: <code>sudo systemctl restart nginx.service</code>.</p>
-<h2>Homestead Notes</h2>
-<p>One issue I have come across with Homestead is that it will rebuild the config file whenever the Vagrant box is halted and started. You’ll need to re-do this change each time.</p>
-<hr>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October — added service restart command.</em></p>
-<p><em><strong>Last Updated:</strong> Tuesday 22nd October —included note on NGINX config rebuild eachtime Homestead is restarted.</em></p>
-
-                    <div class="share__blog">
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
-                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
-                        </a>
-                        <a class="l" href="https://twitter.com/intent/tweet?text=No CSS or JS on Magento 2%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
-                            <i class="fab fa-twitter" aria-label="Twitter Logo"></i> Share on Twitter
-                        </a>
-                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
-                            <i class="far fa-coffee-togo" aria-label="Coffee Cup"></i> Buy me a Coffee
-                        </a>
-                    </div>
-                </div>
-                <footer>
+            <h1 class="--sub">Blog</h1>
+            
+<div class="body dark">
+  <div class="body__section body__section--case-study-items">
+    
+      
+      <div class="case-study-item case-study-item--">
+        <div class="case-study-item__img">
+          <div class="case-study-item__img__image">
+            <a href="/demo/monetize-plugin/">
+              <img src="/images/demos/monetize/feature.jpg" srcset="/images/demos/monetize/feature@2x.jpg 2x" alt="" aria-label="Read More" />
+            </a>
+          </div>
+        </div>
+        <div class="case-study-item__data">
+          <div class="case-study-item__data--content">
+            <h2>Monetize Plugin Demo</h2>
+            <p>An Eleventy plugin to monetize posts and site content.</p>
+            <a href="/demo/monetize-plugin/" class="l">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  <footer>
     <div class="footer__content">
         <div class="footer__content__item footer__content__plinks">
             <a class="l" href="/blog/">Blog</a>
@@ -202,7 +165,7 @@ server {
     </div>
 </footer>
 
-            </div>
+</div>
         </div>
     </body>
 </html>

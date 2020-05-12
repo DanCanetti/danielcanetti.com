@@ -38,6 +38,12 @@
         </url>
     
         <url>
+            <loc>/demo/monetize-plugin/</loc>
+            <lastmod>2019-05-12T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/email-isnt-broken/</loc>
             <lastmod>2019-08-27T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -430,6 +436,12 @@
         <url>
             <loc>/node_modules/util-deprecate/README/</loc>
             <lastmod>2020-05-12T13:24:34.228Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/demo/</loc>
+            <lastmod>2020-05-12T17:11:39.759Z</lastmod>
             <changefreq></changefreq>
         </url>
     
