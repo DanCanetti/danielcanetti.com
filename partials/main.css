@@ -1533,6 +1533,13 @@ footer .copyright {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .affiliate {
+    left: 10px;
+    top: -130px;
+  }
+}
+
 .affiliate img {
   width: 100%;
   height: auto;
@@ -1555,6 +1562,13 @@ footer .copyright {
 }
 
 @media (max-width: 576px) {
+  .affiliate.show {
+    left: auto;
+    top: 0px;
+  }
+}
+
+@media (max-width: 576px) {
   .affiliate {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1567,7 +1581,6 @@ footer .copyright {
     height: 123px;
     right: 10px;
     left: auto;
-    top: 0px;
   }
   .affiliate .affiliate__content {
     display: none;

@@ -982,6 +982,10 @@ footer {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
+  @media (max-width: 576px) {
+    .affiliate {
+      left: 10px;
+      top: -130px; } }
   .affiliate img {
     width: 100%;
     height: auto; }
@@ -995,6 +999,10 @@ footer {
   .affiliate.show {
     left: 10px;
     opacity: 1; }
+    @media (max-width: 576px) {
+      .affiliate.show {
+        left: auto;
+        top: 0px; } }
   @media (max-width: 576px) {
     .affiliate {
       display: flex;
@@ -1003,8 +1011,7 @@ footer {
       width: calc(100% - 260px);
       height: 123px;
       right: 10px;
-      left: auto;
-      top: 0px; }
+      left: auto; }
       .affiliate .affiliate__content {
         display: none; }
       .affiliate.flywheel {
