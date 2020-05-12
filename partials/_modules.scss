@@ -399,9 +399,13 @@ $burgertransitions: .4s;
 .affiliate {
   width: 240px;
   position: fixed;
-  left: 10px;
+  left: -250px;
   top: 120px;
   opacity: 0;
+  @include sm {
+    left: 10px;
+    top: -130px;
+  }
   @include transitionall(.3s);
   img {
     width: 100%;
@@ -417,7 +421,12 @@ $burgertransitions: .4s;
     }
   }
   &.show {
+    left: 10px;
     opacity: 1;
+    @include sm {
+      left: auto;
+      top: 0px;
+    }
   }
   @include sm {
     display: flex;
@@ -427,7 +436,7 @@ $burgertransitions: .4s;
     height: 123px;
     right: 10px;
     left: auto;
-    top: 0px;
+    //top: 0px;
     .affiliate__content {
       display: none;
     }
