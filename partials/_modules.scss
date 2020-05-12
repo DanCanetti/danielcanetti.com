@@ -399,7 +399,7 @@ $burgertransitions: .4s;
 .affiliate {
   width: 240px;
   position: fixed;
-  left: 10px;
+  left: -250px;
   top: 120px;
   opacity: 0;
   @include transitionall(.3s);
@@ -417,6 +417,7 @@ $burgertransitions: .4s;
     }
   }
   &.show {
+    left: 10px;
     opacity: 1;
   }
   @include sm {

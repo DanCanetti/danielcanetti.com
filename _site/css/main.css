@@ -975,7 +975,7 @@ footer {
 .affiliate {
   width: 240px;
   position: fixed;
-  left: 10px;
+  left: -250px;
   top: 120px;
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
@@ -993,6 +993,7 @@ footer {
       font-size: 1em;
       margin-bottom: 20px; }
   .affiliate.show {
+    left: 10px;
     opacity: 1; }
   @media (max-width: 576px) {
     .affiliate {
