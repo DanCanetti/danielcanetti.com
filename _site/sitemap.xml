@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>/node_modules/eleventy-plugin-monetization/README/</loc>
-            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
             <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
             <lastmod>2015-10-30T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -438,4 +432,23 @@
             <lastmod>2020-05-12T13:24:34.228Z</lastmod>
             <changefreq></changefreq>
         </url>
+    
+        <url>
+            <loc>/demo/</loc>
+            <lastmod>2020-05-12T22:00:42.917Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/eleventy-plugin-monetization/README/</loc>
+            <lastmod>2020-05-12T22:00:42.922Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/moodboard/</loc>
+            <lastmod>2020-05-24T22:07:43.173Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
 </urlset>
