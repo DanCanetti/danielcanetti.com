@@ -1,6 +1,6 @@
-// Hide zoom layer behind body after x scroll 
+// Show/Hide Affiliate
 $(window).scroll(function(){
-    // Scrol Top
+    // Scroll Top
     if ($(window).scrollTop() >= 500) {
       $('.affiliate').addClass('show');
     }

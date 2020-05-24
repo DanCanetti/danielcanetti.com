@@ -22,7 +22,24 @@
     <body class="{{ pageClass }}">
         <div class="wrapper">
             {% include nav %}
-            <h1 class="--sub">{{ pageTitle }}</h1>
+            <div class="affiliate flywheel">
+                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="affiliate digital-ocean">
+                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
+                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
+                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
             {{ content }}
         </div>
     </body>
