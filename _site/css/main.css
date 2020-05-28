@@ -639,6 +639,21 @@ footer {
   .sub .body {
     padding-top: 75%; } }
 
+#tumblrfeed {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 0px; }
+  @media (max-width: 576px) {
+    #tumblrfeed {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
+
 /*
     Modules
     ---
@@ -947,6 +962,19 @@ footer {
         font-size: 1rem; }
       .case-study-item .case-study-item__data .case-study-item__data--content a {
         align-self: flex-start; }
+  .case-study-item.moodboard {
+    width: 100%;
+    margin: 0;
+    padding: 5px; }
+    .case-study-item.moodboard:first-of-type, .case-study-item.moodboard:nth-last-of-type(2) {
+      padding-top: 0; }
+    .case-study-item.moodboard p {
+      display: none; }
+    .case-study-item.moodboard blockquote, .case-study-item.moodboard figure {
+      margin: 0; }
+    @media (max-width: 576px) {
+      .case-study-item.moodboard:nth-last-of-type(2) {
+        padding-top: 5px; } }
 
 .share__blog {
   display: flex;
