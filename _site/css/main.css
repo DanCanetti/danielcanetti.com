@@ -965,7 +965,8 @@ footer {
   .case-study-item.moodboard {
     width: 100%;
     margin: 0;
-    padding: 5px; }
+    padding: 5px;
+    display: block; }
     .case-study-item.moodboard:first-of-type, .case-study-item.moodboard:nth-last-of-type(2) {
       padding-top: 0; }
     .case-study-item.moodboard p {

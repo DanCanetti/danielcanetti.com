@@ -42,9 +42,9 @@ new Vue({
   el: '#project-list',
   data() {
     return {
-      hover1: false, // Emerald Kitchens
-      hover2: false, // K.B Pro
-      hover3: false, // Wharncliffe
+      hover1: false, // Align Growth Summit
+      hover2: false, // Emerald Kitchens
+      hover3: false, // K.B Pro
     };
   }
 });
