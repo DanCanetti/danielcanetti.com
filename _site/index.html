@@ -32,6 +32,7 @@
 <script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- DEV script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
 
@@ -86,11 +87,11 @@
             <ul>
             
             
+              <li><a href="https://aligngrowthsummit.com/" target="_blank" rel="noopener">Align Growth Summit</a></li>
+            
               <li><a href="https://www.kbpro.com/" target="_blank" rel="noopener">K.B Pro</a></li>
             
               <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank" rel="noopener">Emerald Kitchens</a></li>
-            
-              <li><a href="https://github.com/DanCanetti/sass-quick-start" target="_blank" rel="noopener">Sass, BEM, and SMACSS Quick Start</a></li>
             
             </ul>
           </li>
@@ -144,6 +145,14 @@
         <h2>Projects.</h2>
         <div id="project-list" class="collection-list">
             
+            <a href="https://aligngrowthsummit.com/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Align Growth Summit<br><span class="collection-list__description"></span></h3></a>
+            <transition name="fade">
+              <picture v-if="hover1">
+                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
+                <img src="/images/case-studies/align-gs/featureHome.jpg" srcset="/images/case-studies/align-gs/featureHome@2x.jpg 2x" alt="">
+              </picture>
+            </transition>
+            
             <a href="https://www.kbpro.com/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
               <picture v-if="hover2">
@@ -152,19 +161,11 @@
               </picture>
             </transition>
             
-            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
-            <transition name="fade">
-              <picture v-if="hover1">
-                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="">
-              </picture>
-            </transition>
-            
-            <a href="https://github.com/DanCanetti/sass-quick-start" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Sass, BEM, and SMACSS Quick Start<br><span class="collection-list__description"></span></h3></a>
+            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
             <transition name="fade">
               <picture v-if="hover3">
                 <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="/images/case-studies/sass-quick-start/featureHome.jpg" srcset="/images/case-studies/sass-quick-start/featureHome@2x.jpg 2x" alt="">
+                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="">
               </picture>
             </transition>
             

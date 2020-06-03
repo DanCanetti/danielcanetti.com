@@ -98,14 +98,20 @@
         </url>
     
         <url>
-            <loc>/case-studies/kb-pro/</loc>
+            <loc>/case-studies/align-growth-summit/</loc>
             <lastmod>2020-01-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/emerald-kitchens/</loc>
+            <loc>/case-studies/kb-pro/</loc>
             <lastmod>2020-01-02T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/emerald-kitchens/</loc>
+            <lastmod>2020-01-03T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
