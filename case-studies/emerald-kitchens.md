@@ -12,7 +12,10 @@ projectClass: has-case-study
 projectExcerpt: Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.
 seoIndex: noindex
 projectid: 3
-date: 2020-01-03
+tags:
+  - projects
+  - selectedproject
+date: 2019-02-05
 ---
 
 Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.

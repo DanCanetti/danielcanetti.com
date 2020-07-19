@@ -8,4 +8,5 @@ ProjectFeatureImage: /images/case-studies/wordpress-boilerplate/feature.jpg
 ProjectClass: case-study-coming-soon
 seoIndex: noindex
 eleventyExcludeFromCollections: true
+date: 2019-11-01
 ---

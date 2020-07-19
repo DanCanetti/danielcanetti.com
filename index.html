@@ -17,12 +17,13 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
 <div class="body">
     <div class="body__section body__section--intro">
       <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau Beauty Group</a>, a permanent makeup training company.</p>
+        <p class="employment" v-html="jobInfo"></p>
     </div>
     <div class="body__section body__section--projects">
-        <h2>Projects.</h2>
+        <h2>Selected Projects.</h2>
         <div id="project-list" class="collection-list">
-            {% for post in collections.projects limit: 3 %}
+            {% assign selectedprojects = collections.selectedproject %}
+            {% for post in selectedprojects reversedexi %}
             <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" target="_blank" rel="noopener" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
             <transition name="fade">
               <picture v-if="hover{{ post.data.projectid }}">

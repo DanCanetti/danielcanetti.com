@@ -11,5 +11,5 @@ projectClass: has-case-study
 projectExcerpt: Quickly deploy SMACSS based scss files to a new project. 
 seoIndex: noindex
 projectid:
-date: 2020-01-03
+date: 2019-05-22
 ---

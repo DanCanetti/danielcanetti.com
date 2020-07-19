@@ -9,5 +9,5 @@ projectClass: has-case-study
 projectExcerpt: A font which includes some of the most popular WordPress plugin icons.
 seoIndex: noindex
 projectid: 4
-date: 2020-01-06
+date: 2018-09-06
 ---
