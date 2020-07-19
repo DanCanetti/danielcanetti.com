@@ -12,5 +12,8 @@ projectClass: has-case-study
 projectExcerpt: This annual event had a facelift for 2020 as well as some last minute changes due to the Covid-19 Pandemic. 
 seoIndex: all
 projectid: 1
-date: 2020-01-01
+tags:
+  - projects
+  - selectedproject
+date: 2020-06-01
 ---

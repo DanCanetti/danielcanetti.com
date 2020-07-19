@@ -1,10 +1,12 @@
 // Zoom on scroll
+/*
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 	$(".zoom").css({
 		transform: 'translate3d(0, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/1)/100+')',
 	});
 });
+*/
 
 // Fade zoom on scroll and change bg colour
 $(function() {
@@ -35,6 +37,14 @@ $(window).scroll(function(){
    else {
     $('.zoom').removeClass('move');
    }
+});
+
+// Current Employment
+new Vue({
+  el: '.employment',
+  data: {
+    jobInfo: 'Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.'
+  }
 });
 
 // Toggle Project Images

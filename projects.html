@@ -7,20 +7,28 @@ pageExcerpt: A selection of personal and professional web development projects i
 
 <div class="body dark">
     <div class="body__section body__section--case-study-items">
-      {% for post in collections.projects %}
+      {% for post in collections.projects reversed %}
         <div class="case-study-item case-study-item--{{ post.data.pageType }}">
           <div class="case-study-item__img">
             <div class="case-study-item__img__image">
+              {% if post.data.projectLink %}
               <a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener" >
                 <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
               </a>
+              {% else %}
+              <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="" aria-label="Cover Image. Visit site using the link below." />
+              {% endif %}
             </div>
           </div>
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
               <h2>{{ post.data.pageTitle }}</h2>
               <p>{{ post.data.projectExcerpt }}</p>
+              {% if post.data.projectLink %}
               <a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener" >Visit {{ post.data.pageType }}</a>
+              {% else %}
+              <span>💀 [Dead Project]</span>
+              {% endif %}
             </div>
           </div>
         </div>
