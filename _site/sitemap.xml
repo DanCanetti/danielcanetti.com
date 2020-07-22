@@ -475,4 +475,10 @@
             <changefreq></changefreq>
         </url>
     
+        <url>
+            <loc>/blog/wordpress-valet/</loc>
+            <lastmod>2020-07-22T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
 </urlset>
