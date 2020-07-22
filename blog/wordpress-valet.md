@@ -1,5 +1,5 @@
 ---
-postTitle: How to run WordPress locally on Mac using Valet.
+postTitle: How to run WordPress locally on Mac using Valet
 #date: Last Modified
 date: 2020-07-22
 postTag: Web Development
