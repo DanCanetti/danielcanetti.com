@@ -10,6 +10,6 @@ projectFeatureImageHomeRetina: /images/case-studies/sass-quick-start/featureHome
 projectClass: has-case-study
 projectExcerpt: Quickly deploy SMACSS based scss files to a new project. 
 seoIndex: noindex
-projectid: 3
-date: 2020-01-03
+projectid:
+date: 2019-05-22
 ---

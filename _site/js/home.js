@@ -1,10 +1,12 @@
 // Zoom on scroll
+/*
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 	$(".zoom").css({
 		transform: 'translate3d(0, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/1)/100+')',
 	});
 });
+*/
 
 // Fade zoom on scroll and change bg colour
 $(function() {
@@ -37,14 +39,22 @@ $(window).scroll(function(){
    }
 });
 
+// Current Employment
+new Vue({
+  el: '.employment',
+  data: {
+    jobInfo: 'Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.'
+  }
+});
+
 // Toggle Project Images
 new Vue({
   el: '#project-list',
   data() {
     return {
-      hover1: false, // Emerald Kitchens
-      hover2: false, // K.B Pro
-      hover3: false, // Wharncliffe
+      hover1: false, // Align Growth Summit
+      hover2: false, // Emerald Kitchens
+      hover3: false, // K.B Pro
     };
   }
 });

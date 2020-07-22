@@ -10,5 +10,5 @@ projectClass: has-case-study
 projectExcerpt: WordPress set-up using Divi Builder.
 seoIndex: noindex
 projectid: 3
-date: 2020-01-05
+date: 2018-11-15
 ---

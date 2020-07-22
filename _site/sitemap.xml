@@ -32,8 +32,38 @@
         </url>
     
         <url>
+            <loc>/case-studies/marketing-news-builder/</loc>
+            <lastmod>2016-06-03T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
             <lastmod>2016-06-09T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/wordpress-plugin-icons/</loc>
+            <lastmod>2018-09-06T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/wharncliffe-business-systems/</loc>
+            <lastmod>2018-11-15T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/fit4it-fitness/</loc>
+            <lastmod>2019-01-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/emerald-kitchens/</loc>
+            <lastmod>2019-02-05T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
@@ -52,6 +82,18 @@
         <url>
             <loc>/demo/monetize-plugin/</loc>
             <lastmod>2019-05-12T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/sass-quick-start/</loc>
+            <lastmod>2019-05-22T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/slick-slider-quick-start/</loc>
+            <lastmod>2019-06-02T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
@@ -99,49 +141,7 @@
     
         <url>
             <loc>/case-studies/kb-pro/</loc>
-            <lastmod>2020-01-01T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/emerald-kitchens/</loc>
             <lastmod>2020-01-02T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/sass-quick-start/</loc>
-            <lastmod>2020-01-03T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/working-with-homestead/</loc>
-            <lastmod>2020-01-03T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/fit4it-fitness/</loc>
-            <lastmod>2020-01-04T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/wharncliffe-business-systems/</loc>
-            <lastmod>2020-01-05T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/wordpress-plugin-icons/</loc>
-            <lastmod>2020-01-06T00:00:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/case-studies/slick-slider-quick-start/</loc>
-            <lastmod>2020-01-07T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
@@ -460,6 +460,24 @@
         <url>
             <loc>/moodboard/</loc>
             <lastmod>2020-05-24T22:07:43.173Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/align-growth-summit/</loc>
+            <lastmod>2020-06-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/eleventy-barebones/</loc>
+            <lastmod>2020-06-13T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/wordpress-valet/</loc>
+            <lastmod>2020-07-22T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
