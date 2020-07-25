@@ -178,6 +178,11 @@ body {
             padding: 25% 5% 0 5%;
         }
     }
+    &.sub {
+      .wrapper, .body {
+        background-color: #fff;
+      }
+    }
 }
 
 // Smooth Scrolling
@@ -188,7 +193,7 @@ body {
 }
 
 h1 {
-    font-family: $header;
+    //font-family: $header;
     font-size: 4rem;
     color: $dancanettiblack;
     text-align: left;
@@ -204,7 +209,7 @@ h1 {
       //top: 140px;
       top: 40px;    // Hide behind nav toggle ;)
       left: 55px;
-      color: $dancanettiwhite;
+      color: $dancanettiblack;
       font-family: $pfont;
       font-weight: $pfontheavy;
       font-size: 1rem;
@@ -218,7 +223,7 @@ h2 {
     font-weight: $pfontheavy;
     font-size: 2.5rem;
     letter-spacing: .25rem;
-    color: $dancanettiwhite;
+    color: $dancanettiblack;
     padding: 0;
     margin: 0 0 $ds 0;    
 }
@@ -242,7 +247,7 @@ p {
 }
 
 a {
-    color: $dancanettiwhite;
+    color: $dancanettiblack;
     text-decoration: none;
     position: relative;
     &:hover {
@@ -258,7 +263,7 @@ a {
             height: 1px;
             width: 100%;
             opacity: 0.3;
-            background: $dancanettiwhite;
+            background: $dancanettiblack;
             @include transitionall(.3s);
         }
         &:hover {
@@ -287,63 +292,10 @@ a {
         position: relative;
         z-index: 1;
         @include transitionall(.3s);
-        svg {
-            width: .7em!important;
+        img {
+          height: 1.5rem;
         }
-        &:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            border-radius: 100%;
-            background: $dancanettiwhite;
-            width: 0px;
-            height: 0px;
-            top: 15px;
-            left: 10px;
-            @include transitionall(.3s);
-        }
-        &.sl--d {
-            &:before {
-                background: $dribbble;
-            }
-        }
-        &.sl--i {
-            &:before {
-                background: $instagram;
-            }
-        }
-        &.sl--t {
-            &:before {
-                background: $twitter;
-            }
-        }
-        &.sl--l {
-            &:before {
-                background: $linkedin;
-            }
-        }
-        &:hover {
-            color: $dancanettiblack;
-            cursor: none;
-            &.sl--d {
-               color: $dancanettiwhite;
-            }
-            &.sl--i {
-                color: $dancanettiwhite;
-            }
-            &.sl--t {
-                color: $dancanettiwhite;
-            }
-            &.sl--l {
-                color: $dancanettiwhite;
-            }
-            &:before {
-                top: -4px;
-                left: -10px;
-                width: 40px;
-                height: 40px;
-            }
-        }
+        
     }
 }
 
@@ -354,7 +306,7 @@ button {
   padding: 0 0 5px 0;
   margin-top: 10px;
   font-size: 1.25rem;
-  color: $dancanettiwhite;
+  color: $dancanettiblack;
   text-decoration: none;
   position: relative;
   @include transitionall(.3s);
@@ -366,7 +318,7 @@ button {
     height: 1px;
     width: 100%;
     opacity: 0.3;
-    background: $dancanettiwhite;
+    background: $dancanettiblack;
     @include transitionall(.3s);
   }
   &:hover {
@@ -396,7 +348,7 @@ blockquote {
     & + p {
         font-family: $serif;
         margin: 25px 75px 75px 75px;
-        color: $dancanettiwhite;
+        color: $dancanettiblack;
         font-size: .7em;
     }
     @include sm {
@@ -409,7 +361,7 @@ blockquote {
 
 code {
   font-family: monospace;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.1);
 }
 
 pre {
@@ -417,7 +369,7 @@ pre {
   margin-top: 35px;
   width: 100%;
   overflow-y: scroll;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.1);
   code {
     font-size: 1rem;
     background: transparent;
@@ -429,7 +381,7 @@ s {   // Strikethrough
 }
 
 .social-img {
-  height: .95rem;
+  height: .9rem;
   @include transitionall(.3s);
   &.hov-enabled {
     &:hover {

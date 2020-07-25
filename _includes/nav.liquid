@@ -28,7 +28,7 @@
             <a href="/blog/">Blog</a>
             <ul>
             {% assign navblogposts = collections.posts %}
-            {% for post in navblogposts limit: 3 %}
+            {% for post in navblogposts limit: 4 %}
               <li><a href="{{ post.url }}">{{ post.data.postTitle }}</a></li>
             {% endfor %}
             </ul>
@@ -41,11 +41,11 @@
           </li>
         </ul>
         <ul class="social">
-          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a></li>
-          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a></li>
-          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a></li>
-          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a></li>
+          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a></li>
+          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a></li>
+          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a></li>
+          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a></li>
+          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a></li>
         </ul>
       </nav>
     </div>

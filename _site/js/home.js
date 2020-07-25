@@ -16,12 +16,12 @@ $(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= heightThreshold && scroll <=  heightThreshold_end ) {
-            $('.body').addClass('dark');
+            $('.body').addClass('white');
             $('.zoom__content').addClass('fade');
             $("nav").addClass("scroll");
             $(".scroll-hint").addClass("hide");
         } else {
-            $('.body').removeClass('dark');
+            $('.body').removeClass('white');
             $('.zoom__content').removeClass('fade');
             $("nav").removeClass("scroll");
             $(".scroll-hint").removeClass("hide");
@@ -39,22 +39,13 @@ $(window).scroll(function(){
    }
 });
 
-// Current Employment
-new Vue({
-  el: '.employment',
-  data: {
-    jobInfo: 'Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.'
-  }
-});
-
 // Toggle Project Images
-new Vue({
-  el: '#project-list',
-  data() {
-    return {
-      hover1: false, // Align Growth Summit
-      hover2: false, // Emerald Kitchens
-      hover3: false, // K.B Pro
-    };
-  }
+$( document ).ready(function() {
+  // Change on hover
+  $( ".collection-list.projects a" ).hover(function() {
+    var imgdataval       = jQuery(this).attr('data-img');
+    var imgretinadataval = jQuery(this).attr('data-imgretina');
+    $( ".collection-list.projects img" ).attr('src', imgdataval);
+    $( ".collection-list.projects img" ).attr('srcset', imgretinadataval + ' 2x');
+  });
 });

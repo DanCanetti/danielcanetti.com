@@ -17,21 +17,16 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
 <div class="body">
     <div class="body__section body__section--intro">
       <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p class="employment" v-html="jobInfo"></p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.</p>
     </div>
     <div class="body__section body__section--projects">
         <h2>Selected Projects.</h2>
-        <div id="project-list" class="collection-list">
+        <div class="collection-list projects">
             {% assign selectedprojects = collections.selectedproject %}
             {% for post in selectedprojects reversed %}
-            <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" target="_blank" rel="noopener" @mouseover="hover{{ post.data.projectid }} = true" @mouseover="hoverOver" @mouseleave="hover{{ post.data.projectid }} = false"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
-            <transition name="fade">
-              <picture v-if="hover{{ post.data.projectid }}">
-                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="{{ post.data.projectFeatureImageHome }}" srcset="{{ post.data.projectFeatureImageHomeRetina }} 2x" alt="">
-              </picture>
-            </transition>
+            <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" data-img="{{ post.data.projectFeatureImageHome }}" data-imgretina="{{ post.data.projectFeatureImageHomeRetina }}" target="_blank" rel="noopener"><h3>{{ post.data.pageTitle }}</h3></a>
             {% endfor %}
+            <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
         </div>
         <a href="/projects/" class="l l--t" aria-label="View more blog posts.">View All</a>
     </div>
@@ -53,7 +48,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
         </div>
         <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
     </div-->
-    <div class="body__section">
+    <!--div class="body__section">
         <h2>Github.</h2>
         <div class="collection-list">
           <a href="https://www.wordpresspluginicons.com/" target="_blank" rel="noopener"><h3>WordPress Plugin Icon Font</h3></a>
@@ -61,6 +56,6 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
           <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank" rel="noopener"><h3>Slick Slider Quick Start</h3></a>
         </div>
         <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" rel="noopener" aria-label="View more blog posts.">View All</a>
-    </div>
+    </div-->
     {% include footer %}
 </div>

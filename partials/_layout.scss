@@ -16,6 +16,10 @@ nav {
   right: 0;
   top: -750px;
   @include transitionall(.7s);
+  @include sm {
+    width: 100%;
+    padding: 40px 10px 40px 50px;
+  }
   &.scroll {
     top: 0;
     background: $dancanettiwhite;
@@ -27,6 +31,9 @@ nav {
     display: flex;
     align-content: center;
     justify-content: center;
+    @include sm {
+      justify-content: flex-start;
+    }
     .nav__content__logoarea {
       position: relative;
       z-index: 60000;
@@ -59,6 +66,10 @@ nav {
       li {
         margin: 0px 15px;
         font-size: .95rem;
+        @include sm {
+          margin-left: 0;
+          padding-right: 25px; 
+        }
         a {
           color: $dancanettiblack;
           text-transform: uppercase;
@@ -123,11 +134,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    /*
     &.move {
         z-index: -1;
         opacity: 0;
     }
+    */
     .zoom__content {
+        font-family: $header;
         opacity: 1;
         -webkit-transition: opacity .3s ease-in-out;
         -moz-transition: opacity .3s ease-in-out;
@@ -182,7 +196,7 @@ nav {
     @include transitionall(.3s);
     @include sm {
       margin-left: -10%;
-      padding: 100% 50px 0 70px;
+      padding: 100% 50px 0 50px;
       width: 120%;
       height: 100%;
     }
@@ -192,9 +206,9 @@ nav {
       background-size: cover;
       background-position: center;
     }
-    &.dark {
-        background-color: $dancanettiblack;
-        color: $dancanettiwhite;
+    &.white {
+        background-color: $dancanettiwhite;
+        color: $dancanettiblack;
     }
     .body__section {
         position: relative;
@@ -203,7 +217,7 @@ nav {
         flex-direction: column;
         max-width: 750px;
         align-items: flex-start;
-        margin: 100px auto 0 auto;
+        margin: 40px auto 0 auto;
         padding: $ds 0 0 0;
         opacity: 1;
         @include transitionall(.3s);
@@ -213,9 +227,12 @@ nav {
         &.body__section--intro {
             padding-top: 50%;
             margin-bottom: 200px;
+            @include sm {
+              margin-bottom: 0;
+            }
         }
         &.body__section--case-study-items {
-          margin-top: 170px;
+          //margin-top: 170px;
           padding-top: 0;
           flex-direction: row;
           justify-content: space-between;
@@ -226,7 +243,7 @@ nav {
           }
         }
         @include sm {
-            padding: 150px 0px 50px 0px;
+            padding: 50px 0px 50px 0px;
         }
         &.body__section--post {
           @include sm {
@@ -236,26 +253,41 @@ nav {
           h1 {
             font-family: $pfont;
             font-weight: $pfontheavy;
-            color: #fff;
+            color: $dancanettiblack;
             font-size: 3rem;
             margin-top: -50px;
             margin-bottom: 0px;
             padding-bottom: 10px;
+            text-align: center;
             @include sm {
               font-size: 2.25rem;
             }
-            & + div {  // Date & Reading Time
-              margin-bottom: 75px;
-              display: flex;
-              flex-direction: row;
-              span {
-                &:first-of-type {
-                  margin-right: 25px;
-                }
+          }
+          .body__section--post-meta {  // Date & Reading Time
+            width: 100%;
+            margin-bottom: 75px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            span {
+              &:first-of-type {
+                margin-right: 25px;
               }
             }
           }
+          .body__section--post-tag {
+            background: $dancanettiwhite;
+            border: 1px solid $dancanettiblack;
+            padding: 4px 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            font-size: .7rem;
+            margin: 0 auto;
+          }
           h2 {
+            width: 100%;
+            text-align: left;
             font-size: 1.75rem;
             margin-bottom: 0;
             padding-bottom: 0px;
@@ -265,13 +297,12 @@ nav {
             }
           }
           h3 {
+            width: 100%;
+            text-align: left;
             font-size: 1.25rem;
             margin-bottom: 0;
             padding-bottom: 0px;
             margin-top: 75px;
-            @include sm {
-              font-size: 1.05rem;
-            }
           }
           p {
             max-width: 100%;
@@ -289,7 +320,7 @@ nav {
                 height: 1px;
                 width: 100%;
                 opacity: 0.3;
-                background: $dancanettiwhite;
+                background: $dancanettiblack;
                 @include transitionall(.3s);
             }
             &:hover {
@@ -302,6 +333,7 @@ nav {
           ul, ol {
             margin-top: 30px;
             padding-left: 25px;
+            width: 100%;
             li {
               font-size: 1.25rem;
               margin-bottom: 15px;
@@ -310,11 +342,15 @@ nav {
           img {
             width: 100%;
             height: auto;
+            &.body__section--post-feat-img {
+              z-index: -1;
+              margin-top: -10px;
+              border-top: 1px solid #111;
+            }
           }
         }
     }
 }
-
 
 // Footer
 footer {
@@ -345,7 +381,7 @@ footer {
     .copyright {
       font-size: .75rem;
       margin-top: 40px;
-      color: #fff;
+      color: $dancanettiblack;
       opacity: 0.5;
     }
 }
@@ -358,7 +394,7 @@ footer {
     }
     @include sm {
       .body {
-        padding-top: 75%;
+        padding-top: 200px;
       }
     }
 }
