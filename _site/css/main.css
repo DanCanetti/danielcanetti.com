@@ -194,8 +194,6 @@ a {
       text-transform: uppercase;
       letter-spacing: .1rem;
       margin-left: 5px; }
-      a.l.l--t:before {
-        opacity: 0.6; }
       a.l.l--t:hover {
         opacity: 1; }
         a.l.l--t:hover:before {
