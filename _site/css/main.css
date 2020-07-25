@@ -190,12 +190,10 @@ a {
       opacity: 1;
       background: #F92A82; }
     a.l.l--t {
-      opacity: 0.3;
+      opacity: 1;
       text-transform: uppercase;
       letter-spacing: .1rem;
       margin-left: 5px; }
-      a.l.l--t:before {
-        opacity: 0.6; }
       a.l.l--t:hover {
         opacity: 1; }
         a.l.l--t:hover:before {
@@ -630,7 +628,7 @@ footer {
     font-size: .75rem;
     margin-top: 40px;
     color: #111;
-    opacity: 0.5; }
+    opacity: 1; }
 
 .sub nav {
   top: 0 !important;
