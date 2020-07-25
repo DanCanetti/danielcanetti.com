@@ -32,7 +32,7 @@
 <script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script type="text/javascript" defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
 <!--script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script-->
 <script type="text/javascript" defer src="/js/main.js"></script>
 
@@ -116,11 +116,11 @@
           </li>
         </ul>
         <ul class="social">
-          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a></li>
-          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a></li>
-          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a></li>
-          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a></li>
+          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a></li>
+          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a></li>
+          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a></li>
+          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a></li>
+          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a></li>
         </ul>
       </nav>
     </div>
@@ -139,37 +139,20 @@
 <div class="body">
     <div class="body__section body__section--intro">
       <p>A Web Developer living and working in Yorkshire, England.</p>
-        <p class="employment" v-html="jobInfo"></p>
+        <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.</p>
     </div>
     <div class="body__section body__section--projects">
         <h2>Selected Projects.</h2>
-        <div id="project-list" class="collection-list">
+        <div class="collection-list projects">
             
             
-            <a href="https://aligngrowthsummit.com/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover1 = true" @mouseover="hoverOver" @mouseleave="hover1 = false"><h3>Align Growth Summit<br><span class="collection-list__description"></span></h3></a>
-            <transition name="fade">
-              <picture v-if="hover1">
-                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="/images/case-studies/align-gs/featureHome.jpg" srcset="/images/case-studies/align-gs/featureHome@2x.jpg 2x" alt="">
-              </picture>
-            </transition>
+            <a href="https://aligngrowthsummit.com/" class="project-link has-case-study" data-img="/images/case-studies/align-gs/featureHome.jpg" data-imgretina="/images/case-studies/align-gs/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>Align Growth Summit<br><span class="collection-list__description"></span></h3></a>
             
-            <a href="https://www.kbpro.com/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover2 = true" @mouseover="hoverOver" @mouseleave="hover2 = false"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
-            <transition name="fade">
-              <picture v-if="hover2">
-                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
-              </picture>
-            </transition>
+            <a href="https://www.kbpro.com/" class="project-link has-case-study" data-img="/images/case-studies/kbpro/featureHome.jpg" data-imgretina="/images/case-studies/kbpro/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>K.B Pro<br><span class="collection-list__description"></span></h3></a>
             
-            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" target="_blank" rel="noopener" @mouseover="hover3 = true" @mouseover="hoverOver" @mouseleave="hover3 = false"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
-            <transition name="fade">
-              <picture v-if="hover3">
-                <source media='(max-width: 776px)' srcset='/images/transparent-mob.gif'/>
-                <img src="/images/case-studies/emerald-kitchens/featureHome.jpg" srcset="/images/case-studies/emerald-kitchens/featureHome@2x.jpg 2x" alt="">
-              </picture>
-            </transition>
+            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" data-img="/images/case-studies/emerald-kitchens/featureHome.jpg" data-imgretina="/images/case-studies/emerald-kitchens/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>Emerald Kitchens<br><span class="collection-list__description"></span></h3></a>
             
+            <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
         </div>
         <a href="/projects/" class="l l--t" aria-label="View more blog posts.">View All</a>
     </div>
@@ -178,14 +161,14 @@
         <div class="collection-list posts">
           
           
-            <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="collection-list__link"><h3>Advice for web development students<br><span class="collection-list__description">Web Development</span></h3></a>
-            <!-- For reference - date October 30, 2015 -->
+            <a href="/blog/wordpress-valet/" class="collection-list__link"><h3>How to run WordPress locally on Mac using Valet<br><span class="collection-list__description">Web Development</span></h3></a>
+            <!-- For reference - date July 22, 2020 -->
           
-            <a href="/blog/being-a-woman-in-tech-sucks/" class="collection-list__link"><h3>Being a woman in tech sucks<br><span class="collection-list__description">Culture</span></h3></a>
-            <!-- For reference - date November 22, 2015 -->
+            <a href="/blog/github-pages/" class="collection-list__link"><h3>Github Pages<br><span class="collection-list__description">Web Development</span></h3></a>
+            <!-- For reference - date May 03, 2020 -->
           
-            <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="collection-list__link"><h3>How a mentor leaving can inspire you<br><span class="collection-list__description">Culture</span></h3></a>
-            <!-- For reference - date June 09, 2016 -->
+            <a href="/blog/project-management-tools/" class="collection-list__link"><h3>Project Management Tools<br><span class="collection-list__description">Life</span></h3></a>
+            <!-- For reference - date April 18, 2020 -->
           
         </div>
         <a href="/blog/" class="l l--t" aria-label="View more blog posts.">View All</a>
@@ -197,7 +180,7 @@
         </div>
         <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
     </div-->
-    <div class="body__section">
+    <!--div class="body__section">
         <h2>Github.</h2>
         <div class="collection-list">
           <a href="https://www.wordpresspluginicons.com/" target="_blank" rel="noopener"><h3>WordPress Plugin Icon Font</h3></a>
@@ -205,7 +188,7 @@
           <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank" rel="noopener"><h3>Slick Slider Quick Start</h3></a>
         </div>
         <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" rel="noopener" aria-label="View more blog posts.">View All</a>
-    </div>
+    </div-->
     <footer>
     <div class="footer__content">
         <div class="footer__content__item footer__content__plinks">
@@ -214,11 +197,11 @@
             <a class="l" href="/contact/">Mail</a>
         </div>
         <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><i class="fab fa-github" aria-label="GitHub"></i></a>
-            <a class="sl sl--d" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><i class="fab fa-dribbble" aria-label="Dribbble"></i></a>
-            <a class="sl sl--i" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-            <a class="sl sl--t" href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-            <a class="sl sl--l" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Go to Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="Go to LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a>
         </div>
         <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>

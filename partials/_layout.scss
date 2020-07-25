@@ -192,9 +192,9 @@ nav {
       background-size: cover;
       background-position: center;
     }
-    &.dark {
-        background-color: $dancanettiblack;
-        color: $dancanettiwhite;
+    &.white {
+        background-color: $dancanettiwhite;
+        color: $dancanettiblack;
     }
     .body__section {
         position: relative;
@@ -203,7 +203,7 @@ nav {
         flex-direction: column;
         max-width: 750px;
         align-items: flex-start;
-        margin: 100px auto 0 auto;
+        margin: 40px auto 0 auto;
         padding: $ds 0 0 0;
         opacity: 1;
         @include transitionall(.3s);
@@ -215,7 +215,7 @@ nav {
             margin-bottom: 200px;
         }
         &.body__section--case-study-items {
-          margin-top: 170px;
+          //margin-top: 170px;
           padding-top: 0;
           flex-direction: row;
           justify-content: space-between;
@@ -236,7 +236,7 @@ nav {
           h1 {
             font-family: $pfont;
             font-weight: $pfontheavy;
-            color: #fff;
+            color: $dancanettiblack;
             font-size: 3rem;
             margin-top: -50px;
             margin-bottom: 0px;
@@ -289,7 +289,7 @@ nav {
                 height: 1px;
                 width: 100%;
                 opacity: 0.3;
-                background: $dancanettiwhite;
+                background: $dancanettiblack;
                 @include transitionall(.3s);
             }
             &:hover {
@@ -345,7 +345,7 @@ footer {
     .copyright {
       font-size: .75rem;
       margin-top: 40px;
-      color: #fff;
+      color: $dancanettiblack;
       opacity: 0.5;
     }
 }

@@ -158,6 +158,9 @@ $burgertransitions: .4s;
             justify-content: space-between;
             align-items: center;
             padding: 0 50px 0px 15px;
+            img {
+              height: 1rem;
+            }
             @include sm {
               margin-top: 25px;
             }
@@ -289,6 +292,22 @@ $burgertransitions: .4s;
      }
     }      
   }
+  &.projects {
+    a {
+      width: 100%;
+      padding-right: 325px; // Img
+    }
+    img {
+      position: absolute;
+      right: 0;
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+      @include sm {
+        display: none;
+      }
+    }
+  }
 }
 
 // Case Studies
@@ -337,6 +356,7 @@ $burgertransitions: .4s;
       display: flex;
       justify-content: space-between;
       width: 100%;
+      color: $dancanettiwhite;
     }
   }
   .case-study-item__data {
@@ -434,7 +454,7 @@ $burgertransitions: .4s;
   }
   .affiliate__content {
     padding: 20px;
-    color: #fff;
+    color: $dancanettiblack;
     p {
       margin-top: 0;
       font-size: 1em;
@@ -490,7 +510,7 @@ $burgertransitions: .4s;
       background: none;
       box-shadow: none;
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $dancanettiblack;
       color: #fff;
       font-size: 1rem;
       @include transitionall(.3s);
@@ -539,21 +559,26 @@ $burgertransitions: .4s;
   margin-top: 50px;
   &.social {
     max-width: 500px;
+    img {
+      height: .9rem !important; // Important required
+      width: auto!important;    // Important required
+      margin-right: 9px;
+    }
   }
   div {
     position: relative;
     width: calc(100% / 3);
     padding: 45px 25px;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-bottom: 1px solid $dancanettiblack;
+    border-left: 1px solid $dancanettiblack;
     text-align: center;
     background: transparent;
     @include transitionall(.3s);
     &:nth-child(1), &:nth-child(2), &:nth-child(3) {    // Top 3
-      border-top: 1px solid #fff;
+      border-top: 1px solid $dancanettiblack;
     }
     &:nth-child(3n), &:last-child {
-      border-right: 1px solid #fff;
+      border-right: 1px solid $dancanettiblack;
     }
     &:hover {
       background: $dancanettialt;
@@ -567,7 +592,7 @@ $burgertransitions: .4s;
         border-right: none;
       }
       &:nth-child(2n), &:last-child {
-        border-right: 1px solid #fff;
+        border-right: 1px solid $dancanettiblack;
       }
     }
   }
@@ -580,9 +605,12 @@ $burgertransitions: .4s;
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      border-bottom: 1px solid $dancanettiblack;
+    }
     svg {
       margin-right: 10px;
-      fill: #fff;
+      fill: $dancanettiblack;
     }
   }
 }
