@@ -16,6 +16,10 @@ nav {
   right: 0;
   top: -750px;
   @include transitionall(.7s);
+  @include sm {
+    width: 100%;
+    padding: 40px 10px 40px 50px;
+  }
   &.scroll {
     top: 0;
     background: $dancanettiwhite;
@@ -27,6 +31,9 @@ nav {
     display: flex;
     align-content: center;
     justify-content: center;
+    @include sm {
+      justify-content: flex-start;
+    }
     .nav__content__logoarea {
       position: relative;
       z-index: 60000;
@@ -59,6 +66,10 @@ nav {
       li {
         margin: 0px 15px;
         font-size: .95rem;
+        @include sm {
+          margin-left: 0;
+          padding-right: 25px; 
+        }
         a {
           color: $dancanettiblack;
           text-transform: uppercase;
@@ -123,10 +134,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    /*
     &.move {
         z-index: -1;
         opacity: 0;
     }
+    */
     .zoom__content {
         opacity: 1;
         -webkit-transition: opacity .3s ease-in-out;
@@ -182,7 +195,7 @@ nav {
     @include transitionall(.3s);
     @include sm {
       margin-left: -10%;
-      padding: 100% 50px 0 70px;
+      padding: 100% 50px 0 50px;
       width: 120%;
       height: 100%;
     }
@@ -302,6 +315,7 @@ nav {
           ul, ol {
             margin-top: 30px;
             padding-left: 25px;
+            width: 100%;
             li {
               font-size: 1.25rem;
               margin-bottom: 15px;
@@ -315,6 +329,15 @@ nav {
     }
 }
 
+// Post 
+.post--header {
+  height: 100vh;
+  padding: 150px 30% 100px 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
 
 // Footer
 footer {

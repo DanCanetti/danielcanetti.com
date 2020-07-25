@@ -40,18 +40,23 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div id="post" class="body dark">
+            <div class="post--header">
+                <!--img src="{{ postFeatureImage }}" srcset="{{ postFeatureImageRetina }} 2x" alt=""-->
+                 <h1>{{ postTitle }}</h1>
+                <div>
+                    <span>{{ date | date: '%B %d, %Y' }}</span>
+                    <span class="reading-time"></span>
+                </div>
+            </div>
+            <div id="post" class="body">
                 <div class="body__section body__section--post">
-                    <h1>{{ postTitle }}</h1>
-                    <div>
-                        <span>{{ date | date: '%B %d, %Y' }}</span>
-                        <span class="reading-time"></span>
-                    </div>
                     {{ content }}
+                    <hr>
                     <div class="share__blog">
-                        <!--a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
-                            <i class="fab fa-facebook-f" aria-label="Facebook Logo"></i> Share on Facebook
-                        </a-->
+                        <h3>Share {{ postTitle }}</h3>
+                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
+                            Share on Facebook
+                        </a>
                         <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
                             Don't share on Facebook
                         </a-->
