@@ -114,6 +114,8 @@ body {
     @media (max-width: 576px) {
       body .wrapper {
         padding: 25% 5% 0 5%; } }
+  body.sub .wrapper, body.sub .body {
+    background-color: #fff; }
 
 @media screen and (prefers-reduced-motion: reduce) {
   a[href*="#"] {
@@ -134,7 +136,7 @@ h1, h2, h3 {
     position: fixed;
     top: 40px;
     left: 55px;
-    color: #fff;
+    color: #111;
     font-family: "brandon-grotesque", sans-serif;
     font-weight: 900;
     font-size: 1rem;
@@ -145,7 +147,7 @@ h2, h3 {
   font-weight: 900;
   font-size: 2.5rem;
   letter-spacing: .25rem;
-  color: #fff;
+  color: #111;
   padding: 0;
   margin: 0 0 75px 0; }
 
@@ -162,7 +164,7 @@ p {
     font-size: .75rem; }
 
 a {
-  color: #fff;
+  color: #111;
   text-decoration: none;
   position: relative; }
   a:hover {
@@ -180,7 +182,7 @@ a {
       height: 1px;
       width: 100%;
       opacity: 0.3;
-      background: #fff;
+      background: #111;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
@@ -206,46 +208,8 @@ a {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    a.sl svg {
-      width: 0.7em !important; }
-    a.sl:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      border-radius: 100%;
-      background: #fff;
-      width: 0px;
-      height: 0px;
-      top: 15px;
-      left: 10px;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
-    a.sl.sl--d:before {
-      background: #ea4c89; }
-    a.sl.sl--i:before {
-      background: #d00376; }
-    a.sl.sl--t:before {
-      background: #00aced; }
-    a.sl.sl--l:before {
-      background: #0e76a8; }
-    a.sl:hover {
-      color: #111;
-      cursor: none; }
-      a.sl:hover.sl--d {
-        color: #fff; }
-      a.sl:hover.sl--i {
-        color: #fff; }
-      a.sl:hover.sl--t {
-        color: #fff; }
-      a.sl:hover.sl--l {
-        color: #fff; }
-      a.sl:hover:before {
-        top: -4px;
-        left: -10px;
-        width: 40px;
-        height: 40px; }
+    a.sl img {
+      height: 1.5rem; }
 
 button {
   background: transparent;
@@ -254,7 +218,7 @@ button {
   padding: 0 0 5px 0;
   margin-top: 10px;
   font-size: 1.25rem;
-  color: #fff;
+  color: #111;
   text-decoration: none;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
@@ -269,7 +233,7 @@ button {
     height: 1px;
     width: 100%;
     opacity: 0.3;
-    background: #fff;
+    background: #111;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -296,7 +260,7 @@ blockquote {
   blockquote + p {
     font-family: "Roboto Slab", serif;
     margin: 25px 75px 75px 75px;
-    color: #fff;
+    color: #111;
     font-size: .7em; }
   @media (max-width: 576px) {
     blockquote {
@@ -322,7 +286,7 @@ s {
   opacity: 0.5; }
 
 .social-img {
-  height: .95rem;
+  height: .9rem;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -501,9 +465,9 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
-  .body.dark {
-    background-color: #111;
-    color: #fff; }
+  .body.white {
+    background-color: #fff;
+    color: #111; }
   .body .body__section {
     position: relative;
     z-index: 3;
@@ -511,7 +475,7 @@ nav {
     flex-direction: column;
     max-width: 750px;
     align-items: flex-start;
-    margin: 100px auto 0 auto;
+    margin: 40px auto 0 auto;
     padding: 75px 0 0 0;
     opacity: 1;
     -webkit-transition: all 0.3s ease-in-out;
@@ -524,7 +488,6 @@ nav {
       padding-top: 50%;
       margin-bottom: 200px; }
     .body .body__section.body__section--case-study-items {
-      margin-top: 170px;
       padding-top: 0;
       flex-direction: row;
       justify-content: space-between;
@@ -543,7 +506,7 @@ nav {
     .body .body__section.body__section--post h1, .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
       font-family: "brandon-grotesque", sans-serif;
       font-weight: 900;
-      color: #fff;
+      color: #111;
       font-size: 3rem;
       margin-top: -50px;
       margin-bottom: 0px;
@@ -588,7 +551,7 @@ nav {
         height: 1px;
         width: 100%;
         opacity: 0.3;
-        background: #fff;
+        background: #111;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
@@ -631,7 +594,7 @@ footer {
   footer .copyright {
     font-size: .75rem;
     margin-top: 40px;
-    color: #fff;
+    color: #111;
     opacity: 0.5; }
 
 .sub nav {
@@ -802,6 +765,8 @@ footer {
             justify-content: space-between;
             align-items: center;
             padding: 0 50px 0px 15px; }
+            .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social img {
+              height: 1rem; }
             @media (max-width: 576px) {
               .njs-toggle-menu .njs-toggle-menu--toggle + label + .main-nav ul.social {
                 margin-top: 25px; } }
@@ -905,6 +870,18 @@ footer {
     font-weight: 300;
     opacity: 0.5;
     font-size: .75em; }
+  .collection-list.projects a {
+    width: 100%;
+    padding-right: 325px; }
+  .collection-list.projects img {
+    position: absolute;
+    right: 0;
+    height: 300px;
+    width: 300px;
+    object-fit: cover; }
+    @media (max-width: 576px) {
+      .collection-list.projects img {
+        display: none; } }
 
 .case-study-item {
   width: calc(50% - 15px);
@@ -945,7 +922,8 @@ footer {
       padding: 15px 25px;
       display: flex;
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      color: #fff; }
   .case-study-item .case-study-item__data {
     display: flex;
     flex-direction: row;
@@ -1022,7 +1000,7 @@ footer {
     height: auto; }
   .affiliate .affiliate__content {
     padding: 20px;
-    color: #fff; }
+    color: #111; }
     .affiliate .affiliate__content p {
       margin-top: 0;
       font-size: 1em;
@@ -1068,7 +1046,7 @@ footer {
       background: none;
       box-shadow: none;
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #111;
       color: #fff;
       font-size: 1rem;
       -webkit-transition: all 0.3s ease-in-out;
@@ -1109,12 +1087,16 @@ footer {
   margin-top: 50px; }
   .grid.social {
     max-width: 500px; }
+    .grid.social img {
+      height: .9rem !important;
+      width: auto !important;
+      margin-right: 9px; }
   .grid div {
     position: relative;
     width: calc(100% / 3);
     padding: 45px 25px;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-bottom: 1px solid #111;
+    border-left: 1px solid #111;
     text-align: center;
     background: transparent;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1122,9 +1104,9 @@ footer {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .grid div:nth-child(1), .grid div:nth-child(2), .grid div:nth-child(3) {
-      border-top: 1px solid #fff; }
+      border-top: 1px solid #111; }
     .grid div:nth-child(3n), .grid div:last-child {
-      border-right: 1px solid #fff; }
+      border-right: 1px solid #111; }
     .grid div:hover {
       background: #F92A82; }
     @media (max-width: 576px) {
@@ -1135,7 +1117,7 @@ footer {
         .grid div:nth-child(3n), .grid div:last-child {
           border-right: none; }
         .grid div:nth-child(2n), .grid div:last-child {
-          border-right: 1px solid #fff; } }
+          border-right: 1px solid #111; } }
   .grid a {
     position: absolute;
     width: 100%;
@@ -1145,9 +1127,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .grid a:hover {
+      border-bottom: 1px solid #111; }
     .grid a svg {
       margin-right: 10px;
-      fill: #fff; }
+      fill: #111; }
 
 /*
     State
