@@ -24,7 +24,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
         <div class="collection-list projects">
             {% assign selectedprojects = collections.selectedproject %}
             {% for post in selectedprojects reversed %}
-            <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" data-img="{{ post.data.projectFeatureImageHome }}" data-imgretina="{{ post.data.projectFeatureImageHomeRetina }}" target="_blank" rel="noopener"><h3>{{ post.data.pageTitle }}<br><span class="collection-list__description">{{ post.data.pageDesc }}</span></h3></a>
+            <a href="{{ post.data.projectLink }}" class="project-link {{ post.data.projectClass }}" data-img="{{ post.data.projectFeatureImageHome }}" data-imgretina="{{ post.data.projectFeatureImageHomeRetina }}" target="_blank" rel="noopener"><h3>{{ post.data.pageTitle }}</h3></a>
             {% endfor %}
             <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
         </div>

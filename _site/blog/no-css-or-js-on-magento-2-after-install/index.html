@@ -94,7 +94,7 @@
             <ul>
             
             
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
+              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
             
               <li><a href="/blog/github-pages/">Github Pages</a></li>
             
@@ -141,16 +141,15 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div class="post--header">
-                <!--img src="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature.jpg" srcset="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature@2x.jpg 2x" alt=""-->
-                 <h1>No CSS or JS on Magento 2</h1>
-                <div>
-                    <span>October 22, 2019</span>
-                    <span class="reading-time"></span>
-                </div>
-            </div>
-            <div id="post" class="body">
+            <div id="post" class="body dark">
                 <div class="body__section body__section--post">
+                    <h1>No CSS or JS on Magento 2</h1>
+                    <div class="body__section--post-meta">
+                        <span>October 22, 2019</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <span class="body__section--post-tag">Web Development</span>
+                    <img class="body__section--post-feat-img" src="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" alt="">
                     <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
 <p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
 <h2>Pointing to the correct config</h2>

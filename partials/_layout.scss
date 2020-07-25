@@ -141,6 +141,7 @@ nav {
     }
     */
     .zoom__content {
+        font-family: $header;
         opacity: 1;
         -webkit-transition: opacity .3s ease-in-out;
         -moz-transition: opacity .3s ease-in-out;
@@ -226,6 +227,9 @@ nav {
         &.body__section--intro {
             padding-top: 50%;
             margin-bottom: 200px;
+            @include sm {
+              margin-bottom: 0;
+            }
         }
         &.body__section--case-study-items {
           //margin-top: 170px;
@@ -239,7 +243,7 @@ nav {
           }
         }
         @include sm {
-            padding: 150px 0px 50px 0px;
+            padding: 50px 0px 50px 0px;
         }
         &.body__section--post {
           @include sm {
@@ -254,21 +258,36 @@ nav {
             margin-top: -50px;
             margin-bottom: 0px;
             padding-bottom: 10px;
+            text-align: center;
             @include sm {
               font-size: 2.25rem;
             }
-            & + div {  // Date & Reading Time
-              margin-bottom: 75px;
-              display: flex;
-              flex-direction: row;
-              span {
-                &:first-of-type {
-                  margin-right: 25px;
-                }
+          }
+          .body__section--post-meta {  // Date & Reading Time
+            width: 100%;
+            margin-bottom: 75px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            span {
+              &:first-of-type {
+                margin-right: 25px;
               }
             }
           }
+          .body__section--post-tag {
+            background: $dancanettiwhite;
+            border: 1px solid $dancanettiblack;
+            padding: 4px 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            font-size: .7rem;
+            margin: 0 auto;
+          }
           h2 {
+            width: 100%;
+            text-align: left;
             font-size: 1.75rem;
             margin-bottom: 0;
             padding-bottom: 0px;
@@ -278,13 +297,12 @@ nav {
             }
           }
           h3 {
+            width: 100%;
+            text-align: left;
             font-size: 1.25rem;
             margin-bottom: 0;
             padding-bottom: 0px;
             margin-top: 75px;
-            @include sm {
-              font-size: 1.05rem;
-            }
           }
           p {
             max-width: 100%;
@@ -324,19 +342,14 @@ nav {
           img {
             width: 100%;
             height: auto;
+            &.body__section--post-feat-img {
+              z-index: -1;
+              margin-top: -10px;
+              border-top: 1px solid #111;
+            }
           }
         }
     }
-}
-
-// Post 
-.post--header {
-  height: 100vh;
-  padding: 150px 30% 100px 50px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
 }
 
 // Footer
@@ -381,7 +394,7 @@ footer {
     }
     @include sm {
       .body {
-        padding-top: 75%;
+        padding-top: 200px;
       }
     }
 }

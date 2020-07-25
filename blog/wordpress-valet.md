@@ -1,5 +1,5 @@
 ---
-postTitle: How to run WordPress locally on Mac using Valet
+postTitle: How to run WordPress locally on Mac using Valet
 #date: Last Modified
 date: 2020-07-22
 postTag: Web Development
@@ -17,7 +17,7 @@ Yes, it is.
 
 **Please note:** A lot of what I'm about to run through I followed from [this guide](https://wpbeaches.com/setting-up-valet-on-macos-for-local-wordpress-development/). I'm going to include some fixes for issues I ran into but I am in no way taking any credit for their work.
 
-## Installing Homebrew and the required packages
+## Installing Homebrew and the required packages
 
 Homebrew is a package manager for MacOS, through this we can install PHP, MySQL and a whole load of other packages -you can [search them all here](https://formulae.brew.sh/cask/). 
 
@@ -34,11 +34,11 @@ We also need to install the package that links WP CLI and Valet together:
 
 - WP CLI Valet Command: `wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git`
 
-## Expanding the PHP Memory Limits
+## Expanding the PHP Memory Limits
 
 At this point we're going to tweak our PHP installation to expand the memory. Run `php --ini` to find the config file and then nano into that file, for me this was `nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini`. Change limits to 1024M in all 3 places and then restart the service: `brew service restart mysql`.
 
-## The MySQL Issue
+## The MySQL Issue
 
 In the guide I followed they recommended to run `brew install mysql@5.7` but I later had issues with this when trying to use the WP CLI tool. After an hour of so investigating I found someone else who'd ran into this issue but has found a solution. So, for this guide I'm going to recommend you install the latest version of MySQL and follow the rest of this guide to get up and running.
 
@@ -53,7 +53,7 @@ Once Valet is installed, try pinging any `*.test` domain on your terminal using 
 
 Now we know Valet is working we need to tell it where our projects are and this is were we want to generate domains - to do this just navigate to your project folder (using the CLI), for example I'd go `/Documents/Projects/` and then you'll just need to run the `valet park` command.
 
-## The SQL Fix
+## The SQL Fix
 
 It was at this stage that I started to run into issues when trying to create a new site via the WP CLI tool that we installed earlier. So, prior to setting up a site lets resolve this pesky SQL 8.x issue that stops the WordPress sites from connecting.
 

@@ -102,7 +102,7 @@ $burgertransitions: .4s;
         width: 250px;
         opacity: 1;
 				text-align: left;
-				background: #fff;
+				background: $dancanettigrey;
 				margin-left: -100vw;
 				padding: 135px 0 0 0;
 				font-weight: 900;
@@ -277,11 +277,15 @@ $burgertransitions: .4s;
       }
   }
   .collection-list__description {
-    font-family: $pfont;
-    font-weight: $pfontlight;
-    color: $dancanettigrey;
-    opacity: .5;
-    font-size: .75em;
+    background: $dancanettigrey;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-size: .7rem;
+    margin: 0 auto;
+    color: $dancanettiblack;
+    opacity: 1;
   }
   &.posts {
     .collection-list__link {

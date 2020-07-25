@@ -420,6 +420,7 @@ nav {
   }
   */ }
   .zoom .zoom__content {
+    font-family: "Abril Fatface", cursive;
     opacity: 1;
     -webkit-transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
@@ -500,6 +501,9 @@ nav {
     .body .body__section.body__section--intro {
       padding-top: 50%;
       margin-bottom: 200px; }
+      @media (max-width: 576px) {
+        .body .body__section.body__section--intro {
+          margin-bottom: 0; } }
     .body .body__section.body__section--case-study-items {
       padding-top: 0;
       flex-direction: row;
@@ -511,7 +515,7 @@ nav {
           flex-direction: column; } }
     @media (max-width: 576px) {
       .body .body__section {
-        padding: 150px 0px 50px 0px; } }
+        padding: 50px 0px 50px 0px; } }
     @media (max-width: 576px) {
       .body .body__section.body__section--post {
         margin-top: 0;
@@ -523,17 +527,31 @@ nav {
       font-size: 3rem;
       margin-top: -50px;
       margin-bottom: 0px;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      text-align: center; }
       @media (max-width: 576px) {
         .body .body__section.body__section--post h1, .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
           font-size: 2.25rem; } }
-      .body .body__section.body__section--post h1 + div, .body .body__section.body__section--post h2 + div, .body .body__section.body__section--post h3 + div {
-        margin-bottom: 75px;
-        display: flex;
-        flex-direction: row; }
-        .body .body__section.body__section--post h1 + div span:first-of-type, .body .body__section.body__section--post h2 + div span:first-of-type, .body .body__section.body__section--post h3 + div span:first-of-type {
-          margin-right: 25px; }
+    .body .body__section.body__section--post .body__section--post-meta {
+      width: 100%;
+      margin-bottom: 75px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .body .body__section.body__section--post .body__section--post-meta span:first-of-type {
+        margin-right: 25px; }
+    .body .body__section.body__section--post .body__section--post-tag {
+      background: #fff;
+      border: 1px solid #111;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      font-size: .7rem;
+      margin: 0 auto; }
     .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
+      width: 100%;
+      text-align: left;
       font-size: 1.75rem;
       margin-bottom: 0;
       padding-bottom: 0px;
@@ -542,13 +560,12 @@ nav {
         .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
           font-size: 1.5rem; } }
     .body .body__section.body__section--post h3 {
+      width: 100%;
+      text-align: left;
       font-size: 1.25rem;
       margin-bottom: 0;
       padding-bottom: 0px;
       margin-top: 75px; }
-      @media (max-width: 576px) {
-        .body .body__section.body__section--post h3 {
-          font-size: 1.05rem; } }
     .body .body__section.body__section--post p {
       max-width: 100%; }
     .body .body__section.body__section--post a {
@@ -582,14 +599,10 @@ nav {
     .body .body__section.body__section--post img {
       width: 100%;
       height: auto; }
-
-.post--header {
-  height: 100vh;
-  padding: 150px 30% 100px 50px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center; }
+      .body .body__section.body__section--post img.body__section--post-feat-img {
+        z-index: -1;
+        margin-top: -10px;
+        border-top: 1px solid #111; }
 
 footer {
   z-index: 5000000;
@@ -624,7 +637,7 @@ footer {
   background: #fff; }
 @media (max-width: 576px) {
   .sub .body {
-    padding-top: 75%; } }
+    padding-top: 200px; } }
 
 #tumblrfeed {
   /* Prevent vertical gaps */
@@ -734,7 +747,7 @@ footer {
         width: 250px;
         opacity: 1;
         text-align: left;
-        background: #fff;
+        background: #f0f0f0;
         margin-left: -100vw;
         padding: 135px 0 0 0;
         font-weight: 900;
@@ -883,11 +896,15 @@ footer {
       width: 100%;
       max-width: calc(100vw - 20px); }
   .collection-list .collection-list__description {
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 300;
-    color: #f0f0f0;
-    opacity: .5;
-    font-size: .75em; }
+    background: #f0f0f0;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-size: .7rem;
+    margin: 0 auto;
+    color: #111;
+    opacity: 1; }
   .collection-list.posts .collection-list__link .collection-list__link__post-date {
     color: #111;
     font-weight: 300;

@@ -94,7 +94,7 @@
             <ul>
             
             
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
+              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
             
               <li><a href="/blog/github-pages/">Github Pages</a></li>
             
@@ -141,16 +141,15 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div class="post--header">
-                <!--img src="/images/posts/gitlab-pages/feature.jpg" srcset="/images/posts/gitlab-pages/feature@2x.jpg 2x" alt=""-->
-                 <h1>GitLab Pages</h1>
-                <div>
-                    <span>February 06, 2019</span>
-                    <span class="reading-time"></span>
-                </div>
-            </div>
-            <div id="post" class="body">
+            <div id="post" class="body dark">
                 <div class="body__section body__section--post">
+                    <h1>GitLab Pages</h1>
+                    <div class="body__section--post-meta">
+                        <span>February 06, 2019</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <span class="body__section--post-tag">Web Development</span>
+                    <img class="body__section--post-feat-img" src="/images/posts/gitlab-pages/feature-full.jpg" alt="">
                     <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
 <p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
 <p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>

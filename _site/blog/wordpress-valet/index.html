@@ -41,7 +41,7 @@
 </script>
 
         <script type="text/javascript" defer src="/js/post.js"></script>
-        <title>Daniel Canetti • How to run WordPress locally on Mac using Valet</title>
+        <title>Daniel Canetti • How to run WordPress locally on Mac using Valet</title>
         <meta name="description" content="Create and run WordPress websites directly from your Mac via the CLI.">
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Daniel Canetti" />
@@ -94,7 +94,7 @@
             <ul>
             
             
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
+              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
             
               <li><a href="/blog/github-pages/">Github Pages</a></li>
             
@@ -141,21 +141,20 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div class="post--header">
-                <!--img src="/images/posts/wordpress-valet/feature.jpg" srcset="/images/posts/wordpress-valet/feature@2x.jpg 2x" alt=""-->
-                 <h1>How to run WordPress locally on Mac using Valet</h1>
-                <div>
-                    <span>July 22, 2020</span>
-                    <span class="reading-time"></span>
-                </div>
-            </div>
-            <div id="post" class="body">
+            <div id="post" class="body dark">
                 <div class="body__section body__section--post">
+                    <h1>How to run WordPress locally on Mac using Valet</h1>
+                    <div class="body__section--post-meta">
+                        <span>July 22, 2020</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <span class="body__section--post-tag">Web Development</span>
+                    <img class="body__section--post-feat-img" src="/images/posts/wordpress-valet/feature-full.jpg" alt="">
                     <p>I've recently started to learn Laravel and pretty early on the course introduced me to local development, by local I mean directly off the machine, rather than using a tool or VM (Homestead) as I had been doing.</p>
 <p>The tool introduced was <a href="https://laravel.com/docs/7.x/valet">Valet</a>, it's described in their documentation as 'a Laravel development environment for Mac minimalists.' Naturally, my next thought was 'if I can run a Laravel application locally, why do I need <a href="https://www.mamp.info/en/mamp/mac/">MAMP</a> or <a href="https://laravel.com/docs/7.x/homestead">Homestead</a> to run WordPress sites?' - and thus I set out to see if this was possible.</p>
 <p>Yes, it is.</p>
 <p><strong>Please note:</strong> A lot of what I'm about to run through I followed from <a href="https://wpbeaches.com/setting-up-valet-on-macos-for-local-wordpress-development/">this guide</a>. I'm going to include some fixes for issues I ran into but I am in no way taking any credit for their work.</p>
-<h2>Installing Homebrew and the required packages</h2>
+<h2>Installing Homebrew and the required packages</h2>
 <p>Homebrew is a package manager for MacOS, through this we can install PHP, MySQL and a whole load of other packages -you can <a href="https://formulae.brew.sh/cask/">search them all here</a>.</p>
 <p>Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command <code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</code>.
  
@@ -170,9 +169,9 @@ We now have Homebrew installed and can start to use this to install all the othe
 <ul>
 <li>WP CLI Valet Command: <code>wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git</code></li>
 </ul>
-<h2>Expanding the PHP Memory Limits</h2>
+<h2>Expanding the PHP Memory Limits</h2>
 <p>At this point we're going to tweak our PHP installation to expand the memory. Run <code>php --ini</code> to find the config file and then nano into that file, for me this was <code>nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini</code>. Change limits to 1024M in all 3 places and then restart the service: <code>brew service restart mysql</code>.</p>
-<h2>The MySQL Issue</h2>
+<h2>The MySQL Issue</h2>
 <p>In the guide I followed they recommended to run <code>brew install mysql@5.7</code> but I later had issues with this when trying to use the WP CLI tool. After an hour of so investigating I found someone else who'd ran into this issue but has found a solution. So, for this guide I'm going to recommend you install the latest version of MySQL and follow the rest of this guide to get up and running.</p>
 <h2>Installing Valet</h2>
 <p>If you like you can follow the <a href="https://laravel.com/docs/7.x/valet#installation">Laravel documentation</a> for installing Valet as I'll just be dropping that in this guide right about… now!</p>
@@ -182,7 +181,7 @@ We now have Homebrew installed and can start to use this to install all the othe
 </ul>
 <p>Once Valet is installed, try pinging any <code>*.test</code> domain on your terminal using a command such as <code>ping foobar.test</code>. If Valet is installed correctly you should see this domain responding on <code>127.0.0.1</code>.</p>
 <p>Now we know Valet is working we need to tell it where our projects are and this is were we want to generate domains - to do this just navigate to your project folder (using the CLI), for example I'd go <code>/Documents/Projects/</code> and then you'll just need to run the <code>valet park</code> command.</p>
-<h2>The SQL Fix</h2>
+<h2>The SQL Fix</h2>
 <p>It was at this stage that I started to run into issues when trying to create a new site via the WP CLI tool that we installed earlier. So, prior to setting up a site lets resolve this pesky SQL 8.x issue that stops the WordPress sites from connecting.</p>
 <p>The bug itself is due to an authentication change from <code>mysql_native_password</code> to <code>caching_sha2_password</code>, there is much more detail about this here.</p>
 <p>To fix it all we need to do is access MySQL by running the <code>mysql -uroot</code> you'll have seen when Homebrew installed MySQL. Once we're in MySQL run the following command: <code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';</code>. What we're doing here is changing the authenticator for the <code>root</code> user, I highly recommend you ONLY do this on your local environment.
@@ -204,14 +203,14 @@ That's it, you can now spin up as many WordPress or Laravel projects as you like
 
                     <hr>
                     <div class="share__blog">
-                        <h3>Share How to run WordPress locally on Mac using Valet</h3>
+                        <h3>Share How to run WordPress locally on Mac using Valet</h3>
                         <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/wordpress-valet/" target="_blank">
                             Share on Facebook
                         </a>
                         <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
                             Don't share on Facebook
                         </a-->
-                        <a class="l" href="https://twitter.com/intent/tweet?text=How to run WordPress locally on Mac using Valet%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/wordpress-valet/" target="_blank">
+                        <a class="l" href="https://twitter.com/intent/tweet?text=How to run WordPress locally on Mac using Valet%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/wordpress-valet/" target="_blank">
                             Share on Twitter
                         </a>
                         <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">

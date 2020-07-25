@@ -40,16 +40,15 @@
                     <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
                 </div>
             </div>
-            <div class="post--header">
-                <!--img src="{{ postFeatureImage }}" srcset="{{ postFeatureImageRetina }} 2x" alt=""-->
-                 <h1>{{ postTitle }}</h1>
-                <div>
-                    <span>{{ date | date: '%B %d, %Y' }}</span>
-                    <span class="reading-time"></span>
-                </div>
-            </div>
-            <div id="post" class="body">
+            <div id="post" class="body dark">
                 <div class="body__section body__section--post">
+                    <h1>{{ postTitle }}</h1>
+                    <div class="body__section--post-meta">
+                        <span>{{ date | date: '%B %d, %Y' }}</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <span class="body__section--post-tag">{{ postTag }}</span>
+                    <img class="body__section--post-feat-img" src="{{ postFeatureImageFull }}" alt="">
                     {{ content }}
                     <hr>
                     <div class="share__blog">
