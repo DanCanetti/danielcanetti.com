@@ -35,7 +35,7 @@
 &lt;p&gt;The tool introduced was &lt;a href=&quot;https://laravel.com/docs/7.x/valet&quot;&gt;Valet&lt;/a&gt;, it&#39;s described in their documentation as &#39;a Laravel development environment for Mac minimalists.&#39; Naturally, my next thought was &#39;if I can run a Laravel application locally, why do I need &lt;a href=&quot;https://www.mamp.info/en/mamp/mac/&quot;&gt;MAMP&lt;/a&gt; or &lt;a href=&quot;https://laravel.com/docs/7.x/homestead&quot;&gt;Homestead&lt;/a&gt; to run WordPress sites?&#39; - and thus I set out to see if this was possible.&lt;/p&gt;
 &lt;p&gt;Yes, it is.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Please note:&lt;/strong&gt; A lot of what I&#39;m about to run through I followed from &lt;a href=&quot;https://wpbeaches.com/setting-up-valet-on-macos-for-local-wordpress-development/&quot;&gt;this guide&lt;/a&gt;. I&#39;m going to include some fixes for issues I ran into but I am in no way taking any credit for their work.&lt;/p&gt;
-&lt;h2&gt;Installing Homebrew and the required packages&lt;/h2&gt;
+&lt;h2&gt;Installing Homebrew and the required packages&lt;/h2&gt;
 &lt;p&gt;Homebrew is a package manager for MacOS, through this we can install PHP, MySQL and a whole load of other packages -you can &lt;a href=&quot;https://formulae.brew.sh/cask/&quot;&gt;search them all here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command &lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;quot;&lt;/code&gt;.
  
@@ -50,9 +50,9 @@ We now have Homebrew installed and can start to use this to install all the othe
 &lt;ul&gt;
 &lt;li&gt;WP CLI Valet Command: &lt;code&gt;wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Expanding the PHP Memory Limits&lt;/h2&gt;
+&lt;h2&gt;Expanding the PHP Memory Limits&lt;/h2&gt;
 &lt;p&gt;At this point we&#39;re going to tweak our PHP installation to expand the memory. Run &lt;code&gt;php --ini&lt;/code&gt; to find the config file and then nano into that file, for me this was &lt;code&gt;nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini&lt;/code&gt;. Change limits to 1024M in all 3 places and then restart the service: &lt;code&gt;brew service restart mysql&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;The MySQL Issue&lt;/h2&gt;
+&lt;h2&gt;The MySQL Issue&lt;/h2&gt;
 &lt;p&gt;In the guide I followed they recommended to run &lt;code&gt;brew install mysql@5.7&lt;/code&gt; but I later had issues with this when trying to use the WP CLI tool. After an hour of so investigating I found someone else who&#39;d ran into this issue but has found a solution. So, for this guide I&#39;m going to recommend you install the latest version of MySQL and follow the rest of this guide to get up and running.&lt;/p&gt;
 &lt;h2&gt;Installing Valet&lt;/h2&gt;
 &lt;p&gt;If you like you can follow the &lt;a href=&quot;https://laravel.com/docs/7.x/valet#installation&quot;&gt;Laravel documentation&lt;/a&gt; for installing Valet as I&#39;ll just be dropping that in this guide right about… now!&lt;/p&gt;
@@ -62,7 +62,7 @@ We now have Homebrew installed and can start to use this to install all the othe
 &lt;/ul&gt;
 &lt;p&gt;Once Valet is installed, try pinging any &lt;code&gt;*.test&lt;/code&gt; domain on your terminal using a command such as &lt;code&gt;ping foobar.test&lt;/code&gt;. If Valet is installed correctly you should see this domain responding on &lt;code&gt;127.0.0.1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Now we know Valet is working we need to tell it where our projects are and this is were we want to generate domains - to do this just navigate to your project folder (using the CLI), for example I&#39;d go &lt;code&gt;/Documents/Projects/&lt;/code&gt; and then you&#39;ll just need to run the &lt;code&gt;valet park&lt;/code&gt; command.&lt;/p&gt;
-&lt;h2&gt;The SQL Fix&lt;/h2&gt;
+&lt;h2&gt;The SQL Fix&lt;/h2&gt;
 &lt;p&gt;It was at this stage that I started to run into issues when trying to create a new site via the WP CLI tool that we installed earlier. So, prior to setting up a site lets resolve this pesky SQL 8.x issue that stops the WordPress sites from connecting.&lt;/p&gt;
 &lt;p&gt;The bug itself is due to an authentication change from &lt;code&gt;mysql_native_password&lt;/code&gt; to &lt;code&gt;caching_sha2_password&lt;/code&gt;, there is much more detail about this here.&lt;/p&gt;
 &lt;p&gt;To fix it all we need to do is access MySQL by running the &lt;code&gt;mysql -uroot&lt;/code&gt; you&#39;ll have seen when Homebrew installed MySQL. Once we&#39;re in MySQL run the following command: &lt;code&gt;ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;&#39;;&lt;/code&gt;. What we&#39;re doing here is changing the authenticator for the &lt;code&gt;root&lt;/code&gt; user, I highly recommend you ONLY do this on your local environment.
