@@ -333,7 +333,7 @@ nav {
       color: #111;
       text-align: left;
       text-transform: uppercase;
-      font-family: "Abril Fatface", cursive;
+      font-family: "Abril Fatface", sans-serif;
       font-size: 2em; }
       nav .nav__content .nav__content__logoarea .nav__content__logoarea--toggle-menu {
         font-family: "brandon-grotesque", sans-serif;
@@ -418,7 +418,7 @@ nav {
   }
   */ }
   .zoom .zoom__content {
-    font-family: "Abril Fatface", cursive;
+    font-family: "Abril Fatface", sans-serif;
     opacity: 1;
     -webkit-transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
@@ -526,7 +526,8 @@ nav {
       margin-top: -50px;
       margin-bottom: 0px;
       padding-bottom: 10px;
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
       @media (max-width: 576px) {
         .body .body__section.body__section--post h1, .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
           font-size: 2.25rem; } }
@@ -591,6 +592,8 @@ nav {
       margin-top: 30px;
       padding-left: 25px;
       width: 100%; }
+      .body .body__section.body__section--post ul.slick-dots, .body .body__section.body__section--post ol.slick-dots {
+        margin-top: 15px; }
       .body .body__section.body__section--post ul li, .body .body__section.body__section--post ol li {
         font-size: 1.25rem;
         margin-bottom: 15px; }
@@ -1097,7 +1100,7 @@ footer {
       box-shadow: none;
       border: none;
       border-bottom: 1px solid #111;
-      color: #fff;
+      color: #111;
       font-size: 1rem;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
@@ -1106,7 +1109,9 @@ footer {
       .form .form-group input.parsley-error, .form .form-group textarea.parsley-error {
         border-bottom: 1px solid #F92A82; }
     .form .form-group textarea {
-      resize: vertical; }
+      resize: vertical;
+      padding: 15px 0;
+      font-family: "brandon-grotesque", sans-serif; }
     .form .form-group button {
       align-self: flex-end; }
     .form .form-group ul.parsley-errors-list {
@@ -1182,6 +1187,69 @@ footer {
     .grid a svg {
       margin-right: 10px;
       fill: #111; }
+
+.slick-slider {
+  width: 100%;
+  margin-top: 50px; }
+  .slick-slider ul.slick-dots {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none; }
+    .slick-slider ul.slick-dots button {
+      display: none; }
+    .slick-slider ul.slick-dots li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      margin: 0 7px;
+      background: #f0f0f0;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .slick-slider ul.slick-dots li:hover {
+        background: #d6d6d6; }
+      .slick-slider ul.slick-dots li.slick-active {
+        background: #F92A82; }
+
+.award {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px;
+  margin: -2px auto 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #f0f0f0; }
+  @media (max-width: 576px) {
+    .award {
+      flex-direction: column;
+      align-items: flex-start; } }
+  .award:first-of-type {
+    margin-top: 50px; }
+  .award p, .award a {
+    color: #111;
+    font-size: .9rem;
+    margin: 0; }
+    @media (max-width: 576px) {
+      .award p, .award a {
+        font-size: .7rem;
+        margin: 10px 0 0 2px; } }
+  .award img {
+    max-width: 125px;
+    width: 100%;
+    height: auto;
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 2px solid #f0f0f0; }
+    @media (max-width: 576px) {
+      .award img {
+        max-height: 61px;
+        width: auto;
+        border: none; } }
 
 /*
     State
