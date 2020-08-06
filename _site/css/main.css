@@ -1236,15 +1236,19 @@ footer {
     margin: 0; }
     @media (max-width: 576px) {
       .award p, .award a {
+        font-size: .7rem;
         margin: 10px 0 0 2px; } }
   .award img {
     max-width: 125px;
+    width: 100%;
     height: auto;
     margin-right: 25px;
     padding-right: 25px;
     border-right: 2px solid #f0f0f0; }
     @media (max-width: 576px) {
       .award img {
+        max-height: 61px;
+        width: auto;
         border: none; } }
 
 /*

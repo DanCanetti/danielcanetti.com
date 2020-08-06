@@ -687,16 +687,20 @@ $burgertransitions: .4s;
     font-size: .9rem;
     margin: 0;
     @include sm {
+      font-size: .7rem;
       margin: 10px 0 0 2px;
     }
   }
   img {
     max-width: 125px;
+    width: 100%;
     height: auto;
     margin-right: 25px;
     padding-right: 25px;
     border-right: 2px solid $dancanettigrey;
     @include sm {
+      max-height: 61px;
+      width: auto;
       border: none;
     }
   }
