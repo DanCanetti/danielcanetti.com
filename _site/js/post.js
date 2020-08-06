@@ -34,3 +34,21 @@ function setReadingTime(){
 function getWordCount(){
   return post.innerText.match(/\w+/g).length;
 }
+
+// Slick Sliders
+jQuery('.basic-slider').slick({
+  dots: true,
+  arrows: false,
+  autoplay: false,
+  fade: true,
+  cssEase: 'linear',
+});
+
+jQuery('.basic-slider-auto').slick({
+  dots: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  fade: true,
+  cssEase: 'linear',
+});

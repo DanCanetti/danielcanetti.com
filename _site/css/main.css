@@ -526,7 +526,8 @@ nav {
       margin-top: -50px;
       margin-bottom: 0px;
       padding-bottom: 10px;
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
       @media (max-width: 576px) {
         .body .body__section.body__section--post h1, .body .body__section.body__section--post h2, .body .body__section.body__section--post h3 {
           font-size: 2.25rem; } }
@@ -591,6 +592,8 @@ nav {
       margin-top: 30px;
       padding-left: 25px;
       width: 100%; }
+      .body .body__section.body__section--post ul.slick-dots, .body .body__section.body__section--post ol.slick-dots {
+        margin-top: 15px; }
       .body .body__section.body__section--post ul li, .body .body__section.body__section--post ol li {
         font-size: 1.25rem;
         margin-bottom: 15px; }
@@ -1097,7 +1100,7 @@ footer {
       box-shadow: none;
       border: none;
       border-bottom: 1px solid #111;
-      color: #fff;
+      color: #111;
       font-size: 1rem;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
@@ -1182,6 +1185,33 @@ footer {
     .grid a svg {
       margin-right: 10px;
       fill: #111; }
+
+.slick-slider {
+  width: 100%;
+  margin-top: 50px; }
+  .slick-slider ul.slick-dots {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none; }
+    .slick-slider ul.slick-dots button {
+      display: none; }
+    .slick-slider ul.slick-dots li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      margin: 0 7px;
+      background: #f0f0f0;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .slick-slider ul.slick-dots li:hover {
+        background: #d6d6d6; }
+      .slick-slider ul.slick-dots li.slick-active {
+        background: #F92A82; }
 
 /*
     State

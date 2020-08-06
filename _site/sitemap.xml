@@ -481,4 +481,10 @@
             <changefreq></changefreq>
         </url>
     
+        <url>
+            <loc>/blog/coniston-water-2020/</loc>
+            <lastmod>2020-08-06T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
 </urlset>
