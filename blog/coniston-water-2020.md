@@ -13,7 +13,7 @@ After all the chaos and uncertainty in early 2020 it was nice to finally be able
 
 Although I didn't manage to get a complete break from work up there, hammering out two 10+ mile walks over the space of two days (including one *very* treacherous decline) and knocking back several pints in the afternoon sunshine certainly helped to clear the mind and offered a chance to re-focus on the rest of the year.
 
-I've collated some of the better shots from the weekend below - all shot on iPhone 11, which I must say I'm very impressed with.
+I've collated some of the better shots from the weekend below - all shot on iPhone 11, which I must say I'm very impressed with - especially the camera.
 
 Hope everyone is staying safe!
 
