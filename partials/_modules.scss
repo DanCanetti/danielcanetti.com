@@ -687,6 +687,7 @@ $burgertransitions: .4s;
     font-size: .9rem;
     margin: 0;
     @include sm {
+      font-size: .7rem;
       margin: 10px 0 0 2px;
     }
   }

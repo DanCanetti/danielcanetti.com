@@ -1236,6 +1236,7 @@ footer {
     margin: 0; }
     @media (max-width: 576px) {
       .award p, .award a {
+        font-size: .7rem;
         margin: 10px 0 0 2px; } }
   .award img {
     max-width: 125px;
