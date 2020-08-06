@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>/node_modules/eleventy-plugin-monetization/.github/ISSUE_TEMPLATE/bug_report/</loc>
-            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/eleventy-plugin-monetization/.github/ISSUE_TEMPLATE/feature_request/</loc>
-            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/eleventy-plugin-monetization/README/</loc>
-            <lastmod>1985-10-26T08:15:00.000Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
             <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
             <lastmod>2015-10-30T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -164,306 +146,6 @@
         </url>
     
         <url>
-            <loc>/404.html</loc>
-            <lastmod>2020-05-12T12:56:56.984Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/blog/</loc>
-            <lastmod>2020-05-12T12:56:57.030Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/contact/</loc>
-            <lastmod>2020-05-12T12:56:57.031Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/</loc>
-            <lastmod>2020-05-12T12:56:57.031Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/projects/</loc>
-            <lastmod>2020-05-12T12:56:57.033Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/feed/</loc>
-            <lastmod>2020-05-12T13:24:34.121Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/@11ty/eleventy-plugin-rss/README/</loc>
-            <lastmod>2020-05-12T13:24:34.123Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/any-promise/README/</loc>
-            <lastmod>2020-05-12T13:24:34.126Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/debug/CHANGELOG/</loc>
-            <lastmod>2020-05-12T13:24:34.127Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/debug/README/</loc>
-            <lastmod>2020-05-12T13:24:34.128Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/dom-serializer/README/</loc>
-            <lastmod>2020-05-12T13:24:34.133Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/dom-serializer/node_modules/domelementtype/README/</loc>
-            <lastmod>2020-05-12T13:24:34.135Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/dom-serializer/node_modules/entities/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.146Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/domelementtype/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.147Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/domhandler/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.149Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/domutils/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.156Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/entities/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.161Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/htmlparser2/README/</loc>
-            <lastmod>2020-05-12T13:24:34.163Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/http-equiv-refresh/README/</loc>
-            <lastmod>2020-05-12T13:24:34.166Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/inherits/README/</loc>
-            <lastmod>2020-05-12T13:24:34.167Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/list-to-array/README/</loc>
-            <lastmod>2020-05-12T13:24:34.169Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/luxon/CHANGELOG/</loc>
-            <lastmod>2020-05-12T13:24:34.170Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/luxon/README/</loc>
-            <lastmod>2020-05-12T13:24:34.171Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/luxon/build/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.189Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/luxon/license/</loc>
-            <lastmod>2020-05-12T13:24:34.189Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/ms/license/</loc>
-            <lastmod>2020-05-12T13:24:34.197Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/ms/readme/</loc>
-            <lastmod>2020-05-12T13:24:34.197Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/parse-srcset/README/</loc>
-            <lastmod>2020-05-12T13:24:34.200Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/README/</loc>
-            <lastmod>2020-05-12T13:24:34.203Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/</loc>
-            <lastmod>2020-05-12T13:24:34.204Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/lcov-report/</loc>
-            <lastmod>2020-05-12T13:24:34.205Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/</loc>
-            <lastmod>2020-05-12T13:24:34.206Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/index.js/</loc>
-            <lastmod>2020-05-12T13:24:34.206Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/</loc>
-            <lastmod>2020-05-12T13:24:34.208Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/index.js/</loc>
-            <lastmod>2020-05-12T13:24:34.208Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-render/CHANGELOG/</loc>
-            <lastmod>2020-05-12T13:24:34.210Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-render/README/</loc>
-            <lastmod>2020-05-12T13:24:34.210Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml-urls/README/</loc>
-            <lastmod>2020-05-12T13:24:34.211Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml/CHANGELOG/</loc>
-            <lastmod>2020-05-12T13:24:34.213Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/posthtml/README/</loc>
-            <lastmod>2020-05-12T13:24:34.213Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/promise-each/README/</loc>
-            <lastmod>2020-05-12T13:24:34.215Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/readable-stream/CONTRIBUTING/</loc>
-            <lastmod>2020-05-12T13:24:34.216Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/readable-stream/GOVERNANCE/</loc>
-            <lastmod>2020-05-12T13:24:34.216Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/readable-stream/README/</loc>
-            <lastmod>2020-05-12T13:24:34.217Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/safe-buffer/README/</loc>
-            <lastmod>2020-05-12T13:24:34.222Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/string_decoder/README/</loc>
-            <lastmod>2020-05-12T13:24:34.225Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/util-deprecate/History/</loc>
-            <lastmod>2020-05-12T13:24:34.227Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/node_modules/util-deprecate/README/</loc>
-            <lastmod>2020-05-12T13:24:34.228Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/demo/</loc>
-            <lastmod>2020-05-12T22:00:42.917Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>/moodboard/</loc>
-            <lastmod>2020-05-24T22:07:43.173Z</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
             <loc>/case-studies/align-growth-summit/</loc>
             <lastmod>2020-06-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -484,6 +166,324 @@
         <url>
             <loc>/blog/coniston-water-2020/</loc>
             <lastmod>2020-08-06T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/404.html</loc>
+            <lastmod>2020-08-06T11:22:56.552Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/</loc>
+            <lastmod>2020-08-06T11:22:56.797Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/contact/</loc>
+            <lastmod>2020-08-06T11:22:56.833Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/demo/</loc>
+            <lastmod>2020-08-06T11:22:56.834Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/feed/</loc>
+            <lastmod>2020-08-06T11:22:56.835Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/</loc>
+            <lastmod>2020-08-06T11:22:56.835Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/moodboard/</loc>
+            <lastmod>2020-08-06T11:22:56.835Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/@11ty/eleventy-plugin-rss/README/</loc>
+            <lastmod>2020-08-06T11:22:56.840Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/any-promise/README/</loc>
+            <lastmod>2020-08-06T11:22:56.843Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/debug/CHANGELOG/</loc>
+            <lastmod>2020-08-06T11:22:56.844Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/debug/README/</loc>
+            <lastmod>2020-08-06T11:22:56.845Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/README/</loc>
+            <lastmod>2020-08-06T11:22:56.850Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/node_modules/domelementtype/README/</loc>
+            <lastmod>2020-08-06T11:22:56.851Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/dom-serializer/node_modules/entities/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.858Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domelementtype/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.860Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domhandler/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.862Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/domutils/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.873Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/eleventy-plugin-monetization/.github/ISSUE_TEMPLATE/bug_report/</loc>
+            <lastmod>2020-08-06T11:22:56.877Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/eleventy-plugin-monetization/.github/ISSUE_TEMPLATE/feature_request/</loc>
+            <lastmod>2020-08-06T11:22:56.877Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/eleventy-plugin-monetization/README/</loc>
+            <lastmod>2020-08-06T11:22:56.877Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/entities/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.882Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/htmlparser2/README/</loc>
+            <lastmod>2020-08-06T11:22:56.885Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/http-equiv-refresh/README/</loc>
+            <lastmod>2020-08-06T11:22:56.892Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/inherits/README/</loc>
+            <lastmod>2020-08-06T11:22:56.894Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/list-to-array/README/</loc>
+            <lastmod>2020-08-06T11:22:56.896Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/CHANGELOG/</loc>
+            <lastmod>2020-08-06T11:22:56.898Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/README/</loc>
+            <lastmod>2020-08-06T11:22:56.898Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/build/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.934Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/luxon/license/</loc>
+            <lastmod>2020-08-06T11:22:56.935Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/ms/license/</loc>
+            <lastmod>2020-08-06T11:22:56.947Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/ms/readme/</loc>
+            <lastmod>2020-08-06T11:22:56.947Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/parse-srcset/README/</loc>
+            <lastmod>2020-08-06T11:22:56.951Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/README/</loc>
+            <lastmod>2020-08-06T11:22:56.989Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/</loc>
+            <lastmod>2020-08-06T11:22:56.990Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/</loc>
+            <lastmod>2020-08-06T11:22:56.991Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/</loc>
+            <lastmod>2020-08-06T11:22:56.991Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/lcov-report/posthtml-parser/index.js/</loc>
+            <lastmod>2020-08-06T11:22:56.992Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/</loc>
+            <lastmod>2020-08-06T11:22:56.995Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-parser/coverage/posthtml-parser/index.js/</loc>
+            <lastmod>2020-08-06T11:22:56.995Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-render/CHANGELOG/</loc>
+            <lastmod>2020-08-06T11:22:56.998Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-render/README/</loc>
+            <lastmod>2020-08-06T11:22:56.999Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml-urls/README/</loc>
+            <lastmod>2020-08-06T11:22:57.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml/CHANGELOG/</loc>
+            <lastmod>2020-08-06T11:22:57.048Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/posthtml/README/</loc>
+            <lastmod>2020-08-06T11:22:57.055Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/promise-each/README/</loc>
+            <lastmod>2020-08-06T11:22:57.063Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/CONTRIBUTING/</loc>
+            <lastmod>2020-08-06T11:22:57.065Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/GOVERNANCE/</loc>
+            <lastmod>2020-08-06T11:22:57.065Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/readable-stream/README/</loc>
+            <lastmod>2020-08-06T11:22:57.066Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/safe-buffer/README/</loc>
+            <lastmod>2020-08-06T11:22:57.080Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/string_decoder/README/</loc>
+            <lastmod>2020-08-06T11:22:57.081Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/util-deprecate/History/</loc>
+            <lastmod>2020-08-06T11:22:57.082Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/node_modules/util-deprecate/README/</loc>
+            <lastmod>2020-08-06T11:22:57.083Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/projects/</loc>
+            <lastmod>2020-08-06T11:22:57.085Z</lastmod>
             <changefreq></changefreq>
         </url>
     
