@@ -537,6 +537,8 @@ $burgertransitions: .4s;
     }
     textarea {
       resize: vertical;
+      padding: 15px 0;
+      font-family: $pfont;
     }
     button {
       align-self: flex-end;
@@ -632,6 +634,7 @@ $burgertransitions: .4s;
   }
 }
 
+// Slick Sliders
 .slick-slider {
   width: 100%;
   margin-top: 50px;
@@ -658,6 +661,43 @@ $burgertransitions: .4s;
       &.slick-active {
         background: $dancanettialt;
       }
+    }
+  }
+}
+
+// Awards/Nominations
+.award {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px;
+  margin: -2px auto 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border: 2px solid $dancanettigrey;
+  @include sm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &:first-of-type {
+    margin-top: 50px;
+  }
+  p, a {
+    color: $dancanettiblack;
+    font-size: .9rem;
+    margin: 0;
+    @include sm {
+      margin: 10px 0 0 2px;
+    }
+  }
+  img {
+    max-width: 125px;
+    height: auto;
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 2px solid $dancanettigrey;
+    @include sm {
+      border: none;
     }
   }
 }
