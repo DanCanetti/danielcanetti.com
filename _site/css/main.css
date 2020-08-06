@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     Main
     ---
@@ -641,19 +642,26 @@ footer {
     padding-top: 200px; } }
 
 #tumblrfeed {
+  position: relative;
+  width: 100%;
   /* Prevent vertical gaps */
   line-height: 0;
-  -webkit-column-count: 2;
+  -webkit-column-count: 1;
   -webkit-column-gap: 0px;
-  -moz-column-count: 2;
+  -moz-column-count: 1;
   -moz-column-gap: 0px;
-  column-count: 2;
+  column-count: 1;
   column-gap: 0px; }
   @media (max-width: 576px) {
     #tumblrfeed {
       -webkit-column-count: 1;
       -moz-column-count: 1;
       column-count: 1; } }
+  #tumblrfeed:before {
+    content: 'Loading some inspiration 🔥🔥';
+    position: absolute;
+    top: 10px;
+    left: 10px; }
 
 /*
     Modules
