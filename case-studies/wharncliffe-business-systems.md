@@ -7,6 +7,7 @@ projectLink: https://wharncliffe.co.uk/
 projectFeatureImage: /images/case-studies/wharncliffe/feature.jpg
 projectFeatureImageRetina: /images/case-studies/wharncliffe/feature.jpg
 projectClass: has-case-study
+projectType: WordPress
 projectExcerpt: WordPress set-up using Divi Builder.
 seoIndex: noindex
 projectid: 3

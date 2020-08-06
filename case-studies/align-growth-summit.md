@@ -9,6 +9,7 @@ projectFeatureImageRetina: /images/case-studies/align-gs/feature.jpg
 projectFeatureImageHome: /images/case-studies/align-gs/featureHome.jpg
 projectFeatureImageHomeRetina: /images/case-studies/align-gs/featureHome@2x.jpg
 projectClass: has-case-study
+projectType: Eleventy
 projectExcerpt: This annual event had a facelift for 2020 as well as some last minute changes due to the Covid-19 Pandemic. 
 seoIndex: all
 projectid: 1

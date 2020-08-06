@@ -9,6 +9,7 @@ projectFeatureImageRetina: /images/case-studies/emerald-kitchens/feature.jpg
 projectFeatureImageHome: /images/case-studies/emerald-kitchens/featureHome.jpg
 projectFeatureImageHomeRetina: /images/case-studies/emerald-kitchens/featureHome@2x.jpg
 projectClass: has-case-study
+projectType: WordPress
 projectExcerpt: Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.
 seoIndex: noindex
 projectid: 3
