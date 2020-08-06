@@ -28,6 +28,29 @@
   
   <entry>
     <title></title>
+    <link href="/blog/eleventy-github-pages/"/>
+    <updated>2020-08-07T01:00:00+01:00</updated>
+    <id>/blog/eleventy-github-pages/</id>
+    <content type="html">&lt;p&gt;Github pages allows you to host your site directly from the repo on an Apex domain - essentialy it&#39;s free hosting! Even better, you can configure your Eleventy site to output to the &lt;code&gt;docs&lt;/code&gt; directory Github uses by making a simple config change.&lt;/p&gt;
+&lt;p&gt;Copy and paste the below into your &lt;code&gt;eleventy.js&lt;/code&gt; file (if you don&#39;t have one create this file in the root of your project), all we&#39;re doing here is changing the output from the default &lt;code&gt;_site&lt;/code&gt; directory to &lt;code&gt;docs&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;module.exports = {
+    dir: {
+        output: &amp;quot;docs&amp;quot;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you&#39;ve made this change - the next time you compile 11ty will create the &lt;code&gt;docs&lt;/code&gt; directory with all your site files in it.&lt;/p&gt;
+&lt;h2&gt;Some good extra reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/github-pages/&quot;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&quot;&gt;Managing a custom domain for your GitHub Pages site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.11ty.dev/docs/config/&quot;&gt;11ty Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="/blog/coniston-water-2020/"/>
     <updated>2020-08-06T01:00:00+01:00</updated>
     <id>/blog/coniston-water-2020/</id>
