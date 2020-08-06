@@ -528,7 +528,7 @@ $burgertransitions: .4s;
       box-shadow: none;
       border: none;
       border-bottom: 1px solid $dancanettiblack;
-      color: #fff;
+      color: $dancanettiblack;
       font-size: 1rem;
       @include transitionall(.3s);
       &.parsley-error {
@@ -628,6 +628,36 @@ $burgertransitions: .4s;
     svg {
       margin-right: 10px;
       fill: $dancanettiblack;
+    }
+  }
+}
+
+.slick-slider {
+  width: 100%;
+  margin-top: 50px;
+  ul.slick-dots {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    button {
+      display: none;
+    }
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      margin: 0 7px;
+      background: $dancanettigrey;
+      cursor: pointer;
+      @include transitionall(.3s);
+      &:hover {
+        background: #d6d6d6;
+      }
+      &.slick-active {
+        background: $dancanettialt;
+      }
     }
   }
 }
