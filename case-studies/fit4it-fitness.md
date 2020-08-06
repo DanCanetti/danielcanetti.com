@@ -7,6 +7,7 @@ projectLink:
 projectFeatureImage: /images/case-studies/fit4it-fitness/feature.jpg
 projectFeatureImageRetina: /images/case-studies/fit4it-fitness/feature.jpg
 projectClass: has-case-study
+projectType: WordPress
 projectExcerpt: A simple, one page, bespoke brochure website designed and custom built in WordPress. All the content is delivered using Gutenberg and the forms are built using Contact Form 7.
 seoIndex: noindex
 projectid: 4

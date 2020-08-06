@@ -333,7 +333,7 @@ nav {
       color: #111;
       text-align: left;
       text-transform: uppercase;
-      font-family: "Abril Fatface", cursive;
+      font-family: "Abril Fatface", sans-serif;
       font-size: 2em; }
       nav .nav__content .nav__content__logoarea .nav__content__logoarea--toggle-menu {
         font-family: "brandon-grotesque", sans-serif;
@@ -418,7 +418,7 @@ nav {
   }
   */ }
   .zoom .zoom__content {
-    font-family: "Abril Fatface", cursive;
+    font-family: "Abril Fatface", sans-serif;
     opacity: 1;
     -webkit-transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
