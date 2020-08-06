@@ -1109,7 +1109,9 @@ footer {
       .form .form-group input.parsley-error, .form .form-group textarea.parsley-error {
         border-bottom: 1px solid #F92A82; }
     .form .form-group textarea {
-      resize: vertical; }
+      resize: vertical;
+      padding: 15px 0;
+      font-family: "brandon-grotesque", sans-serif; }
     .form .form-group button {
       align-self: flex-end; }
     .form .form-group ul.parsley-errors-list {
@@ -1212,6 +1214,38 @@ footer {
         background: #d6d6d6; }
       .slick-slider ul.slick-dots li.slick-active {
         background: #F92A82; }
+
+.award {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px;
+  margin: -2px auto 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #f0f0f0; }
+  @media (max-width: 576px) {
+    .award {
+      flex-direction: column;
+      align-items: flex-start; } }
+  .award:first-of-type {
+    margin-top: 50px; }
+  .award p, .award a {
+    color: #111;
+    font-size: .9rem;
+    margin: 0; }
+    @media (max-width: 576px) {
+      .award p, .award a {
+        margin: 10px 0 0 2px; } }
+  .award img {
+    max-width: 125px;
+    height: auto;
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 2px solid #f0f0f0; }
+    @media (max-width: 576px) {
+      .award img {
+        border: none; } }
 
 /*
     State
