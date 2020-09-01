@@ -705,3 +705,31 @@ $burgertransitions: .4s;
     }
   }
 }
+
+// Contents
+.body .body__section.body__section--post .toc {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: toc-items;
+    li {
+      position: relative;
+      margin-left: 0;
+      padding-left: 45px;
+      counter-increment: toc-items;
+      &:before {
+        content: counter(toc-items, decimal-leading-zero);
+        position: absolute;
+        left: 0;
+        font-size: 1.25rem;
+        font-weight: $pfontheavy;
+        color: $dancanettiblack;
+      }
+      &.toc__this {
+        &:before {
+          color: $dancanettialt;
+        }
+      }
+    }
+  }
+}

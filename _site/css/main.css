@@ -1259,6 +1259,25 @@ footer {
         width: auto;
         border: none; } }
 
+.body .body__section.body__section--post .toc ul {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: toc-items; }
+  .body .body__section.body__section--post .toc ul li {
+    position: relative;
+    margin-left: 0;
+    padding-left: 45px;
+    counter-increment: toc-items; }
+    .body .body__section.body__section--post .toc ul li:before {
+      content: counter(toc-items,decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #111; }
+    .body .body__section.body__section--post .toc ul li.toc__this:before {
+      color: #F92A82; }
+
 /*
     State
     ---
