@@ -158,6 +158,18 @@
         </url>
     
         <url>
+            <loc>/case-studies/canetti-codes/</loc>
+            <lastmod>2020-07-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/case-studies/townscaper-community/</loc>
+            <lastmod>2020-07-01T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
             <loc>/blog/wordpress-valet/</loc>
             <lastmod>2020-07-22T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
@@ -490,6 +502,12 @@
         <url>
             <loc>/blog/eleventy-github-pages/</loc>
             <lastmod>2020-08-07T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/blog/github-actions-hackathon/</loc>
+            <lastmod>2020-09-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
