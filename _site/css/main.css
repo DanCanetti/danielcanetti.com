@@ -421,12 +421,19 @@ nav {
   .zoom .zoom__content {
     font-family: "Abril Fatface", sans-serif;
     opacity: 1;
+    display: flex;
     -webkit-transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
     -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out; }
     .zoom .zoom__content.fade {
       opacity: 0; }
+    .zoom .zoom__content .zoom__content__gif {
+      height: 6rem; }
+      @media (max-width: 576px) {
+        .zoom .zoom__content .zoom__content__gif {
+          margin-top: -10px;
+          margin-left: -40px; } }
 
 .scroll-hint {
   position: fixed;
