@@ -143,12 +143,20 @@ nav {
     .zoom__content {
         font-family: $header;
         opacity: 1;
+        display: flex;
         -webkit-transition: opacity .3s ease-in-out;
         -moz-transition: opacity .3s ease-in-out;
         -o-transition: opacity .3s ease-in-out;
         transition: opacity .3s ease-in-out;
         &.fade {
             opacity: 0;
+        }
+        .zoom__content__gif {
+          height: 6rem;
+          @include sm {
+            margin-top: -10px;
+            margin-left: -40px;
+          }
         }
     }
 }
