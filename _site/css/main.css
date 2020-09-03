@@ -336,6 +336,10 @@ nav {
       text-transform: uppercase;
       font-family: "Abril Fatface", sans-serif;
       font-size: 2em; }
+      nav .nav__content .nav__content__logoarea img {
+        height: 6rem;
+        margin-left: -40px;
+        margin-bottom: -10px; }
       nav .nav__content .nav__content__logoarea .nav__content__logoarea--toggle-menu {
         font-family: "brandon-grotesque", sans-serif;
         font-size: .4em;
