@@ -42,6 +42,11 @@ nav {
       text-transform: uppercase;
       font-family: $header;
       font-size: 2em;
+      img {
+        height: 6rem;
+        margin-left: -40px;
+        margin-bottom: -10px;
+      }
       .nav__content__logoarea--toggle-menu {
         font-family: $pfont;
         font-size: .4em;
