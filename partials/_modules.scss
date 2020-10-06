@@ -5,233 +5,6 @@
     E.G. callouts, sidebar sections, product lists
 */
 
-// Burger Menu Variables
-$bar-height: 1px; // Height of bars
-$bar-width: 24px; // Width of large bars
-$short-bar-width: #{$bar-width - 7px}; // Width of final bar
-$bar-spacing: -6px; // Space between all bars
-// Burger Menu
-$burgertransitions: .4s;
-// Non JS Menu Toggle
-.njs-toggle-menu {
-  margin-left: 10px;
-  align-self: center;
-	&.njs-toggle-menu--mob-move {
-		margin-top: -125px;
-	}
-	.toggle-menu__toggle-menu-icon {
-		display: inline-block;
-		z-index: 500;
-		position: relative;
-		margin-right: 10px;
-		@include sm {
-			margin-left: -4px;
-		}
-		.toggle-menu-icon__toggle-menu-icon-inner {
-			margin-top: -2.5px;
-			width: $bar-width;
-			height: $bar-height;
-			background: #000;
-			display: inline-block;
-			vertical-align: middle;
-			margin-left: 7px;
-			z-index: 50;
-			position: relative;
-			@include transitionall($burgertransitions);
-			&:before {
-				content: "";
-				position: absolute;
-				top: $bar-spacing;
-				left: 0;
-				width: $bar-width;
-				height: $bar-height;
-				background: #000;
-				opacity: 1;
-				@include transitionall($burgertransitions);
-			}
-			&:after {
-				content: "";
-				position: absolute;
-				bottom: $bar-spacing;
-				left: 0;
-				width: $short-bar-width;
-				height: $bar-height;
-				background: #000;
-				@include transitionall($burgertransitions);
-			}
-		}
-		&.toggle-menu-icon--toggle {
-			.toggle-menu-icon__toggle-menu-icon-inner {
-				-ms-transform: rotate(45deg);
-				/* IE 9 */
-				-webkit-transform: rotate(45deg);
-				/* Safari prior 9.0 */
-				transform: rotate(45deg);
-				/* Standard syntax */
-				&:before {
-					opacity: 0;
-				}
-				&:after {
-					bottom: 0;
-					width: $bar-width;
-					-ms-transform: rotate(90deg);
-					/* IE 9 */
-					-webkit-transform: rotate(90deg);
-					/* Safari prior 9.0 */
-					transform: rotate(90deg);
-					/* Standard syntax */
-				}
-			}
-		}
-		&.hideondesktop {
-			display: none;
-			@include sm {
-				display: block;
-			}
-		}
-	}
-	.njs-toggle-menu--toggle {
-		display: none;
-		&+label {
-			cursor: pointer;
-			position: relative;
-			z-index: 5000000;
-			&+.main-nav {
-				position: fixed;
-        height: 100vh;
-        width: 250px;
-        opacity: 1;
-				text-align: left;
-				background: $dancanettigrey;
-				margin-left: -100vw;
-				padding: 135px 0 0 0;
-				font-weight: 900;
-        //@include transitionall($burgertransitions);
-        @include transitionall(.6s);
-        @include sm {
-          overflow-y: scroll;
-          padding-bottom: 25px;
-          height: 100%;
-          max-height: 100vh;
-          width: 100%;
-        }
-        ul {
-          list-style: none;
-          height: 90%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          margin-left: 50px;
-          li {
-            margin-bottom: 15px;
-            margin-top: 15px;
-            &:first-of-type {
-              margin-top: 0;
-            }
-            ul {
-              margin-top: 10px;
-              margin-left: 0;
-              li {
-                margin-top: 0;
-                margin-left: 0;
-                &:last-of-type {
-                  margin-bottom: 0;
-                }
-              }
-              a {
-                color: #9a9a9a;
-                font-weight: 400;
-                font-size: .8rem;
-              }
-            }
-          }
-          a {
-            @include transitionall(.3s);
-            &:hover {
-              color: $dancanettialt;
-            }
-          }
-          &.social {
-            height: 10%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 50px 0px 15px;
-            img {
-              height: 1rem;
-            }
-            @include sm {
-              margin-top: 25px;
-            }
-            li {
-              margin: 0 0 15px 0;
-            }
-            a {
-              color: $dancanettiblack;
-              @include transitionall(.3s);
-              &:hover {
-                color: $dancanettialt;
-              }
-            }
-          }
-        }
-				&.main-nav--toggle {
-					opacity: 1;
-					top: 75px;
-					@include sm {
-						top: 0;
-						left: 0;
-					}
-				}
-			}
-		}
-		&:checked {
-			&+label {
-				.toggle-menu__toggle-menu-icon .toggle-menu-icon__toggle-menu-icon-inner {
-					-ms-transform: rotate(45deg);
-					-webkit-transform: rotate(45deg);
-					transform: rotate(45deg);
-					&:before {
-						opacity: 0;
-					}
-					&:after {
-						bottom: 0;
-						width: $bar-width;
-						-ms-transform: rotate(90deg);
-						-webkit-transform: rotate(90deg);
-						transform: rotate(90deg);
-					}
-				}
-				&+.main-nav {
-          margin-left: 0;
-          opacity: 1;
-				}
-			}
-		}
-	}
-}
-
-// Social Links
-.social-links {
-    position: relative;
-    //margin-top: 100px;
-    a {
-      padding: 6.5px 10px;
-      font-size: .5em;
-      border: 1px solid $dancanettiblack;
-      border-radius: 50px;
-      color: $dancanettiblack;
-      background: transparent;
-      @include transitionall(.3s);
-      &:hover {
-        background: $dancanettialt;
-        color: #fff;
-      }
-    }
-}
-
 // Display Collection Items
 .collection-list {
   position: relative;
@@ -245,7 +18,6 @@ $burgertransitions: .4s;
   align-items: stretch;
   align-content: flex-start;
   flex-wrap: wrap;
-  animation: init-hide 3s 1;
   opacity: 1;
   a {
       opacity: 1;
@@ -291,7 +63,7 @@ $burgertransitions: .4s;
     .collection-list__link {
      .collection-list__link__post-date {
        color: $dancanettiblack;
-       font-weight: $pfontlight;
+       font-weight: $pfontreg;
        opacity: 0.5;
        font-size: .75em;
      }
@@ -319,6 +91,26 @@ $burgertransitions: .4s;
 }
 
 // Case Studies
+.case-study-items__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  .case-study-item {
+    width: 35%;
+    margin-bottom: 0px;
+    &.case-study-item--post {
+      margin-bottom: 40px;
+    }
+    &:nth-of-type(odd) {
+      margin-right: 7.5%;
+    }
+    p {
+      opacity: .7;
+    }
+  }
+}
+
 .case-study-item {
   width: calc(50% - 15px);
   display: flex;
@@ -379,6 +171,9 @@ $burgertransitions: .4s;
       h2 {
         margin: 25px 0;
         font-size: 1.2rem;
+        font-family: $pfont;
+        text-transform: unset;
+        letter-spacing: 0.05rem;
       }
       p {
         margin-top: 0;
@@ -418,7 +213,8 @@ $burgertransitions: .4s;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin-top: 50px;
+  width: 100%;
+  margin: 50px auto 0 auto;
   @include sm {
     flex-direction: column;
     justify-content: center;
@@ -427,23 +223,28 @@ $burgertransitions: .4s;
       margin-right: 0px;
     }
   }
-  a {
-    width: fit-content;
-    margin-bottom: 20px;
-    svg {
-      margin-right: 8px;
-      color: #fff;
-      @include transitionall(.3s);
-    }
-    &:hover {
+  .share__blog__links {
+    width: 100%;
+    max-width: 80%;
+    margin: 30px auto 0 auto;
+    a {
+      width: fit-content;
+      margin-bottom: 20px;
       svg {
-        color: $dancanettialt;
+        margin-right: 8px;
+        color: #fff;
+        @include transitionall(.3s);
       }
-    }
-    &:not(:last-of-type) {
-      margin-right: 20px;
-      @include sm {
-        margin-right: 0;
+      &:hover {
+        svg {
+          color: $dancanettialt;
+        }
+      }
+      &:not(:last-of-type) {
+        margin-right: 20px;
+        @include sm {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -708,10 +509,17 @@ $burgertransitions: .4s;
 
 // Contents
 .body .body__section.body__section--post .toc {
+  max-width: 80%;
+  width: 100%;
+  margin: 30px auto 0 auto;
+  h3 {
+    width: 100%;
+  }
   ul {
     list-style: none;
     padding-left: 0;
     counter-reset: toc-items;
+    float: left;
     li {
       position: relative;
       margin-left: 0;
@@ -722,8 +530,7 @@ $burgertransitions: .4s;
         position: absolute;
         left: 0;
         font-size: 1.25rem;
-        font-weight: $pfontheavy;
-        color: $dancanettiblack;
+        font-weight: $pfontbold;
       }
       &.toc__this {
         &:before {

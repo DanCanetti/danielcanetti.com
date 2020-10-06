@@ -22,13 +22,15 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/vendor/slick.css">
+
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
-<script type="text/javascript" defer src="/js/vendor/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -40,181 +42,139 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <script type="text/javascript" defer src="/js/home.js"></script>
         <title>Daniel Canetti • A Web Developer</title>
-        <meta name="description" content="A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress builds to full bespoke builds.">
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:site_name" content="Daniel Canetti" />
-        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
-        <meta property="og:description" content="" />
-        <meta property="og:url" content="https://danielcanetti.com/" />
-        <meta property="og:image" content="https://danielcanetti.com/images/feature.jpg" />
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
-        <meta property="twitter:description" content="">
-        <meta property="twitter:image" content="https://danielcanetti.com/images/feature.jpg">
-        <meta property="twitter:url" content="https://danielcanetti.com/">
-        <meta property="twitter:site" content="@Dan_Canetti">
-        <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="home">
-        <div class="wrapper">
-            <nav>
-  <div class="nav__content">
-    <a href="/">
-        <div class="nav__content__logoarea">
-          <!--Dan.-->
-          <img class="zoom__content__gif lazy" src="/video/hi.gif" alt="">
-        </div>
-    </a>
-    <div class="njs-toggle-menu">
-      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
-      <label for="njs-toggle-menu--toggle">
-        <span class="toggle-menu__toggle-menu-icon">
-          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
-        </span>
+      <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+        <nav>
+  <a class="logo" href="/">Dan.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/extras/">Extras</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <img src="/images/icons/moon.svg" />
       </label>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/projects/">Projects</a>
-            <!--ul>
-            
-            
-              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank" rel="noopener">Emerald Kitchens</a></li>
-            
-              <li><a href="https://www.kbpro.com/" target="_blank" rel="noopener">K.B Pro</a></li>
-            
-              <li><a href="https://aligngrowthsummit.com/" target="_blank" rel="noopener">Align Growth Summit</a></li>
-            
-            </ul-->
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-            <ul>
-            
-            
-              <li><a href="/blog/github-actions-hackathon/">GitHub Actions Hackathon</a></li>
-            
-              <li><a href="/blog/eleventy-github-pages/">Host an Eleventy site on Github Pages</a></li>
-            
-              <li><a href="/blog/coniston-water-2020/">Coniston Water</a></li>
-            
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
-            
-            </ul>
-          </li>
-          <li>
-            <a href="/moodboard/">Moodboard</a>
-          </li>
-          <li>
-            <a href="/contact/">Contact</a>
-          </li>
-        </ul>
-        <ul class="social">
-          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a></li>
-          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a></li>
-          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a></li>
-          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a></li>
-          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li>
+  </ul>
 </nav>
 
-            
-<div class="header-spacing"></div>
-
-<div class="zoom">
-    <h1 class="zoom__content">
-       <!--img class="zoom__content__gif" src="/video/hi.gif" alt=""-->
-      Dan.
-    </h1>
-</div>
-
-<div class="scroll-hint"></div>
-
-<div class="body">
-    <div class="body__section body__section--intro">
-      <p>A Web Developer living and working in Yorkshire, England.</p>
-      <p>Currently the developer for <a class="l" href="https://nouveaubeautygroup.com" target="_blank" rel="noopener">Nouveau HD Beauty Group</a>, a permanent makeup training company.</p>
-      <div class="award">
-        <img src="/images/awards/boss.png" alt="BOSS">
-        <a class="l" href="https://dealersupport.co.uk/boss-announces-2017-awards-shortlist/">2017 Emerging Professional of the Year Shortlisted</a>
+        
+<div class="body body--home">
+    <div class="body__section body__section--intro body__section--fade-up">
+      <div class="body__section--intro__face" @mouseover="nofacemask = true" @mouseleave="nofacemask = false">
+        <img src="/images/nomask.png" alt="" v-if="nofacemask" />
+        <img src="/images/facemask.png" alt="" v-else />
       </div>
-      <div class="award">
-        <img src="/images/awards/vow.png" alt="VOW Europe">
-        <p>2016 Support Person of the Year Winner</p>
-      </div>
-    </div>
-    <div class="body__section body__section--projects">
-        <h2>Selected Projects.</h2>
-        <div class="collection-list projects">
-            
-            
-            <a href="https://aligngrowthsummit.com/" class="project-link has-case-study" data-img="/images/case-studies/align-gs/featureHome.jpg" data-imgretina="/images/case-studies/align-gs/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>Align Growth Summit<br><span class="collection-list__description">Eleventy</span></h3></a>
-            
-            <a href="https://www.kbpro.com/" class="project-link has-case-study" data-img="/images/case-studies/kbpro/featureHome.jpg" data-imgretina="/images/case-studies/kbpro/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>K.B Pro<br><span class="collection-list__description">WordPress/Magento</span></h3></a>
-            
-            <a href="https://www.emerald-kitchens.co.uk/" class="project-link has-case-study" data-img="/images/case-studies/emerald-kitchens/featureHome.jpg" data-imgretina="/images/case-studies/emerald-kitchens/featureHome@2x.jpg" target="_blank" rel="noopener"><h3>Emerald Kitchens<br><span class="collection-list__description">WordPress</span></h3></a>
-            
-            <img src="/images/case-studies/kbpro/featureHome.jpg" srcset="/images/case-studies/kbpro/featureHome@2x.jpg 2x" alt="">
-        </div>
-        <a href="/projects/" class="l l--t" aria-label="View more blog posts.">View All</a>
+      <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
     </div>
     <div class="body__section">
-        <h2>Writing.</h2>
-        <div class="collection-list posts">
-          
-          
-            <a href="/blog/github-actions-hackathon/" class="collection-list__link"><h3>GitHub Actions Hackathon<br><span class="collection-list__description">Hackathon</span></h3></a>
-            <!-- For reference - date September 01, 2020 -->
-          
-            <a href="/blog/eleventy-github-pages/" class="collection-list__link"><h3>Host an Eleventy site on Github Pages<br><span class="collection-list__description">Web Development</span></h3></a>
-            <!-- For reference - date August 07, 2020 -->
-          
-            <a href="/blog/coniston-water-2020/" class="collection-list__link"><h3>Coniston Water<br><span class="collection-list__description">Life</span></h3></a>
-            <!-- For reference - date August 06, 2020 -->
-          
+      <h2 class="sml">Work.</h2>
+      <div class="case-study-items__wrap">
+      
+        <div class="case-study-item case-study-item--site">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://townscaper.community/" class="l" target="_blank" rel="noopener" >Townscaper Community</a></h2>
+              <p>A place to share and discuss Townscaper builds with other users.</p>
+            </div>
+          </div>
         </div>
-        <a href="/blog/" class="l l--t" aria-label="View more blog posts.">View All</a>
+        
+        <div class="case-study-item case-study-item--site">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://aligngrowthsummit.com/" class="l" target="_blank" rel="noopener" >Align Growth Summit</a></h2>
+              <p>This annual event had a facelift for 2020 as well as some last minute changes due to the Covid-19 Pandemic.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--site">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://www.kbpro.com/" class="l" target="_blank" rel="noopener" >K.B Pro</a></h2>
+              <p>The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--site">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://www.emerald-kitchens.co.uk/" class="l" target="_blank" rel="noopener" >Emerald Kitchens</a></h2>
+              <p>Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <a href="/work/" class="l" >View All</a>
     </div>
-    <!--div class="body__section">
-        <h2>Shop.</h2>
-        <div class="collection-list">
-          <a href="#" target="_blank"><h3>Eleventy Basic Theme</h3></a>
+    <div class="body__section">
+      <h2 class="sml">Blog.</h2>
+      <div class="case-study-items__wrap">
+      
+      
+        <div class="case-study-item case-study-item--post case-study-item--">
+          <!--a href="/blog/three-things-web-development-students-should-learn-before-graduation/">
+            <img src="/images/posts/advice-for-web-developmen-students/feature-full.jpg" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank" rel="noopener" >Advice for web development students</a></h2>
+              <p>The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.</p>
+              <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l">Read More</a>
+            </div>
+          </div>
         </div>
-        <a href="https://danielcanetti.square.site/" class="l l--t" target="_blank">Visit Shop</a>
-    </div-->
-    <!--div class="body__section">
-        <h2>Github.</h2>
-        <div class="collection-list">
-          <a href="https://www.wordpresspluginicons.com/" target="_blank" rel="noopener"><h3>WordPress Plugin Icon Font</h3></a>
-          <a href="https://github.com/DanCanetti/sass-quick-start" target="_blank" rel="noopener"><h3>Sass Quick Start</h3></a>
-          <a href="https://github.com/DanCanetti/slick-slider-quick-start" target="_blank" rel="noopener"><h3>Slick Slider Quick Start</h3></a>
+        
+        <div class="case-study-item case-study-item--post case-study-item--">
+          <!--a href="/blog/being-a-woman-in-tech-sucks/">
+            <img src="/images/posts/being-a-woman-in-tech-sucks/feature-full.jpg" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/being-a-woman-in-tech-sucks/" target="_blank" rel="noopener" >Being a woman in tech sucks</a></h2>
+              <p>I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?</p>
+              <a href="/blog/being-a-woman-in-tech-sucks/" class="l">Read More</a>
+            </div>
+          </div>
         </div>
-        <a href="https://github.com/DanCanetti" class="l l--t" target="_blank" rel="noopener" aria-label="View more blog posts.">View All</a>
-    </div-->
-    <footer>
-    <div class="footer__content">
-        <div class="footer__content__item footer__content__plinks">
-            <a class="l" href="/blog/">Blog</a>
-            <a class="l" href="/projects/">Work</a>
-            <a class="l" href="/contact/">Mail</a>
+        
+        <div class="case-study-item case-study-item--post case-study-item--">
+          <!--a href="/blog/how-a-mentor-leaving-can-inspire-you/">
+            <img src="/images/posts/how-a-mentor-leaving-can-inspire-you/feature-full.jpg" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/how-a-mentor-leaving-can-inspire-you/" target="_blank" rel="noopener" >How a mentor leaving can inspire you</a></h2>
+              <p>Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.</p>
+              <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l">Read More</a>
+            </div>
+          </div>
         </div>
-        <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Go to Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="Go to LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a>
+        
+        <div class="case-study-item case-study-item--post case-study-item--">
+          <!--a href="/blog/gitlab-pages/">
+            <img src="/images/posts/gitlab-pages/feature-full.jpg" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/gitlab-pages/" target="_blank" rel="noopener" >GitLab Pages</a></h2>
+              <p>GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.</p>
+              <a href="/blog/gitlab-pages/" class="l">Read More</a>
+            </div>
+          </div>
         </div>
-        <span class="copyright">Daniel Canetti &copy; 2020</span>
+        
+      </div>
+      <a href="/blog/" class="l" >View All</a>
     </div>
-</footer>
 </div>
-        </div>
+      </div>
     </body>
 </html>

@@ -22,13 +22,15 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/vendor/slick.css">
+
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
-<script type="text/javascript" defer src="/js/vendor/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -40,7 +42,6 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
-        <script type="text/javascript" defer src="/js/sub.js"></script>
         <title>Daniel Canetti • Blog</title>
         <meta name="description" content="Tutorials, thoughts on tech culture, dev and business tools. Here's where I share my web development experiences and musings from my life.">
         <meta property="og:locale" content="en_GB" />
@@ -58,76 +59,27 @@
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="sub">
-        <div class="wrapper">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             <nav>
-  <div class="nav__content">
-    <a href="/">
-        <div class="nav__content__logoarea">
-          <!--Dan.-->
-          <img class="zoom__content__gif lazy" src="/video/hi.gif" alt="">
-        </div>
-    </a>
-    <div class="njs-toggle-menu">
-      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
-      <label for="njs-toggle-menu--toggle">
-        <span class="toggle-menu__toggle-menu-icon">
-          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
-        </span>
+  <a class="logo" href="/">Dan's Blog.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/extras/">Extras</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <img src="/images/icons/moon.svg" />
       </label>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/projects/">Projects</a>
-            <!--ul>
-            
-            
-              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank" rel="noopener">Emerald Kitchens</a></li>
-            
-              <li><a href="https://www.kbpro.com/" target="_blank" rel="noopener">K.B Pro</a></li>
-            
-              <li><a href="https://aligngrowthsummit.com/" target="_blank" rel="noopener">Align Growth Summit</a></li>
-            
-            </ul-->
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-            <ul>
-            
-            
-              <li><a href="/blog/github-actions-hackathon/">GitHub Actions Hackathon</a></li>
-            
-              <li><a href="/blog/eleventy-github-pages/">Host an Eleventy site on Github Pages</a></li>
-            
-              <li><a href="/blog/coniston-water-2020/">Coniston Water</a></li>
-            
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
-            
-            </ul>
-          </li>
-          <li>
-            <a href="/moodboard/">Moodboard</a>
-          </li>
-          <li>
-            <a href="/contact/">Contact</a>
-          </li>
-        </ul>
-        <ul class="social">
-          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a></li>
-          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a></li>
-          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a></li>
-          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a></li>
-          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li>
+  </ul>
 </nav>
 
             <h1 class="--sub">Blog</h1>
             
-<div class="body">
-  <div class="body__section body__section--case-study-items">
+<div class="body body--sub">
+  <div class="body__section body__section--case-study-items body__section--fade-up">
     
       
       <div class="case-study-item case-study-item--">

@@ -1,0 +1,167 @@
+/*
+    Page
+    ---
+    ways to describe how our modules or layouts will look when in a particular state.
+    E.G. Is it hidden or expanded? Is it active or inactive?
+*/
+
+.body {
+    &.body--contact {
+        .body__section.body__section--post {
+            h2 {
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    &.body--wordpress-plugin-icons {
+        .body__section.body__section--post {
+            margin-top: 40px;
+            padding: 0;
+        }
+        .wpi-head {
+            display: flex;
+            font-size: .7rem;
+            flex-direction: row;
+            margin-bottom: 25px;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            h1 {
+                font-size: 1rem;
+                width: 230px;
+                padding: 0;
+                margin: 0 auto 0 0;
+            }
+            a {
+                &:first-of-type {
+                    margin-right: 20px;
+                }
+            }
+            #WPIconSearch {
+                width: 150px;
+                font-size: 10px;
+                padding: 12px 20px 12px 15px;
+                margin-left: 20px;
+                border-radius: 0;
+                border: none;
+                background: $dancanettigrey;
+                box-shadow: none;
+              }
+        }
+
+          .wpi-body {
+            width: 100%;
+          }
+          
+          #WPIconSearchTable {
+            background: #fff;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            font-size: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+          
+          #WPIconSearchTable th {
+            color: #717575;
+            padding: 15px 12px;
+            text-align: left;
+          }
+          
+          #WPIconSearchTable td {
+            text-align: left;
+            padding: 15px 12px;
+          }
+          
+          #WPIconSearchTable td:first-child {
+            width: 15%;
+            text-align: center  
+          }
+          
+          #WPIconSearchTable td i {
+            color: #8B9393;
+            display: block;
+            font-size: 3em;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(2):hover i {
+            color: #00e4bc; /* ACF */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(3):hover i {
+            color: #00e4bc; /* ACF alt */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(4):hover i {
+            color: #5e8e14; /* Askimet */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(5):hover i {
+            color: #5e8e14; /* Askimet alt */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(6):hover i {
+            color: #a62f00; /* Contact Form 7 */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(7):hover i {
+            color: #8f42ec; /* Divi */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(8):hover i {
+            color: #E93030; /* Duplicator */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(9):hover i {
+            color: #FFCD08; /* iThemes */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(10):hover i {
+            color: #00be28; /* Jetpack */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(11):hover i {
+            color: #553d80; /* LearnPress */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(12):hover i {
+            color: #ef4748; /* Ninja Forms */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(13):hover i {
+            color: #2dbfc5; /* W3 Total Cache */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(14):hover i {
+            color: #008cc1; /* Wordfence */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(15):hover i {
+            color: #96588a; /* WooCommerce */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(16):hover i {
+            color: #1abc9c; /* WP Smush */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(17):hover i {
+            color: #db6939; /* Updraft */
+          }
+          
+          #WPIconSearchTable tr:nth-of-type(18):hover i {
+            color: #a4286a; /* Yoast */
+          }
+          
+          #WPIconSearchTable tr:last-child td {
+            padding-bottom: 40px;
+          }
+    }
+}

@@ -47,142 +47,67 @@ $screen-sm: 576px;
   transition-delay: $length;
 }
 
-// Vue Transitions
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
 // Animation
-@keyframes line-grow {              // Grow Line
-  0% {
-    height: 0px;
-  }
-  50% {
-    height: 0px;
-  }
-  100% {
-    height: 300px;
-  }
-}
-
-@keyframes scroll-show {            // Scroll Text
-  0% {
-    opacity: 0;
-    top: 67px;
-  }
-  50% {
-    opacity: 0;
-    top: 67px;
-  }
-  100% {
-    opacity: 1;
-    top: 17px;
-  }
-}
-
-@keyframes init-fade {              // Fade in-up
-  0% {
-    opacity: 0;
-    margin-bottom: -50px;
-  }
-  100% {
-    opacity: 1;
-    margin-bottom: 0px;
-  }
-}
-
-@keyframes init-fade--intro {       // Fade in-up
-  0% {
-    opacity: 0;
-    margin-bottom: -50px;
-  }
-  100% {
-    opacity: 1;
-    margin-bottom: 150px;
-  }
-}
-
-@keyframes scroll {         // Mouse Scroll
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0); opacity: 1;
-  }
-  100% {
-    transform: translateY(15px); opacity: 0;
-  }
-}
-
 @keyframes fade-in {      // Fade In
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 
-@keyframes init-hide {
+@keyframes fade-in-up {    // Fade In Up
   0% {
     opacity: 0;
-    display: none;
+    margin-top: 25px;
   }
-  99% {
+  25% {
     opacity: 0;
-    display: none;
+    margin-top: 25px;
   }
   100% {
     opacity: 1;
-    display: flex;
+    margin-top: 0px;
+  }
+}
+
+@keyframes fade-in-up-img {    // Fade In Up Image
+  0% {
+    opacity: 0;
+    margin-top: -125px;
+  }
+  25% {
+    opacity: 0;
+    margin-top: -125px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -150px;
   }
 }
 
 // Fonts
-$pfont:       'brandon-grotesque', sans-serif;
-$pfontlight:  300;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+$pfont:       'Karla', sans-serif;
 $pfontreg:    400;
-$pfontbold:   500;
-$pfontheavy:  900;
+$pfontbold:   700;
 
 // Serif
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 $serif:       'Roboto Slab', serif;
 
-// Titles
-//@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
-//$header:      'Bangers', 'brandon-grotesque', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-$header:       'Abril Fatface', sans-serif;
-
 // Basics
-
 body {
-    //animation: init-fade 6s 1;
     font-family: $pfont;
-    font-weight: $pfontlight;
-    background-color: #fff;
+    font-weight: $pfontreg;
+    background-color: $dancanettiwhite;
     padding-bottom: 0px;
     max-width: 1750px;
     margin: auto;
-    .wrapper {
-        position: relative;
-        z-index: 5;
-        background-color: #f0f0f0;          // Light grey background
-        margin: 10px;
-        overflow: hidden;
-        @include sm {
-            padding: 25% 5% 0 5%;
-        }
-    }
-    &.sub {
-      .wrapper, .body {
-        background-color: #fff;
-      }
-    }
 }
 
 // Smooth Scrolling
@@ -192,10 +117,59 @@ body {
 	}
 }
 
+// Day/Night Toggle
+#wrapper {
+  background-color: $dancanettiwhite;
+  color: $dancanettiblack;
+  @include transitionall(.3s);
+  a {
+    color: $dancanettiblack;
+    @include transitionall(.3s);
+  }
+  .body__section--post-tag {
+    background: $dancanettiblack;
+    color: $dancanettiwhite;
+  }
+  hr {
+    border: 1px solid $dancanettiblack;
+  }
+  code {
+    background: rgba(0,0,0,0.1);
+  }
+  pre {
+    background: rgba(0,0,0,0.1);
+    code {
+      background: transparent;
+    }
+  }
+  &.night {
+    background-color: $dancanettiblack;
+    color: $dancanettiwhite;
+    a {
+      color: $dancanettiwhite;
+    }
+    .body__section--post-tag {
+      background: $dancanettiwhite;
+      color: $dancanettiblack;
+    }
+    hr {
+      border: 1px solid $dancanettiwhite;
+    }
+    code {
+      background: rgba(255,255,255,0.1);
+    }
+    pre {
+      background: rgba(255,255,255,0.1);
+      code {
+        background: transparent;
+      }
+    }
+  }
+}
+
 h1 {
     //font-family: $header;
     font-size: 4rem;
-    color: $dancanettiblack;
     text-align: left;
     text-transform: uppercase;
     padding: 5vh 0;
@@ -205,32 +179,33 @@ h1 {
         font-size: 3rem;
     }
     &.--sub {
-      position: fixed;
-      //top: 140px;
-      top: 40px;    // Hide behind nav toggle ;)
-      left: 55px;
-      color: $dancanettiblack;
-      font-family: $pfont;
-      font-weight: $pfontheavy;
-      font-size: 1rem;
-      letter-spacing: .25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
     }
 }
 
 h2 {
     @extend h1;
     font-family: $pfont;
-    font-weight: $pfontheavy;
     font-size: 2.5rem;
     letter-spacing: .25rem;
-    color: $dancanettiblack;
     padding: 0;
-    margin: 0 0 $ds 0;    
+    margin: 0 0 $ds 0;   
+    &.sml {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      letter-spacing: .05rem;
+      text-transform: capitalize;
+    } 
 }
 
 h3 {
     @extend h2;
+    font-family: $pfont;
     font-weight: $pfontbold;
+    text-transform: unset;
     font-size: 1.75rem;
     letter-spacing: .05rem;
 }
@@ -247,7 +222,6 @@ p {
 }
 
 a {
-    color: $dancanettiblack;
     text-decoration: none;
     position: relative;
     &:hover {
@@ -263,7 +237,7 @@ a {
             height: 1px;
             width: 100%;
             opacity: 0.3;
-            background: $dancanettiblack;
+            background: $dancanettigrey;
             @include transitionall(.3s);
         }
         &:hover {
@@ -272,27 +246,6 @@ a {
                 background: $dancanettialt;
             }
         }
-        &.l--t {
-            opacity: 1;
-            text-transform: uppercase;
-            letter-spacing: .1rem;
-            margin-left: 5px;
-            &:hover {
-                opacity: 1;
-                &:before {
-                  background: $dancanettialt;
-                }
-            }
-        }
-    }
-    &.sl {
-        position: relative;
-        z-index: 1;
-        @include transitionall(.3s);
-        img {
-          height: 1.5rem;
-        }
-        
     }
 }
 
@@ -328,15 +281,14 @@ button {
 }
 
 .strong {
-    font-weight: $pfontheavy;
+    font-weight: $pfontbold;
 }
 
 hr {
     box-shadow: none;
-    border: 1px solid $dancanettigrey;
     height: 0px;
-    width: 12.5%;
-    margin: 75px 0 25px 0px;
+    width: 80%;
+    margin: 75px auto 25px auto;
 }
 
 blockquote {
@@ -345,7 +297,6 @@ blockquote {
     & + p {
         font-family: $serif;
         margin: 25px 75px 75px 75px;
-        color: $dancanettiblack;
         font-size: .7em;
     }
     @include sm {
@@ -358,7 +309,7 @@ blockquote {
 
 code {
   font-family: monospace;
-  background: rgba(0,0,0,0.1);
+  padding: 5px;
 }
 
 pre {
@@ -366,7 +317,6 @@ pre {
   margin-top: 35px;
   width: 100%;
   overflow-y: scroll;
-  background: rgba(0,0,0,0.1);
   code {
     font-size: 1rem;
     background: transparent;

@@ -19,13 +19,21 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
-<!--link rel="stylesheet" href="/css/vendor/slick.css"-->
+{% if page.url contains 'wordpress-plugin-icons' %}
+  <link rel="stylesheet" href="/vendor/wp-plugin-icons/wp-plugin-icons.min.css">
+{% endif %}
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
-<!--script type="text/javascript" defer src="/js/vendor/slick.min.js"></script-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
+{% if page.url contains 'wordpress-plugin-icons' %}
+  <script type="text/javascript" defer src="/js/vendor/wp-plugin-icons.js"></script>
+{% endif %}
+{% if page.url contains 'contact' %}
+  <script type="text/javascript" defer src="/js/contact.js"></script>
+{% endif %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>

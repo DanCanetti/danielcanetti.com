@@ -14,7 +14,7 @@
         </url>
     
         <url>
-            <loc>/case-studies/marketing-news-builder/</loc>
+            <loc>/work/marketing-news-builder/</loc>
             <lastmod>2016-06-03T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -26,25 +26,25 @@
         </url>
     
         <url>
-            <loc>/case-studies/wordpress-plugin-icons/</loc>
+            <loc>/work/wordpress-plugin-icons/</loc>
             <lastmod>2018-09-06T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/wharncliffe-business-systems/</loc>
+            <loc>/work/wharncliffe-business-systems/</loc>
             <lastmod>2018-11-15T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/fit4it-fitness/</loc>
+            <loc>/work/fit4it-fitness/</loc>
             <lastmod>2019-01-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/emerald-kitchens/</loc>
+            <loc>/work/emerald-kitchens/</loc>
             <lastmod>2019-02-05T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -68,13 +68,19 @@
         </url>
     
         <url>
-            <loc>/case-studies/sass-quick-start/</loc>
+            <loc>/demo/wordpress-plugin-icons/</loc>
+            <lastmod>2019-05-12T00:00:00.000Z</lastmod>
+            <changefreq></changefreq>
+        </url>
+    
+        <url>
+            <loc>/work/sass-quick-start/</loc>
             <lastmod>2019-05-22T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/slick-slider-quick-start/</loc>
+            <loc>/work/slick-slider-quick-start/</loc>
             <lastmod>2019-06-02T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -122,7 +128,7 @@
         </url>
     
         <url>
-            <loc>/case-studies/kb-pro/</loc>
+            <loc>/work/kb-pro/</loc>
             <lastmod>2020-01-02T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -146,25 +152,25 @@
         </url>
     
         <url>
-            <loc>/case-studies/align-growth-summit/</loc>
+            <loc>/work/align-growth-summit/</loc>
             <lastmod>2020-06-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/eleventy-barebones/</loc>
+            <loc>/work/eleventy-barebones/</loc>
             <lastmod>2020-06-13T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/canetti-codes/</loc>
+            <loc>/work/canetti-codes/</loc>
             <lastmod>2020-07-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
     
         <url>
-            <loc>/case-studies/townscaper-community/</loc>
+            <loc>/work/townscaper-community/</loc>
             <lastmod>2020-07-01T00:00:00.000Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -200,7 +206,7 @@
         </url>
     
         <url>
-            <loc>/demo/</loc>
+            <loc>/extras/</loc>
             <lastmod>2020-08-06T11:22:56.834Z</lastmod>
             <changefreq></changefreq>
         </url>
@@ -494,7 +500,7 @@
         </url>
     
         <url>
-            <loc>/projects/</loc>
+            <loc>/work/</loc>
             <lastmod>2020-08-06T11:22:57.085Z</lastmod>
             <changefreq></changefreq>
         </url>

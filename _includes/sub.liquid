@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         {% include meta %}
-        <script type="text/javascript" defer src="/js/sub.js"></script>
         <title>Daniel Canetti • {{ pageTitle }}</title>
         <meta name="description" content="{{ pageDesc }}">
         <meta property="og:locale" content="en_GB" />
@@ -20,7 +19,7 @@
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="{{ pageClass }}">
-        <div class="wrapper">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             {% include nav %}
             <h1 class="--sub">{{ pageTitle }}</h1>
             {{ content }}

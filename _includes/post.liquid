@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         {% include meta %}
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • {{ postTitle }}</title>
         <meta name="description" content="{{ postExcerpt }}">
@@ -20,51 +22,35 @@
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="{{ pageClass }}">
-        <div class="wrapper">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             {% include nav %}
-            <div class="affiliate flywheel">
-                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
-                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
-                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
-            <div class="affiliate digital-ocean">
-                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
-                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
-                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
             <div id="post" class="body dark">
-                <div class="body__section body__section--post">
+                <div class="body__section body__section--post body__section--fade-up">
                     <h1>{{ postTitle }}</h1>
                     <div class="body__section--post-meta">
                         <span>{{ date | date: '%B %d, %Y' }}</span>
+                        <span class="body__section--post-tag">{{ postTag }}</span>
                         <span class="reading-time"></span>
                     </div>
-                    <span class="body__section--post-tag">{{ postTag }}</span>
-                    <img class="body__section--post-feat-img" src="{{ postFeatureImageFull }}" alt="">
+                    <!--img class="body__section--post-feat-img" src="{{ postFeatureImageFull }}" alt=""-->
                     {{ content }}
                     <hr>
                     <div class="share__blog">
                         <h3>Share {{ postTitle }}</h3>
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
-                            Share on Facebook
-                        </a>
-                        <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
-                            Don't share on Facebook
-                        </a-->
-                        <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
-                            Share on Twitter
-                        </a>
-                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
-                            Buy me a Coffee
-                        </a>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
                     </div>
                 </div>
                 {% include footer %}

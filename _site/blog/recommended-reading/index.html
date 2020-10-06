@@ -22,13 +22,15 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/vendor/slick.css">
+
 
 <!-- JS -->
-<script type="text/javascript" defer src="/js/vendor/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
-<script type="text/javascript" defer src="/js/vendor/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" defer src="/js/main.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -40,6 +42,8 @@
   gtag('config', 'UA-53667430-1');
 </script>
 
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • Recommended Reading</title>
         <meta name="description" content="I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.">
@@ -57,100 +61,33 @@
         <meta property="twitter:site" content="@Dan_Canetti">
         <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
-    <body class="sub">
-        <div class="wrapper">
+    <body class="sub post">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             <nav>
-  <div class="nav__content">
-    <a href="/">
-        <div class="nav__content__logoarea">
-          <!--Dan.-->
-          <img class="zoom__content__gif lazy" src="/video/hi.gif" alt="">
-        </div>
-    </a>
-    <div class="njs-toggle-menu">
-      <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
-      <label for="njs-toggle-menu--toggle">
-        <span class="toggle-menu__toggle-menu-icon">
-          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - sign in, view basket, call us, and email us"></span>
-        </span>
+  <a class="logo" href="/">Dan's Blog.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/extras/">Extras</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <img src="/images/icons/moon.svg" />
       </label>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/projects/">Projects</a>
-            <!--ul>
-            
-            
-              <li><a href="https://www.emerald-kitchens.co.uk/" target="_blank" rel="noopener">Emerald Kitchens</a></li>
-            
-              <li><a href="https://www.kbpro.com/" target="_blank" rel="noopener">K.B Pro</a></li>
-            
-              <li><a href="https://aligngrowthsummit.com/" target="_blank" rel="noopener">Align Growth Summit</a></li>
-            
-            </ul-->
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-            <ul>
-            
-            
-              <li><a href="/blog/github-actions-hackathon/">GitHub Actions Hackathon</a></li>
-            
-              <li><a href="/blog/eleventy-github-pages/">Host an Eleventy site on Github Pages</a></li>
-            
-              <li><a href="/blog/coniston-water-2020/">Coniston Water</a></li>
-            
-              <li><a href="/blog/wordpress-valet/">How to run WordPress locally on Mac using Valet</a></li>
-            
-            </ul>
-          </li>
-          <li>
-            <a href="/moodboard/">Moodboard</a>
-          </li>
-          <li>
-            <a href="/contact/">Contact</a>
-          </li>
-        </ul>
-        <ul class="social">
-          <li><a href="https://github.com/DanCanetti" target="_blank" aria-label="Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a></li>
-          <li><a href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a></li>
-          <li><a href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a></li>
-          <li><a href="https://twitter.com/Dan_Canetti" target="_blank" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a></li>
-          <li><a href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li>
+  </ul>
 </nav>
 
-            <div class="affiliate flywheel">
-                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
-                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
-                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
-            <div class="affiliate digital-ocean">
-                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
-                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
-                </a>
-                <div class="affiliate__content">
-                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
-                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
-                </div>
-            </div>
             <div id="post" class="body dark">
-                <div class="body__section body__section--post">
+                <div class="body__section body__section--post body__section--fade-up">
                     <h1>Recommended Reading</h1>
                     <div class="body__section--post-meta">
                         <span>September 30, 2019</span>
+                        <span class="body__section--post-tag">Life</span>
                         <span class="reading-time"></span>
                     </div>
-                    <span class="body__section--post-tag">Life</span>
-                    <img class="body__section--post-feat-img" src="/images/posts/recommended-reading/feature-full.jpg" alt="">
+                    <!--img class="body__section--post-feat-img" src="/images/posts/recommended-reading/feature-full.jpg" alt=""-->
                     <p>I try to read as often as I can, typically a chapter a night of whichever book I'm reading on my Kindle or listening to via Audible. I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.</p>
 <h2>The Launch Pad</h2>
 <p><img src="/images/posts/recommended-reading/book-launchpad.jpg" alt="The Launch Pad"></p>
@@ -193,18 +130,20 @@
                     <hr>
                     <div class="share__blog">
                         <h3>Share Recommended Reading</h3>
-                        <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/recommended-reading/" target="_blank">
-                            Share on Facebook
-                        </a>
-                        <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
-                            Don't share on Facebook
-                        </a-->
-                        <a class="l" href="https://twitter.com/intent/tweet?text=Recommended Reading%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/recommended-reading/" target="_blank">
-                            Share on Twitter
-                        </a>
-                        <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
-                            Buy me a Coffee
-                        </a>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/recommended-reading/" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text=Recommended Reading%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/recommended-reading/" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <footer>

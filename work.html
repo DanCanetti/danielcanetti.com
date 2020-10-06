@@ -1,0 +1,36 @@
+---
+layout: sub.liquid
+pageTitle: Work
+pageClass: sub
+pageExcerpt: A selection of personal and professional web development projects including some of my latest work.
+---
+
+<div class="body body--sub">
+  <div class="body__section body__section--case-study-items body__section--fade-up">
+    {% for post in collections.projects reversed %}
+    <div class="case-study-item case-study-item--{{ post.data.pageType }}">
+      {% if post.data.projectLink %}
+      <a href="{{ post.data.projectLink }}" target="_blank" rel="noopener">
+        <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt=""
+          aria-label="Cover Image. Visit site using the link below." />
+      </a>
+      {% else %}
+      <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt=""
+        aria-label="Cover Image. Visit site using the link below." />
+      {% endif %}
+      <div class="case-study-item__data">
+        <div class="case-study-item__data--content">
+          <h2>{{ post.data.pageTitle }}</h2>
+          <p>{{ post.data.projectExcerpt }}</p>
+          {% if post.data.projectLink %}
+          <a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener">Visit {{ post.data.pageType }}</a>
+          {% else %}
+          <span>💀 [Dead Project]</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% include footer %}
+</div>

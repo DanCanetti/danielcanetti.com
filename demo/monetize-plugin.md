@@ -1,6 +1,6 @@
 ---
 postTitle: Monetize Plugin Demo
-#date: Last Modified
+layout: monteize.liquid
 date: 2019-05-12
 postTag: Web Development
 postFeatureImage: /images/demos/monetize/feature.jpg
