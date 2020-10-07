@@ -1,0 +1,30 @@
+---
+layout: sub.liquid
+pageTitle: Extras
+pageClass: sub
+pageDesc: Demos for plugins and open source.
+---
+
+<div class="body body--sub">
+  <div class="body__section body__section--case-study-items body__section--fade-up">
+    {% assign alldemos = collections.demos | reverse %}
+    {% for post in alldemos %}  
+      <div class="case-study-item case-study-item--{{ post.data.pageType }}">
+        <div class="case-study-item__img">
+          <div class="case-study-item__img__image">
+            <a href="{{ post.url }}">
+              <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="" aria-label="Read More" />
+            </a>
+          </div>
+        </div>
+        <div class="case-study-item__data">
+          <div class="case-study-item__data--content">
+            <h2>{{ post.data.postTitle }}</h2>
+            <p>{{ post.data.postExcerpt }}</p>
+            <a href="{{ post.url }}" class="l">View Demo</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>

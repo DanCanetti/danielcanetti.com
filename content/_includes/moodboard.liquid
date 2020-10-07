@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        <script type="text/javascript" defer src="/js/tumblr.js"></script>
+        <title>Daniel Canetti • {{ pageTitle }}</title>
+        <meta name="description" content="{{ pageDesc }}">
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content="Daniel Canetti" />
+        <meta property="og:title" content="Daniel Canetti • A Web Developer" />
+        <meta property="og:description" content="{{ pageExcerpt }}" />
+        <meta property="og:url" content="https://danielcanetti.com/" />
+        <meta property="og:image" content="https://danielcanetti.com{{ pageFeatureImage }}" />
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+        <meta property="twitter:description" content="{{ pageExcerpt }}">
+        <meta property="twitter:image" content="https://danielcanetti.com{{ pageFeatureImage }}">
+        <meta property="twitter:url" content="https://danielcanetti.com/">
+        <meta property="twitter:site" content="@Dan_Canetti">
+        <meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="{{ pageClass }}">
+        <div class="wrapper">
+            {% include nav %}
+            <div class="affiliate flywheel">
+                <a href="https://bit.ly/flywheel-bloglink" target="_blank">
+                    <img src="/images/affiliate/flywheel/flywheel-one.png" alt="Flywheel Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>I recommend Flywheel for all my customers who are going down the WordPress route.<br>&nbsp;<br>It's a no brainer.</p>
+                    <a class="l" href="https://bit.ly/flywheel-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            <div class="affiliate digital-ocean">
+                <a href="https://bit.ly/digitalocean-bloglink" target="_blank">
+                    <img src="/images/affiliate/digitalocean/digitalocean-one.png" alt="DigitalOcean Image" />
+                </a>
+                <div class="affiliate__content">
+                    <p>When I need more control over my stack, I use DigitalOcean. It's one of the best around and it's cheap too!</p>
+                    <a class="l" href="https://bit.ly/digitalocean-bloglink" target="_blank">Find out more</a>
+                </div>
+            </div>
+            {{ content }}
+        </div>
+        {% include footer %}
+    </body>
+</html>

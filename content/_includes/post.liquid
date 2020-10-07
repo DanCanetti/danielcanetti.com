@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" defer src="/js/post.js"></script>
+        <title>Daniel Canetti • {{ postTitle }}</title>
+        <meta name="description" content="{{ postExcerpt }}">
+        {% include social %}
+    </head>
+    <body class="{{ pageClass }}">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+            {% include nav %}
+            <div id="post" class="body dark">
+                <div class="body__section body__section--post body__section--fade-up">
+                    <h1>{{ postTitle }}</h1>
+                    <div class="body__section--post-meta">
+                        <span>{{ date | date: '%B %d, %Y' }}</span>
+                        <span class="body__section--post-tag">{{ postTag }}</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <!--img class="body__section--post-feat-img" src="{{ postFeatureImageFull }}" alt=""-->
+                    {{ content }}
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share {{ postTitle }}</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% include footer %}
+            </div>
+        </div>
+        {% include footer %}
+    </body>
+</html>

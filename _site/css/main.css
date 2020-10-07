@@ -68,7 +68,7 @@ p {
 body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: #111;
   padding-bottom: 0px;
   max-width: 1750px;
   margin: auto; }
@@ -525,7 +525,10 @@ footer {
   width: 100%;
   z-index: 0;
   text-align: left;
-  font-size: 1.75em; }
+  font-size: 1.75em;
+  background: rgba(0, 0, 0, 0.1); }
+  footer.night {
+    background: rgba(255, 255, 255, 0.1); }
   footer .footer__content {
     display: flex;
     flex-direction: column;
