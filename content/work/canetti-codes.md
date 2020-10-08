@@ -2,9 +2,8 @@
 pageTitle: Canetti Codes
 pageType: site
 projectLink: https://canetti.codes/
-projectFeatureImage: /images/case-studies/canetti-codes/mockup.jpg
-projectFeatureImageRetina: /images/case-studies/canetti-codes/mockup@2x.jpg
-projectClass: 
+projectFeatureImage: /dist/images/canetticodes.jpg
+projectFeatureImageRetina: /dist/images/canetticodes@2x.jpg 
 projectType: Jamstack
 projectExcerpt: Bespoke web development for small businesses, events and weddings.
 seoIndex: noindex
