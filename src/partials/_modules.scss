@@ -131,7 +131,7 @@
       content: "";
       display: block;
       //padding-top: 100%; 	/* ratio of 1:1*/
-      padding-top: 130%;
+      padding-top: 65%;
     }
     .case-study-item__img__image {
       position: absolute;
@@ -226,7 +226,7 @@
   .share__blog__links {
     width: 100%;
     max-width: 80%;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 0 0;
     a {
       width: fit-content;
       margin-bottom: 20px;
@@ -254,57 +254,26 @@
   }
 }
 
-// Affiliate promos on posts
-.affiliate {
-  width: 240px;
-  position: fixed;
-  left: -250px;
-  top: 120px;
-  opacity: 0;
-  @include sm {
-    left: 10px;
-    top: -130px;
-  }
-  @include transitionall(.3s);
-  img {
+// Post Feature Image
+.post--bg-image {
+  animation: fade-in-up 2s ease-in-out 1;
+  height: 100vh;
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
     width: 100%;
-    height: auto;
-  }
-  .affiliate__content {
-    padding: 20px;
-    color: $dancanettiblack;
-    p {
-      margin-top: 0;
-      font-size: 1em;
-      margin-bottom: 20px;
-    }
-  }
-  &.show {
-    left: 10px;
-    opacity: 1;
-    @include sm {
-      left: auto;
-      top: 0px;
-    }
-  }
-  @include sm {
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    width: calc(100% - 260px);
-    height: 123px;
-    right: 10px;
-    left: auto;
-    //top: 0px;
-    .affiliate__content {
-      display: none;
-    }
-    &.flywheel {
-      background-color: #55c5d1;
-    }
-    &.digital-ocean {
-      background-color: #0080ff;
-    }
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    @include transitionall(.3s);
   }
 }
 
@@ -466,52 +435,11 @@
   }
 }
 
-// Awards/Nominations
-.award {
-  display: flex;
-  flex-direction: row;
-  padding: 15px 25px;
-  margin: -2px auto 0 auto;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  border: 2px solid $dancanettigrey;
-  @include sm {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  &:first-of-type {
-    margin-top: 50px;
-  }
-  p, a {
-    color: $dancanettiblack;
-    font-size: .9rem;
-    margin: 0;
-    @include sm {
-      font-size: .7rem;
-      margin: 10px 0 0 2px;
-    }
-  }
-  img {
-    max-width: 125px;
-    width: 100%;
-    height: auto;
-    margin-right: 25px;
-    padding-right: 25px;
-    border-right: 2px solid $dancanettigrey;
-    @include sm {
-      max-height: 61px;
-      width: auto;
-      border: none;
-    }
-  }
-}
-
 // Contents
 .body .body__section.body__section--post .toc {
   max-width: 80%;
   width: 100%;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 0 0;
   h3 {
     width: 100%;
   }

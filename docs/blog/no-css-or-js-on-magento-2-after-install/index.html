@@ -2,29 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Webpack -->
-<script type="text/javascript" defer src="/dist/bundle.js"></script>
+<script type="text/javascript" src="/dist/bundle.js"></script>
 
 <!-- CSS -->
-<link rel="stylesheet" href="/css/main.css">
 
 
 <!-- JS -->
@@ -52,14 +51,14 @@
         <meta name="description" content="I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.">
         <meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Daniel Canetti" />
-<meta property="og:title" content="Daniel Canetti • A Web Developer" />
+<meta property="og:title" content="Daniel Canetti • " />
 <meta property="og:description" content="" />
 <meta property="og:url" content="https://danielcanetti.com/" />
-<meta property="og:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" />
+<meta property="og:image" content="https://danielcanetti.com" />
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+<meta property="twitter:title" content="Daniel Canetti • ">
 <meta property="twitter:description" content="">
-<meta property="twitter:image" content="https://danielcanetti.com/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg">
+<meta property="twitter:image" content="https://danielcanetti.com">
 <meta property="twitter:url" content="https://danielcanetti.com/">
 <meta property="twitter:site" content="@Dan_Canetti">
 <meta property="twitter:creator" content="@Dan_Canetti">
@@ -81,15 +80,15 @@
   </ul>
 </nav>
 
-            <div id="post" class="body dark">
-                <div class="body__section body__section--post body__section--fade-up">
+            <div class="body dark post">
+                <div class="post--bg-image" style="background-image: url('/dist/images/magentonginx@2x.jpg');"></div>
+                <div class="body__section body__section--post">
                     <h1>No CSS or JS on Magento 2</h1>
                     <div class="body__section--post-meta">
                         <span>October 22, 2019</span>
                         <span class="body__section--post-tag">Web Development</span>
                         <span class="reading-time"></span>
                     </div>
-                    <!--img class="body__section--post-feat-img" src="/images/posts/no-ccs-or-js-on-magento-2-after-install/feature-full.jpg" alt=""-->
                     <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
 <p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
 <h2>Pointing to the correct config</h2>
@@ -133,23 +132,6 @@ server {
                         </div>
                     </div>
                 </div>
-                <footer>
-    <div class="footer__content">
-        <div class="footer__content__item footer__content__plinks">
-            <a class="l" href="/blog/">Blog</a>
-            <a class="l" href="/projects/">Work</a>
-            <a class="l" href="/contact/">Mail</a>
-        </div>
-        <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Go to Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="Go to LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a>
-        </div>
-        <span class="copyright">Daniel Canetti &copy; 2020</span>
-    </div>
-</footer>
             </div>
         </div>
         <footer>

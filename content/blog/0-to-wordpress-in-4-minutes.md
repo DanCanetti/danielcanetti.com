@@ -3,9 +3,8 @@ postTitle: 0 to WordPress in 4 minutes
 #date: Last Modified
 date: 2020-02-01
 postTag: Web Development
-postFeatureImage: /images/posts/0-to-wordpress-in-4-minutes/feature.jpg
-postFeatureImageRetina: /images/posts/0-to-wordpress-in-4-minutes/feature@2x.jpg
-postFeatureImageFull: /images/posts/0-to-wordpress-in-4-minutes/feature-full.jpg
+postFeatureImage: /dist/images/zerotowordpress.jpg
+postFeatureImageRetina: /dist/images/zerotowordpress@2x.jpg
 postExcerpt: Go from nothing to a working local WordPress site in a matter of minutes.
 ---
 

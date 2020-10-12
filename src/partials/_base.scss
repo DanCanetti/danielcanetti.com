@@ -75,6 +75,22 @@ $screen-sm: 576px;
   }
 }
 
+@keyframes fade-in-up-post {    // Fade In Up - Blog Post
+  0% {
+    opacity: 0;
+    margin-top: calc(30vh + 20px);
+  }
+  25% {
+    opacity: 0;
+    margin-top: calc(30vh + 20px);
+  }
+  100% {
+    opacity: 1;
+    margin-top: 30vh;
+  }
+}
+
+
 @keyframes fade-in-up-img {    // Fade In Up Image
   0% {
     opacity: 0;
@@ -104,7 +120,8 @@ $serif:       'Roboto Slab', serif;
 body {
     font-family: $pfont;
     font-weight: $pfontreg;
-    background-color: $dancanettiblack;
+    //background-color: $dancanettiblack;
+    background-color: $dancanettiwhite;
     padding-bottom: 0px;
     max-width: 1750px;
     margin: auto;
@@ -142,6 +159,14 @@ body {
       background: transparent;
     }
   }
+  .body__section--post {
+    background: $dancanettiwhite;
+  }
+  .post--bg-image {
+    &:before {
+      background: $dancanettiwhite;
+    }
+  }
   &.night {
     background-color: $dancanettiblack;
     color: $dancanettiwhite;
@@ -162,6 +187,14 @@ body {
       background: rgba(255,255,255,0.1);
       code {
         background: transparent;
+      }
+    }
+    .body__section--post {
+      background: $dancanettiblack;
+    }
+    .post--bg-image {
+      &:before {
+        background: $dancanettiblack;
       }
     }
   }
@@ -288,7 +321,7 @@ hr {
     box-shadow: none;
     height: 0px;
     width: 80%;
-    margin: 75px auto 25px auto;
+    margin: 75px auto 25px 0;
 }
 
 blockquote {

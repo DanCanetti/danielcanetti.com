@@ -3,9 +3,8 @@ postTitle: Project Management Tools
 #date: Last Modified
 date: 2020-04-18
 postTag: Life
-postFeatureImage: /images/posts/project-management-tools/feature.jpg
-postFeatureImageRetina: /images/posts/project-management-tools/feature@2x.jpg
-postFeatureImageFull: /images/posts/project-management-tools/feature-full.jpg
+postFeatureImage: /dist/images/projectmanagementtools.jpg
+postFeatureImageRetina: /dist/images/projectmanagementtools@2x.jpg
 postExcerpt: To try and save some people mucking about as I have - here's a quick run down of three project management tools.
 ---
 

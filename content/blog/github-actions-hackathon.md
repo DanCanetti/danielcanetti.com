@@ -3,9 +3,8 @@ postTitle: GitHub Actions Hackathon
 #date: Last Modified
 date: 2020-09-01
 postTag: Hackathon
-postFeatureImage: /images/posts/github-actions-hackathon/feature.jpg
-postFeatureImageRetina: /images/posts/github-actions-hackathon/feature@2x.jpg
-postFeatureImageFull: /images/posts/github-actions-hackathon/feature-full.jpg
+postFeatureImage: /dist/images/githubactions.jpg
+postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Dev.to teamed up with GitHub to put on a hackathon based on building and sharing GitHub Actions. I took part and logged my progress as I went along for this series.
 ---
 

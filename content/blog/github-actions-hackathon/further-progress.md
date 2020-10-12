@@ -3,9 +3,8 @@ postTitle: GitHub Actions Hackathon - Further Progress
 #date: Last Modified
 date: 2020-09-01
 postTag: Hackathon
-postFeatureImage: /images/posts/github-actions-hackathon/feature.jpg
-postFeatureImageRetina: /images/posts/github-actions-hackathon/feature@2x.jpg
-postFeatureImageFull: /images/posts/github-actions-hackathon/feature-full.jpg
+postFeatureImage: /dist/images/githubactions.jpg
+postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Part 2 - I've made some tweaks to the script in an attempt to get this working how I'd like it to and so far I've just hit errors.
 eleventyExcludeFromCollections: true
 ---

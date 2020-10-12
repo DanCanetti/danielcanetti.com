@@ -3,9 +3,8 @@ postTitle: Host an Eleventy site on Github Pages
 #date: Last Modified
 date: 2020-08-07
 postTag: Web Development
-postFeatureImage: /images/posts/eleventy-github-pages/feature.jpg
-postFeatureImageRetina: /images/posts/eleventy-github-pages/feature@2x.jpg
-postFeatureImageFull: /images/posts/eleventy-github-pages/feature-full.jpg
+postFeatureImage: /dist/images/eleventygithubpages.jpg
+postFeatureImageRetina: /dist/images/eleventygithubpages@2x.jpg
 postExcerpt: Host your Eleventy site for free on Github pages.
 ---
 

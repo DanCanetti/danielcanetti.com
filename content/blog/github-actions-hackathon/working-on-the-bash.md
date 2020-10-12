@@ -3,9 +3,8 @@ postTitle: GitHub Actions Hackathon - Working on the bash
 #date: Last Modified
 date: 2020-09-01
 postTag: Hackathon
-postFeatureImage: /images/posts/github-actions-hackathon/feature.jpg
-postFeatureImageRetina: /images/posts/github-actions-hackathon/feature@2x.jpg
-postFeatureImageFull: /images/posts/github-actions-hackathon/feature-full.jpg
+postFeatureImage: /dist/images/githubactions.jpg
+postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Part 3 - After the last error it was clear that it wasn't finding the `.sh` script in the Action. To resolve this I've amended the `.yml` and changed where to find the bash file - pointing it to the root instead. 
 eleventyExcludeFromCollections: true
 ---

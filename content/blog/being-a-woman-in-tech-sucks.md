@@ -3,9 +3,8 @@ postTitle: Being a woman in tech sucks
 #date: Last Modified
 date: 2015-11-22
 postTag: Culture
-postFeatureImage: /images/posts/being-a-woman-in-tech-sucks/feature.jpg
-postFeatureImageRetina: /images/posts/being-a-woman-in-tech-sucks/feature@2x.jpg
-postFeatureImageFull: /images/posts/being-a-woman-in-tech-sucks/feature-full.jpg
+postFeatureImage: /dist/images/beingawomanintechsucks.jpg
+postFeatureImageRetina: /dist/images/beingawomanintechsucks@2x.jpg
 postExcerpt: I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?
 ---
 
@@ -43,7 +42,7 @@ Forever Mogul
 
 The reason I have used Marissa Mayer as an example is due to the [outstanding work she has done at Yahoo](https://www.fastcompany.com/3044281/marissa-mayer) since taking over as CEO in 2012 and although her views on the gender issues in tech are sometimes difficult to measure, stating that “[There are probably industries where gender is more of an issue](http://uk.businessinsider.com/sama-group-ceo-leila-janah-criticizes-marissa-mayers-view-on-gender-in-the-workplace-2015-3?r=US&IR=T)” but also that she “[hopes that the wild growth in technology in her lifetime means more girls going into tech](http://www.makers.com/moments/women-tech)”.
 
-![Marissa Mayer](/images/posts/being-a-woman-in-tech-sucks/marissa-mayer.jpg)**Marissa Mayer | [Image Source](https://www.fastcompany.com/3044281/marissa-mayer)**
+![Marissa Mayer](/dist/images/marissa-mayer.jpg)**Marissa Mayer | [Image Source](https://www.fastcompany.com/3044281/marissa-mayer)**
 
 Mayer is just one example, with Facebook COO Sheryl Sandberg been named the most powerful woman in technology on the [Forbes' Power Women list](https://www.forbes.com/power-women/) for the fourth consecutive year and a further six Silicon Valley executives making it into the top 25 on the Power Women list there may be a shift underway to finally begin breaking down the gender barriers in tech.
 

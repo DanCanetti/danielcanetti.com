@@ -12,15 +12,15 @@
     <body class="{{ pageClass }}">
         <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             {% include nav %}
-            <div id="post" class="body dark">
-                <div class="body__section body__section--post body__section--fade-up">
+            <div class="body dark post">
+                <div class="post--bg-image" style="background-image: url('{{ postFeatureImageRetina }}');"></div>
+                <div class="body__section body__section--post">
                     <h1>{{ postTitle }}</h1>
                     <div class="body__section--post-meta">
                         <span>{{ date | date: '%B %d, %Y' }}</span>
                         <span class="body__section--post-tag">{{ postTag }}</span>
                         <span class="reading-time"></span>
                     </div>
-                    <!--img class="body__section--post-feat-img" src="{{ postFeatureImageFull }}" alt=""-->
                     {{ content }}
                     <hr>
                     <div class="share__blog">
@@ -41,7 +41,6 @@
                         </div>
                     </div>
                 </div>
-                {% include footer %}
             </div>
         </div>
         {% include footer %}

@@ -3,9 +3,8 @@ postTitle: How to run WordPress locally on Mac using Valet
 #date: Last Modified
 date: 2020-07-22
 postTag: Web Development
-postFeatureImage: /images/posts/wordpress-valet/feature.jpg
-postFeatureImageRetina: /images/posts/wordpress-valet/feature@2x.jpg
-postFeatureImageFull: /images/posts/wordpress-valet/feature-full.jpg
+postFeatureImage: /dist/images/valetlarge.jpg
+postFeatureImageRetina: /dist/images/valetlarge@2x.jpg
 postExcerpt: Create and run WordPress websites directly from your Mac via the CLI.
 ---
 

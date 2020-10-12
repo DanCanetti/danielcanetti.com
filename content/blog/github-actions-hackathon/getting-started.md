@@ -3,9 +3,8 @@ postTitle: GitHub Actions Hackathon - Getting started
 #date: Last Modified
 date: 2020-08-18
 postTag: Hackathon
-postFeatureImage: /images/posts/github-actions-hackathon/feature.jpg
-postFeatureImageRetina: /images/posts/github-actions-hackathon/feature@2x.jpg
-postFeatureImageFull: /images/posts/github-actions-hackathon/feature-full.jpg
+postFeatureImage: /dist/images/githubactions.jpg
+postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Part 1 - The action I'm building will allow users to create a new, blank Eleventy site including all the files and directories I usually use/create when creating a new site.
 eleventyExcludeFromCollections: true
 ---
