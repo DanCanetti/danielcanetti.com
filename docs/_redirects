@@ -6,6 +6,10 @@ https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
 # Redirect beta subdomain to primary domain
 https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
 
+# New Redirects
+https://danielcanetti.com/current-setup/ https://danielcanetti.com/blog/2019-setup/ 301!
+https://danielcanetti.com/recommended-reading/ https://danielcanetti.com/blog/2019-reading-list/ 301!
+
 # Historical Redirects
 https://danielcanetti.com/wordpressify https://danielcanetti.com/blog/wordpressify/ 301!
 https://danielcanetti.com/gitlab-pages https://danielcanetti.com/blog/gitlab-pages/ 301!

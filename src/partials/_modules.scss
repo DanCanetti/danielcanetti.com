@@ -139,24 +139,23 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: $dancanettialt;
+      background-color: $dancanettigrey;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       img {
         object-fit: cover;
         height: 100%;
+        opacity: 1;
+        @include transitionall(.3s);
       }
     }
-    .case-study-item__meta {
-      position: absolute;
-      z-index: 5;
-      font-size: .8rem;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      color: $dancanettiwhite;
+    &:hover {
+      .case-study-item__img__image {
+        img {
+          opacity: .7;
+        }
+      }
     }
   }
   .case-study-item__data {
@@ -165,23 +164,45 @@
     justify-content: space-between;
     align-items: stretch;
     .case-study-item__data--content {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      h2 {
-        margin: 25px 0;
-        font-size: 1.2rem;
-        font-family: $pfont;
-        text-transform: unset;
-        letter-spacing: 0.05rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      .case-study-item__meta {
+        width: 100%;
+        margin: 25px 0 0;
+        font-size: .75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        span {
+          margin-right: 30px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
       }
-      p {
-        margin-top: 0;
-        margin-bottom: 25px;
-        font-size: 1rem;
-      }
-      a {
-        align-self: flex-start;
+      .case-study-item__copy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          margin: 25px 0;
+          font-size: 1.2rem;
+          font-family: $pfont;
+          text-transform: unset;
+          letter-spacing: 0.05rem;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 25px;
+          font-size: 1rem;
+        }
+        a {
+          //align-self: flex-start;
+        }
       }
     }
   }
