@@ -1,6 +1,6 @@
 ---
 pageTitle: Canetti Codes
-pageType: site
+projectStatus: Live Site
 projectLink: https://canetti.codes/
 projectFeatureImage: /dist/images/canetticodes.jpg
 projectFeatureImageRetina: /dist/images/canetticodes@2x.jpg 

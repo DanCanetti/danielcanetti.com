@@ -1,6 +1,6 @@
 ---
 pageTitle: K.B Pro
-pageType: site
+projectStatus: Live Site
 projectLink: https://www.kbpro.com/
 projectFeatureImage: /dist/images/kbpro.jpg
 projectFeatureImageRetina: /dist/images/kbpro@2x.jpg 

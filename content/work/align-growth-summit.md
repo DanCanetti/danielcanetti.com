@@ -1,6 +1,6 @@
 ---
 pageTitle: Align Growth Summit
-pageType: site
+projectStatus: Live Site
 projectLink: https://aligngrowthsummit.com/
 projectFeatureImage: /dist/images/align-gs.jpg
 projectFeatureImageRetina: /dist/images/align-gs@2x.jpg

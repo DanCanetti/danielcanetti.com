@@ -1,6 +1,6 @@
 ---
 pageTitle: WordPress Plugin Icon Font
-pageType: project
+projectStatus: Archived 
 pageSubTitle: Font Family
 projectLink: https://www.wordpresspluginicons.com/
 projectFeatureImage: /images/case-studies/wordpress-plugin-icon-font/feature.jpg

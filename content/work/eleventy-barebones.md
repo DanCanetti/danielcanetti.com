@@ -1,6 +1,6 @@
 ---
 pageTitle: Eleventy Barebones
-pageType: project
+projectStatus: Side Project
 projectLink: https://getbarebones.danielcanetti.com/
 projectFeatureImage: /images/case-studies/eleventy-barebones/feature.jpg
 projectFeatureImageRetina: /images/case-studies/eleventy-barebones/feature@2x.jpg

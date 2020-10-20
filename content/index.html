@@ -18,7 +18,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
       <h2 class="sml">Work.</h2>
       <div class="case-study-items__wrap">
       {% for post in collections.selectedproject reversed %}
-        <div class="case-study-item case-study-item--{{ post.data.pageType }}">
+        <div class="case-study-item case-study-item--home">
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
               <h2><a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener" >{{ post.data.pageTitle }}</a></h2>
@@ -35,7 +35,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
       <div class="case-study-items__wrap">
       {% assign allblogposts = collections.posts | reverse %}
       {% for post in allblogposts limit: 4 %}
-        <div class="case-study-item case-study-item--post case-study-item--{{ post.data.pageType }}">
+        <div class="case-study-item case-study-item--post case-study-item--home">
           <!--a href="{{ post.url }}">
             <img src="{{ post.data.postFeatureImageFull }}" alt="" aria-label="Read More" />
           </a-->
