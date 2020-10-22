@@ -21,18 +21,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Webpack -->
-<script type="text/javascript" src="/dist/bundle.js"></script>
-
-<!-- CSS -->
-
-
-<!-- JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script type="text/javascript" defer src="/js/main.js"></script>
-
-
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -73,14 +64,16 @@
     <li><a class="l" href="/contact/">Contact</a></li>
     <li class="toggle-nightMode">
       <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
-        <img src="/dist/images/moon.svg" />
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
       </label>
       <input type="checkbox" id="theme-toggle" v-model="nightMode">
     </li>
   </ul>
 </nav>
 
-            <div class="body dark post">
+            <div id="post" class="body dark post">
                 <div class="post--bg-image" style="background-image: url('/dist/images/githubactions@2x.jpg');"></div>
                 <div class="body__section body__section--post">
                     <h1>GitHub Actions Hackathon - Further Progress</h1>

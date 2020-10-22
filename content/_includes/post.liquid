@@ -12,7 +12,7 @@
     <body class="{{ pageClass }}">
         <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             {% include nav %}
-            <div class="body dark post">
+            <div id="post" class="body dark post">
                 <div class="post--bg-image" style="background-image: url('{{ postFeatureImageRetina }}');"></div>
                 <div class="body__section body__section--post">
                     <h1>{{ postTitle }}</h1>

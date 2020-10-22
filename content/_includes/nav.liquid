@@ -6,7 +6,9 @@
     <li><a class="l" href="/contact/">Contact</a></li>
     <li class="toggle-nightMode">
       <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
-        <img src="/dist/images/moon.svg" />
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
       </label>
       <input type="checkbox" id="theme-toggle" v-model="nightMode">
     </li>

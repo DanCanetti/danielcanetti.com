@@ -129,3 +129,68 @@ import marketingnewsbuilderretina from './images/work/mn-builder/marketing-news-
 
 // CSS
 import './partials/main.scss';
+
+// JS
+import './js/plugins/parsley.min.js';
+import './js/plugins/slick.min.js';
+
+// Vue
+new Vue({
+  el: "#wrapper",
+	watch: {
+		nightMode: function() {
+			localStorage.setItem("nightMode", JSON.stringify(this.nightMode));
+		}
+	},
+	data: {
+        nightMode: localStorage.getItem("nightMode") || false,
+        nofacemask: false,
+        night :"/dist/images/moon.svg",
+        day :'/dist/images/sun.svg',
+  },
+});
+
+// Reading Time 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const post = document.getElementById("post");
+    const readingTimeSummary = document.querySelector(".reading-time");
+    const avgWordsPerMin = 250;
+
+    function setReadingTime(){
+        let count = getWordCount();
+        let time = Math.ceil(count / avgWordsPerMin);
+
+        readingTimeSummary.innerText = time + " min read";
+    }
+
+    function getWordCount(){
+    return post.innerText.match(/\w+/g).length;
+    }
+});
+
+// Contact
+$("#dancanetti_contact").submit(function(e) {
+    e.preventDefault();
+    var $form = $(this);
+    $.post($form.attr("action"), $form.serialize()).then(function() {
+      alert("Thank you!");
+    });
+});
+
+// Slick Sliders
+jQuery('.basic-slider').slick({
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    fade: true,
+    cssEase: 'linear',
+  });
+  
+  jQuery('.basic-slider-auto').slick({
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    cssEase: 'linear',
+  });

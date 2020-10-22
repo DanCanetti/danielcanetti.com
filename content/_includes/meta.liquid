@@ -18,24 +18,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Webpack -->
-<script type="text/javascript" src="/dist/bundle.js"></script>
-
-<!-- CSS -->
-{% if page.url contains 'wordpress-plugin-icons' %}
-  <link rel="stylesheet" href="/vendor/wp-plugin-icons/wp-plugin-icons.min.css">
-{% endif %}
-
-<!-- JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script type="text/javascript" defer src="/js/vendor/parsley.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script type="text/javascript" defer src="/js/main.js"></script>
-{% if page.url contains 'wordpress-plugin-icons' %}
-  <script type="text/javascript" defer src="/js/vendor/wp-plugin-icons.js"></script>
-{% endif %}
-{% if page.url contains 'contact' %}
-  <script type="text/javascript" defer src="/js/contact.js"></script>
-{% endif %}
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
