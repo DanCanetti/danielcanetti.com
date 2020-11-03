@@ -37,7 +37,6 @@
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • Project Management Tools</title>
         <meta name="description" content="To try and save some people mucking about as I have - here's a quick run down of three project management tools.">
         <meta property="og:locale" content="en_GB" />
@@ -62,19 +61,19 @@
     <li><a class="l" href="/work/">Work</a></li>
     <li><a class="l" href="/blog/">Blog</a></li>
     <li><a class="l" href="/contact/">Contact</a></li>
-    <li class="toggle-nightMode">
+    <!--li class="toggle-nightMode">
       <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
         <transition name="fade">
           <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
         </transition>
       </label>
       <input type="checkbox" id="theme-toggle" v-model="nightMode">
-    </li>
+    </li-->
   </ul>
 </nav>
 
+            <img class="post--bg-image" src="/dist/images/projectmanagementtools@2x.jpg" />
             <div id="post" class="body dark post">
-                <div class="post--bg-image" style="background-image: url('/dist/images/projectmanagementtools@2x.jpg');"></div>
                 <div class="body__section body__section--post">
                     <h1>Project Management Tools</h1>
                     <div class="body__section--post-meta">
@@ -91,11 +90,26 @@
 <li>Trello</li>
 <li>Basecamp</li>
 <li>Trello (Again)</li>
+<li>Todoist (Personal)/Toggl (Work)</li>
 </ul>
 <p>As you can see, I go back and forth alot. At the time of writing I'm in the process of moving from Basecamp to Trello, I originally moved to Basecamp because my company did so and I find it easier to use the same tool everywhere. That was a mistake.</p>
 <p>So, to try and save some people mucking about as I have going back and forth I thought I'd do a quick run down of three of these project management tools.</p>
+<h2>Todoist</h2>
+<p>After using Trello for a while I decided that I needed something simpler that I could use to store other items such as my reading list and a list of 'awesome websites' that I constantly update and you can see <a href="#">here</a>. I've found this to be by far the best tool I've used so far and it's allowed me to consolidate other accounts such as Pocket into it.</p>
+<ul>
+<li>✅ Good for small projects</li>
+<li>✅ Mobile app is good</li>
+<li>✅ Quick to set up initally</li>
+<li>✅ Free tier offers loads of functionality</li>
+<li>✅ Great API</li>
+<li>✅ Can nest lists</li>
+<li>✅ Offers Kanban approach</li>
+<li>✅ Daily goal encourages progression</li>
+<li>❌ Be careful how many nested lists you use - it can get messy</li>
+</ul>
+<p><a href="https://todoist.com/r/dan_canetti_glzypa">Get started with Todoist</a>*</p>
 <h2>Trello</h2>
-<p>By far my favourite (RIP <a href="https://www.wunderlist.com/">Wunderlist 💔</a>), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what's been done to what's on hold.</p>
+<p>My former favourite (RIP <a href="https://www.wunderlist.com/">Wunderlist 💔</a>), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what's been done to what's on hold.</p>
 <ul>
 <li>✅ My favourite</li>
 <li>✅ Agile approach</li>
@@ -136,6 +150,7 @@
 </ul>
 <p><a href="https://basecamp.com/">Get started with Basecamp</a></p>
 <hr>
+<p><em><strong>Last Updated:</strong> Monday 2nd November 2020 to add Todoist.</em></p>
 <p>*<em>This is an affiliate link for which I may receive a small commission, at no extra cost to you, should you decide to sign up. I only use affiliate links on products/tools I actually use and recommend ✌️</em></p>
 
                     <hr>
@@ -161,19 +176,17 @@
         </div>
         <footer>
     <div class="footer__content">
-        <div class="footer__content__item footer__content__plinks">
-            <a class="l" href="/blog/">Blog</a>
-            <a class="l" href="/projects/">Work</a>
-            <a class="l" href="/contact/">Mail</a>
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy" rel="noreferrer">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack" rel="noreferrer">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify" rel="noreferrer">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube" rel="noreferrer"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch" rel="noreferrer"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
         </div>
-        <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Go to Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="Go to LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a>
-        </div>
-        <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>
 </footer>
     </body>

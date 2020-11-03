@@ -8,6 +8,8 @@ postFeatureImageRetina: /dist/images/acompleteguidetoeleventy@2x.jpg
 postExcerpt: From installation to continuous deployment - everything you need to get started with the static site generator.
 ---
 
+***Please Note***: This article was written in 2019. My approach to building Jamstack sites has changed since this article was written, I will upload a new post detailing my new approach and link here in due course.
+
 ## What is Eleventy?
 
 [Eleventy](https://www.11ty.io/) is a static site generator designed to be a Javascript alternative to Jekyll - it works with multiple languages and ships with it's own server for local development.

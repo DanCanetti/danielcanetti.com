@@ -4,7 +4,6 @@
         {% include meta %}
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • {{ postTitle }}</title>
         <meta name="description" content="{{ postExcerpt }}">
         {% include social %}
@@ -12,8 +11,8 @@
     <body class="{{ pageClass }}">
         <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
             {% include nav %}
+            <img class="post--bg-image" src="{{ postFeatureImageRetina }}" />
             <div id="post" class="body dark post">
-                <div class="post--bg-image" style="background-image: url('{{ postFeatureImageRetina }}');"></div>
                 <div class="body__section body__section--post">
                     <h1>{{ postTitle }}</h1>
                     <div class="body__section--post-meta">

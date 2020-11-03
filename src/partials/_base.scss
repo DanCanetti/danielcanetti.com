@@ -82,21 +82,6 @@ $screen-sm: 576px;
   }
 }
 
-@keyframes fade-in-up-post {    // Fade In Up - Blog Post
-  0% {
-    opacity: 0;
-    margin-top: calc(30vh + 20px);
-  }
-  25% {
-    opacity: 0;
-    margin-top: calc(30vh + 20px);
-  }
-  100% {
-    opacity: 1;
-    margin-top: 30vh;
-  }
-}
-
 @keyframes fade-in-up-img {    // Fade In Up Image
   0% {
     opacity: 0;
@@ -154,7 +139,7 @@ body {
     color: $dancanettiwhite;
   }
   hr {
-    border: 1px solid $dancanettiblack;
+    border: 1px solid rgba(17,17,17,0.4);
   }
   code {
     background: rgba(0,0,0,0.1);
@@ -163,14 +148,6 @@ body {
     background: rgba(0,0,0,0.1);
     code {
       background: transparent;
-    }
-  }
-  .body__section--post {
-    background: $dancanettiwhite;
-  }
-  .post--bg-image {
-    &:before {
-      background: $dancanettiwhite;
     }
   }
   &.night {
@@ -184,7 +161,7 @@ body {
       color: $dancanettiblack;
     }
     hr {
-      border: 1px solid $dancanettiwhite;
+      border: 1px solid rgba(255,255,255,0.4);
     }
     code {
       background: rgba(255,255,255,0.1);
@@ -193,14 +170,6 @@ body {
       background: rgba(255,255,255,0.1);
       code {
         background: transparent;
-      }
-    }
-    .body__section--post {
-      background: $dancanettiblack;
-    }
-    .post--bg-image {
-      &:before {
-        background: $dancanettiblack;
       }
     }
   }
@@ -334,14 +303,13 @@ blockquote {
     font-family: $serif;
     margin: 75px 75px 5px 75px;
     & + p {
-        font-family: $serif;
-        margin: 25px 75px 75px 75px;
+        margin: 25px 75px 75px 75px!important;
         font-size: .7em;
     }
     @include sm {
       margin: 75px 25px 5px 25px;
       & + p {
-        margin: 25px 25px 75px 25px;
+        margin: 25px 25px 75px 25px!important;
       }
     }
 }

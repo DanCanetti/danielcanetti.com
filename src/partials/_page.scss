@@ -5,6 +5,28 @@
     E.G. Is it hidden or expanded? Is it active or inactive?
 */
 
+body {
+    &.post {
+        .wrapper {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000111+0,000111+100&0.3+0,0+100 */
+                background: -moz-linear-gradient(top,  rgba(0,1,17,0.3) 0%, rgba(0,1,17,0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(0,1,17,0.3) 0%,rgba(0,1,17,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(0,1,17,0.3) 0%,rgba(0,1,17,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000111', endColorstr='#00000111',GradientType=0 ); /* IE6-9 */
+            }
+        }
+    }
+}
+
 .body {
     &.body--contact {
         .body__section.body__section--post {
@@ -16,6 +38,6 @@
         }
     }
     &.post {
-      padding-top: 0;
+        padding-top: 50px;
     }
 }

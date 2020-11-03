@@ -37,7 +37,6 @@
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" defer src="/js/post.js"></script>
         <title>Daniel Canetti • Installing Craft CMS in Homestead</title>
         <meta name="description" content="An extract from a larger guide I’m working on for installing Laravel/Homestead.">
         <meta property="og:locale" content="en_GB" />
@@ -62,19 +61,19 @@
     <li><a class="l" href="/work/">Work</a></li>
     <li><a class="l" href="/blog/">Blog</a></li>
     <li><a class="l" href="/contact/">Contact</a></li>
-    <li class="toggle-nightMode">
+    <!--li class="toggle-nightMode">
       <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
         <transition name="fade">
           <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
         </transition>
       </label>
       <input type="checkbox" id="theme-toggle" v-model="nightMode">
-    </li>
+    </li-->
   </ul>
 </nav>
 
+            <img class="post--bg-image" src="/dist/images/craftcmshomestead@2x.jpg" />
             <div id="post" class="body dark post">
-                <div class="post--bg-image" style="background-image: url('/dist/images/craftcmshomestead@2x.jpg');"></div>
                 <div class="body__section body__section--post">
                     <h1>Installing Craft CMS in Homestead</h1>
                     <div class="body__section--post-meta">
@@ -136,19 +135,17 @@
         </div>
         <footer>
     <div class="footer__content">
-        <div class="footer__content__item footer__content__plinks">
-            <a class="l" href="/blog/">Blog</a>
-            <a class="l" href="/projects/">Work</a>
-            <a class="l" href="/contact/">Mail</a>
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy" rel="noreferrer">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack" rel="noreferrer">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify" rel="noreferrer">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube" rel="noreferrer"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch" rel="noreferrer"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
         </div>
-        <div class="footer__content__item footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/images/icons/github-b.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://dribbble.com/dan_canetti" target="_blank" aria-label="Go to Dribbble" rel="noreferrer"><img src="/images/icons/dribbble-b.svg" alt="Dribbble" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/images/icons/instagram-b.svg" alt="Instagram" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/images/icons/twitter-b.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.linkedin.com/in/danielcanetti" target="_blank" aria-label="Go to LinkedIn" rel="noreferrer"><img src="/images/icons/linkedin-b.svg" alt="LinkedIn" /></a>
-        </div>
-        <span class="copyright">Daniel Canetti &copy; 2020</span>
     </div>
 </footer>
     </body>

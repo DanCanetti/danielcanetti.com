@@ -29,6 +29,24 @@ import ms310 from './images/icons/ms-icon-310x310.png';
 import feature from './images/feature.jpg';
 import sun from './images/icons/sun.svg';
 import moon from './images/icons/moon.svg';
+import github from './images/icons/github.svg';
+import githubblack from './images/icons/github-b.svg';
+import instagram from './images/icons/instagram.svg';
+import instagramblack from './images/icons/instagram-b.svg';
+import linkedin from './images/icons/linkedin.svg';
+import linkedinblack from './images/icons/linkedin-b.svg';
+import dribbble from './images/icons/dribbble.svg';
+import dribbbleblack from './images/icons/dribbble-b.svg';
+import medium from './images/icons/medium.svg';
+import mediumblack from './images/icons/medium-b.svg';
+import twitch from './images/icons/twitch.svg';
+import twitchblack from './images/icons/twitch-b.svg';
+import twitter from './images/icons/twitter.svg';
+import twitterblack from './images/icons/twitter-b.svg';
+import youtube from './images/icons/youtube.svg';
+import youtubeblack from './images/icons/youtube-b.svg';
+
+
 
 // Images - Homepage
 import mask from './images/facemask.png';

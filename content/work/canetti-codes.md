@@ -1,7 +1,7 @@
 ---
 pageTitle: Canetti Codes
-projectStatus: Live Site
-projectLink: https://canetti.codes/
+projectStatus: Archived
+projectLink: https://github.com/CanettiCodes/canetti.codes
 projectFeatureImage: /dist/images/canetticodes.jpg
 projectFeatureImageRetina: /dist/images/canetticodes@2x.jpg 
 projectType: Jamstack

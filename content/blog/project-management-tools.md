@@ -17,14 +17,31 @@ I've gone through my fair share of project management tools in the past few year
 * Trello
 * Basecamp
 * Trello (Again)
+* Todoist (Personal)/Toggl (Work)
 
 As you can see, I go back and forth alot. At the time of writing I'm in the process of moving from Basecamp to Trello, I originally moved to Basecamp because my company did so and I find it easier to use the same tool everywhere. That was a mistake.
 
 So, to try and save some people mucking about as I have going back and forth I thought I'd do a quick run down of three of these project management tools.
 
+## Todoist
+
+After using Trello for a while I decided that I needed something simpler that I could use to store other items such as my reading list and a list of 'awesome websites' that I constantly update and you can see [here](#). I've found this to be by far the best tool I've used so far and it's allowed me to consolidate other accounts such as Pocket into it.
+
+* ✅ Good for small projects
+* ✅ Mobile app is good
+* ✅ Quick to set up initally
+* ✅ Free tier offers loads of functionality
+* ✅ Great API
+* ✅ Can nest lists
+* ✅ Offers Kanban approach
+* ✅ Daily goal encourages progression
+* ❌ Be careful how many nested lists you use - it can get messy
+
+[Get started with Todoist](https://todoist.com/r/dan_canetti_glzypa)*
+
 ## Trello 
 
-By far my favourite (RIP [Wunderlist 💔](https://www.wunderlist.com/)), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what's been done to what's on hold.
+My former favourite (RIP [Wunderlist 💔](https://www.wunderlist.com/)), Trello offers a simple, agile approach to projects that definitely benefits those of us who need to see the whole picture all the time - from what's been done to what's on hold.
 
 * ✅ My favourite
 * ✅ Agile approach
@@ -70,5 +87,7 @@ I'd been hearing about Basecamp for years, when the company stated that we were 
 [Get started with Basecamp](https://basecamp.com/)
 
 ---
+
+***Last Updated:** Monday 2nd November 2020 to add Todoist.*
 
 **This is an affiliate link for which I may receive a small commission, at no extra cost to you, should you decide to sign up. I only use affiliate links on products/tools I actually use and recommend ✌️*

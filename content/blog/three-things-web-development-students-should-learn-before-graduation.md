@@ -22,6 +22,8 @@ Version Control allows you to save your code at different stages (versions) then
 
 ## Project Management
 
+See my post reviewing project management tools [here](/blog/project-management-tools/).
+
 This is crucial at University and at work and is the reason my Dissertation was completed successfully, there are a lot to choose from but I will just discuss the two I have used. Throughout university I used Zoho Projects but have since moved on to Asana (Developed by original Facebook developer Dustin Moskovitz) which I would recommend to anyone, the sleek redesign has drastically improved the product and impressed me enough to spend the time transferring tasks from Zoho. Regardless of the system you are using ensure that you keep it up to date with the latest projects you have been set.
 
 > "Asana specializes in helping teams manage workflows, and it’s the preeminent tool for the job."
@@ -42,4 +44,4 @@ When I started working in my current role during my final year I had to learn AS
 
 ---
 
-*Update 27/08/2019: I'm now using Trello for project management - [view all my gear here](/blog/current-setup/).*
+***Last Updated:** Monday 2nd November 2020 to add Todoist.*
