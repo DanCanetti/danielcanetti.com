@@ -46,8 +46,6 @@ import twitterblack from './images/icons/twitter-b.svg';
 import youtube from './images/icons/youtube.svg';
 import youtubeblack from './images/icons/youtube-b.svg';
 
-
-
 // Images - Homepage
 import mask from './images/facemask.png';
 import nomask from './images/nomask.png';
