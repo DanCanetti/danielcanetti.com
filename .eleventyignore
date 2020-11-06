@@ -1,4 +1,6 @@
 README.md
-partials/
 coming-soon/
-node_modules/@11ty/eleventy-plugin-rss/sample/
+node_modules/
+_site/
+demo/
+extras.html

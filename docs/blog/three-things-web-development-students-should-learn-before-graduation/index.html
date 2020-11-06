@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Webpack -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53667430-1');
+</script>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <title>Daniel Canetti • Advice for web development students</title>
+        <meta name="description" content="The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.">
+        <meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+<meta property="og:title" content="Daniel Canetti • " />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://danielcanetti.com/" />
+<meta property="og:image" content="https://danielcanetti.com" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • ">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="https://danielcanetti.com">
+<meta property="twitter:url" content="https://danielcanetti.com/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="sub post">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+            <nav>
+  <a class="logo" href="/">Dan's Blog.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <!--li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
+      </label>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li-->
+  </ul>
+</nav>
+
+            <img class="post--bg-image" src="/dist/images/adviceforwebdevelopmenstudents@2x.jpg" />
+            <div id="post" class="body dark post">
+                <div class="body__section body__section--post">
+                    <h1>Advice for web development students</h1>
+                    <div class="body__section--post-meta">
+                        <span>October 30, 2015</span>
+                        <span class="body__section--post-tag">Web Development</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <p>Developing at university and working in the real world is a big change, bigger than you may realize. Tighter deadlines, technical documentation, and fellow developers will all have a profound effect on the way you proceed after university and will help to shape you into a successful developer. The following three things will help the transition be a little smoother and may even improve your job prospects.</p>
+<h2>Version Control</h2>
+<p>Version control is, or should be, used by all development teams. Although Git and Team Foundation are commonly used there us a huge number of version control systems available; fortunately they are one and the same, get used to one and you should be able to use any of them. Personally I would recommend learning to use Git as it has been a requirement for over half of the jobs I have applied for.</p>
+<blockquote>
+<p>&quot;Git is the new fast-rising star of version control systems. Initially developed by Linux kernel creator Linus Torvalds, Git has recently taken the Web development community by storm.&quot;</p>
+</blockquote>
+<p>Smashing Magazine</p>
+<p>Version Control allows you to save your code at different stages (versions) then continue to work on it, this way if anything goes wrong in future developments a previous working version can be accessed. This is also useful when working on team projects as the source code and be branched to multiple developers allowing them all to make changes, then the system will merge the changes back to the source code. I didn’t use version control on projects at University and thinking back it would save me many hours of retracing my steps if I had, it would also have helped greatly to tie this in with the project management system and allow me to keep tabs on the state the code was in for each task.</p>
+<h2>Project Management</h2>
+<p>See my post reviewing project management tools <a href="/blog/project-management-tools/">here</a>.</p>
+<p>This is crucial at University and at work and is the reason my Dissertation was completed successfully, there are a lot to choose from but I will just discuss the two I have used. Throughout university I used Zoho Projects but have since moved on to Asana (Developed by original Facebook developer Dustin Moskovitz) which I would recommend to anyone, the sleek redesign has drastically improved the product and impressed me enough to spend the time transferring tasks from Zoho. Regardless of the system you are using ensure that you keep it up to date with the latest projects you have been set.</p>
+<blockquote>
+<p>&quot;Asana specializes in helping teams manage workflows, and it’s the preeminent tool for the job.&quot;</p>
+</blockquote>
+<p>PC Mag</p>
+<p>When a new assignment brief is released break it down into manageable sections in your notebook, then break each section into tasks and use the Project Management System (PMS) to keep track of which tasks are due when and the progress you have made. Make use of the description to fully layout your vision for the brief and the task, this way you can refer back easily without having to flick through a bloated notebook and then mark each task as complete; you will be able to refer back to completed tasks if they contain useful data.</p>
+<h2>Teach Yourself</h2>
+<p>In my opinion this could be the most useful skill for a postgraduate. Technology is constantly advancing and as developers it is our job to stay ahead of the curve and be in a position to implement new languages and technologies as they arrive in the marketplace. In order to do this many developers are self-taught in languages as their current role may not allow them to expand their knowledge as they wish.</p>
+<blockquote>
+<p>&quot;Most of the skills I use to make a living are skills I’ve learned on my own: Web design, desktop publishing, marketing, personal productivity skills, even teaching!&quot;</p>
+</blockquote>
+<p>Dustin Wax</p>
+<p>When I started working in my current role during my final year I had to learn ASP.NET along side working on University projects and my dissertation. Since then I have continued to work for the same company, my skill-set however has continued to expand as I use my portfolio site to expand my knowledge. I have vastly improved my jQuery knowledge, redeveloped my portfolio in SASS (which was new to me), used some new PHP code to incorporate my blog into my site, and pushed my CSS/Bootstrap capabilities to a new level. I achieved this by reading blogs such as A List Apart, seek advice through CodeProject, and using free tutorial sites like CodeAcademy.</p>
+<hr>
+<p><em><strong>Last Updated:</strong> Monday 2nd November 2020 to add Todoist.</em></p>
+
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share Advice for web development students</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text=Advice for web development students%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="footer__content">
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy" rel="noreferrer">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack" rel="noreferrer">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify" rel="noreferrer">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube" rel="noreferrer"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch" rel="noreferrer"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<nav>
+  <a class="logo" href="/">{% if pageClass == "sub contact" %}Contact {% endif %}Dan{% if pageClass == "sub" %}'s {{ pageTitle }}{% endif %}{% if pageClass == "sub post" %}'s Blog{% endif %}.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <!--li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
+      </label>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li-->
+  </ul>
+</nav>

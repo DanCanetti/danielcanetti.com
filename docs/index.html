@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Webpack -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53667430-1');
+</script>
+
+        <title>Daniel Canetti • A Web Developer</title>
+        <meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+<meta property="og:title" content="Daniel Canetti • A Web Developer" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://danielcanetti.com/" />
+<meta property="og:image" content="https://danielcanetti.com" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • A Web Developer">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="https://danielcanetti.com">
+<meta property="twitter:url" content="https://danielcanetti.com/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="home">
+      <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+        <nav>
+  <a class="logo" href="/">Dan.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <!--li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
+      </label>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li-->
+  </ul>
+</nav>
+
+        
+<div class="body body--home">
+    <div class="body__section body__section--intro body__section--fade-up">
+      <div class="body__section--intro__face" @mouseover="nofacemask = true" @mouseleave="nofacemask = false">
+        <img src="/dist/images/nomask.png" alt="" v-if="nofacemask" />
+        <img src="/dist/images/facemask.png" alt="" v-else />
+      </div>
+      <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
+    </div>
+    <div class="body__section">
+      <h2 class="sml">Work.</h2>
+      <div class="case-study-items__wrap">
+      
+        <div class="case-study-item case-study-item--home">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://townscaper.community/" class="l" target="_blank" rel="noopener" >Townscaper Community</a></h2>
+              <p>A place to share and discuss Townscaper builds with other users.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--home">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://aligngrowthsummit.com/" class="l" target="_blank" rel="noopener" >Align Growth Summit</a></h2>
+              <p>This annual event had a facelift for 2020 as well as some last minute changes due to the Covid-19 Pandemic.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--home">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://www.kbpro.com/" class="l" target="_blank" rel="noopener" >K.B Pro</a></h2>
+              <p>The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--home">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="https://www.emerald-kitchens.co.uk/" class="l" target="_blank" rel="noopener" >Emerald Kitchens</a></h2>
+              <p>Emerald Kitchens was due a website update to fit with it's new branding and diversified product offerings. I took up the challenge to redesign and rebuild the site, focussing on encouraging users to get in touch or pick up the phone.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <a href="/work/" class="l" >View All</a>
+    </div>
+    <div class="body__section">
+      <h2 class="sml">Blog.</h2>
+      <div class="case-study-items__wrap">
+      
+      
+        <div class="case-study-item case-study-item--post case-study-item--home">
+          <!--a href="/blog/three-things-web-development-students-should-learn-before-graduation/">
+            <img src="" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/three-things-web-development-students-should-learn-before-graduation/" target="_blank" rel="noopener" >Advice for web development students</a></h2>
+              <p>The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.</p>
+              <a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--post case-study-item--home">
+          <!--a href="/blog/being-a-woman-in-tech-sucks/">
+            <img src="" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/being-a-woman-in-tech-sucks/" target="_blank" rel="noopener" >Being a woman in tech sucks</a></h2>
+              <p>I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?</p>
+              <a href="/blog/being-a-woman-in-tech-sucks/" class="l">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--post case-study-item--home">
+          <!--a href="/blog/how-a-mentor-leaving-can-inspire-you/">
+            <img src="" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/how-a-mentor-leaving-can-inspire-you/" target="_blank" rel="noopener" >How a mentor leaving can inspire you</a></h2>
+              <p>Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.</p>
+              <a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-study-item case-study-item--post case-study-item--home">
+          <!--a href="/blog/gitlab-pages/">
+            <img src="" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="/blog/gitlab-pages/" target="_blank" rel="noopener" >GitLab Pages</a></h2>
+              <p>GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.</p>
+              <a href="/blog/gitlab-pages/" class="l">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <a href="/blog/" class="l" >View All</a>
+    </div>
+</div>
+      </div>
+      <footer>
+    <div class="footer__content">
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy" rel="noreferrer">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack" rel="noreferrer">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify" rel="noreferrer">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube" rel="noreferrer"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch" rel="noreferrer"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

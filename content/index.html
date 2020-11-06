@@ -1,0 +1,54 @@
+---
+layout: layout.liquid
+pageTitle: A Web Developer
+pageClass: home
+pageFeatureImage: /images/feature.jpg
+pageDesc: A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress builds to full bespoke builds.
+---
+
+<div class="body body--home">
+    <div class="body__section body__section--intro body__section--fade-up">
+      <div class="body__section--intro__face" @mouseover="nofacemask = true" @mouseleave="nofacemask = false">
+        <img src="/dist/images/nomask.png" alt="" v-if="nofacemask" />
+        <img src="/dist/images/facemask.png" alt="" v-else />
+      </div>
+      <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
+    </div>
+    <div class="body__section">
+      <h2 class="sml">Work.</h2>
+      <div class="case-study-items__wrap">
+      {% for post in collections.selectedproject reversed %}
+        <div class="case-study-item case-study-item--home">
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener" >{{ post.data.pageTitle }}</a></h2>
+              <p>{{ post.data.projectExcerpt }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a href="/work/" class="l" >View All</a>
+    </div>
+    <div class="body__section">
+      <h2 class="sml">Blog.</h2>
+      <div class="case-study-items__wrap">
+      {% assign allblogposts = collections.posts | reverse %}
+      {% for post in allblogposts limit: 4 %}
+        <div class="case-study-item case-study-item--post case-study-item--home">
+          <!--a href="{{ post.url }}">
+            <img src="{{ post.data.postFeatureImageFull }}" alt="" aria-label="Read More" />
+          </a-->
+          <div class="case-study-item__data">
+            <div class="case-study-item__data--content">
+              <h2><a href="{{ post.url }}" target="_blank" rel="noopener" >{{ post.data.postTitle }}</a></h2>
+              <p>{{ post.data.postExcerpt }}</p>
+              <a href="{{ post.url }}" class="l">Read More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a href="/blog/" class="l" >View All</a>
+    </div>
+</div>
