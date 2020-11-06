@@ -12,7 +12,7 @@ Grand Designs has been one of the staple design and architecture shows on TV sin
 
 ## Container House
 
-![Container House](/dist/images/favourite.jpg)
+![Container House](/dist/images/container-house.jpg)
 
 A young farmer and architect in Northern Ireland hopes to make a home out of four large shipping containers welded together to form a giant cross.
 
