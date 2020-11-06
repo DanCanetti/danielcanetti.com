@@ -159,7 +159,7 @@ new Vue({
 		}
 	},
 	data: {
-        nightMode: localStorage.getItem("nightMode") || false,
+        nightMode: localStorage.getItem("nightMode") || true,
         nofacemask: false,
         night :"/dist/images/moon.svg",
         day :'/dist/images/sun.svg',
