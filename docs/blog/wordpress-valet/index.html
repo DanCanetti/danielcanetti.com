@@ -88,9 +88,10 @@
 <p><strong>Please note:</strong> A lot of what I'm about to run through I followed from <a href="https://wpbeaches.com/setting-up-valet-on-macos-for-local-wordpress-development/">this guide</a>. I'm going to include some fixes for issues I ran into but I am in no way taking any credit for their work.</p>
 <h2>Installing Homebrew and the required packages</h2>
 <p>Homebrew is a package manager for MacOS, through this we can install PHP, MySQL and a whole load of other packages -you can <a href="https://formulae.brew.sh/cask/">search them all here</a>.</p>
-<p>Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command <code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</code>.
- 
-We now have Homebrew installed and can start to use this to install all the other packages we're going to need:</p>
+<p>Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command:</p>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre>
+<p>We now have Homebrew installed and can start to use this to install all the other packages we're going to need:</p>
 <ul>
 <li>Composer: <code>brew install composer</code></li>
 <li>PHP: <code>brew install php</code></li>
@@ -158,14 +159,14 @@ That's it, you can now spin up as many WordPress or Laravel projects as you like
     <div class="footer__content">
         <span class="copyright">
             Daniel Canetti &copy; 2020<br>
-            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy" rel="noreferrer">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack" rel="noreferrer">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify" rel="noreferrer">Netlify</a>, and Coffee.
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify">Netlify</a>, and Coffee.
         </span>
         <div class="footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github" rel="noreferrer"><img src="/dist/images/github.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter" rel="noreferrer"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube" rel="noreferrer"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
-            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch" rel="noreferrer"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram" rel="noreferrer"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
         </div>
     </div>
 </footer>

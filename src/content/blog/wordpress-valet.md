@@ -20,7 +20,11 @@ Yes, it is.
 
 Homebrew is a package manager for MacOS, through this we can install PHP, MySQL and a whole load of other packages -you can [search them all here](https://formulae.brew.sh/cask/). 
 
-Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`.
+Before we get to MySQL and PHP we need to actually install Homebrew. This is pretty straightforward - all we need to do is open up the Terminal and run this command:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
  
 We now have Homebrew installed and can start to use this to install all the other packages we're going to need:
 
