@@ -37,7 +37,7 @@ After using Trello for a while I decided that I needed something simpler that I 
 * ✅ Daily goal encourages progression
 * ❌ Be careful how many nested lists you use - it can get messy
 
-[Get started with Todoist](https://todoist.com/r/dan_canetti_glzypa)*
+<a href="https://todoist.com/r/dan_canetti_glzypa" rel="nofollow">Get started with Todoist*</a>
 
 ## Trello 
 
@@ -54,7 +54,7 @@ My former favourite (RIP [Wunderlist 💔](https://www.wunderlist.com/)), Trello
 * ❌ Mobile App can be a bit fiddly
 * ❌ Can only install one power-up on free version (choose wisely!)
 
-[Get started with Trello](https://trello.com/danielcanetti/recommend)*
+<a href="https://trello.com/danielcanetti/recommend" rel="nofollow">Get started with Trello*</a>
 
 ## Asana
 

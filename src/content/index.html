@@ -33,7 +33,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
     <div class="body__section">
       <h2 class="sml">Blog.</h2>
       <div class="case-study-items__wrap">
-      {% assign allblogposts = collections.posts | reverse %}
+      {% assign allblogposts = collections.posts %}
       {% for post in allblogposts limit: 4 %}
         <div class="case-study-item case-study-item--post case-study-item--home">
           <!--a href="{{ post.url }}">

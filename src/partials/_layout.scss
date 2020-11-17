@@ -8,7 +8,7 @@
 // Navigation
 nav {
   padding: 50px 100px;
-  position: absolute;
+  position: relative;
   z-index: 100;
   width: 100%;
   left: 0;
@@ -29,6 +29,9 @@ nav {
       margin-right: 40px;
       &:last-of-type {
         margin-right: 0;
+      }
+      @include sm {
+        margin-right: 20px;
       }
       &.toggle-nightMode {
         input {
@@ -100,18 +103,18 @@ nav {
   &.body--home {
     //height: calc(100vh - 20px);
     height: 100%;
-    padding: 120px 100px 0 100px;
+    padding: 0 100px 0 100px;
     @include sm {
       padding: 40px 40px 0 40px;
     }
   }
   &.body--sub {
-    padding: 200px 100px 0 100px;
+    padding: 100px 100px 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     @include sm {
-      padding: 175px 40px 0 40px;
+      padding: 50px 40px 0 40px;
     }
   }
   .body__section {
@@ -143,7 +146,7 @@ nav {
       padding: 0;
       @include sm {
         height: auto;
-        padding: 275px 0 75px 0;
+        padding: 200px 0;
       }
       .body__section--intro__face {
         cursor: none;
@@ -293,11 +296,6 @@ nav {
           border-top: 1px solid $dancanettigrey;
         }
       }
-    }
-  }
-  &.body--contact {
-    @include sm {
-      margin-top: 175px;
     }
   }
 }

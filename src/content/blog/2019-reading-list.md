@@ -18,7 +18,7 @@ A fast-paced yet insightful look into the mysterious Y Combinator and some of th
 
 I blazed through this on Audible in less than a week and would listen or read it again at some stage.
 
-[Buy The Launch Pad.](https://www.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=danielcanet01-21&creative=6738&linkCode=as2&creativeASIN=0670923494&linkId=674a67918e6c06893ed84c33a53a4071)
+<a href="https://www.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=danielcanet01-21&creative=6738&linkCode=as2&creativeASIN=0670923494&linkId=674a67918e6c06893ed84c33a53a4071" rel="nofollow">Buy The Launch Pad*</a>
 
 ## Onward
 
@@ -28,7 +28,7 @@ Howard Shultz talks through his return as CEO of Starbucks, the effect the finan
 
 This is a long read, but one I enjoyed and would recommend should you have an interest in Starbucks.
 
-[Buy Onward.](https://whttps//www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470977647&linkId=b543eddf855961466f8cb43884ee754cww.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=danielcanet01-21&creative=6738&linkCode=as2&creativeASIN=0670923494&linkId=674a67918e6c06893ed84c33a53a4071)
+<a href="https://whttps//www.amazon.co.uk/gp/product/0470977647/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0470977647&linkId=b543eddf855961466f8cb43884ee754cww.amazon.co.uk/gp/product/0670923494/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=danielcanet01-21&creative=6738&linkCode=as2&creativeASIN=0670923494&linkId=674a67918e6c06893ed84c33a53a4071" rel="nofollow">Buy Onward*</a>
 
 ## Start With Why
 
@@ -38,7 +38,7 @@ If you've seen any of Simon Sineks talks you'll be familiar with some of the sto
 
 For anyone in a management position or who aspires to one day be a manager I'd encourage you to read this book, there are some fantastic theories and pricinples to consider applying in your workplace.
 
-[Buy Start With Why.](https://www.amazon.co.uk/gp/product/0241958229/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0241958229&linkId=09ba3da2391879d7b3fc7369be52bd75)
+<a href="https://www.amazon.co.uk/gp/product/0241958229/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0241958229&linkId=09ba3da2391879d7b3fc7369be52bd75" rel="nofollow">Buy Start With Why*</a>
 
 ## Becoming
 
@@ -50,7 +50,7 @@ At a mammoth 19hr runtime it's by far the longest book I've listened to and Mich
 
 There aren't many take-aways from this book, but it's a great read for your next vacation.
 
-[Buy Becoming.](https://www.amazon.co.uk/gp/product/0241334144/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0241334144&linkId=d07c6596bdf28a7b14da00ec13eae1bb)
+<a href="https://www.amazon.co.uk/gp/product/0241334144/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0241334144&linkId=d07c6596bdf28a7b14da00ec13eae1bb" rel="nofollow">Buy Becoming*</a>
 
 ## The Upstarts
 
@@ -58,7 +58,7 @@ There aren't many take-aways from this book, but it's a great read for your next
 
 First of all, I must say that this is not as enjoyable as Hatching Twitter. That being said, the parts about Uber in particular are very interesting given their controversial history and learning about how Air B&B grew from an air mattress to a billion dollar company is aspirational.
 
-[Buy The Upstarts.](https://www.amazon.co.uk/gp/product/0552172588/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0552172588&linkId=174e7a1aee1251304d543d889d4c4cc2)
+<a href="https://www.amazon.co.uk/gp/product/0552172588/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0552172588&linkId=174e7a1aee1251304d543d889d4c4cc2" rel="nofollow">Buy The Upstarts*</a>
 
 ## Hatching Twitter
 
@@ -66,7 +66,7 @@ First of all, I must say that this is not as enjoyable as Hatching Twitter. That
 
 One of my all time favourites - a story of friendship, betrayal, deceit, and the founding of Twitter. It's all true and it's a real page turner.
 
-[Buy Hatching Twitter.](https://www.amazon.co.uk/gp/product/1444761978/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1444761978&linkId=ec4a7bbcad8c42b07c1f81ebfb2b46c1)
+<a href="https://www.amazon.co.uk/gp/product/1444761978/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1444761978&linkId=ec4a7bbcad8c42b07c1f81ebfb2b46c1" rel="nofollow">Buy Hatching Twitter*</a>
 
 ## Unsubscribe
 
@@ -74,7 +74,7 @@ One of my all time favourites - a story of friendship, betrayal, deceit, and the
 
 Exactly what is says on the tin. I read this very early on in my worklife and it really influenced how I handle my emails - if you find yourself inundated with emails, give this book a try.
 
-[Buy Unsubscribe.](https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01FE6V5KI&linkId=8233de69f6a5abf3b694efe449ef827a)
+<a href="https://www.amazon.co.uk/gp/product/B01FE6V5KI/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B01FE6V5KI&linkId=8233de69f6a5abf3b694efe449ef827a" rel="nofollow">Buy Unsubscribe*</a>
 
 ## Don't Make Me Think
 
@@ -82,7 +82,7 @@ Exactly what is says on the tin. I read this very early on in my worklife and it
 
 If you went to University to study web design or development you'll should have read this already, if not it's definitely worth a read.
 
-[Buy Don't Make Me Think.](https://www.amazon.co.uk/gp/product/0321344758/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321344758&linkId=779a6452e129a18a325c9f8a78626f63)
+<a href="https://www.amazon.co.uk/gp/product/0321344758/ref=as_li_tl?ie=UTF8&tag=danielcanet01-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0321344758&linkId=779a6452e129a18a325c9f8a78626f63" rel="nofollow">Buy Don't Make Me Think*</a>
 
 ---
 

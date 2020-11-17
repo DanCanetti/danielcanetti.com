@@ -33,21 +33,6 @@ module.exports = {
             },
           },
         ],
-        /*
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              sassOptions: {
-                outputStyle: 'compressed',
-              },
-            },
-          },
-        ],
-        */
       },
       {
         test: /\.(png|svg|jpg|gif|ico)$/,
