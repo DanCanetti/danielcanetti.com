@@ -23,6 +23,7 @@
 <!-- Webpack -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="/dist/ctti.css">
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -130,7 +131,7 @@ pageExcerpt: Pabst paleo seitan shoreditch 90's shabby chic.
 &lt;/html&gt;
 </code></pre>
 <p>As you can see in <code>**Fig 2**</code>, we're calling the meta from the <code>_includes</code> directory in the head of the document. Any include can be called in a template when using liquid as I do - <a href="https://www.11ty.io/docs/languages/liquid/">find out more here</a>.</p>
-<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `sub post` and</code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
+<p>You'll also notice that we're calling the other variables from the top of the document - remember this template can be applied to multiple pages. In the example liquid file we're calling the <code>, `sub post` and </code>. In <code>**Fig 1**</code> we've defined the page title and class for this page and these will be populated when the site is compiled. The `` pulls in everything after <code>**Fig 1**</code>.</p>
 <h2>Subpages</h2>
 <p>When creating subpages in a directory, such as blog posts, we can create a .json file which will apply the elements from <code>**Fig 1**</code> to all files in the directory. For example, we can apply the same liquid template and class to every blog post in the blog directory:</p>
 <pre><code>Fig 3.
