@@ -7,11 +7,15 @@ pageExcerpt: A selection of personal and professional web development projects i
 
 <div class="body body--sub">
   <div class="body__section body__section--case-study-items body__section--fade-up">
-    {% for post in collections.projects reversed %}
+    {% for post in collections.projects %}
     <a href="{{ post.data.projectLink }}" target="_blank" rel="noopener" class="case-study-item case-study-item--hover case-study-item--{{ post.data.pageType }}">
       <div class="case-study-item__img">
         <div class="case-study-item__img__image">
-            {% if post.data.projectFeatureImage %}
+            {% if post.data.projectFeatureVid %}
+            <video muted="" autoplay="" loop="" playsinline="">
+              <source src="{{ post.data.projectFeatureVid }}" type="video/mp4">
+            </video>
+            {% elsif post.data.projectFeatureImage %}
             <img src="{{ post.data.projectFeatureImage }}" srcset="{{ post.data.projectFeatureImageRetina }} 2x" alt="Cover Image. Visit site using the link below." aria-label="Read More" />
             {% else %}
             <img src="/dist/images/feature.jpg" alt="Cover Image. Visit site using the link below." aria-label="Read More" />

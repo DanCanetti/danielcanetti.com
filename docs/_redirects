@@ -41,7 +41,7 @@ https://danielcanetti.com/privacy-policy https://danielcanetti.com/ 301!
 https://danielcanetti.com/privacy-policy/ https://danielcanetti.com/ 301!
 https://danielcanetti.com/privacy-policy/feed https://danielcanetti.com/ 301!
 https://danielcanetti.com/projects https://danielcanetti.com/ 301!
-https://danielcanetti.com/search/{search_term_string}/feed/rss2/ https://danielcanetti.com/ 301!
+# https://danielcanetti.com/search/{search_term_string}/feed/rss2/ https://danielcanetti.com/ 301!
 https://danielcanetti.com/tag/architecture https://danielcanetti.com/ 301!
 https://danielcanetti.com/tag/architecture/feed https://danielcanetti.com/ 301!
 https://danielcanetti.com/tag/ci-cd https://danielcanetti.com 301!

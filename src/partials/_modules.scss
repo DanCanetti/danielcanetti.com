@@ -125,22 +125,33 @@
   @include sm {
     width: 75%;
   }
+  /*
   &:last-of-type, &:nth-last-of-type(2) {
     margin-bottom: 0;
   }
+  */
   &.case-study-item--hover {
     opacity: 1;
     @include transitionall(.3s);
     &:hover {
-      opacity: .7;
+      //opacity: .7;
+      .case-study-item__img {
+        .case-study-item__img__image {
+          img, video {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
   }
   @include sm {
     width: calc(100% - 15px);
     margin-bottom: 30px;
+    /*
     &:nth-last-of-type(2) {
       margin-bottom: 30px;
     }
+    */
   }
   img {
     width: 100%;
@@ -166,9 +177,18 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      overflow: hidden;
       img {
         object-fit: cover;
         height: 100%;
+        transform: scale(1);
+        @include transitionall(.3s);
+      }
+      video {
+        width: auto;
+        height: 101%;
+        transform: scale(1);
+        @include transitionall(.3s);
       }
     }
   }
@@ -330,6 +350,7 @@
     margin-bottom: 20px;
     label {
       font-size: 1rem;
+      @include transitionall(.3s);
     }
     input, textarea {
       height: 50px;
@@ -343,6 +364,11 @@
       &.parsley-error {
         border-bottom: 1px solid $dancanettialt;
       }
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
     }
     textarea {
       resize: vertical;
@@ -351,6 +377,12 @@
     }
     button {
       align-self: flex-end;
+      &:disabled {
+        //opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+        color: $dancanettialt;
+      }
     }
     ul.parsley-errors-list {
       list-style: none;
