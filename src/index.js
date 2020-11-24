@@ -190,11 +190,11 @@ $("#dancanetti_contact").submit(function(e) {
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize()).then(function() {
       //alert("Thank you!");
-      $(this).addClass('form--submitted');
-      $(this).find('button').html('Message Sent');
-      $(this).find('button').attr('disabled', 'true');
-      $(this).find('input').attr('disabled', 'true');
-      $(this).find('textarea').attr('disabled', 'true');
+      $('form').addClass('form--submitted');
+      $('form').find('button').html('Message Sent');
+      $('form').find('button').attr('disabled', 'true');
+      $('form').find('input').attr('disabled', 'true');
+      $('form').find('textarea').attr('disabled', 'true');
     });
 });
 
