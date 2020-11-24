@@ -166,7 +166,7 @@ new Vue({
   },
 });
 
-// Reading Time 
+// Reading Time - NOT WORKING
 document.addEventListener('DOMContentLoaded', (event) => {
     const post = document.getElementById("post");
     const readingTimeSummary = document.querySelector(".reading-time");
@@ -189,7 +189,12 @@ $("#dancanetti_contact").submit(function(e) {
     e.preventDefault();
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize()).then(function() {
-      alert("Thank you!");
+      //alert("Thank you!");
+      $(this).addClass('form--submitted');
+      $(this).find('button').html('Message Sent');
+      $(this).find('button').attr('disabled', 'true');
+      $(this).find('input').attr('disabled', 'true');
+      $(this).find('textarea').attr('disabled', 'true');
     });
 });
 
