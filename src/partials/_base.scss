@@ -26,10 +26,16 @@ $ds:             75px;
 
 // Media Queries
 $screen-sm: 576px;
+$screen-md: 1025px;
 @mixin sm {
    @media (max-width: #{$screen-sm}) {
        @content;
    }
+}
+@mixin md {
+  @media (max-width: #{$screen-md}) {
+      @content;
+  }
 }
 
 // Mixins
