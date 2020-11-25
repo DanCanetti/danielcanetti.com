@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        <title>Daniel Canetti • {{ pageTitle }}</title>
+        {% include social %}
+    </head>
+    <body class="{{ pageClass }}">
+      <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+        {% include nav %}
+        {{ content }}
+      </div>
+      {% include footer %}
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body, nav, footer, .body {
+  background: #111;
+}
+</style>
+
+<link rel="stylesheet" rel="async" href="/dist/ctti.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53667430-1');
+</script>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <title>Daniel Canetti • GitLab Pages</title>
+        <meta name="description" content="GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.">
+        <meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+<meta property="og:title" content="Daniel Canetti • " />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://danielcanetti.com/" />
+<meta property="og:image" content="https://danielcanetti.com" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • ">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="https://danielcanetti.com">
+<meta property="twitter:url" content="https://danielcanetti.com/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="sub post">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+            <nav>
+  <a class="logo" href="/">Dan's Blog.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <!--li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
+      </label>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li-->
+  </ul>
+</nav>
+
+            <img class="post--bg-image" src="/dist/images/gitlabpages@2x.jpg" />
+            <div id="post" class="body dark post">
+                <div class="body__section body__section--post">
+                    <h1>GitLab Pages</h1>
+                    <div class="body__section--post-meta">
+                        <span>February 06, 2019</span>
+                        <span class="body__section--post-tag">Web Development</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
+<p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
+<p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
+<h2>Prerequisites:</h2>
+<ul>
+<li>As mentioned above, the repo must not use server-side languages. <a href="https://gitlab.com/pages">See here for a complete list of supported languages</a> with example config files.</li>
+<li>A working repo with at least an index.html file.</li>
+</ul>
+<h2>The .gitlab-ci.yml file</h2>
+<p>This is the config file that will deploy the codebase to GitLab pages once pushed to the server, the below mostly consists of the html template GitLab generates and the only change I’ve made is to limit this to the staging branch of the project.</p>
+<pre><code>pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+    - staging
+</code></pre>
+<h2>Creating a .gitlab-ci.yml file</h2>
+<ol>
+<li>To generate this file for yourself, go to your repository and add a new file to the repo by clicking on the <code>+</code> and selecting <code>new file</code>.</li>
+<li>At the top of the next page you can select a template from the <code>choose type</code> dropdown, select <code>.gitlab-ci.yml</code> then click the <code>Apply a GitLab CI Yaml template</code> button and select the project type you’re working on. For this example we’ll choose <code>HTML</code>.</li>
+<li>A file very similar to the above should then be generated — you’ll notice the only difference is the <code>staging</code> branch I use.</li>
+<li>Commit the file to your repo, then navigate to <code>CI/CD</code> on the left navigation and you should see the pipeline is running.</li>
+<li>Once this has completed you should see the <code>Pages</code> option as appeared in the <code>Settings</code> menu on the left side. Inside here you should see a message which states <code>Congratulations! your pages are served under:</code> and a link to your page.</li>
+<li>You’re done!</li>
+</ol>
+<h2>Some things to be aware of</h2>
+<p>You can copy your <code>.gitlab-ci.yml</code> file to other projects, as long as you call your branch the same name it should work just fine.</p>
+<p>If you Group your projects, <strong>GitLab Pages can only be generated from repos in the top level of a group</strong>, I got stuck trying to generate Pages from a subgroup and this is not supported.</p>
+<p>Once you see the <code>Congratulations!</code> message it may take a short while for the propagation to take place before you actually see your page. Before then you’ll be served with a 404 page, that’s perfectly normal and you’ve done nothing wrong.</p>
+
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share GitLab Pages</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text=GitLab Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="footer__content">
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

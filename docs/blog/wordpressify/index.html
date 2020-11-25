@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body, nav, footer, .body {
+  background: #111;
+}
+</style>
+
+<link rel="stylesheet" rel="async" href="/dist/ctti.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53667430-1');
+</script>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <title>Daniel Canetti • Wordpressify</title>
+        <meta name="description" content="A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.">
+        <meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+<meta property="og:title" content="Daniel Canetti • " />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://danielcanetti.com/" />
+<meta property="og:image" content="https://danielcanetti.com" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • ">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="https://danielcanetti.com">
+<meta property="twitter:url" content="https://danielcanetti.com/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+    </head>
+    <body class="sub post">
+        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+            <nav>
+  <a class="logo" href="/">Dan's Blog.</a>
+  <ul> 
+    <li><a class="l" href="/work/">Work</a></li>
+    <li><a class="l" href="/blog/">Blog</a></li>
+    <li><a class="l" href="/contact/">Contact</a></li>
+    <!--li class="toggle-nightMode">
+      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
+        <transition name="fade">
+          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
+        </transition>
+      </label>
+      <input type="checkbox" id="theme-toggle" v-model="nightMode">
+    </li-->
+  </ul>
+</nav>
+
+            <img class="post--bg-image" src="/dist/images/wordpressify@2x.jpg" />
+            <div id="post" class="body dark post">
+                <div class="body__section body__section--post">
+                    <h1>Wordpressify</h1>
+                    <div class="body__section--post-meta">
+                        <span>May 09, 2019</span>
+                        <span class="body__section--post-tag">Web Development</span>
+                        <span class="reading-time"></span>
+                    </div>
+                    <p>WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via <a href="https://wppusher.com/">WP Pusher</a>.</p>
+<h2>Setting up MySQL Locally</h2>
+<p>The easiest approach to setting up WordPressify is to have a local instance of MySQL installed, this runs on the Mac and can be controlled MySQL from System Preferences.</p>
+<ul>
+<li>Download MySQL Community Server from the <a href="https://dev.mysql.com/downloads/mysql/">official site</a>.</li>
+<li>Follow the installation instructions.</li>
+</ul>
+<h2>Connecting to local MySQL via Sequel Pro</h2>
+<p>I prefer to use Sequel Pro to connect to MySQL rather than using the command line. You can <a href="https://www.sequelpro.com/">download Sequel Pro for free here</a>.</p>
+<ul>
+<li>Open Sequel Pro.</li>
+<li>Choose the Socket option.</li>
+<li>Enter the Username and Password you created during the MySQL install.</li>
+<li>You should now be connected.</li>
+</ul>
+<h2>Preparing to install WordPressify.</h2>
+<ul>
+<li>Create a new database.</li>
+<li>Create a new user or assign a current user the correct privileges.</li>
+<li>Keep note of the database name, username, and password. You’ll need these on the next step.</li>
+</ul>
+<h2>Installing WordPressify</h2>
+<p>These instructions can be found on the <a href="https://www.wordpressify.co/">WordPressify website</a>, I’ve included here for ease of use. I have a folder which I use for my Laravel Homestead sites and install each instance in here to keep my workflow simple.</p>
+<ul>
+<li>Using the command line navigate to your desired root directory.</li>
+<li>Using the command line navigate to your desired root directory - <code>git clone https://github.com/luangjokaj/wordpressify</code>.</li>
+<li>Install the NPM dependancies - <code>npm install</code>.</li>
+<li>Change the template name. Open the gulpfile.js and edit this line: <code>const themeName = 'wordpressify';</code>.</li>
+<li>Download the latest version of WordPress - <code>npm run install:wordpress</code>.</li>
+<li>Start the workflow and complete the WordPress Install - <code>npm run dev</code>.</li>
+<li>Connecting to local MySQL during the WordPress Install.
+<ul>
+<li>Add the database, username, and password.</li>
+<li>Use <code>127.0.0.1</code> as the host.</li>
+</ul>
+</li>
+<li>Add your site name, user name and password for the initial user.</li>
+<li>Your site should now be installed using WordPressify.</li>
+</ul>
+
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share Wordpressify</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/wordpressify/" target="_blank">
+                                Share on Facebook
+                            </a>
+                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
+                                Don't share on Facebook
+                            </a-->
+                            <a class="l" href="https://twitter.com/intent/tweet?text=Wordpressify%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/wordpressify/" target="_blank">
+                                Share on Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="footer__content">
+        <span class="copyright">
+            Daniel Canetti &copy; 2020<br>
+            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" aria-label="Go to Eleventy">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" aria-label="Go to Webpack">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" aria-label="Go to Netlify">Netlify</a>, and Coffee.
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" aria-label="Go to Github"><img src="/dist/images/github.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" aria-label="Go to Twitter"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
+            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" aria-label="Go to YouTube"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
+            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" aria-label="Go to Twitch"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
+            <a class="sl" href="https://www.instagram.com/dan_canetti_dev/" target="_blank" aria-label="Go to Instagram"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
