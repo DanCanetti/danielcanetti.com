@@ -16,16 +16,17 @@ nav {
   top: 0;
   display: flex;
   justify-content: space-between;
-  animation: fade-in 3s ease-in-out 1;
   @include sm {
     padding: 40px;
   }
   .logo {
     font-weight: $pfontbold;
+    animation: fade-in 3s ease-in-out 1;
   }
   ul {
     list-style: none;
     display: flex;
+    animation: fade-in 3s ease-in-out 1;
     li {
       margin-right: 40px;
       &:last-of-type {
@@ -134,6 +135,9 @@ nav {
     @include transitionall(0.3s);
     &.fade {
       opacity: 0.3;
+    }
+    &.body__section--fade {
+      animation: fade-in 2s ease-in-out 1;
     }
     &.body__section--fade-up {
       animation: fade-in-up 2s ease-in-out 1;
