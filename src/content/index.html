@@ -3,7 +3,7 @@ layout: layout.liquid
 pageTitle: A Web Developer
 pageClass: home
 pageFeatureImage: /images/feature.jpg
-pageDesc: A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress builds to full bespoke builds.
+pageDesc: A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress websites to fully bespoke builds.
 ---
 
 <div class="body body--home">
@@ -21,7 +21,7 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
         <div class="case-study-item case-study-item--home">
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener" >{{ post.data.pageTitle }}</a></h2>
+              <h2><a href="{{ post.data.projectLink }}" class="l" target="_blank" rel="noopener">{{ post.data.pageTitle }}</a></h2>
               <p>{{ post.data.projectExcerpt }}</p>
             </div>
           </div>
@@ -41,9 +41,9 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
           </a-->
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="{{ post.url }}" target="_blank" rel="noopener" >{{ post.data.postTitle }}</a></h2>
+              <h2><a href="{{ post.url }}" class="l" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
               <p>{{ post.data.postExcerpt }}</p>
-              <a href="{{ post.url }}" class="l">Read More</a>
+              <!--a href="{{ post.url }}" class="l">Read More</a-->
             </div>
           </div>
         </div>
