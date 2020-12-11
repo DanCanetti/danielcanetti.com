@@ -121,6 +121,14 @@ nav {
     @include sm {
       padding: 50px 40px 0 40px;
     }
+    &.body--sub--404 {
+      background-image: url(https://media.giphy.com/media/nDMyoNRkCesJdZAuuL/giphy-downsized.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 700px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
   .body__section {
     position: relative;
