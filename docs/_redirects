@@ -9,6 +9,7 @@ https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
 # New Redirects
 https://danielcanetti.com/current-setup/ https://danielcanetti.com/blog/2019-setup/ 301!
 https://danielcanetti.com/recommended-reading/ https://danielcanetti.com/blog/2019-reading-list/ 301!
+https://danielcanetti.com/moodboard/ https://danielcanetti.com/blog/ 301!
 
 # Historical Redirects
 https://danielcanetti.com/wordpressify https://danielcanetti.com/blog/wordpressify/ 301!
@@ -40,8 +41,7 @@ https://danielcanetti.com/no-access//feed/ https://danielcanetti.com/ 301!
 https://danielcanetti.com/privacy-policy https://danielcanetti.com/ 301!
 https://danielcanetti.com/privacy-policy/ https://danielcanetti.com/ 301!
 https://danielcanetti.com/privacy-policy/feed https://danielcanetti.com/ 301!
-https://danielcanetti.com/projects https://danielcanetti.com/ 301!
-# https://danielcanetti.com/search/{search_term_string}/feed/rss2/ https://danielcanetti.com/ 301!
+https://danielcanetti.com/projects https://danielcanetti.com/work/ 301!
 https://danielcanetti.com/tag/architecture https://danielcanetti.com/ 301!
 https://danielcanetti.com/tag/architecture/feed https://danielcanetti.com/ 301!
 https://danielcanetti.com/tag/ci-cd https://danielcanetti.com 301!
