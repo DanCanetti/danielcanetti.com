@@ -28,9 +28,9 @@ html, body, nav, footer, .body {
 
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -59,21 +59,31 @@ html, body, nav, footer, .body {
 <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="sub contact">
-        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+        <div id="wrapper"  class="wrapper night">
             <nav>
   <a class="logo" href="/">Contact Dan.</a>
   <ul> 
     <li><a class="l" href="/work/">Work</a></li>
     <li><a class="l" href="/blog/">Blog</a></li>
-    <li><a class="l" href="/contact/">Contact</a></li>
-    <!--li class="toggle-nightMode">
-      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
-        <transition name="fade">
-          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
-        </transition>
-      </label>
-      <input type="checkbox" id="theme-toggle" v-model="nightMode">
-    </li-->
+    <li class="hom"><a class="l" href="/contact/">Contact</a></li>
+    <li>
+      <div class="njs-toggle-menu">
+        <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+        <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - awesome websites"></span>
+        </span>
+        </label>
+        <div class="main-nav">
+          <ul>
+            <li><a class="l" href="/work/">Work</a></li>
+            <li><a class="l" href="/blog/">Blog</a></li>
+            <li><a class="l" href="/contact/">Contact</a></li>
+            <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
 </nav>
 

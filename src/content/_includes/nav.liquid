@@ -3,14 +3,24 @@
   <ul> 
     <li><a class="l" href="/work/">Work</a></li>
     <li><a class="l" href="/blog/">Blog</a></li>
-    <li><a class="l" href="/contact/">Contact</a></li>
-    <!--li class="toggle-nightMode">
-      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
-        <transition name="fade">
-          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
-        </transition>
-      </label>
-      <input type="checkbox" id="theme-toggle" v-model="nightMode">
-    </li-->
+    <li class="hom"><a class="l" href="/contact/">Contact</a></li>
+    <li>
+      <div class="njs-toggle-menu">
+        <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+        <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - awesome websites"></span>
+        </span>
+        </label>
+        <div class="main-nav">
+          <ul>
+            <li><a class="l" href="/work/">Work</a></li>
+            <li><a class="l" href="/blog/">Blog</a></li>
+            <li><a class="l" href="/contact/">Contact</a></li>
+            <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
 </nav>
