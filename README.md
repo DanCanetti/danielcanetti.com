@@ -1,6 +1,8 @@
 # Daniel Canetti Portfolio
 
-## Version: 2.0.2
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DanCanetti/danielcanetti.com?color=000&label=Release&style=flat-square">
+
+
 
 ## Status
 
