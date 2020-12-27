@@ -1,12 +1,6 @@
 # Daniel Canetti Portfolio
 
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DanCanetti/danielcanetti.com?color=000&label=Release&style=flat-square">
-
-
-
-## Status
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/32c1a90d-a757-43b2-a099-5dd9d014729d/deploy-status)](https://app.netlify.com/sites/danielcanetti/deploys)
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/DanCanetti/danielcanetti.com?color=000&label=Release&style=flat-square"> [![Netlify Status](https://api.netlify.com/api/v1/badges/32c1a90d-a757-43b2-a099-5dd9d014729d/deploy-status)](https://app.netlify.com/sites/danielcanetti/deploys)
 
 ## Build
 
