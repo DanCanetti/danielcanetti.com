@@ -28,9 +28,9 @@ html, body, nav, footer, .body {
 
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
@@ -59,30 +59,39 @@ html, body, nav, footer, .body {
 <meta property="twitter:creator" content="@Dan_Canetti">
     </head>
     <body class="home">
-      <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+      <div id="wrapper" class="wrapper night">
         <nav>
   <a class="logo" href="/">Dan.</a>
   <ul> 
     <li><a class="l" href="/work/">Work</a></li>
     <li><a class="l" href="/blog/">Blog</a></li>
-    <li><a class="l" href="/contact/">Contact</a></li>
-    <!--li class="toggle-nightMode">
-      <label for="theme-toggle" v-bind:class="{ 'night' : nightMode }">
-        <transition name="fade">
-          <span><img :src='day' key=1 v-if="nightMode" /><img :src='night' v-else /></span>
-        </transition>
-      </label>
-      <input type="checkbox" id="theme-toggle" v-model="nightMode">
-    </li-->
+    <li class="hom"><a class="l" href="/contact/">Contact</a></li>
+    <li>
+      <div class="njs-toggle-menu">
+        <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+        <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - awesome websites"></span>
+        </span>
+        </label>
+        <div class="main-nav">
+          <ul>
+            <li><a class="l" href="/work/">Work</a></li>
+            <li><a class="l" href="/blog/">Blog</a></li>
+            <li><a class="l" href="/contact/">Contact</a></li>
+            <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
 </nav>
 
         
 <div class="body body--home">
     <div class="body__section body__section--intro body__section--fade">
-      <div class="body__section--intro__face" @mouseover="nofacemask = true" @mouseleave="nofacemask = false">
-        <img src="/dist/images/nomask.png" alt="" v-if="nofacemask" />
-        <img src="/dist/images/facemask.png" alt="" v-else />
+      <div class="body__section--intro__face">
+        <img id="face" src="/dist/images/facemask.png" alt="" />
       </div>
       <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
     </div>
@@ -135,53 +144,53 @@ html, body, nav, footer, .body {
       
       
         <div class="case-study-item case-study-item--post case-study-item--home">
-          <!--a href="/blog/github-actions-hackathon/">
+          <!--a href="/blog/three-things-web-development-students-should-learn-before-graduation/">
             <img src="" alt="" aria-label="Read More" />
           </a-->
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="/blog/github-actions-hackathon/" class="l" title="Read GitHub Actions Hackathon">GitHub Actions Hackathon</a></h2>
-              <p>Dev.to teamed up with GitHub to put on a hackathon based on building and sharing GitHub Actions. I took part and logged my progress as I went along for this series.</p>
-              <!--a href="/blog/github-actions-hackathon/" class="l">Read More</a-->
+              <h2><a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l" title="Read Advice for web development students">Advice for web development students</a></h2>
+              <p>The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.</p>
+              <!--a href="/blog/three-things-web-development-students-should-learn-before-graduation/" class="l">Read More</a-->
             </div>
           </div>
         </div>
         
         <div class="case-study-item case-study-item--post case-study-item--home">
-          <!--a href="/blog/eleventy-github-pages/">
+          <!--a href="/blog/being-a-woman-in-tech-sucks/">
             <img src="" alt="" aria-label="Read More" />
           </a-->
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="/blog/eleventy-github-pages/" class="l" title="Read Host an Eleventy site on Github Pages">Host an Eleventy site on Github Pages</a></h2>
-              <p>Host your Eleventy site for free on Github pages.</p>
-              <!--a href="/blog/eleventy-github-pages/" class="l">Read More</a-->
+              <h2><a href="/blog/being-a-woman-in-tech-sucks/" class="l" title="Read Being a woman in tech sucks">Being a woman in tech sucks</a></h2>
+              <p>I’m a man and in 2015 I tried to find out what it’s like being a woman in the tech industry. Are these gender issues really as bad as people think?</p>
+              <!--a href="/blog/being-a-woman-in-tech-sucks/" class="l">Read More</a-->
             </div>
           </div>
         </div>
         
         <div class="case-study-item case-study-item--post case-study-item--home">
-          <!--a href="/blog/coniston-water-2020/">
+          <!--a href="/blog/how-a-mentor-leaving-can-inspire-you/">
             <img src="" alt="" aria-label="Read More" />
           </a-->
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="/blog/coniston-water-2020/" class="l" title="Read Coniston Water">Coniston Water</a></h2>
-              <p>After all the chaos and uncertainty in early 2020 it was nice to finally be able to get away to one of my favourite places in the world - the Lake District.</p>
-              <!--a href="/blog/coniston-water-2020/" class="l">Read More</a-->
+              <h2><a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l" title="Read How a mentor leaving can inspire you">How a mentor leaving can inspire you</a></h2>
+              <p>Rather than letting the loss of a mentor hinder your progress use it as a learning experience, don’t be afraid to step up and put yourself in the hot seat.</p>
+              <!--a href="/blog/how-a-mentor-leaving-can-inspire-you/" class="l">Read More</a-->
             </div>
           </div>
         </div>
         
         <div class="case-study-item case-study-item--post case-study-item--home">
-          <!--a href="/blog/wordpress-valet/">
+          <!--a href="/blog/gitlab-pages/">
             <img src="" alt="" aria-label="Read More" />
           </a-->
           <div class="case-study-item__data">
             <div class="case-study-item__data--content">
-              <h2><a href="/blog/wordpress-valet/" class="l" title="Read How to run WordPress locally on Mac using Valet">How to run WordPress locally on Mac using Valet</a></h2>
-              <p>Create and run WordPress websites directly from your Mac via the CLI.</p>
-              <!--a href="/blog/wordpress-valet/" class="l">Read More</a-->
+              <h2><a href="/blog/gitlab-pages/" class="l" title="Read GitLab Pages">GitLab Pages</a></h2>
+              <p>GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.</p>
+              <!--a href="/blog/gitlab-pages/" class="l">Read More</a-->
             </div>
           </div>
         </div>
