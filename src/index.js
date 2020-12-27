@@ -150,20 +150,11 @@ import './partials/main.scss';
 import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
 
-// Vue
-new Vue({
-  el: "#wrapper",
-	watch: {
-		nightMode: function() {
-			localStorage.setItem("nightMode", JSON.stringify(this.nightMode));
-		}
-	},
-	data: {
-        nightMode: localStorage.getItem("nightMode") || true,
-        nofacemask: false,
-        night :"/dist/images/moon.svg",
-        day :'/dist/images/sun.svg',
-  },
+// Animoji Toggle
+$("#face") .mouseover(function () {
+  this.src= "dist/images/nomask.png"
+}).mouseout(function () {
+   this.src= "dist/images/facemask.png"
 });
 
 // Reading Time - NOT WORKING

@@ -8,9 +8,8 @@ pageDesc: A developer with a broad skillset living and working in Yorkshire, Eng
 
 <div class="body body--home">
     <div class="body__section body__section--intro body__section--fade">
-      <div class="body__section--intro__face" @mouseover="nofacemask = true" @mouseleave="nofacemask = false">
-        <img src="/dist/images/nomask.png" alt="" v-if="nofacemask" />
-        <img src="/dist/images/facemask.png" alt="" v-else />
+      <div class="body__section--intro__face">
+        <img id="face" src="/dist/images/facemask.png" alt="" />
       </div>
       <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
     </div>

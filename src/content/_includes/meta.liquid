@@ -25,9 +25,12 @@ html, body, nav, footer, .body {
 
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
+
+{% if pageClass == "sub awesome-websites" %}
+<script type="text/javascript" defer src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script type="text/javascript" defer src="https://dancanetti.github.io/asset-bank/js/awesome-websites/get_awesome-websites.js"></script>
+{% endif %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53667430-1"></script>
