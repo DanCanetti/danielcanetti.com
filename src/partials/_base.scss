@@ -113,6 +113,12 @@ $pfontbold:   700;
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 $serif:       'Roboto Slab', serif;
 
+// Monospace
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
+$mono:       'JetBrains Mono', monospace;
+$monoreg:    400;
+$monobold:   800;
+
 // Basics
 html {
   background-color: $dancanettiblack;
@@ -165,6 +171,11 @@ body {
     color: $dancanettiwhite;
     a {
       color: $dancanettiwhite;
+      &.l {
+        &.alt {
+          color: $dancanettialt;
+        }
+      }
     }
     .body__section--post-tag {
       background: $dancanettiwhite;
@@ -263,6 +274,9 @@ a {
                 opacity: 1;
                 background: $dancanettialt;
             }
+        }
+        &.alt {
+          color: $dancanettialt;
         }
     }
 }

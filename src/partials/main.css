@@ -6,6 +6,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -201,6 +202,10 @@ body {
   color: #fff;
 }
 
+#wrapper.night a.l.alt {
+  color: #F92A82;
+}
+
 #wrapper.night .body__section--post-tag {
   background: #fff;
   color: #111;
@@ -306,6 +311,10 @@ a.l:before {
 a.l:hover:before {
   opacity: 1;
   background: #F92A82;
+}
+
+a.l.alt {
+  color: #F92A82;
 }
 
 button {
@@ -2022,6 +2031,58 @@ footer .copyright {
 
 .website-list li p a {
   text-decoration: underline;
+}
+
+ul.changelog {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #f0f0f0;
+  list-style: none;
+}
+
+ul.changelog li {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+ul.changelog li h3 {
+  width: 100%;
+  font-size: .75rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+ul.changelog li time {
+  width: 40%;
+}
+
+ul.changelog li span {
+  width: 60%;
+}
+
+@media (max-width: 576px) {
+  ul.changelog li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+  ul.changelog li time, ul.changelog li span {
+    width: 100%;
+  }
+  ul.changelog li h3 {
+    margin-bottom: 30px;
+  }
+  ul.changelog li time {
+    margin-bottom: 15px;
+  }
 }
 
 /*
