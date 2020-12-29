@@ -12,6 +12,7 @@ pageDesc: View all the historic changes for this site.
             <ul class="changelog">
                   {%- for commit in collections.recentChanges %}
                   <li>
+                        <h3>Commit: <a class="l alt" href="https://github.com/DanCanetti/danielcanetti.com/commit/{{ commit.hash }}" target="_blank" rel="external" aria-label="Go to this commit">{{ commit.abbrevHash }}</a></h3>
                         <time>{{ commit.authorDate | date: "%A, %d %B %Y" }}</time>
                         <span>{{ commit.subject }}</span>
                   </li>
