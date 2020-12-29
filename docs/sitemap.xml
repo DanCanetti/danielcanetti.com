@@ -1,147 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://danielcanetti.com/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/work/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/eleventy-github-pages/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/coniston-water-2020/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/wordpress-valet/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-pages/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/project-management-tools/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/0-to-wordpress-in-4-minutes/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/a-complete-guide-to-eleventy/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/craft-cms-and-homestead/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/2019-reading-list/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/2019-setup/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/my-favourite-grand-designs/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/email-isnt-broken/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/wordpressify/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/gitlab-pages/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/how-a-mentor-leaving-can-inspire-you/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/being-a-woman-in-tech-sucks/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/getting-started/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/further-progress/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/working-on-the-bash/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/npm/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://danielcanetti.com/blog/github-actions-hackathon/create-eleventy-site-action/</loc>
-  <lastmod>2020-12-11T23:06:20+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/blog/three-things-web-development-students-should-learn-before-graduation/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/being-a-woman-in-tech-sucks/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/gitlab-pages/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/wordpressify/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/email-isnt-broken/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/my-favourite-grand-designs/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/2019-setup/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/2019-reading-list/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/no-css-or-js-on-magento-2-after-install/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/craft-cms-and-homestead/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/a-complete-guide-to-eleventy/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/0-to-wordpress-in-4-minutes/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/project-management-tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/github-pages/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/wordpress-valet/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/coniston-water-2020/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/eleventy-github-pages/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/github-actions-hackathon/</loc>
+  </url>
+  
+  <url>
+    <loc>/404.html</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/kb-pro/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/townscaper-community/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/emerald-kitchens/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/align-growth-summit/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/canetti-codes/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/marketing-news-builder/</loc>
+  </url>
+  
+  <url>
+    <loc>/awesome-sites/</loc>
+  </url>
+  
+  <url>
+    <loc>/changelog/</loc>
+  </url>
 </urlset>
