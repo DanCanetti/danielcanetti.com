@@ -1,0 +1,21 @@
+---
+layout: sub.liquid
+pageTitle: Changelog
+pageClass: sub
+pageDesc: View all the historic changes for this site.
+---
+
+<div class="body body--sub">
+      <div class="body__section body__section--fade">
+            <h2>Latest Changes</h2>
+            <p>Capped at <strong>thirty (30)</strong> changes.</p>
+            <ul class="changelog">
+                  {%- for commit in collections.recentChanges %}
+                  <li>
+                        <time>{{ commit.authorDate | date: "%A, %d %B %Y" }}</time>
+                        <span>{{ commit.subject }}</span>
+                  </li>
+                  {%- endfor %}
+            </ul>
+      </div>
+</div>

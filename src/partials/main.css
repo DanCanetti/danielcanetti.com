@@ -2024,6 +2024,45 @@ footer .copyright {
   text-decoration: underline;
 }
 
+ul.changelog {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #f0f0f0;
+  list-style: none;
+}
+
+ul.changelog li {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul.changelog li time {
+  width: 40%;
+  font-weight: 700;
+}
+
+ul.changelog li span {
+  width: 60%;
+}
+
+@media (max-width: 576px) {
+  ul.changelog li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+  ul.changelog li time, ul.changelog li span {
+    width: 100%;
+  }
+  ul.changelog li time {
+    margin-bottom: 15px;
+  }
+}
+
 /*
     Page
     ---

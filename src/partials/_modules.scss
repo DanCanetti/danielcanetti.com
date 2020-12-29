@@ -785,3 +785,32 @@ $burgertransitions: .4s;
     }
   }
 }
+
+// Changelog
+ul.changelog {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid $dancanettigrey;
+  list-style: none;
+  li {
+    margin-bottom: 40px;
+    display: flex;
+    time {
+      width: 40%;
+      font-weight: $pfontbold;
+    }
+    span {
+      width: 60%;
+    }
+    @include sm {
+      flex-direction: column;
+      margin-bottom: 50px;
+      time, span {
+        width: 100%;
+      }
+      time {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -16,6 +16,16 @@
 <meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% if pageClass == "home" %}
+<meta property="og:title" content="Daniel Canetti">
+<meta property="og:description" content="A Yorkshire based Front-end Web Developer">
+<meta property="og:image" content="https://danielcanetti.com{{ pageFeatureImage }}">
+<meta property="og:url" content="https://danielcanetti.com/">
+<meta name="twitter:title" content="Daniel Canetti">
+<meta name="twitter:description" content="A Yorkshire based Front-end Web Developer">
+<meta name="twitter:image" content="https://danielcanetti.com{{ pageFeatureImage }}">
+<meta name="twitter:card" content="https://danielcanetti.com/">
+{% endif %}
 
 <style>
 html, body, nav, footer, .body {
