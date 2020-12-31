@@ -128,6 +128,8 @@ import containerhouse from './images/posts/my-favourite-grand-designs/container-
 import turfhouse from './images/posts/my-favourite-grand-designs/turf-house.jpg';
 import eastlondontiny from './images/posts/my-favourite-grand-designs/tiny-east-london-house.jpg';
 import steambent from './images/posts/my-favourite-grand-designs/steam-bent-timber-house.jpg';
+import yir2020 from './images/posts/year-in-review-2020/yir-2020.jpg';
+import yir2020retina from './images/posts/year-in-review-2020/yir-2020@2x.jpg';
 
 // Images - Work
 import townscapercommunity from './images/work/townscaper-community/townscapercommunity.jpg';
