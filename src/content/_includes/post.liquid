@@ -9,7 +9,7 @@
         {% include social %}
     </head>
     <body class="{{ pageClass }}">
-        <div id="wrapper" v-bind:class="{ 'night' : nightMode }" class="wrapper">
+        <div id="wrapper" class="wrapper night">
             {% include nav %}
             <img class="post--bg-image" src="{{ postFeatureImageRetina }}" />
             <div id="post" class="body dark post">
@@ -23,7 +23,7 @@
                     {{ content }}
                     <hr>
                     <div class="share__blog">
-                        <h3>Share {{ postTitle }}</h3>
+                        <h3>Share: {{ postTitle }}</h3>
                         <div class="share__blog__links">
                             <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
                                 Share on Facebook
