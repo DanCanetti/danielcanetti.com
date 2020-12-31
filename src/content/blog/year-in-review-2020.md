@@ -5,7 +5,7 @@ date: 2020-12-30
 postTag: Web Development
 postFeatureImage: /dist/images/yir-2020.jpg
 postFeatureImageRetina: /dist/images/yir-2020@2x.jpg
-postExcerpt: In a year to forget in most other aspects, danielcanetti.com has seen some major improvements and I've learnt some valuable new skills along the way.
+postExcerpt: 2020 is a year to forget in most aspects, however danielcanetti.com has seen some major improvements and I've learnt some valuable new skills along the way.
 ---
 
 2020 is a year to forget in most aspects, however danielcanetti.com has seen some major improvements and I've learnt some valuable new skills along the way. You may have noticed a visual change with a simpler layout and cleaner colour pallete, but there's much more to the update and here I'll take a deeper dive into the techincal changes and advancements that have been made to the site.
