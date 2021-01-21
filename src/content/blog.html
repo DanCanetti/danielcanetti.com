@@ -5,8 +5,18 @@ pageClass: sub
 pageDesc: Tutorials, thoughts on tech culture, dev and business tools. Here's where I share my web development experiences and musings from my life.
 ---
 
-<div class="body body--sub">
-  <div class="body__section body__section--case-study-items body__section--fade">
+<div class="body body--sub body--sub--blog">
+  <div class="body__section body__section--case-study-items body__section--case-study-items--blog body__section--fade">
+    <div class="filter-posts">
+      <select class="filter-posts__select">
+        <option selected disabled>Filter</option>
+        <option value="tag-all">All Posts</option>
+        <option value="tag-web-development">Web Development</option>
+        <option value="tag-life">Life</option>
+        <option value="tag-culture">Culture</option>
+        <option value="tag-hackathon">Hackathon</option>
+      </select>
+    </div>
     {% assign allblogposts = collections.posts | reverse %}
     {% for post in allblogposts %}  
       <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--post tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
