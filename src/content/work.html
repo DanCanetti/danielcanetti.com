@@ -6,9 +6,9 @@ pageDesc: A selection of personal and professional web development projects incl
 ---
 
 <div class="body body--sub">
-  <div class="body__section body__section--case-study-items body__section--fade">
+  <div class="body__section body__section--case-study-items body__section--case-study-items--work body__section--fade">
     {% for post in collections.projects %}
-    <a href="{{ post.data.projectLink }}" target="_blank" rel="noopener" class="case-study-item case-study-item--hover case-study-item--{{ post.data.pageType }}">
+    <a href="{{ post.data.projectLink }}" target="_blank" rel="noopener" class="case-study-item case-study-item--hover case-study-item--work">
       <div class="case-study-item__img">
         <div class="case-study-item__img__image">
             {% if post.data.projectFeatureVid %}
@@ -25,8 +25,8 @@ pageDesc: A selection of personal and professional web development projects incl
       <div class="case-study-item__data">
         <div class="case-study-item__data--content">
           <div class="case-study-item__meta">
-            <span>{{ post.data.projectType }}</span>
-            <span>{{ post.data.projectStatus }}</span>
+            <span><img src="/dist/images/{{ post.data.projectType }}.svg" class="{{ post.data.projectType }}" alt="{{ post.data.projectType }}" aria-label="{{ post.data.projectType }}" /> {{ post.data.projectType }}</span>
+            <span><img src="/dist/images/{{ post.data.projectStatus }}.svg" alt="{{ post.data.projectStatus }}" aria-label="{{ post.data.projectStatus }}" /> {{ post.data.projectStatus }}</span>
           </div>
           <div class="case-study-item__copy">
             <h2>{{ post.data.pageTitle }}</h2>

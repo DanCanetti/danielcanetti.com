@@ -1,6 +1,6 @@
 ---
 pageTitle: Emerald Kitchens
-projectStatus: Live Site
+projectStatus: Live
 projectLink: https://www.emerald-kitchens.co.uk/
 projectFeatureImage: /dist/images/emeraldkitchens.jpg
 projectFeatureImageRetina: /dist/images/emeraldkitchens@2x.jpg
