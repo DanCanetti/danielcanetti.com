@@ -317,6 +317,7 @@ $burgertransitions: .4s;
     }
     @include sm {
       width: 100%;
+      margin-bottom: 25px;
     }
     .case-study-item__data {
       position: absolute;
@@ -325,6 +326,13 @@ $burgertransitions: .4s;
       padding: 15px 30px;
       background: $dancanettiblack;
       min-width: 250px;
+      @include sm {
+        background: rgba(0,0,0,.5);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
       a {
         text-align: left;
       }
