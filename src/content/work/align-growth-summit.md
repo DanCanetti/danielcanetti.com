@@ -1,6 +1,6 @@
 ---
 pageTitle: Align Growth Summit
-projectStatus: Live Site
+projectStatus: Archived
 projectLink: https://archive.aligngrowthsummit.canetti.codes/
 projectFeatureImage: /dist/images/align-gs.jpg
 projectFeatureImageRetina: /dist/images/align-gs@2x.jpg

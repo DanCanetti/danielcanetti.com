@@ -123,6 +123,9 @@ nav {
     align-items: center;
     @include sm {
       padding: 50px 40px 0 40px;
+      &.body--sub--blog {
+        padding-top: 100px;
+      }
     }
     &.body--sub--404 {
       background-image: url(https://media.giphy.com/media/nDMyoNRkCesJdZAuuL/giphy-downsized.gif);
@@ -205,6 +208,10 @@ nav {
         flex-direction: column;
         width: 100%;
       }
+      &.body__section--case-study-items--work, &.body__section--case-study-items--blog {
+        width: 100%;
+        max-width: $maxwidth;
+      }
     }
     @include sm {
       padding: 0px 0px 50px 0px;
@@ -278,6 +285,15 @@ nav {
       a {
         @include transitionall(0.3s);
         z-index: 1;
+        text-decoration: underline;
+        text-decoration-color: rgba(255,255,255,.5);
+        text-decoration-thickness: .05em;
+        text-underline-offset: 5px;
+        @include transitionall(.3s);
+        &:hover {
+          text-decoration-color: $dancanettialt;
+        }
+        /*
         &:before {
           content: "";
           position: absolute;
@@ -294,6 +310,7 @@ nav {
             background: $dancanettialt;
           }
         }
+        */
       }
       ul,
       ol {

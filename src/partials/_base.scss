@@ -259,6 +259,12 @@ a {
     &.l {
         @include transitionall(.3s);
         z-index: 1;
+        text-decoration: underline;
+        text-decoration-color: rgba(255,255,255,.5);
+        text-decoration-thickness: .05em;
+        text-underline-offset: 5px;
+        @include transitionall(.3s);
+        /*
         &:before {
             content: "";
             position: absolute;
@@ -269,11 +275,15 @@ a {
             background: $dancanettigrey;
             @include transitionall(.3s);
         }
+        */
         &:hover {
+          text-decoration-color: $dancanettialt;
+          /*
             &:before {
                 opacity: 1;
                 background: $dancanettialt;
             }
+            */
         }
         &.alt {
           color: $dancanettialt;

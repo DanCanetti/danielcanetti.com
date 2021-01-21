@@ -24,6 +24,7 @@ import ms70 from './images/icons/ms-icon-70x70.png';
 import ms144 from './images/icons/ms-icon-144x144.png';
 import ms150 from './images/icons/ms-icon-150x150.png';
 import ms310 from './images/icons/ms-icon-310x310.png';
+import chevron from './images/icons/chevron.svg';
 
 // Images - Global
 import feature from './images/feature.jpg';
@@ -131,6 +132,14 @@ import steambent from './images/posts/my-favourite-grand-designs/steam-bent-timb
 import yir2020 from './images/posts/year-in-review-2020/yir-2020.jpg';
 import yir2020retina from './images/posts/year-in-review-2020/yir-2020@2x.jpg';
 
+// Images - Work Icons
+import archived from './images/icons/projects/archived.svg';
+import jamstack from './images/icons/projects/jamstack.svg';
+import javascript from './images/icons/projects/javascript.svg';
+import live from './images/icons/projects/live.svg';
+import magento from './images/icons/projects/magento.svg';
+import wordpress from './images/icons/projects/wordpress.svg';
+
 // Images - Work
 import townscapercommunity from './images/work/townscaper-community/townscapercommunity.jpg';
 import townscapercommunityretina from './images/work/townscaper-community/townscapercommunity@2x.jpg';
@@ -207,4 +216,15 @@ jQuery('.basic-slider').slick({
     autoplaySpeed: 5000,
     fade: true,
     cssEase: 'linear',
+  });
+
+  // Filter posts
+  var posttag = undefined;
+  $('.filter-posts__select').on('change', function() {
+    var posttag = this.value;
+    $(".case-study-item:not(."+ posttag +")").hide();
+    $("."+ posttag +"").show();
+    if(posttag == "tag-all") {
+      $(".case-study-item").show();
+    }
   });

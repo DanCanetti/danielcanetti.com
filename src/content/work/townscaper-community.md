@@ -1,6 +1,6 @@
 ---
 pageTitle: Townscaper Community
-projectStatus: Live Site
+projectStatus: Live
 projectLink: https://townscaper.community/
 projectFeatureImage: /dist/images/townscapercommunity.jpg
 projectFeatureImageRetina: /dist/images/townscapercommunity@2x.jpg
