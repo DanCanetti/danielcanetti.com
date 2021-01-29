@@ -309,8 +309,8 @@ $burgertransitions: .4s;
     width: 75%;
   }
   &.case-study-item--work {
-    width: 50%;
-    margin: 0;
+    width: calc(50% - 7.5px);
+    margin: 0 0 15px;
     position: relative;
     &:first-child, &:nth-child(4n) {
       width: 100%;
@@ -321,13 +321,16 @@ $burgertransitions: .4s;
     }
     .case-study-item__data {
       position: absolute;
-      bottom: 30px;
-      left: 30px;
+      bottom: 0;
+      left: 0;
       padding: 15px 30px;
-      background: $dancanettiblack;
+      background: rgba(0,0,0,.5);
       min-width: 250px;
+      height: 100%;
+      width: 100%;
+      align-items: flex-end;
       @include sm {
-        background: rgba(0,0,0,.5);
+        //background: rgba(0,0,0,.5);
         bottom: 0;
         left: 0;
         width: 100%;
