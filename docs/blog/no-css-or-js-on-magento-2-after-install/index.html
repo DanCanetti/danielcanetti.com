@@ -38,6 +38,7 @@ html, body, nav, footer, .body {
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <title>Daniel Canetti • No CSS or JS on Magento 2</title>
         <meta name="description" content="I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.">
+        
         <meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Daniel Canetti" />
 
@@ -53,6 +54,7 @@ html, body, nav, footer, .body {
 <meta property="twitter:site" content="@Dan_Canetti">
 <meta property="twitter:creator" content="@Dan_Canetti">
 
+        
     </head>
     <body class="sub post">
         <div id="wrapper" class="wrapper night">
@@ -86,11 +88,13 @@ html, body, nav, footer, .body {
             <div id="post" class="body dark post">
                 <div class="body__section body__section--post">
                     <h1>No CSS or JS on Magento 2</h1>
+                    
                     <div class="body__section--post-meta">
                         <span>October 22, 2019</span>
                         <span class="body__section--post-tag">Web Development</span>
                         <span class="reading-time"></span>
                     </div>
+                    
                     <p>Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.</p>
 <p>This turned out to be because NGINX was ignoring the <code>.htaccess</code> file in the <code>/pub/static/</code> directory. After some further examination I found that Magento 2 comes as standard with a sample NGINX config file and I simple need to point the site to it.</p>
 <h2>Pointing to the correct config</h2>
@@ -128,9 +132,11 @@ server {
                             <a class="l" href="https://twitter.com/intent/tweet?text=No CSS or JS on Magento 2%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/" target="_blank">
                                 Share on Twitter
                             </a>
+                            
                             <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
                                 Buy me a Coffee
                             </a>
+                            
                         </div>
                     </div>
                 </div>

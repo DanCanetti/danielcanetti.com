@@ -153,6 +153,14 @@ import emeraldkitchens from './images/work/emerald-kitchens/emeraldkitchens.jpg'
 import emeraldkitchensretina from './images/work/emerald-kitchens/emeraldkitchens@2x.jpg';
 import marketingnewsbuilder from './images/work/mn-builder/marketing-news-builder.jpg';
 import marketingnewsbuilderretina from './images/work/mn-builder/marketing-news-builder@2x.jpg';
+import nouveaulashes from './images/work/nouveau-lashes/nouveau-lashes.jpg';
+import nouveaulashesretina from './images/work/nouveau-lashes/nouveau-lashes@2x.jpg';
+import nouveaulashestdw from './images/work/nouveau-lashes/training-dates-widget.jpg';
+import nouveaulashestdwretina from './images/work/nouveau-lashes/training-dates-widget@2x.jpg';
+import nouveaulashestdwmobile from './images/work/nouveau-lashes/training-dates-widget-mobile.jpg';
+import nouveaulashesforms from './images/work/nouveau-lashes/forms.jpg';
+import nouveaulashesformsretina from './images/work/nouveau-lashes/forms@2x.jpg';
+import nouveaulashesformsmobile from './images/work/nouveau-lashes/forms-mobile.jpg';
 
 // CSS
 import './partials/main.scss';
@@ -162,7 +170,7 @@ import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
 
 // Animoji Toggle
-$("#face") .mouseover(function () {
+$("#face").mouseover(function () {
   this.src= "dist/images/nomask.png"
 }).mouseout(function () {
    this.src= "dist/images/facemask.png"

@@ -8,7 +8,7 @@ pageDesc: A selection of personal and professional web development projects incl
 <div class="body body--sub">
   <div class="body__section body__section--case-study-items body__section--case-study-items--work body__section--fade">
     {% for post in collections.projects %}
-    <a href="{{ post.data.projectLink }}" target="_blank" rel="noopener" class="case-study-item case-study-item--hover case-study-item--work">
+    <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--work">
       <div class="case-study-item__img">
         <div class="case-study-item__img__image">
             {% if post.data.projectFeatureVid %}

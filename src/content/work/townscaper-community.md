@@ -10,7 +10,7 @@ projectExcerpt: A place to share and discuss Townscaper builds with other users.
 seoIndex: noindex
 tags:
   - projects
-  - selectedproject
+# - selectedproject
 #date: 2020-07-01
-date: 2020-12-02
+date: 2020-12-03
 ---

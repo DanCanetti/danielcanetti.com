@@ -312,7 +312,7 @@ $burgertransitions: .4s;
     width: calc(50% - 7.5px);
     margin: 0 0 15px;
     position: relative;
-    &:first-child, &:nth-child(4n) {
+    &:first-child, &:nth-child(4n), &:last-child {
       width: 100%;
     }
     @include sm {
@@ -324,7 +324,12 @@ $burgertransitions: .4s;
       bottom: 0;
       left: 0;
       padding: 15px 30px;
-      background: rgba(0,0,0,.5);
+      //background: rgba(0,0,0,.5);
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000111+0,000111+100&0.3+0,0+100 */
+      background: -moz-linear-gradient(top,  rgba(0,1,17,0) 0%, rgba(0,1,17,0.3) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(0,1,17,0) 0%,rgba(0,1,17,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(0,1,17,0) 0%,rgba(0,1,17,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000111', endColorstr='#00000111',GradientType=0 ); /* IE6-9 */
       min-width: 250px;
       height: 100%;
       width: 100%;
@@ -920,5 +925,53 @@ ul.changelog {
     @include sm {
       width: 100%;
     }
+  }
+}
+
+// Project
+.project-image img {
+  width: 100vw;
+  margin-left: -200px;
+  margin-top: 15px;
+  @include md {
+    margin-left: -100px;
+  }
+  @include sm {
+    margin-left: -40px;
+  }
+}
+
+// Gist
+.gist {
+  margin-top: 30px;
+  width: 100%;
+  .blob-wrapper {
+    padding: 15px 0;
+    background-color: $dancanettiblack;
+    .highlight {
+      background-color: $dancanettiblack;
+    }
+  }
+  .blob-num:before {
+    color: #fff!important;
+  }
+  .pl-kos {
+    color: #fff!important;
+  }
+  .pl-smi {
+    color: #e01a4f!important;
+  }
+  .pl-s1 {
+    color: #53b3cb!important;
+  }
+  .pl-pds, .pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sra, .pl-sr .pl-sre {
+    color: #f15946!important;
+  }
+  .pl-en, .pl-c1, .pl-s3 {
+    color: #f9c22e!important;
+  }
+  .gist-meta {
+    background: $dancanettiblack!important;
+    color: #fff!important;
   }
 }
