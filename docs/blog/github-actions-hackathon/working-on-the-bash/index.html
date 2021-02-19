@@ -38,6 +38,7 @@ html, body, nav, footer, .body {
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <title>Daniel Canetti • GitHub Actions Hackathon - Working on the bash</title>
         <meta name="description" content="Part 3 - After the last error it was clear that it wasn't finding the `.sh` script in the Action. To resolve this I've amended the `.yml` and changed where to find the bash file - pointing it to the root instead.">
+        
         <meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Daniel Canetti" />
 
@@ -53,6 +54,7 @@ html, body, nav, footer, .body {
 <meta property="twitter:site" content="@Dan_Canetti">
 <meta property="twitter:creator" content="@Dan_Canetti">
 
+        
     </head>
     <body class="sub post">
         <div id="wrapper" class="wrapper night">
@@ -86,11 +88,13 @@ html, body, nav, footer, .body {
             <div id="post" class="body dark post">
                 <div class="body__section body__section--post">
                     <h1>GitHub Actions Hackathon - Working on the bash</h1>
+                    
                     <div class="body__section--post-meta">
                         <span>September 01, 2020</span>
                         <span class="body__section--post-tag">Hackathon</span>
                         <span class="reading-time"></span>
                     </div>
+                    
                     <p>After the last error it was clear that it wasn't finding the <code>.sh</code> script in the Action. To resolve this I've amended the <code>.yml</code> and changed where to find the bash file - pointing it to the root instead.</p>
 <p>After testing, the error had changed to say <code>Can't find 'action.yml', 'action.yaml' or 'Dockerfile' under '[dir]'. Did you forget to run actions/checkout before running your local action?</code>. As far as I know I'm running the checkout correctly but it's a new error to tackle... we seem to be getting somewhere.</p>
 <p>Just to make sure I've checked the logs and it is indeed checking out the Repo okay. I've read up some more and it seems like I might need a Dockerfile, which I've now created using <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">this</a> from the documentation which will run Linux. I've also renamed the <code>main.yml</code> to <code>action.yml</code>.</p>
@@ -122,9 +126,11 @@ html, body, nav, footer, .body {
                             <a class="l" href="https://twitter.com/intent/tweet?text=GitHub Actions Hackathon - Working on the bash%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/github-actions-hackathon/working-on-the-bash/" target="_blank">
                                 Share on Twitter
                             </a>
+                            
                             <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
                                 Buy me a Coffee
                             </a>
+                            
                         </div>
                     </div>
                 </div>

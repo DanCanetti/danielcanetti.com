@@ -6,23 +6,65 @@ projectFeatureImage: /dist/images/kbpro.jpg
 projectFeatureImageRetina: /dist/images/kbpro@2x.jpg 
 projectFeatureVid: https://www.kbpro.com/wp-content/uploads/2020/01/homepage_video_large.mp4
 projectType: Wordpress
-projectExcerpt: The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.
+projectExcerpt: A ground-up rebuild on the latest version of WordPress wrapped around a recently re-skinned Magento store.
 seoIndex: all
 tags: 
   - projects
   - selectedproject
   - homeprojects
-date: 2020-12-01
+date: 2020-12-02
 ---
 
-The K.B Pro Shop was in need of a fresh look and refined approach to it's product configurations. In 2019 I took the lead on the shop redesign project with a primary focus on refining the user experience and increasing revenue.
+A ground-up rebuild on the latest version of WordPress wrapped around a recently re-skinned Magento store. The site was built working closely with the designers at every stage of the build.
 
----
+## Training Dates 
 
-This redesign was required as the previous skin was riddled with design and user experience issues. On the homepage alone there were a number of noticeable flaws: the basket icon seemed to randomly placed in the header, the main body of the homepage was a duplication of the navigation, the about text and latest products were too far down the page and appeared below the first fold - to name a few.
+The training dates page pulls from an api endpoint, this is essentially the full-page version of the [Nouveau Lashes Training Dates Widget](/work/nouveau-lashes/#training-dates-widget).
 
-To rectify this I've stripped the site right back to the brands colour pallete, making use of the white space and following the designers input when possible. The focus of the homepage is now the latest promotion(s), which are featured in a carousel, and links to the main categories of the site sit just beneath. Additonally, we refined the navigation to simplify the category offerings which allows for an improved user experience and potenitally an increase in sales as users can find their desired product easier.
+## Bespoke Training Sliders
 
-## Configuration
+On the training pages the designers wanted a bespoke slider that would overlay the copy, whoch fades away, as the content was navigated. After some complex JS calculations and layering of elements we achieved the desired result.
 
-On the previous version of the K.B Pro shop the pigment products were set up separately, using categories to define size and having a unique product per colour - simplifying this was crucial to improving the design and user experience. We rebuilt these into configurable products with size and pigment colour as product options and slashed the number of products in category creating a much simpler approach.
+</div>
+
+<div class="project-image">
+  <picture>
+    <source srcset="/dist/images/treatment-calculator@2x.jpg" media="(min-width: 1000px)">
+    <source srcset="/dist/images/treatment-calculator.jpg" media="(min-width: 577px)">
+    <img srcset="/dist/images/treatment-calculator-mobile.jpg" alt="Training Dates Widget">
+  </picture>
+</div>
+
+<div class="body__section body__section--post body__section--project-part body__section--{{ projectType | downcase }}">
+
+## Treatment Calculator
+
+The treatment calculator allows a potential trainee to work out their potential earnings depending on the number of treatments performed per week and how much they could charge per treatment.
+
+## Webforms
+
+Forms are built on a per-page basis with each field and checkbox optional. Validation is perfomted using [parsley](https://parsleyjs.org/) and [recaptcha](https://www.google.com/recaptcha/about/) to prevent spam submission. 
+
+</div>
+
+<div class="project-image">
+  <picture>
+    <source srcset="/dist/images/brow-guide@2x.jpg" media="(min-width: 1000px)">
+    <source srcset="/dist/images/brow-guide.jpg" media="(min-width: 577px)">
+    <img srcset="/dist/images/brow-guide-mobile.jpg" alt="Training Dates Widget">
+  </picture>
+</div>
+
+<div class="body__section body__section--post body__section--{{ projectType | downcase }}">
+
+## Brow Style Guide
+
+An innovative idea from the design team, the Brow Style Guide deomstrates the effect each of the new glider needles have on persons brow. The effects can be toggled and layered above one another as the customer would in a treatment.
+
+[View Brow Style Guide](https://www.kbpro.com/brow-style-guide/)
+
+## Glider Launch
+
+A bespoke design, The Glider Landing page outside any of the current templates for the site to add some flair to this campaign and the new product launch.
+
+[View page](https://www.kbpro.com/glider/)
