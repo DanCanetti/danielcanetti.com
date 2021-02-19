@@ -32,11 +32,11 @@ A new section of the site consisting of several new templates.
 
 The salon finder already existed on the site and pull data from an api endpoint. The design was cleaned up and brought inline with the recent changes.
 
-[Visit Salon Finder](https://nouveaulashes.com/salon-finder/)
+[View Salon Finder](https://nouveaulashes.com/salon-finder/)
 
 </div>
 
-<div class="project-image">
+<div id="training-dates-widget" class="project-image">
   <picture>
     <source srcset="/dist/images/training-dates-widget@2x.jpg" media="(min-width: 1000px)">
     <source srcset="/dist/images/training-dates-widget.jpg" media="(min-width: 577px)">
@@ -53,6 +53,8 @@ Used on several sites across the group, the Training Dates widget pulls from an 
 ## Book Eyelash Training
 
 A basic landing page, the dropdown selection populates a URL into the link below and sends the user to a more informative page or to book the training online. The locations section is populated dynamically by pulling in the children of an exsisting page.
+
+[View page](https://nouveaulashes.com/book-eyelash-training/)
 
 </div>
 
