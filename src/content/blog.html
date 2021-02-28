@@ -37,6 +37,9 @@ pageDesc: Tutorials, thoughts on tech culture, dev and business tools. Here's wh
             </div>
             <div class="case-study-item__copy">
               <h2>{{ post.data.postTitle }}</h2>
+              {% if forloop.first == true %}
+              <p>{{ post.data.postExcerpt }}</p>
+              {% endif %}
             </div>
           </div>
         </div>
