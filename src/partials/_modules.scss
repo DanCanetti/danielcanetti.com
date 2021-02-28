@@ -305,6 +305,35 @@ $burgertransitions: .4s;
   display: flex;
   flex-direction: column;
   margin-bottom: 60px; // 4x 15px
+  &--post {
+    order: 3;
+    &:first-of-type {
+      order: 1;
+    }
+  }
+  @include minsm {
+    &--post {
+      &:first-of-type {
+        flex-direction: row;
+        width: 100%;
+        .case-study-item__img {
+          width: 70%;
+          margin-right: 30px;
+        }
+        .case-study-item__data {
+          width: calc(30% - 25px);
+          .case-study-item__data--content {
+            .case-study-item__meta, .case-study-item__copy {
+              justify-content: flex-start!important;
+              h2 {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   @include sm {
     width: 75%;
   }
@@ -847,6 +876,69 @@ $burgertransitions: .4s;
   }
 }
 
+// Marvel Movie List
+.mcu-list {
+  list-style: none;
+  margin: 100px 0 0 0!important;
+  padding: 0!important;
+  max-width: 100%!important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include sm {
+    margin-top: 50px!important;
+  }
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 48.5%;
+    margin-bottom: 30px!important;
+    text-align: center;
+    img {
+      border-radius: 25px;
+      margin-bottom: 15px!important;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+      @include transitionall(0.3s);
+      &.nwatched {
+        opacity: .5;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        &.nwatched {
+          opacity: 1;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      right: 18px;
+      top: 10px;
+      background: $dancanettiwhite;
+      color: $dancanettiblack;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      font-size: .7rem;
+      &.status {
+        right: auto;
+        left: 18px;
+        &--watched {
+          background: #4CAF50;
+        }
+        &--nwatched {
+          background: #FF9800;
+        }
+      }
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+
 // Changelog
 ul.changelog {
   margin-top: 50px;
@@ -894,10 +986,12 @@ ul.changelog {
 
 // Filter Posts
 .filter-posts {
-  position: absolute;
-  top: -70px;
+  position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  order: 2;
   @include sm {
     width: calc(100% - 15px);
   }
@@ -905,13 +999,17 @@ ul.changelog {
     content: "";
     position: absolute;
     top: 14px;
-    right: 16px;
+    left: 145px;
     z-index: 10;
-    background-image: url('../images/icons/chevron.svg');
+    background-image: url('../images/icons/filter-chevron.svg');
     background-size: 12px;
     height: 12px;
     width: 12px;
     transform: rotate(180deg);
+    @include sm {
+      right: 16px;
+      left: auto;
+    }
   }
   select {
     width: 170px;

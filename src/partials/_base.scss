@@ -32,6 +32,11 @@ $screen-md: 1025px;
        @content;
    }
 }
+@mixin minsm {
+  @media (min-width: #{$screen-sm}) {
+      @content;
+  }
+}
 @mixin md {
   @media (max-width: #{$screen-md}) {
       @content;

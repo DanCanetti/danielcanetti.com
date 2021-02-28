@@ -30,9 +30,6 @@ html, body, nav, footer, .body {
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
-
-
-
 <script async defer data-website-id="a770c3a4-ed9d-4369-a6cf-d800ddf680ab" src="https://analytics.danielcanetti.com/umami.js"></script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -116,7 +113,7 @@ html, body, nav, footer, .body {
 <li>WP CLI Valet Command: <code>wp package install git@github.com:aaemnnosttv/wp-cli-valet-command.git</code></li>
 </ul>
 <h2>Expanding the PHP Memory Limits</h2>
-<p>At this point we're going to tweak our PHP installation to expand the memory. Run <code>php --ini</code> to find the config file and then nano into that file, for me this was <code>nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini</code>. Change limits to 1024M in all 3 places and then restart the service: <code>brew service restart mysql</code>.</p>
+<p>At this point we're going to tweak our PHP installation to expand the memory. Run <code>php --ini</code> to find the config file and then nano into that file, for me this was <code>nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini</code>. Change limits to 1024M in all 3 places and then restart the service: <code>brew services restart mysql</code>.</p>
 <h2>The MySQL Issue</h2>
 <p>In the guide I followed they recommended to run <code>brew install mysql@5.7</code> but I later had issues with this when trying to use the WP CLI tool. After an hour of so investigating I found someone else who'd ran into this issue but has found a solution. So, for this guide I'm going to recommend you install the latest version of MySQL and follow the rest of this guide to get up and running.</p>
 <h2>Installing Valet</h2>
@@ -136,8 +133,11 @@ Once that's done you can exit out of MySQL and we can start looking at the WP CL
 <p>Earlier on we installed the WP CLI tool via Homebrew and it's Valet package, now we've got all the other bits and bobs out of the way we can can get our WordPress site installed.</p>
 <p>Navigate to your projects folder, once again for me this is <code>/Documents/Projects/</code>, and then run <code>wp valet new wordpressvalet</code>. You'll see the WP CLI tool doing it's thing and, thanks to the changes we made earlier on the SQL, we shouldn't run into any issues. Once this is complete your site will be available in the browser at <a href="https://wordpresstest.test/">https://wordpresstest.test/</a>. 
 That's it, you can now spin up as many WordPress or Laravel projects as you like and run them in the browser directly from your Mac.</p>
+<p>The default user credentials are <code>admin</code> and <code>admin</code>. These should be changed asap and <strong>never</strong> used on a live site.</p>
 <hr>
 <p>Hopefully this has been of some help and a big thanks to <a href="https://wpbeaches.com/">WP Beaches</a> and <a href="https://jonathandesrosiers.com/">Jonathan Desrosiers</a> for their articles that helped me get all set up and running.</p>
+<hr>
+<p><em><strong>Last Updated:</strong> Monday 22nd February 2021 to correct a typo on the brew service command and new user creds.</em></p>
 <hr>
 <h2>Sources</h2>
 <ul>
