@@ -305,14 +305,14 @@ $burgertransitions: .4s;
   display: flex;
   flex-direction: column;
   margin-bottom: 60px; // 4x 15px
-  &--post {
+  &--post--blog {
     order: 3;
     &:first-of-type {
       order: 1;
     }
   }
   @include minsm {
-    &--post {
+    &--post--blog {
       &:first-of-type {
         flex-direction: row;
         width: 100%;
