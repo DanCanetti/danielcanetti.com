@@ -19,7 +19,7 @@ pageDesc: Tutorials, thoughts on tech culture, dev and business tools. Here's wh
     </div>
     {% assign allblogposts = collections.posts | reverse %}
     {% for post in allblogposts %}  
-      <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--post tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
+      <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--post case-study-item--post--blog tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
         <div class="case-study-item__img">
           <div class="case-study-item__img__image">
               {% if post.data.postFeatureImage %}
