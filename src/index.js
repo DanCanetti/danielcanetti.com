@@ -24,7 +24,7 @@ import ms70 from './images/icons/ms-icon-70x70.png';
 import ms144 from './images/icons/ms-icon-144x144.png';
 import ms150 from './images/icons/ms-icon-150x150.png';
 import ms310 from './images/icons/ms-icon-310x310.png';
-import chevron from './images/icons/chevron.svg';
+import filterchevron from './images/icons/filter-chevron.svg';
 
 // Images - Global
 import feature from './images/feature.jpg';
@@ -131,6 +131,8 @@ import eastlondontiny from './images/posts/my-favourite-grand-designs/tiny-east-
 import steambent from './images/posts/my-favourite-grand-designs/steam-bent-timber-house.jpg';
 import yir2020 from './images/posts/year-in-review-2020/yir-2020.jpg';
 import yir2020retina from './images/posts/year-in-review-2020/yir-2020@2x.jpg';
+import marvelmcu from './images/posts/mcu/mcu.jpg';
+import marvelmcuretina from './images/posts/mcu/mcu@2x.jpg';
 
 // Images - Work Icons
 import archived from './images/icons/projects/archived.svg';
@@ -177,12 +179,82 @@ import './partials/main.scss';
 // JS
 import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
+import showdown from 'showdown';
 
 // Animoji Toggle
 $("#face").mouseover(function () {
   this.src= "dist/images/nomask.png"
 }).mouseout(function () {
    this.src= "dist/images/facemask.png"
+});
+
+// Awesome Websites
+$.ajax({
+  url: 'https://api.todoist.com/rest/v1/tasks?project_id=2244262525',
+  type: 'GET',
+  beforeSend: function (xhr) {
+      xhr.setRequestHeader('Authorization', 'Bearer 33f22738b05f81309169eb418bcb10e32e8b59cb');
+  },
+  data: {},
+  success: function (result) {
+      $.each(result, function (key, value) {
+          // Parse Markdown
+          var converter   = new showdown.Converter(),
+              fullurl     = value.content,
+              parsedurl   = converter.makeHtml(fullurl);
+          // Get URL for Favicon
+          var getname     = /\[([^)]+)\]/;
+          var sitename    = getname.exec(value.content);
+          var getsitename = sitename.toString().split(',')[1];
+          var parsestart  = parsedurl.replace('<p><a href="https://','');
+          var parseend    = parsestart.substr(0, parsestart.lastIndexOf('/"'));
+          // Append to list
+          $('.website-list').append('<li><img height="16" width="16" src="https://www.google.com/s2/favicons?domain=' + parseend + '" />' + parsedurl + '</li>');
+          $(".website-list li a").attr("target" , "_blank");
+      });
+  },
+  error: function () {
+      console.log('Error getting websites.');
+  },
+});
+
+// Marvel Cinematic Universe
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; 
+if(mm<10) { mm='0'+mm; } 
+var yyyy = today.getFullYear();
+var tdate = yyyy + '-' + mm + '-' + dd;
+
+$.ajax({
+  url: 'https://mcuapi.herokuapp.com/api/v1/movies/',
+  type: 'GET',
+  data: {},
+  success: function (result) {
+    var titles    = result.data;
+    var viewed    = [1,2,3,4,5,6,7,8,9,10,11,13,14];
+    
+    $.each(titles, function (id, data) {
+      // Append to list
+      if(data.release_date < tdate) {
+        // Set viewed status
+        if($.inArray(data.id, viewed) > -1) {
+          var wstatus     = 'watched';
+          var wstatusval  = 'watched';
+        } else {
+          var wstatus     = 'nwatched';
+          var wstatusval  = 'pending';
+        }
+        // Get year
+        var date      = data.release_date;
+        var dateparts = date.split('-');
+        $('.mcu-list').append('<li><input type="hidden" name="movie_id" value="' + data.id + '"><img src="' + data.cover_url + '" alt="' + data.title + '"' + ' class="' + wstatus + '"' + ' />' + '<span' + ' class="status status--' + wstatus + '"' + '>' + wstatusval + '</span>' + '<span>' + dateparts[0] + '</span>' + '</li>');
+      }
+    });
+  },
+  error: function () {
+      console.log('Error getting movies.');
+  },
 });
 
 // Reading Time - NOT WORKING

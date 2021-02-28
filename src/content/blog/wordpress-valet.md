@@ -39,7 +39,7 @@ We also need to install the package that links WP CLI and Valet together:
 
 ## Expanding the PHP Memory Limits
 
-At this point we're going to tweak our PHP installation to expand the memory. Run `php --ini` to find the config file and then nano into that file, for me this was `nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini`. Change limits to 1024M in all 3 places and then restart the service: `brew service restart mysql`.
+At this point we're going to tweak our PHP installation to expand the memory. Run `php --ini` to find the config file and then nano into that file, for me this was `nano /usr/local/etc/php/7.3/conf.d/php-memory-limits.ini`. Change limits to 1024M in all 3 places and then restart the service: `brew services restart mysql`.
 
 ## The MySQL Issue
 
@@ -72,9 +72,15 @@ Earlier on we installed the WP CLI tool via Homebrew and it's Valet package, now
 Navigate to your projects folder, once again for me this is `/Documents/Projects/`, and then run `wp valet new wordpressvalet`. You'll see the WP CLI tool doing it's thing and, thanks to the changes we made earlier on the SQL, we shouldn't run into any issues. Once this is complete your site will be available in the browser at [https://wordpresstest.test/](https://wordpresstest.test/). 
 That's it, you can now spin up as many WordPress or Laravel projects as you like and run them in the browser directly from your Mac.
 
+The default user credentials are `admin` and `admin`. These should be changed asap and **never** used on a live site.
+
 ---
 
 Hopefully this has been of some help and a big thanks to [WP Beaches](https://wpbeaches.com/) and [Jonathan Desrosiers](https://jonathandesrosiers.com/) for their articles that helped me get all set up and running.
+
+---
+
+***Last Updated:** Monday 22nd February 2021 to correct a typo on the brew service command and new user creds.*
 
 ---
 
