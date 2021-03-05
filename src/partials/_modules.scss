@@ -5,6 +5,34 @@
     E.G. callouts, sidebar sections, product lists
 */
 
+// Breadcrumbs
+.breadcrumbs {
+  padding: 25px 100px;
+  margin-top: -5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: $dancanettiwhite;
+  background-color: #171717;
+  @include sm {
+    justify-content: center;
+  }
+  a {
+    color: $dancanettiwhite;
+    margin: 0 10px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,.5);
+    text-decoration-thickness: .05em;
+    text-underline-offset: 5px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+
 // Burger Menu Variables
 $bar-height: 1px; // Height of bars
 $bar-width: 24px; // Width of large bars
@@ -1071,5 +1099,50 @@ ul.changelog {
   .gist-meta {
     background: $dancanettiblack!important;
     color: #fff!important;
+  }
+}
+
+// Tools
+// Agenda/Timeline Parser
+.body__section--tool {
+  @include sm {
+    section {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .timeline-creation {
+    @include sm {
+      flex-direction: column;
+    }
+    div {
+      background-color: #000;
+      button:before {
+        display: none;
+      }
+      @include sm {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+  .preview h2 {
+    color: $dancanettiwhite;
+  }
+  .event-agenda {
+    max-width: 100%;
+    h2 {
+      color: $dancanettiwhite;
+      font-size: 1.5rem;
+    }
+    table tr td {
+      background-color: transparent;
+      &:first-child
+      {
+        &:before, &:after {
+          background: $dancanettiwhite;
+        }
+      }
+    }
   }
 }

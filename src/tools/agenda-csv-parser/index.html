@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Daniel Canetti • Tools • Agenda/Time Parser</title>
+    <meta name="description" content="A responsive event agenda/timeline CVS parser.">
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Daniel Canetti" />
+    <meta property="og:title" content="Daniel Canetti • Tools • Agenda/Time Parser" />
+    <meta property="og:description" content="A responsive event agenda/timeline CVS parser." />
+    <meta property="og:url" content="https://danielcanetti.com/tools/agenda-csv-parser/" />
+    <meta property="og:image" content="https://danielcanetti.com/dist/images/feature.jpg" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Daniel Canetti • Tools • Agenda/Time Parser">
+    <meta property="twitter:description" content="A responsive event agenda/timeline CVS parser.">
+    <meta property="twitter:image" content="https://danielcanetti.com/dist/images/feature.jpg">
+    <meta property="twitter:url" content="https://danielcanetti.com/ools/agenda-csv-parser/">
+    <meta property="twitter:site" content="@Dan_Canetti">
+    <meta property="twitter:creator" content="@Dan_Canetti">
+
+    <link rel="stylesheet" rel="async" href="/dist/ctti.css">
+    <script type="text/javascript" defer src="dist/parse.js"></script>
+    <link rel="stylesheet" rel="async" href="dist/agenda-csv-parser.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div class="sub">
+    <div id="wrapper" class="wrapper night">
+        <nav>
+            <a class="logo" href="/">Dan's Tools.</a>
+            <ul> 
+                <li><a class="l" href="/">Home</a></li>
+              <li><a class="l" href="/tools/">Back to tools</a></li>
+            </ul>
+          </nav>
+        <div class="body body--sub">
+            <div class="body__section body__section--case-study-items body__section--tool body__section--fade">
+                <h1>Timeline Parser</h1>
+                <section>
+                    <div class="timeline-creation">
+                        <div class="download-csv">
+                            <p><strong>1. Download Demo CSV</strong></p>
+                            <span>Use this file as a starting point.</span>
+                            <a class="btn" href="downloads/demo.csv" download>Download</a>
+                        </div>
+                        <div class="upload-csv">
+                            <p><strong>2. Upload CSV</strong></p>
+                            <span>Update the CSV to your suit requirements and upload.</span>
+                            <input id="file" type="file" accept=".csv">
+                            <button id="create" disabled>Create Agenda/Timeline</button>
+                        </div>
+                        <div class="copy-code">
+                            <p><strong>3. Get code</strong></p>
+                            <span>Download your agenda/timeline and the styling.</span>
+                            <button id="download" disabled>Get Files</button>
+                        </div>
+                    </div>
+                </section>
+            
+                <section class="preview">
+                    <h2>Agenda/Timeline Preview</h2>
+                    <div id="timeline-content">
+                        <div id="agenda" class="event-agenda">
+                            <div class="timeline">
+                                <h2>Your Agenda/Timeline Name</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit dui nec facilisis porttitor.
+                                </p>
+                                <table class="table">
+                                    <tbody class="timeline__body">
+                                        <!-- Timeline/Agenda Parsed Here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

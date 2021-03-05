@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const webpack = require('webpack');
 
 module.exports = {
@@ -13,6 +14,11 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: 'ctti.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/tools", to: "../tools/" },
+      ],
     }),
   ],
   module: {

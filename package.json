@@ -17,6 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "browser-sync": "^2.26.14",
+    "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.2",
     "eleventy-plugin-recent-changes": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
