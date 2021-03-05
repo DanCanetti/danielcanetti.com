@@ -26,6 +26,15 @@
         <div id="wrapper" class="wrapper night">
             {% include nav %}
             <img class="post--bg-image" src="{% if pageClass == "project" %}{{ projectFeatureImageRetina }}{% else %}{{ postFeatureImageRetina }}{% endif %}" />
+            {% if pageClass == "project" %}
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <a href="/work/">Work</a> / <span>{{ pageTitle }}</span>
+            </div>
+            {% else %}
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>{{ postTitle }}</span>
+            </div>
+            {% endif %}
             <div id="post" class="body dark post">
                 <div class="body__section body__section--post{% if pageClass == "project" %} body__section--project-part body__section--{{ projectType | downcase }}{% endif %}">
                     <h1>{% if pageClass == "project" %}{{ pageTitle }}{% else %}{{ postTitle }}{% endif %}</h1>
