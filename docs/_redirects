@@ -6,7 +6,16 @@ https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
 # Redirect beta subdomain to primary domain
 https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
 
-# New Redirects
+# Simplified design
+https://danielcanetti.com/blog/ https://danielcanetti.com/ 302!
+https://danielcanetti.com/contact/ https://danielcanetti.com/blog/ 302!
+https://danielcanetti.com/work/ https://danielcanetti.com/about/ 302!
+https://danielcanetti.com/work/townscaper-community/ https://danielcanetti.com/about/ 302!
+https://danielcanetti.com/case-studies/emerald-kitchens/ https://danielcanetti.com/work/emerald-kitchens/ 301!
+https://danielcanetti.com/work/align-growth-summit/ https://danielcanetti.com/about/ 302!
+https://danielcanetti.com/work/canetti-codes/ https://danielcanetti.com/about/ 302!
+
+# 2020 Redirects
 https://danielcanetti.com/current-setup/ https://danielcanetti.com/blog/2019-setup/ 301!
 https://danielcanetti.com/recommended-reading/ https://danielcanetti.com/blog/2019-reading-list/ 301!
 https://danielcanetti.com/moodboard/ https://danielcanetti.com/blog/ 301!

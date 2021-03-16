@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/dist/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/dist/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/dist/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/dist/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/dist/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/dist/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+html, body, nav, footer, .body {
+  background: #fff;
+}
+</style>
+
+<link rel="stylesheet" rel="async" href="/dist/ctti.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="text/javascript" defer src="/dist/bundle.js"></script>
+<script async defer data-website-id="a770c3a4-ed9d-4369-a6cf-d800ddf680ab" src="https://analytics.danielcanetti.com/umami.js"></script>
+        <title>Daniel Canetti • A 2021 guide to Eleventy</title>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <meta name="description" content="A follow-up to my 2019 article, A complete guide to Eleventy, with updates about webpack and my boilerplate.">
+        <meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+
+<meta property="og:title" content="Daniel Canetti • A 2021 guide to Eleventy" />
+<meta property="og:description" content="A follow-up to my 2019 article, A complete guide to Eleventy, with updates about webpack and my boilerplate." />
+<meta property="og:url" content="https://danielcanetti.com/blog/eleventy-2021/" />
+<meta property="og:image" content="https://danielcanetti.com/dist/images/acompleteguidetoeleventy@2x.jpg" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • A 2021 guide to Eleventy">
+<meta property="twitter:description" content="A follow-up to my 2019 article, A complete guide to Eleventy, with updates about webpack and my boilerplate.">
+<meta property="twitter:image" content="https://danielcanetti.com/dist/images/acompleteguidetoeleventy@2x.jpg">
+<meta property="twitter:url" content="https://danielcanetti.com/blog/eleventy-2021/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+
+    </head>
+    <body class="sub post">
+        <div id="wrapper" class="wrapper night">
+            <nav>
+  <a class="logo" href="/">Dan.</a>
+  <ul> 
+    <li>
+      <div class="njs-toggle-menu">
+        <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
+        <label for="njs-toggle-menu--toggle">
+        <span class="toggle-menu__toggle-menu-icon">
+          <span class="toggle-menu-icon__toggle-menu-icon-inner" aria-label="More menu options - awesome websites"></span>
+        </span>
+        </label>
+        <div class="main-nav">
+          <ul>
+            <li><a class="l" href="/about/">About</a></li>
+            <li><a class="l" href="/tools/">Tools</a></li>
+            <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+            <img class="post--bg-image" src="/dist/images/acompleteguidetoeleventy@2x.jpg" />
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <span>Blog</span> / <span>A 2021 guide to Eleventy</span>
+            </div>
+            <div id="post" class="body dark post">
+                <div class="body__section body__section--post">
+                    <h1>A 2021 guide to Eleventy</h1>
+                    <div class="body__section--post-meta">
+                        <span>March 13, 2021</span>
+                        <span class="body__section--post-tag">Web Development</span>
+                        
+                        <span class="reading-time"></span>
+                    </div>
+                    <p>This is a follow-up to my 2019 article, <a href="/blog/a-complete-guide-to-eleventy/">A complete guide to Eleventy</a>. Since then I've integrated webpack and created a boilerplate to help people get started with Eleventy in 2021, which I'll breakdown here so we can really understand what is going on.</p>
+<h2>The boilerplate</h2>
+<p>The boilerplate can be found <a href="https://github.com/DanCanetti/eleventy-boilerplate">here</a>, a blank version <a href="https://github.com/DanCanetti/eleventy-boilerplate-blank">here</a>, and the demo is at <a href="https://thisboilerplate.rocks/">thisboilerplate.rocks</a>.</p>
+<h2>Eleventy Config</h2>
+<p>Our eleventy site is configured in the <code>eleventy.js</code> file.</p>
+<pre><code>const recentChanges = require('eleventy-plugin-recent-changes');
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(recentChanges, {
+    commits: 30, // The maxmium number of commits to add to the collection, before filtering.
+  });
+
+  return {
+    dir: {
+      output: &quot;docs&quot;,
+      input: &quot;src/content&quot;
+  }
+  };
+};
+</code></pre>
+<p>In this example, we're adding the eleventy-plugin-recent-changes plugin config which is not actually used by default on the boilerplate, but is used <a href="/changelog/">here</a>. It's included as a starting point for anyone wanting to add config for a plugin.</p>
+<p>We're also declaring that the site should be output to <code>docs</code> rather than the default <code>_site</code> dir and we're telling eleventy to compile from the <code>src/content</code> dir.</p>
+<h2>Webpack</h2>
+<p>For those who are unsure <a href="https://webpack.js.org/">webpack</a> is a bundler built primarily for JS but which can be used for a variety of other tooling such as image bundling and css pre-processing.</p>
+<p>Let's take a look at the complete <code>webpack.config.js</code> file and then work through it.</p>
+<pre><code>const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'docs/dist'),
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: 'boilerplate.css',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: (resourcePath, context) =&gt; {
+                // publicPath is the relative path of the resource to the context
+                // e.g. for ./css/admin/main.css the publicPath will be ../../
+                // while for ./css/main.css the publicPath will be ../
+                return path.relative(path.dirname(resourcePath), context) + '/';
+              },
+            },
+          },
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                outputStyle: 'compressed',
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+          name: '[name].[ext]',
+        },
+      },
+    ],
+  },
+  externals: {
+    jquery: 'jQuery',
+    vue: 'Vue',
+  }
+};
+</code></pre>
+
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share: A 2021 guide to Eleventy</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/eleventy-2021/" target="_blank" aria-label="Share on Facebook">
+                                Facebook
+                            </a>
+                            <a class="l" href="https://twitter.com/intent/tweet?text=A 2021 guide to Eleventy%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/eleventy-2021/" target="_blank" aria-label="Share on Twitter">
+                                Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank" aria-label="Buy me a Coffee">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="footer__content">
+        <span class="copyright">
+            Daniel Canetti &copy; 2021<br>
+            <a class="l" href="/about/" aria-label="About Dan">About</a><a class="l" href="/tools/" aria-label="Useful development tools">Tools</a><a class="l" href="/awesome-sites/" aria-label="Awesome Websites">Inspiration</a>
+        </span>
+        <div class="footer__content__slinks">
+            <a class="sl" href="https://github.com/DanCanetti" target="_blank" rel="noopener" aria-label="Go to Github"><img src="/dist/images/github-b.svg" alt="GitHub" /></a>
+            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener" aria-label="Go to Twitter"><img src="/dist/images/twitter-b.svg" alt="Twitter" /></a>
+            <!--a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" rel="noopener" aria-label="Go to YouTube"><img src="/dist/images/youtube-b.svg" alt="Youtube" /></a-->
+            <!--a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" rel="noopener" aria-label="Go to Twitch"><img src="/dist/images/twitch-b.svg" alt="Twitch" /></a-->
+            <a class="sl" href="https://www.instagram.com/dan_canetti/" target="_blank" rel="noopener" aria-label="Go to Instagram"><img src="/dist/images/instagram-b.svg" alt="Instagram" /></a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

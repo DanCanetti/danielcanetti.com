@@ -6,28 +6,18 @@
 */
 
 body {
-    &.awesome-websites {
-        h2 {
-            width: 100%;
-            text-align: center;
-            @include sm {
-                text-align: left;
+    &.post {
+        .footer__content {
+            padding: 50px;
+            &:before {
+                width: calc(100% - 100px);
             }
-        }
-    }
-}
-
-.body {
-    &.body--contact {
-        .body__section.body__section--post {
-            h2 {
-                &:first-of-type {
-                    margin-top: 0;
+            @include sm {
+                padding: 50px 40px;
+                &:before {
+                    width: calc(100% - 80px);
                 }
             }
         }
-    }
-    &.post {
-        padding-top: 50px;
     }
 }

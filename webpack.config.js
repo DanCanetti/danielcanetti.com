@@ -18,6 +18,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "./src/tools", to: "../tools/" },
+        { from: "./src/_redirects", to: "../" },
       ],
     }),
   ],
@@ -45,7 +46,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif|ico)$/,
+        test: /\.(png|svg|jpg|gif|ico|mp4)$/,
         loader: 'file-loader',
         options: {
           outputPath: 'images',

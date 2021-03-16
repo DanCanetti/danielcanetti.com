@@ -51,6 +51,9 @@ import youtubeblack from './images/icons/youtube-b.svg';
 import mask from './images/facemask.png';
 import nomask from './images/nomask.png';
 
+// Video - About
+import about from './videos/about.mp4';
+
 // Images - Blog
 import zerotowordpress from './images/posts/0-to-wordpress-in-4-minutes/zerotowordpress.jpg';
 import zerotowordpressretina from './images/posts/0-to-wordpress-in-4-minutes/zerotowordpress@2x.jpg';
@@ -173,6 +176,10 @@ import nouveaulashesforms from './images/work/nouveau-lashes/forms.jpg';
 import nouveaulashesformsretina from './images/work/nouveau-lashes/forms@2x.jpg';
 import nouveaulashesformsmobile from './images/work/nouveau-lashes/forms-mobile.jpg';
 
+// Images - Tools
+import timelineparser from './images/tools/timeline-parser.jpg';
+import timelineparserretina from './images/tools/timeline-parser@2x.jpg';
+
 // CSS
 import './partials/main.scss';
 
@@ -181,48 +188,41 @@ import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
 import showdown from 'showdown';
 
-// Animoji Toggle
-$("#face").mouseover(function () {
-  this.src= "dist/images/nomask.png"
-}).mouseout(function () {
-   this.src= "dist/images/facemask.png"
-});
-
 // Awesome Websites
 $.ajax({
   url: 'https://api.todoist.com/rest/v1/tasks?project_id=2244262525',
   type: 'GET',
   beforeSend: function (xhr) {
-      xhr.setRequestHeader('Authorization', 'Bearer 33f22738b05f81309169eb418bcb10e32e8b59cb');
+    xhr.setRequestHeader('Authorization', 'Bearer 33f22738b05f81309169eb418bcb10e32e8b59cb');
   },
   data: {},
   success: function (result) {
-      $.each(result, function (key, value) {
-          // Parse Markdown
-          var converter   = new showdown.Converter(),
-              fullurl     = value.content,
-              parsedurl   = converter.makeHtml(fullurl);
-          // Get URL for Favicon
-          var getname     = /\[([^)]+)\]/;
-          var sitename    = getname.exec(value.content);
-          var getsitename = sitename.toString().split(',')[1];
-          var parsestart  = parsedurl.replace('<p><a href="https://','');
-          var parseend    = parsestart.substr(0, parsestart.lastIndexOf('/"'));
-          // Append to list
-          $('.website-list').append('<li><img height="16" width="16" src="https://www.google.com/s2/favicons?domain=' + parseend + '" />' + parsedurl + '</li>');
-          $(".website-list li a").attr("target" , "_blank");
-      });
+    $.each(result, function (key, value) {
+      // Parse Markdown
+      var converter = new showdown.Converter(),
+        fullurl = value.content,
+        parsedurl = converter.makeHtml(fullurl);
+      // Get URL for Favicon
+      var getname = /\[([^)]+)\]/;
+      var sitename = getname.exec(value.content);
+      var getsitename = sitename.toString().split(',')[1];
+      var parsestart = parsedurl.replace('<p><a href="https://', '');
+      var parseend = parsestart.substr(0, parsestart.lastIndexOf('/"'));
+      // Append to list
+      $('.website-list').append('<li><img height="16" width="16" src="https://www.google.com/s2/favicons?domain=' + parseend + '" />' + parsedurl + '</li>');
+      $(".website-list li a").attr("target", "_blank");
+    });
   },
   error: function () {
-      console.log('Error getting websites.');
+    console.log('Error getting websites.');
   },
 });
 
 // Marvel Cinematic Universe
 var today = new Date();
 var dd = today.getDate();
-var mm = today.getMonth()+1; 
-if(mm<10) { mm='0'+mm; } 
+var mm = today.getMonth() + 1;
+if (mm < 10) { mm = '0' + mm; }
 var yyyy = today.getFullYear();
 var tdate = yyyy + '-' + mm + '-' + dd;
 
@@ -231,89 +231,46 @@ $.ajax({
   type: 'GET',
   data: {},
   success: function (result) {
-    var titles    = result.data;
-    var viewed    = [1,2,3,4,5,6,7,8,9,10,11,13,14,15,12];
-    
+    var titles = result.data;
+    var viewed = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 12];
+
     $.each(titles, function (id, data) {
       // Append to list
-      if(data.release_date < tdate) {
+      if (data.release_date < tdate) {
         // Set viewed status
-        if($.inArray(data.id, viewed) > -1) {
-          var wstatus     = 'watched';
-          var wstatusval  = 'watched';
+        if ($.inArray(data.id, viewed) > -1) {
+          var wstatus = 'watched';
+          var wstatusval = 'watched';
         } else {
-          var wstatus     = 'nwatched';
-          var wstatusval  = 'pending';
+          var wstatus = 'nwatched';
+          var wstatusval = 'pending';
         }
         // Get year
-        var date      = data.release_date;
+        var date = data.release_date;
         var dateparts = date.split('-');
         $('.mcu-list').append('<li><input type="hidden" name="movie_id" value="' + data.id + '"><img src="' + data.cover_url + '" alt="' + data.title + '"' + ' class="' + wstatus + '"' + ' />' + '<span' + ' class="status status--' + wstatus + '"' + '>' + wstatusval + '</span>' + '<span>' + dateparts[0] + '</span>' + '</li>');
       }
     });
   },
   error: function () {
-      console.log('Error getting movies.');
+    console.log('Error getting movies.');
   },
-});
-
-// Reading Time - NOT WORKING
-document.addEventListener('DOMContentLoaded', (event) => {
-    const post = document.getElementById("post");
-    const readingTimeSummary = document.querySelector(".reading-time");
-    const avgWordsPerMin = 250;
-
-    function setReadingTime(){
-        let count = getWordCount();
-        let time = Math.ceil(count / avgWordsPerMin);
-
-        readingTimeSummary.innerText = time + " min read";
-    }
-
-    function getWordCount(){
-    return post.innerText.match(/\w+/g).length;
-    }
-});
-
-// Contact
-$("#dancanetti_contact").submit(function(e) {
-    e.preventDefault();
-    var $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(function() {
-      //alert("Thank you!");
-      $('form').addClass('form--submitted');
-      $('form').find('button').html('Message Sent');
-      $('form').find('button').attr('disabled', 'true');
-      $('form').find('input').attr('disabled', 'true');
-      $('form').find('textarea').attr('disabled', 'true');
-    });
 });
 
 // Slick Sliders
 jQuery('.basic-slider').slick({
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    fade: true,
-    cssEase: 'linear',
-  });
-  
-  jQuery('.basic-slider-auto').slick({
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    cssEase: 'linear',
-  });
+  dots: true,
+  arrows: false,
+  autoplay: false,
+  fade: true,
+  cssEase: 'linear',
+});
 
-  // Filter posts
-  var posttag = undefined;
-  $('.filter-posts__select').on('change', function() {
-    var posttag = this.value;
-    $(".case-study-item:not(."+ posttag +")").hide();
-    $("."+ posttag +"").show();
-    if(posttag == "tag-all") {
-      $(".case-study-item").show();
-    }
-  });
+jQuery('.basic-slider-auto').slick({
+  dots: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  fade: true,
+  cssEase: 'linear',
+});

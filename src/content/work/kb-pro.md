@@ -1,18 +1,13 @@
 ---
-pageTitle: K.B Pro
-projectStatus: Live
+postTitle: K.B Pro
+#date: Last Modified
+date: 2020-01-10
+postTag: WordPress
+postFeatureImage: /dist/images/kbpro.jpg
+postFeatureImageRetina: /dist/images/kbpro@2x.jpg 
+postExcerpt: A ground-up rebuild on the latest version of WordPress wrapped around a recently re-skinned Magento store.
+isProject: yes
 projectLink: https://www.kbpro.com/
-projectFeatureImage: /dist/images/kbpro.jpg
-projectFeatureImageRetina: /dist/images/kbpro@2x.jpg 
-projectFeatureVid: https://www.kbpro.com/wp-content/uploads/2020/01/homepage_video_large.mp4
-projectType: Wordpress
-projectExcerpt: A ground-up rebuild on the latest version of WordPress wrapped around a recently re-skinned Magento store.
-seoIndex: all
-tags: 
-  - projects
-  - selectedproject
-  - homeprojects
-date: 2020-12-02
 ---
 
 A ground-up rebuild on the latest version of WordPress wrapped around a recently re-skinned Magento store. The site was built working closely with the designers at every stage of the build.
@@ -35,7 +30,7 @@ On the training pages the designers wanted a bespoke slider that would overlay t
   </picture>
 </div>
 
-<div class="body__section body__section--post body__section--project-part body__section--{{ projectType | downcase }}">
+<div class="body__section body__section--post body__section--project-part body__section--{{ postTag | downcase }}">
 
 ## Treatment Calculator
 
@@ -55,7 +50,7 @@ Forms are built on a per-page basis with each field and checkbox optional. Valid
   </picture>
 </div>
 
-<div class="body__section body__section--post body__section--{{ projectType | downcase }}">
+<div class="body__section body__section--post body__section--{{ postTag | downcase }}">
 
 ## Brow Style Guide
 

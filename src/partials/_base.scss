@@ -20,9 +20,9 @@ $twitter:           #00aced;      // Twitter
 $linkedin:          #0e76a8;      // LinkedIn
 
 // Spacing Variables
-$maxwidth:       1250px;
-$maxwidthnarrow: 1000px;
-$ds:             75px;
+$maxwidth:            700px;
+$maxwidthnarrow:      550px;
+$ds:                  75px;
 
 // Media Queries
 $screen-sm: 576px;
@@ -115,8 +115,8 @@ $pfontreg:    400;
 $pfontbold:   700;
 
 // Serif
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-$serif:       'Roboto Slab', serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+$serif:       'Playfair Display', serif;
 
 // Monospace
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
@@ -125,14 +125,10 @@ $monoreg:    400;
 $monobold:   800;
 
 // Basics
-html {
-  background-color: $dancanettiblack;
-}
-
 body {
   font-family: $pfont;
   font-weight: $pfontreg;
-  background-color: $dancanettiblack;
+  color: $dancanettiblack;
   padding-bottom: 0px;
   max-width: 1750px;
   margin: auto;
@@ -145,67 +141,10 @@ body {
 	}
 }
 
-
-// Day/Night Toggle
-#wrapper {
-  background-color: $dancanettiwhite;
-  color: $dancanettiblack;
-  @include transitionall(.3s);
-  a {
-    color: $dancanettiblack;
-    @include transitionall(.3s);
-  }
-  .body__section--post-tag {
-    background: $dancanettiblack;
-    color: $dancanettiwhite;
-  }
-  hr {
-    border: 1px solid rgba(17,17,17,0.4);
-  }
-  code {
-    background: rgba(0,0,0,0.1);
-  }
-  pre {
-    background: rgba(0,0,0,0.1);
-    code {
-      background: transparent;
-    }
-  }
-  &.night {
-    background-color: $dancanettiblack;
-    color: $dancanettiwhite;
-    a {
-      color: $dancanettiwhite;
-      &.l {
-        &.alt {
-          color: $dancanettialt;
-        }
-      }
-    }
-    .body__section--post-tag {
-      background: $dancanettiwhite;
-      color: $dancanettiblack;
-    }
-    hr {
-      border: 1px solid rgba(255,255,255,0.4);
-    }
-    code {
-      background: rgba(255,255,255,0.1);
-    }
-    pre {
-      background: rgba(255,255,255,0.1);
-      code {
-        background: transparent;
-      }
-    }
-  }
-}
-
 h1 {
-    //font-family: $header;
+  font-family: $serif;
     font-size: 4rem;
     text-align: left;
-    text-transform: uppercase;
     padding: 5vh 0;
     margin: 0;
     line-height: 1.25;
@@ -222,7 +161,6 @@ h1 {
 
 h2 {
     @extend h1;
-    font-family: $pfont;
     font-size: 2.5rem;
     letter-spacing: .25rem;
     padding: 0;
@@ -237,11 +175,12 @@ h2 {
 
 h3 {
     @extend h2;
-    font-family: $pfont;
-    font-weight: $pfontbold;
     text-transform: unset;
     font-size: 1.75rem;
     letter-spacing: .05rem;
+    &.mt {
+      margin-top: 50px;
+    }
 }
 
 p {
@@ -256,6 +195,7 @@ p {
 }
 
 a {
+    color: $dancanettiblack;
     text-decoration: none;
     position: relative;
     &:hover {
@@ -265,30 +205,12 @@ a {
         @include transitionall(.3s);
         z-index: 1;
         text-decoration: underline;
-        text-decoration-color: rgba(255,255,255,.5);
+        text-decoration-color: rgba(0,0,0,.5);
         text-decoration-thickness: .05em;
         text-underline-offset: 5px;
         @include transitionall(.3s);
-        /*
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            height: 1px;
-            width: 100%;
-            opacity: 0.3;
-            background: $dancanettigrey;
-            @include transitionall(.3s);
-        }
-        */
         &:hover {
           text-decoration-color: $dancanettialt;
-          /*
-            &:before {
-                opacity: 1;
-                background: $dancanettialt;
-            }
-            */
         }
         &.alt {
           color: $dancanettialt;
@@ -334,11 +256,14 @@ button {
 hr {
     box-shadow: none;
     height: 0px;
-    width: 80%;
+    width: 100%;
+    border: none;
+    border-top: 1px solid $dancanettiblack;
     margin: 75px auto 25px 0;
 }
 
 blockquote {
+    background: rgba(0,0,0,.05);
     font-family: $serif;
     margin: 75px 75px 5px 75px;
     & + p {
@@ -354,11 +279,13 @@ blockquote {
 }
 
 code {
+  background: rgba(0,0,0,.05);
   font-family: monospace;
   padding: 5px;
 }
 
 pre {
+  background: rgba(0,0,0,.05);
   padding: 15px;
   margin-top: 35px;
   width: 100%;
@@ -369,8 +296,22 @@ pre {
   }
 }
 
+ul, ol {
+  padding-left: 50px;
+  li {
+    font-size: 1.25rem;
+    margin-top: calc(#{$ds} / 2);
+  }
+}
+
 s {   // Strikethrough
   opacity: 0.5;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 .social-img {
