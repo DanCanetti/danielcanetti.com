@@ -47,10 +47,6 @@ import twitterblack from './images/icons/twitter-b.svg';
 import youtube from './images/icons/youtube.svg';
 import youtubeblack from './images/icons/youtube-b.svg';
 
-// Images - Homepage
-import mask from './images/facemask.png';
-import nomask from './images/nomask.png';
-
 // Video - About
 import about from './videos/about.mp4';
 
@@ -148,10 +144,6 @@ import wordpress from './images/icons/projects/wordpress.svg';
 // Images - Work
 import townscapercommunity from './images/work/townscaper-community/townscapercommunity.jpg';
 import townscapercommunityretina from './images/work/townscaper-community/townscapercommunity@2x.jpg';
-import canetticodes from './images/work/canetti-codes/canetticodes.jpg';
-import canetticodesretina from './images/work/canetti-codes/canetticodes@2x.jpg';
-import aligngs from './images/work/align-gs/align-gs.jpg';
-import aligngsretina from './images/work/align-gs/align-gs@2x.jpg';
 import kbpro from './images/work/kbpro/kbpro.jpg';
 import kbproretina from './images/work/kbpro/kbpro@2x.jpg';
 import kbprotreatmentcalculator from './images/work/kbpro/treatment-calculator.jpg';

@@ -107,12 +107,6 @@ nav {
   @include sm {
     padding: 40px 40px 0 40px;
   }
-  &.page-not-found {
-    background-image: url("https://media.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/source.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
   &.body--home {
     height: 100%;
     padding: 0 100px 0 100px;
@@ -127,14 +121,6 @@ nav {
     align-items: center;
     @include sm {
       padding: 40px 40px 0 40px;
-    }
-    &.body--sub--404 {
-      background-image: url(https://media.giphy.com/media/nDMyoNRkCesJdZAuuL/giphy-downsized.gif);
-      background-size: cover;
-      background-repeat: no-repeat;
-      min-height: 700px;
-      justify-content: center;
-      margin-bottom: 50px;
     }
   }
   .body__section {

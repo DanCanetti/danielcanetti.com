@@ -942,12 +942,14 @@ $burgertransitions: 0.4s;
 ul.changelog {
   margin-top: 50px;
   padding-top: 50px;
+  padding-left: 0;
   border-top: 1px solid $dancanettigrey;
   list-style: none;
   li {
     margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     h3 {
       width: 100%;
       font-size: 0.75rem;
@@ -957,10 +959,10 @@ ul.changelog {
       font-weight: $monobold;
     }
     time {
-      width: 40%;
+      width: 50%;
     }
     span {
-      width: 60%;
+      width: 40%;
     }
     @include sm {
       flex-direction: column;

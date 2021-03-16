@@ -14,7 +14,7 @@ pageDesc: Front-end Web Developer living and working in Yorkshire, England. Upda
       {% assign blogposts = collections.posts | reverse %}
       {% for post in blogposts %}
       <div class="blog-post--thumb blog-post--thumb--home blog-post--tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
-        <img src="{{ post.data.postFeatureImageRetina }}" alt="{{ post.data.postTitle }} Feature Image">
+        <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="{{ post.data.postTitle }} Feature Image">
         <h2><a href="{{ post.url }}" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
         {% if forloop.first == true %}
           <p>{{ post.data.postExcerpt }}</p>
