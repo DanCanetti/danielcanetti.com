@@ -1,49 +1,29 @@
 ---
 layout: layout.liquid
-pageTitle: A Yorkshire based Front-end Web Developer.
+pageTitle: A Yorkshire based front-end developer
 pageClass: home
 pageFeatureImage: /dist/images/feature.jpg
-pageDesc: A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress websites to fully bespoke builds.
+pageDesc: Front-end Web Developer living and working in Yorkshire, England. Updates on web development, my latest projects, life, and books.
 ---
 
+<h1 style="position: absolute; top: -200%; left: -200%;">Daniel Canetti. Operations Manager and hobbying developer</h1>
+
 <div class="body body--home">
-    <div class="body__section body__section--intro body__section--fade">
-      <div class="body__section--intro__face">
-        <img id="face" src="/dist/images/facemask.png" alt="" />
+  <div class="body__section body__section--fade">
+    <div class="blog-posts__wrap">
+      {% assign blogposts = collections.posts | reverse %}
+      {% for post in blogposts %}
+      <div class="blog-post--thumb blog-post--thumb--home blog-post--tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
+        <img src="{{ post.data.postFeatureImageRetina }}" alt="{{ post.data.postTitle }} Feature Image">
+        <h2><a href="{{ post.url }}" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
+        {% if forloop.first == true %}
+          <p>{{ post.data.postExcerpt }}</p>
+        {% else %}
+          <p>{{ post.data.postExcerpt | truncate: 50 }}</p>
+        {% endif %}
+        <a href="{{ post.url }}" class="l" title="Read {{ post.data.postTitle }}">Read post</a>
       </div>
-      <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
+      {% endfor %}
     </div>
-    <div class="body__section">
-      <h2 class="sml">Work.</h2>
-      <div class="case-study-items__wrap">
-      {% for post in collections.selectedproject %}
-        <div class="case-study-item case-study-item--home">
-          <div class="case-study-item__data">
-            <div class="case-study-item__data--content">
-              <h2><a href="{{ post.url }}" class="l">{{ post.data.pageTitle }}</a></h2>
-              <p>{{ post.data.projectExcerpt }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <a href="/work/" class="l" >View All</a>
-    </div>
-    <div class="body__section">
-      <h2 class="sml">Blog.</h2>
-      <div class="case-study-items__wrap">
-      {% assign allblogposts = collections.posts %}
-      {% for post in allblogposts limit: 4 %}
-        <div class="case-study-item case-study-item--post case-study-item--home">
-          <div class="case-study-item__data">
-            <div class="case-study-item__data--content">
-              <h2><a href="{{ post.url }}" class="l" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
-              <p>{{ post.data.postExcerpt }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <a href="/blog/" class="l" >View All</a>
-    </div>
+  </div>
 </div>

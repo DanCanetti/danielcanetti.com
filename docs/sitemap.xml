@@ -10,7 +10,15 @@
   </url>
   
   <url>
+    <loc>/work/marketing-news-builder/</loc>
+  </url>
+  
+  <url>
     <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
+  </url>
+  
+  <url>
+    <loc>/work/emerald-kitchens/</loc>
   </url>
   
   <url>
@@ -50,6 +58,10 @@
   </url>
   
   <url>
+    <loc>/work/kb-pro/</loc>
+  </url>
+  
+  <url>
     <loc>/blog/0-to-wordpress-in-4-minutes/</loc>
   </url>
   
@@ -78,51 +90,15 @@
   </url>
   
   <url>
-    <loc>/404.html</loc>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-  </url>
-  
-  <url>
-    <loc>/work/</loc>
-  </url>
-  
-  <url>
     <loc>/work/nouveau-lashes/</loc>
   </url>
   
   <url>
-    <loc>/work/kb-pro/</loc>
+    <loc>/404.html</loc>
   </url>
   
   <url>
-    <loc>/work/townscaper-community/</loc>
-  </url>
-  
-  <url>
-    <loc>/work/emerald-kitchens/</loc>
-  </url>
-  
-  <url>
-    <loc>/work/align-growth-summit/</loc>
-  </url>
-  
-  <url>
-    <loc>/work/canetti-codes/</loc>
-  </url>
-  
-  <url>
-    <loc>/work/marketing-news-builder/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
@@ -143,5 +119,13 @@
   
   <url>
     <loc>/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/eleventy-2021/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
   </url>
 </urlset>

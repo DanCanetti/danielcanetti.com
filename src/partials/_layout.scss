@@ -5,9 +5,14 @@
     E.G. header, footer
 */
 
+// Wrapper
+#wrapper {
+  max-width: $maxwidth;
+  margin: auto;
+}
+
 // Navigation
 nav {
-  background: $dancanettiblack;
   padding: 50px 100px;
   position: relative;
   z-index: 100;
@@ -20,6 +25,7 @@ nav {
     padding: 40px;
   }
   .logo {
+    z-index: 40001;
     font-weight: $pfontbold;
     animation: fade-in 3s ease-in-out 1;
   }
@@ -29,6 +35,7 @@ nav {
     animation: fade-in 3s ease-in-out 1;
     li {
       margin-right: 40px;
+      margin-top: 0;
       &:last-of-type {
         margin-right: 0;
       }
@@ -95,10 +102,8 @@ nav {
 
 // Main Content
 .body {
-  padding: 120px 200px 0 200px;
-  @include md {
-    padding: 120px 100px 0 100px;
-  }
+  padding: 75px 50px 0;
+  max-width: $maxwidth;
   @include sm {
     padding: 40px 40px 0 40px;
   }
@@ -109,7 +114,6 @@ nav {
     background-position: center;
   }
   &.body--home {
-    //height: calc(100vh - 20px);
     height: 100%;
     padding: 0 100px 0 100px;
     @include sm {
@@ -117,12 +121,12 @@ nav {
     }
   }
   &.body--sub {
-    padding: 50px 100px 0 100px;
+    padding: 0 100px 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     @include sm {
-      padding: 50px 40px 0 40px;
+      padding: 40px 40px 0 40px;
     }
     &.body--sub--404 {
       background-image: url(https://media.giphy.com/media/nDMyoNRkCesJdZAuuL/giphy-downsized.gif);
@@ -138,10 +142,10 @@ nav {
     z-index: 3;
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: $maxwidth;
+    width: 100%;
     align-items: flex-start;
-    //margin: 0 auto;
-    padding: 0 0 150px 0;
+    padding: 0 0 $ds 0;
     opacity: 1;
     @include transitionall(0.3s);
     &--project-part {
@@ -160,7 +164,7 @@ nav {
       max-width: 750px;
     }
     &.body__section--intro {
-      height: calc(90vh - 10px);
+      height: 50vh;
       max-width: 750px;
       margin-bottom: 100px;
       text-align: center;
@@ -172,16 +176,6 @@ nav {
       @include sm {
         height: auto;
         padding: 200px 0;
-      }
-      .body__section--intro__face {
-        cursor: none;
-        img {
-          max-width: 180px;
-          width: 100%;
-          margin-bottom: 25px;
-          margin-top: -150px;
-          margin-left: -55px;
-        }
       }
       h1 {
         font-weight: $pfontreg;
@@ -217,14 +211,12 @@ nav {
       padding: 0px 0px 50px 0px;
     }
     &.body__section--post {
-      max-width: 700px;
       margin: 0 auto;
       animation: fade-in-up 2s ease-in-out 1;
       h1 {
-        font-family: $pfont;
-        font-weight: $pfontbold;
+        font-family: $serif;
         font-size: 3rem;
-        margin-top: 30px;
+        text-transform: unset;
         margin-bottom: 0px;
         padding-bottom: 10px;
         text-align: left;
@@ -260,6 +252,7 @@ nav {
         width: 80%;
         text-align: left;
         font-size: 1.75rem;
+        letter-spacing: 0.05rem;
         margin-bottom: 0;
         padding-bottom: 0px;
         margin: 75px auto 0 0;
@@ -271,6 +264,7 @@ nav {
         width: 80%;
         text-align: left;
         font-size: 1.25rem;
+        letter-spacing: 0.05rem;
         margin: 75px auto 0 0;
         padding-bottom: 0px;
       }
@@ -283,34 +277,15 @@ nav {
         }
       }
       a {
-        @include transitionall(0.3s);
         z-index: 1;
         text-decoration: underline;
-        text-decoration-color: rgba(255,255,255,.5);
+        text-decoration-color: rgba(0,0,0,.5);
         text-decoration-thickness: .05em;
         text-underline-offset: 5px;
         @include transitionall(.3s);
         &:hover {
           text-decoration-color: $dancanettialt;
         }
-        /*
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: -1px;
-          height: 1px;
-          width: 100%;
-          opacity: 0.3;
-          background: $dancanettigrey;
-          @include transitionall(0.3s);
-        }
-        &:hover {
-          &:before {
-            opacity: 1;
-            background: $dancanettialt;
-          }
-        }
-        */
       }
       ul,
       ol {
@@ -347,12 +322,13 @@ nav {
 
 // Footer
 footer {
+  max-width: $maxwidth;
+  margin: auto;
   width: 100%;
   z-index: 0;
   text-align: left;
   font-size: 1.75em;
-  background-color: $dancanettiblack;
-  color: $dancanettiwhite;
+  color: $dancanettiblack;
   .footer__content {
     position: relative;
     display: flex;
@@ -376,13 +352,26 @@ footer {
       margin: auto;
       height: .5px;
       width: calc(100% - 200px);
-      background-color: $dancanettiwhite;
+      background-color: $dancanettiblack;
       @include sm {
         width: calc(100% - 80px);
       }
     }
-    a {
-      color: $dancanettiwhite;
+    .l {
+      position: relative;
+      margin-right: 10px;
+      padding-right: 13px;
+      &:after {
+        content: '•';
+        position: absolute;
+        right: 0;
+        top: -4px;
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
     }
     .footer__content__slinks {
       display: flex;

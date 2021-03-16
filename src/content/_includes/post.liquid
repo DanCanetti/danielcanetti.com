@@ -2,73 +2,44 @@
 <html lang="en">
     <head>
         {% include meta %}
+        <title>Daniel Canetti • {{ postTitle }}</title>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <title>Daniel Canetti • {% if pageClass == "project" %}{{ pageTitle }}{% else %}{{ postTitle }}{% endif %}</title>
-        <meta name="description" content="{% if pageClass == "project" %}{{ projectExcerpt }}{% else %}{{ postExcerpt }}{% endif %}">
-        {% if pageClass == "project" %}
-        <meta property="og:title" content="Daniel Canetti • {{ pageTitle }}" />
-        <meta property="og:description" content="{{ postExcerpt }}" />
-        <meta property="og:url" content="https://danielcanetti.com{{ page.url }}" />
-        <meta property="og:image" content="https://danielcanetti.com{{ projectFeatureImageRetina }}" />
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Daniel Canetti • {{ pageTitle }}">
-        <meta property="twitter:description" content="{{ postExcerpt }}">
-        <meta property="twitter:image" content="https://danielcanetti.com{{ projectFeatureImageRetina }}">
-        <meta property="twitter:url" content="https://danielcanetti.com{{ page.url }}">
-        <meta property="twitter:site" content="@Dan_Canetti">
-        <meta property="twitter:creator" content="@Dan_Canetti">
-        {% else %}
+        <meta name="description" content="{{ postExcerpt }}">
         {% include social %}
-        {% endif %}
     </head>
     <body class="{{ pageClass }}">
         <div id="wrapper" class="wrapper night">
             {% include nav %}
-            <img class="post--bg-image" src="{% if pageClass == "project" %}{{ projectFeatureImageRetina }}{% else %}{{ postFeatureImageRetina }}{% endif %}" />
-            {% if pageClass == "project" %}
+            <img class="post--bg-image" src="{{ postFeatureImageRetina }}" />
             <div class="breadcrumbs">
-                <a href="/">Home</a> / <a href="/work/">Work</a> / <span>{{ pageTitle }}</span>
+                <a href="/">Home</a> / {% if isProject == 'yes' %}<a href="/about/">About</a> / <span>Work</span>{% else %}<span>Blog</span>{% endif %} / <span>{{ postTitle }}</span>
             </div>
-            {% else %}
-            <div class="breadcrumbs">
-                <a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>{{ postTitle }}</span>
-            </div>
-            {% endif %}
             <div id="post" class="body dark post">
-                <div class="body__section body__section--post{% if pageClass == "project" %} body__section--project-part body__section--{{ projectType | downcase }}{% endif %}">
-                    <h1>{% if pageClass == "project" %}{{ pageTitle }}{% else %}{{ postTitle }}{% endif %}</h1>
-                    {% if pageClass == "project" %}
-                    <div class="body__section--post-meta">
-                        <span><img src="/dist/images/{{ projectType }}.svg" class="project-type-icon project-type-icon--{{ projectType }}" alt="{{ projectType }} icon" aria-label="{{ projectType }}" /> {{ projectType }}</span>
-                        <span><a href="{{ projectLink }}" target="_blank">{% if projectStatus == "Live" %}Visit Site{% else %}Visit Repo{% endif %}</a></span>
-                    </div>
-                    {% else %}
+                <div class="body__section body__section--post">
+                    <h1>{{ postTitle }}</h1>
                     <div class="body__section--post-meta">
                         <span>{{ date | date: '%B %d, %Y' }}</span>
                         <span class="body__section--post-tag">{{ postTag }}</span>
+                        {% if isProject == 'yes' %}
+                        <span><a href="{{ projectLink }}" target="_blank" rel="nofollow">Visit</a></span>
+                        {% endif %}
                         <span class="reading-time"></span>
                     </div>
-                    {% endif %}
                     {{ content }}
                     <hr>
                     <div class="share__blog">
-                        <h3>Share: {% if pageClass == "project" %}{{ pageTitle }}{% else %}{{ postTitle }}{% endif %}</h3>
+                        <h3>Share: {{ postTitle }}</h3>
                         <div class="share__blog__links">
-                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank">
-                                Share on Facebook
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank" aria-label="Share on Facebook">
+                                Facebook
                             </a>
-                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
-                                Don't share on Facebook
-                            </a-->
-                            <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank">
-                                Share on Twitter
+                            <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank" aria-label="Share on Twitter">
+                                Twitter
                             </a>
-                            {% if pageClass != "project" %}
-                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank" aria-label="Buy me a Coffee">
                                 Buy me a Coffee
                             </a>
-                            {% endif %}
                         </div>
                     </div>
                 </div>

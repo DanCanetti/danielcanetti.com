@@ -1,24 +1,18 @@
 ---
-pageTitle: Nouveau Lashes
-projectStatus: Live
+postTitle: Nouveau Lashes
+#date: Last Modified
+date: 2020-10-05
+postTag: WordPress
+postFeatureImage: /dist/images/nouveau-lashes.jpg
+postFeatureImageRetina: /dist/images/nouveau-lashes@2x.jpg
+postExcerpt: A series of updates across the site to bring in a design and update the build. 
+isProject: yes
 projectLink: https://nouveaulashes.com/eyelash-treatment-aftercare/
-projectFeatureImage: /dist/images/nouveau-lashes.jpg
-projectFeatureImageRetina: /dist/images/nouveau-lashes@2x.jpg
-# projectFeatureVid:
-projectType: Wordpress
-projectExcerpt: A series of updates across the site to bring in a design and update the build. 
-seoIndex: all
-tags:
-  - projects
-  - selectedproject
-  - homeprojects
-#date: 2020-06-01
-date: 2020-12-01
 ---
 
 </div> <!-- End body__section -->
 
-<div class="body__section body__section--post body__section--project-part body__section--{{ projectType | downcase }}">
+<div class="body__section body__section--post body__section--project-part body__section--{{ postTag | downcase }}">
 
 Following the successful release of the new e-commerce store, Nouveau Lashes began to update the WordPress end of the website. The site is being worked on section by section and by working closeley with the designers the changes are clearly a vast improvement.
 
@@ -44,7 +38,7 @@ The salon finder already existed on the site and pull data from an api endpoint.
   </picture>
 </div>
 
-<div class="body__section body__section--post body__section--project-part body__section--{{ projectType | downcase }}">
+<div class="body__section body__section--post body__section--project-part body__section--{{ postTag | downcase }}">
 
 ## Training Dates Widget
 
@@ -66,7 +60,7 @@ A basic landing page, the dropdown selection populates a URL into the link below
   </picture>
 </div>
 
-<div class="body__section body__section--post body__section--{{ projectType | downcase }}">
+<div class="body__section body__section--post body__section--{{ postTag | downcase }}">
 
 ## Webforms
 

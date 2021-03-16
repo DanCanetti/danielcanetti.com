@@ -8,7 +8,7 @@ postFeatureImageRetina: /dist/images/acompleteguidetoeleventy@2x.jpg
 postExcerpt: From installation to continuous deployment - everything you need to get started with the static site generator.
 ---
 
-***Please Note***: This article was written in 2019. My approach to building Jamstack sites has changed since this article was written, I will upload a new post detailing my new approach and link here in due course.
+***Please Note***: This article was written in 2019. My approach to building Jamstack sites has changed since this article was written, see here for my [2021 approach to eleventy](/blog/eleventy-2021/).
 
 ## What is Eleventy?
 
