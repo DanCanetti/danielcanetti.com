@@ -94,11 +94,23 @@
   </url>
   
   <url>
+    <loc>/blog/year-in-review-2020/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/marvel-cinematic-universe/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/eleventy-2021/</loc>
+  </url>
+  
+  <url>
     <loc>/404.html</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
@@ -110,22 +122,10 @@
   </url>
   
   <url>
-    <loc>/blog/year-in-review-2020/</loc>
-  </url>
-  
-  <url>
-    <loc>/blog/marvel-cinematic-universe/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
     <loc>/tools/</loc>
-  </url>
-  
-  <url>
-    <loc>/blog/eleventy-2021/</loc>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
   </url>
 </urlset>
