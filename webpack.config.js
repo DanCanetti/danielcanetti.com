@@ -19,6 +19,7 @@ module.exports = {
       patterns: [
         { from: "./src/tools", to: "../tools/" },
         { from: "./src/_redirects", to: "../" },
+        { from: "./src/netlify.toml", to: "../" },
       ],
     }),
   ],
