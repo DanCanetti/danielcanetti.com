@@ -23,19 +23,18 @@
 
 <style>
 html, body, nav, footer, .body {
-  background: #111;
+  background: #fff;
 }
 </style>
 
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
-<script async defer data-website-id="a770c3a4-ed9d-4369-a6cf-d800ddf680ab" src="https://analytics.danielcanetti.com/umami.js"></script>
+<script async defer data-website-id="2e6fa4af-a217-40b6-a360-61dcd8125f4f" src="https://dan-canetti-analytics.herokuapp.com/umami.js"></script>
+        <title>Daniel Canetti • GitLab Pages</title>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <title>Daniel Canetti • GitLab Pages</title>
         <meta name="description" content="GitLab pages allow you to publish static websites directly from a repository in GitLab. I mainly use them to host static HTML staging sites.">
-        
         <meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Daniel Canetti" />
 
@@ -51,15 +50,12 @@ html, body, nav, footer, .body {
 <meta property="twitter:site" content="@Dan_Canetti">
 <meta property="twitter:creator" content="@Dan_Canetti">
 
-        
     </head>
     <body class="sub post">
         <div id="wrapper" class="wrapper night">
             <nav>
-  <a class="logo" href="/">Dan's Blog.</a>
+  <a class="logo" href="/">Dan.</a>
   <ul> 
-    <li><a class="l" href="/work/">Work</a></li>
-    <li><a class="l" href="/blog/">Blog</a></li>
     <li>
       <div class="njs-toggle-menu">
         <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
@@ -70,10 +66,8 @@ html, body, nav, footer, .body {
         </label>
         <div class="main-nav">
           <ul>
-            <li><a class="l" href="/work/">Work</a></li>
-            <li><a class="l" href="/blog/">Blog</a></li>
+            <li><a class="l" href="/about/">About</a></li>
             <li><a class="l" href="/tools/">Tools</a></li>
-            <li><a class="l" href="/contact/">Contact</a></li>
             <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
           </ul>
         </div>
@@ -83,21 +77,18 @@ html, body, nav, footer, .body {
 </nav>
 
             <img class="post--bg-image" src="/dist/images/gitlabpages@2x.jpg" />
-            
             <div class="breadcrumbs">
-                <a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>GitLab Pages</span>
+                <a href="/">Home</a> / <span>Blog</span> / <span>GitLab Pages</span>
             </div>
-            
             <div id="post" class="body dark post">
                 <div class="body__section body__section--post">
                     <h1>GitLab Pages</h1>
-                    
                     <div class="body__section--post-meta">
                         <span>February 06, 2019</span>
                         <span class="body__section--post-tag">Web Development</span>
+                        
                         <span class="reading-time"></span>
                     </div>
-                    
                     <p>GitLab is a git-repository manager with some differences to GitHub, although the recent <a href="https://blog.github.com/2019-01-07-new-year-new-github/">GitHub announcements</a> bring the two more in line with one another.</p>
 <p>If you’re not aware of GitLab pages, they allow you to <a href="https://docs.gitlab.com/ee/user/project/pages/">publish static websites directly from a repository</a> in GitLab. There are some limitations, mainly that Pages do not support server-side languages such as PHP, but I mainly use them to host static HTML staging sites. Once set-up correctly pages are generated when the codebase is pushed onto the server and pages can be specific to a branch, for example I use the staging branch to generate the page.</p>
 <p>Setting up a GitLab page is a relatively straightforward process. I’ll walk you through the process of setting up a standard HTML config and <a href="https://stackoverflow.com/questions/54227311/pages-not-showing-in-settings-after-successful-pipeline">point out where I got stuck</a> when first setting this up.</p>
@@ -138,20 +129,15 @@ html, body, nav, footer, .body {
                     <div class="share__blog">
                         <h3>Share: GitLab Pages</h3>
                         <div class="share__blog__links">
-                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
-                                Share on Facebook
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com/blog/gitlab-pages/" target="_blank" aria-label="Share on Facebook">
+                                Facebook
                             </a>
-                            <!--a class="l" href="https://www.theguardian.com/technology/2020/jun/01/facebook-workers-rebel-mark-zuckerberg-donald-trump" target="_blank" rel="nofollow">
-                                Don't share on Facebook
-                            </a-->
-                            <a class="l" href="https://twitter.com/intent/tweet?text=GitLab Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/gitlab-pages/" target="_blank">
-                                Share on Twitter
+                            <a class="l" href="https://twitter.com/intent/tweet?text=GitLab Pages%20by%20@Dan_Canetti%20-%20https://danielcanetti.com/blog/gitlab-pages/" target="_blank" aria-label="Share on Twitter">
+                                Twitter
                             </a>
-                            
-                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank">
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank" aria-label="Buy me a Coffee">
                                 Buy me a Coffee
                             </a>
-                            
                         </div>
                     </div>
                 </div>
@@ -161,14 +147,14 @@ html, body, nav, footer, .body {
     <div class="footer__content">
         <span class="copyright">
             Daniel Canetti &copy; 2021<br>
-            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" rel="noopener" aria-label="Go to Eleventy">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" rel="noopener" aria-label="Go to Webpack">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" rel="noopener" aria-label="Go to Netlify">Netlify</a>, and Coffee. <a class="l" href="/changelog/">View changelog</a>.
+            <a class="l" href="/about/" aria-label="About Dan">About</a><a class="l" href="/tools/" aria-label="Useful development tools">Tools</a><a class="l" href="/awesome-sites/" aria-label="Awesome Websites">Inspiration</a>
         </span>
         <div class="footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" rel="noopener" aria-label="Go to Github"><img src="/dist/images/github.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener" aria-label="Go to Twitter"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" rel="noopener" aria-label="Go to YouTube"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
-            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" rel="noopener" aria-label="Go to Twitch"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti/" target="_blank" rel="noopener" aria-label="Go to Instagram"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+            <a class="sl umami--click--footer-github" href="https://github.com/DanCanetti" target="_blank" rel="noopener" aria-label="Go to Github"><img src="/dist/images/github-b.svg" alt="GitHub" /></a>
+            <a class="sl umami--click--footer-twitter" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener" aria-label="Go to Twitter"><img src="/dist/images/twitter-b.svg" alt="Twitter" /></a>
+            <!--a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" rel="noopener" aria-label="Go to YouTube"><img src="/dist/images/youtube-b.svg" alt="Youtube" /></a-->
+            <!--a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" rel="noopener" aria-label="Go to Twitch"><img src="/dist/images/twitch-b.svg" alt="Twitch" /></a-->
+            <a class="sl umami--click--footer-instagram" href="https://www.instagram.com/dan_canetti/" target="_blank" rel="noopener" aria-label="Go to Instagram"><img src="/dist/images/instagram-b.svg" alt="Instagram" /></a>
         </div>
     </div>
 </footer>

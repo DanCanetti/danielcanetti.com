@@ -1,0 +1,50 @@
+---
+layout: sub.liquid
+pageTitle: Blog
+pageClass: sub
+pageFeatureImage: /dist/images/feature.jpg
+pageDesc: Tutorials, thoughts on tech culture, dev and business tools. Here's where I share my web development experiences and musings from my life.
+---
+
+<div class="body body--sub body--sub--blog">
+  <div class="body__section body__section--case-study-items body__section--case-study-items--blog body__section--fade">
+    <div class="filter-posts">
+      <select class="filter-posts__select">
+        <option selected disabled>Filter</option>
+        <option value="tag-all">All Posts</option>
+        <option value="tag-web-development">Web Development</option>
+        <option value="tag-life">Life</option>
+        <option value="tag-culture">Culture</option>
+        <option value="tag-hackathon">Hackathon</option>
+      </select>
+    </div>
+    {% assign allblogposts = collections.posts | reverse %}
+    {% for post in allblogposts %}  
+      <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--post case-study-item--post--blog tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
+        <div class="case-study-item__img">
+          <div class="case-study-item__img__image">
+              {% if post.data.postFeatureImage %}
+              <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="" aria-label="Read More" />
+              {% else %}
+              <img src="/dist/images/feature.jpg" alt="" aria-label="Read More" />
+              {% endif %}
+          </div>
+        </div>
+        <div class="case-study-item__data">
+          <div class="case-study-item__data--content">
+            <div class="case-study-item__meta">
+              <span>{{ post.data.postTag }}</span>
+              <span>{{ post.date | date: '%B %d, %Y' }}</span>
+            </div>
+            <div class="case-study-item__copy">
+              <h2>{{ post.data.postTitle }}</h2>
+              {% if forloop.first == true %}
+              <p>{{ post.data.postExcerpt }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+  </div>
+</div>

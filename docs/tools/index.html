@@ -23,14 +23,14 @@
 
 <style>
 html, body, nav, footer, .body {
-  background: #111;
+  background: #fff;
 }
 </style>
 
 <link rel="stylesheet" rel="async" href="/dist/ctti.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="text/javascript" defer src="/dist/bundle.js"></script>
-<script async defer data-website-id="a770c3a4-ed9d-4369-a6cf-d800ddf680ab" src="https://analytics.danielcanetti.com/umami.js"></script>
+<script async defer data-website-id="2e6fa4af-a217-40b6-a360-61dcd8125f4f" src="https://dan-canetti-analytics.herokuapp.com/umami.js"></script>
         <title>Daniel Canetti • Tools</title>
         <meta name="description" content="Useful development tools I've built over the years.">
         <meta property="og:locale" content="en_GB" />
@@ -52,10 +52,8 @@ html, body, nav, footer, .body {
     <body class="sub">
         <div id="wrapper"  class="wrapper night">
             <nav>
-  <a class="logo" href="/">Dan's Tools.</a>
+  <a class="logo" href="/">Dan.</a>
   <ul> 
-    <li><a class="l" href="/work/">Work</a></li>
-    <li><a class="l" href="/blog/">Blog</a></li>
     <li>
       <div class="njs-toggle-menu">
         <input type="checkbox" id="njs-toggle-menu--toggle" class="njs-toggle-menu--toggle" />
@@ -66,10 +64,8 @@ html, body, nav, footer, .body {
         </label>
         <div class="main-nav">
           <ul>
-            <li><a class="l" href="/work/">Work</a></li>
-            <li><a class="l" href="/blog/">Blog</a></li>
+            <li><a class="l" href="/about/">About</a></li>
             <li><a class="l" href="/tools/">Tools</a></li>
-            <li><a class="l" href="/contact/">Contact</a></li>
             <li><a class="l" href="/awesome-sites/">Inspiration</a></li>
           </ul>
         </div>
@@ -80,26 +76,18 @@ html, body, nav, footer, .body {
 
             <h1 class="--sub">Tools</h1>
             
-<div class="body body--sub body--sub--blog">
-  <div class="body__section body__section--case-study-items body__section--case-study-items--blog body__section--fade">
-    <a href="/tools/agenda-csv-parser/" class="case-study-item case-study-item--hover case-study-item--post case-study-item--post--blog tag-tool">
-      <div class="case-study-item__img">
-        <div class="case-study-item__img__image">
-          <img src="/dist/images/canetticodes.jpg" srcset="/dist/images/canetticodes@2x.jpg 2x" alt="" aria-label="Read More" />
-        </div>
+<div class="body body--sub">
+  <div class="body__section body__section--fade">
+    <h2>Tools</h2>
+    <p>Useful development tools I've built over the years.</p>
+    <div class="blog-posts__wrap blog-posts__wrap--margin-top">
+      <div class="blog-post--thumb blog-post--thumb--home">
+        <img src="/dist/images/timeline-parser@2x.jpg" alt="Agenda/Timeline Parser Feature Image">
+        <h2><a href="/tools/agenda-csv-parser/" title="Read Agenda/Timeline Parser">Agenda/Timeline Parser</a></h2>
+        <p>A responsive event agenda/timeline CVS parser.</p>
+        <a href="/tools/agenda-csv-parser/" class="l" title="Agenda/Timeline Parser">View tool</a>
       </div>
-      <div class="case-study-item__data">
-        <div class="case-study-item__data--content">
-          <div class="case-study-item__meta">
-            <span>Tool</span>
-            <span>2021</span>
-          </div>
-          <div class="case-study-item__copy">
-            <h2>Agenda/Timeline Parser</h2>
-          </div>
-        </div>
-      </div>
-    </a>
+    </div>
   </div>
 </div>
         </div>
@@ -107,14 +95,14 @@ html, body, nav, footer, .body {
     <div class="footer__content">
         <span class="copyright">
             Daniel Canetti &copy; 2021<br>
-            Built with <a class="l" href="https://www.11ty.dev/" target="_blank" rel="noopener" aria-label="Go to Eleventy">Eleventy</a>, <a class="l" href="https://webpack.js.org/" target="_blank" rel="noopener" aria-label="Go to Webpack">Webpack</a>, <a class="l" href="https://www.netlify.com/" target="_blank" rel="noopener" aria-label="Go to Netlify">Netlify</a>, and Coffee. <a class="l" href="/changelog/">View changelog</a>.
+            <a class="l" href="/about/" aria-label="About Dan">About</a><a class="l" href="/tools/" aria-label="Useful development tools">Tools</a><a class="l" href="/awesome-sites/" aria-label="Awesome Websites">Inspiration</a>
         </span>
         <div class="footer__content__slinks">
-            <a class="sl" href="https://github.com/DanCanetti" target="_blank" rel="noopener" aria-label="Go to Github"><img src="/dist/images/github.svg" alt="GitHub" /></a>
-            <a class="sl" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener" aria-label="Go to Twitter"><img src="/dist/images/twitter.svg" alt="Twitter" /></a>
-            <a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" rel="noopener" aria-label="Go to YouTube"><img src="/dist/images/youtube.svg" alt="Youtube" /></a>
-            <a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" rel="noopener" aria-label="Go to Twitch"><img src="/dist/images/twitch.svg" alt="Twitch" /></a>
-            <a class="sl" href="https://www.instagram.com/dan_canetti/" target="_blank" rel="noopener" aria-label="Go to Instagram"><img src="/dist/images/instagram.svg" alt="Instagram" /></a>
+            <a class="sl umami--click--footer-github" href="https://github.com/DanCanetti" target="_blank" rel="noopener" aria-label="Go to Github"><img src="/dist/images/github-b.svg" alt="GitHub" /></a>
+            <a class="sl umami--click--footer-twitter" href="https://twitter.com/Dan_Canetti" target="_blank" rel="noopener" aria-label="Go to Twitter"><img src="/dist/images/twitter-b.svg" alt="Twitter" /></a>
+            <!--a class="sl" href="https://www.youtube.com/c/DanielCanetti/" target="_blank" rel="noopener" aria-label="Go to YouTube"><img src="/dist/images/youtube-b.svg" alt="Youtube" /></a-->
+            <!--a class="sl" href="https://www.twitch.tv/dan_canetti" target="_blank" rel="noopener" aria-label="Go to Twitch"><img src="/dist/images/twitch-b.svg" alt="Twitch" /></a-->
+            <a class="sl umami--click--footer-instagram" href="https://www.instagram.com/dan_canetti/" target="_blank" rel="noopener" aria-label="Go to Instagram"><img src="/dist/images/instagram-b.svg" alt="Instagram" /></a>
         </div>
     </div>
 </footer>
