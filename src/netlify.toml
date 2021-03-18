@@ -1,6 +1,4 @@
-...
-
-[[redirects]]
- from = "https://analytics.danielcanetti.com/*"
- to = "https://dan-canetti-analytics.herokuapp.com/:splat"
- status = 200
+ [[redirects]]
+  from = "https://analytics.danielcanetti.com/*"
+  to = "https://dan-canetti-analytics.herokuapp.com/:splat"
+  status = 301
