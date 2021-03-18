@@ -6,6 +6,7 @@ postTag: Web Development
 postFeatureImage: /dist/images/acompleteguidetoeleventy.jpg
 postFeatureImageRetina: /dist/images/acompleteguidetoeleventy@2x.jpg
 postExcerpt: A follow-up to my 2019 article, A complete guide to Eleventy, with updates about webpack and my boilerplate.
+eleventyExcludeFromCollections: true
 ---
 
 This is a follow-up to my 2019 article, [A complete guide to Eleventy](/blog/a-complete-guide-to-eleventy/). Since then I've integrated webpack and created a boilerplate to help people get started with Eleventy in 2021, which I'll breakdown here so we can really understand what is going on.

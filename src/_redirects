@@ -6,6 +6,12 @@ https://danielcanetti.netlify.com/* https://danielcanetti.com/:splat 301!
 # Redirect beta subdomain to primary domain
 https://beta.danielcanetti.com/* https://danielcanetti.com/:splat 301!
 
+# Redirect analytics
+https://analytics.danielcanetti.com/* https://danielcanetti.com/ 301!
+
+# Draft posts
+https://danielcanetti.com/blog/eleventy-2021/ https://danielcanetti.com/blog/ 302!
+
 # Simplified design
 https://danielcanetti.com/blog/ https://danielcanetti.com/ 302!
 https://danielcanetti.com/contact/ https://danielcanetti.com/blog/ 302!
