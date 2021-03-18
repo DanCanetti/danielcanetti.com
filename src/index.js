@@ -49,6 +49,13 @@ import youtubeblack from './images/icons/youtube-b.svg';
 
 // Video - About
 import about from './videos/about.mp4';
+import about_01 from './images/about/about_01.jpg';
+import about_02 from './images/about/about_02.jpg';
+import about_03 from './images/about/about_03.jpg';
+import about_04 from './images/about/about_04.jpg';
+import about_05 from './images/about/about_05.jpg';
+import about_06 from './images/about/about_06.jpg';
+
 
 // Images - Blog
 import zerotowordpress from './images/posts/0-to-wordpress-in-4-minutes/zerotowordpress.jpg';
