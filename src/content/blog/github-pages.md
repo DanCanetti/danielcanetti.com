@@ -3,6 +3,7 @@ postTitle: Github Pages
 #date: Last Modified
 date: 2020-05-03
 postTag: Web Development
+postFeatureImageThumb: /dist/images/githublargethumb.jpg
 postFeatureImage: /dist/images/githublarge.jpg
 postFeatureImageRetina: /dist/images/githublarge@2x.jpg
 postExcerpt: Github pages allows you to host your site directly from the repo. Here's how to set this up for your site.

@@ -3,6 +3,7 @@ postTitle: A year in review
 #date: Last Modified
 date: 2020-12-30
 postTag: Web Development
+postFeatureImageThumb: /dist/images/yir-2020thumb.jpg
 postFeatureImage: /dist/images/yir-2020.jpg
 postFeatureImageRetina: /dist/images/yir-2020@2x.jpg
 postExcerpt: 2020 is a year to forget in most aspects, however danielcanetti.com has seen some major improvements and I've learnt some valuable new skills along the way.

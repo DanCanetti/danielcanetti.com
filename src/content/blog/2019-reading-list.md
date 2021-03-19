@@ -3,6 +3,7 @@ postTitle: 2019 Reading List
 #date: Last Modified
 date: 2019-09-30
 postTag: Life
+postFeatureImageThumb: /dist/images/recommended-readingthumb.jpg
 postFeatureImage: /dist/images/recommended-reading.jpg
 postFeatureImageRetina: /dist/images/recommended-reading@2x.jpg
 postExcerpt: I'm really into business and start-up books at the moment, I love to read about their humble beginnings and often find something to take away from each book to help me improve in my own work or personal life.

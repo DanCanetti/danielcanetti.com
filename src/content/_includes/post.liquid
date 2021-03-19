@@ -11,7 +11,7 @@
     <body class="{{ pageClass }}">
         <div id="wrapper" class="wrapper night">
             {% include nav %}
-            <img class="post--bg-image" src="{{ postFeatureImageRetina }}" />
+            <img class="post--bg-image" src="{{ postFeatureImageRetina }}" alt="{{ post.data.postTitle }} Feature Image" />
             <div class="breadcrumbs">
                 <a href="/">Home</a> / {% if isProject == 'yes' %}<a href="/about/">About</a> / <span>Work</span>{% else %}<span>Blog</span>{% endif %} / <span>{{ postTitle }}</span>
             </div>

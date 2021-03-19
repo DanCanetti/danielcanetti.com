@@ -6,6 +6,7 @@ postTag: Web Development
 postFeatureImage: /dist/images/magentonginx.jpg
 postFeatureImageRetina: /dist/images/magentonginx@2x.jpg
 postExcerpt: I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.
+eleventyExcludeFromCollections: true
 ---
 
 Like many other I use Homestead when working on sites locally, typically with an Apache set-up as I’m usually working on WordPress sites. However I’ve recently looked at setting up Magento 2 with NGINX and ran into a few issues with loading css and js files.
