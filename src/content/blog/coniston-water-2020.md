@@ -3,6 +3,7 @@ postTitle: Coniston Water
 #date: Last Modified
 date: 2020-08-06
 postTag: Life
+postFeatureImageThumb: /dist/images/conistonwater2020thumb.jpg
 postFeatureImage: /dist/images/conistonwater2020.jpg
 postFeatureImageRetina: /dist/images/conistonwater2020@2x.jpg
 postExcerpt: After all the chaos and uncertainty in early 2020 it was nice to finally be able to get away to one of my favourite places in the world - the Lake District.

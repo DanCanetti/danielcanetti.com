@@ -3,9 +3,11 @@ postTitle: Installing Craft CMS in Homestead
 #date: Last Modified
 date: 2019-10-31
 postTag: Web Development
+postFeatureImageThumb: /dist/images/craftcmshomesteadthumb.jpg
 postFeatureImage: /dist/images/craftcmshomestead.jpg
 postFeatureImageRetina: /dist/images/craftcmshomestead@2x.jpg
 postExcerpt: An extract from a larger guide I’m working on for installing Laravel/Homestead.
+eleventyExcludeFromCollections: true
 ---
 
 ## Prerequisites

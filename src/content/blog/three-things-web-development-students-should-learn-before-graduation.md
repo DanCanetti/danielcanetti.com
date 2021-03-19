@@ -3,6 +3,7 @@ postTitle: Advice for web development students
 #date: Last Modified
 date: 2015-10-30
 postTag: Web Development
+postFeatureImageThumb: /dist/images/adviceforwebdevelopmenstudentsthumb.jpg
 postFeatureImage: /dist/images/adviceforwebdevelopmenstudents.jpg
 postFeatureImageRetina: /dist/images/adviceforwebdevelopmenstudents@2x.jpg
 postExcerpt: The following three things will help the transition from education to the workplace be a little smoother and may even improve your job prospects.
