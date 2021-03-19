@@ -3,6 +3,7 @@ postTitle: GitHub Actions Hackathon - Further Progress
 #date: Last Modified
 date: 2020-09-01
 postTag: Hackathon
+postFeatureImageThumb: /dist/images/githubactionsthumb.jpg
 postFeatureImage: /dist/images/githubactions.jpg
 postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Part 2 - I've made some tweaks to the script in an attempt to get this working how I'd like it to and so far I've just hit errors.

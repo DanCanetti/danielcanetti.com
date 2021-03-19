@@ -3,6 +3,7 @@ postTitle: GitHub Actions Hackathon - Published GitHub Action
 #date: Last Modified
 date: 2020-09-01
 postTag: Hackathon
+postFeatureImageThumb: /dist/images/githubactionsthumb.jpg
 postFeatureImage: /dist/images/githubactions.jpg
 postFeatureImageRetina: /dist/images/githubactions@2x.jpg
 postExcerpt: Part 5 - Sometimes it can take a lot of doing the incorrect method to put you back on the right path.

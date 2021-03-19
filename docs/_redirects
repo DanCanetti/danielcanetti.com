@@ -12,6 +12,10 @@ https://analytics.danielcanetti.com/* https://danielcanetti.com/ 301!
 # Draft posts
 https://danielcanetti.com/blog/eleventy-2021/ https://danielcanetti.com/blog/ 302!
 
+# Old Blog Posts 
+https://danielcanetti.com/blog/no-css-or-js-on-magento-2-after-install/ https://danielcanetti.com/blog/ 301!
+https://danielcanetti.com/blog/craft-cms-and-homestead/ https://danielcanetti.com/blog/ 301!
+
 # Simplified design
 https://danielcanetti.com/blog/ https://danielcanetti.com/ 302!
 https://danielcanetti.com/contact/ https://danielcanetti.com/blog/ 302!

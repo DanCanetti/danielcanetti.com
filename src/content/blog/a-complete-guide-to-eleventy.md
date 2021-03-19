@@ -3,6 +3,7 @@ postTitle: A complete guide to Eleventy
 #date: Last Modified
 date: 2019-12-02
 postTag: Web Development
+postFeatureImageThumb: /dist/images/acompleteguidetoeleventythumb.jpg
 postFeatureImage: /dist/images/acompleteguidetoeleventy.jpg
 postFeatureImageRetina: /dist/images/acompleteguidetoeleventy@2x.jpg
 postExcerpt: From installation to continuous deployment - everything you need to get started with the static site generator.

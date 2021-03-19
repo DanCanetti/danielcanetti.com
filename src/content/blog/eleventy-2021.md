@@ -3,6 +3,7 @@ postTitle: A 2021 guide to Eleventy
 #date: Last Modified
 date: 2021-03-13
 postTag: Web Development
+postFeatureImageThumb: /dist/images/acompleteguidetoeleventythumb.jpg
 postFeatureImage: /dist/images/acompleteguidetoeleventy.jpg
 postFeatureImageRetina: /dist/images/acompleteguidetoeleventy@2x.jpg
 postExcerpt: A follow-up to my 2019 article, A complete guide to Eleventy, with updates about webpack and my boilerplate.
