@@ -10,14 +10,14 @@ pageDesc: Front-end Web Developer living and working in Yorkshire, England. Upda
 
 <div class="body body--home">
   <div class="body__section body__section--fade">
-    <div class="blog-posts__wrap">
+    <div class="blog-posts__wrap scrollingPanel">
       {% assign blogposts = collections.posts | reverse %}
       {% for post in blogposts %}
       <div class="blog-post--thumb blog-post--thumb--home blog-post--tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
         {% if forloop.first == true %}
         <a href="{{ post.url }}" title="Read {{ post.data.postTitle }}"><img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="{{ post.data.postTitle }} Feature Image"></a>
         {% else %}
-        <a href="{{ post.url }}" title="Read {{ post.data.postTitle }}"><img src="{{ post.data.postFeatureImageThumb }}" srcset="{{ post.data.postFeatureImage }} 2x" alt="{{ post.data.postTitle }} Feature Image"></a>
+        <a href="{{ post.url }}" title="Read {{ post.data.postTitle }}"><img class="lazy" src="{{ post.data.postFeatureImageThumb }}" srcset="{{ post.data.postFeatureImage }} 2x" alt="{{ post.data.postTitle }} Feature Image"></a>
         {% endif %}
         <h2><a href="{{ post.url }}" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
         {% if forloop.first == true %}
