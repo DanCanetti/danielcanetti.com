@@ -207,6 +207,13 @@ import './partials/main.scss';
 import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
 import showdown from 'showdown';
+import LazyLoad from "vanilla-lazyload";
+
+// Lazy load images
+const lazyContent = new LazyLoad({
+  use_native: true,
+  container: document.querySelector(".scrollingPanel")
+});
 
 // Awesome Websites
 $.ajax({
