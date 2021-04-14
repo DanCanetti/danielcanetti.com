@@ -215,6 +215,9 @@ a {
         &.alt {
           color: $dancanettialt;
         }
+        &.reponame {
+          text-transform: capitalize;
+        }
     }
 }
 

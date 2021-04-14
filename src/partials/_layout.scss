@@ -13,16 +13,21 @@
 
 // Navigation
 nav {
-  padding: 50px 100px;
+  padding: 50px 0;
   position: relative;
   z-index: 100;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto 50px;
   left: 0;
   top: 0;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid $dancanettigrey;
   @include sm {
+    padding: 50px 100px;
     padding: 40px;
+    margin-bottom: 40px;
   }
   .logo {
     z-index: 40001;
@@ -33,6 +38,7 @@ nav {
     list-style: none;
     display: flex;
     animation: fade-in 3s ease-in-out 1;
+    padding: 0;
     li {
       margin-right: 40px;
       margin-top: 0;
@@ -402,11 +408,6 @@ footer {
       @include transitionall(.3s);
       width: 100%;
       height: auto;
-    }
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
     }
   }
 }
