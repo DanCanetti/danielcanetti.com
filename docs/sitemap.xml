@@ -14,7 +14,7 @@
   </url>
   
   <url>
-    <loc>/blog/how-a-mentor-leaving-can-inspire-you/</loc>
+    <loc>/journal/how-a-mentor-leaving-can-inspire-you/</loc>
   </url>
   
   <url>
@@ -30,11 +30,11 @@
   </url>
   
   <url>
-    <loc>/blog/email-isnt-broken/</loc>
+    <loc>/journal/email-isnt-broken/</loc>
   </url>
   
   <url>
-    <loc>/blog/my-favourite-grand-designs/</loc>
+    <loc>/journal/my-favourite-grand-designs/</loc>
   </url>
   
   <url>
@@ -70,7 +70,7 @@
   </url>
   
   <url>
-    <loc>/blog/coniston-water-2020/</loc>
+    <loc>/journal/coniston-water-2020/</loc>
   </url>
   
   <url>
@@ -90,7 +90,7 @@
   </url>
   
   <url>
-    <loc>/blog/marvel-cinematic-universe/</loc>
+    <loc>/journal/marvel-cinematic-universe/</loc>
   </url>
   
   <url>
@@ -115,5 +115,9 @@
   
   <url>
     <loc>/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
   </url>
 </urlset>

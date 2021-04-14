@@ -207,12 +207,76 @@ import './partials/main.scss';
 import './js/plugins/parsley.min.js';
 import './js/plugins/slick.min.js';
 import showdown from 'showdown';
-import LazyLoad from "vanilla-lazyload";
+import { Octokit } from "@octokit/rest";
 
-// Lazy load images
-const lazyContent = new LazyLoad({
-  use_native: true,
-  container: document.querySelector(".scrollingPanel")
+// What I'm working on
+const octokit = new Octokit();
+
+octokit.rest.repos.get({
+  owner: 'DanCanetti',
+  repo: 'eleventy-boilerplate',
+}).then(({ data }) => {
+  console.log(data);
+  let reponame = data.name;
+  reponame = reponame.replace(/-/g, ' ');
+  var projectone = '<p><a class="l reponame" href="'+data.homepage+'" target="_blank">'+reponame+'</a> - '+data.description+'</p>';
+  // Append to homepage
+  $(projectone).insertAfter('.project-header');
+});
+
+octokit.rest.repos.get({
+  owner: 'DanCanetti',
+  repo: 'agenda-timeline-parser',
+}).then(({ data }) => {
+  console.log(data);
+  let reponame = data.name;
+  reponame = reponame.replace(/-/g, ' ');
+  var projectone = '<p><a class="l reponame" href="'+data.homepage+'" target="_blank">'+reponame+'</a> - '+data.description+'</p>';
+  // Append to homepage
+  $(projectone).insertAfter('.project-header');
+});
+
+// What I'm reading
+$.ajax({
+  url: 'https://api.todoist.com/rest/v1/tasks?project_id=2244260319',
+  type: 'GET',
+  beforeSend: function (xhr) {
+    xhr.setRequestHeader('Authorization', 'Bearer 33f22738b05f81309169eb418bcb10e32e8b59cb');
+  },
+  data: {},
+  success: function (result) {
+    $.each(result, function (readingkey, readingvalue) {
+        if ( readingkey === 0 || readingkey === 1 || readingkey === 3 ) {
+        // Parse Markdown
+        var converter = new showdown.Converter(),
+        fullreadingurl = readingvalue.content,
+        parsedreadingurl = converter.makeHtml(fullreadingurl);
+        // Append to homepage
+        $(parsedreadingurl).insertAfter('.reading-header');
+        // Add class and target
+        $('.reading-header + p a').addClass('l');
+        $('.reading-header + p a').attr('target', '_blank');
+        }
+    });
+  },
+  error: function () {
+    console.log('Error getting reading list.');
+  },
+});
+
+// Toggle Blog/Journal
+$('.blog-posts__wrap--journal').hide();
+$('.show-journal').on( "click", function() {
+  $(this).addClass('selected');
+  $('.show-development').removeClass('selected');
+  $('.blog-posts__wrap--journal').show();
+  $('.blog-posts__wrap--development').hide();
+});
+$('.show-development').on( "click", function() {
+  $(this).addClass('selected');
+  $('.show-journal').removeClass('selected');
+  $('.blog-posts__wrap--development').show();
+  $('.blog-posts__wrap--journal').hide();
 });
 
 // Awesome Websites
