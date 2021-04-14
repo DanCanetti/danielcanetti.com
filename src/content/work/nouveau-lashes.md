@@ -14,7 +14,7 @@ projectLink: https://nouveaulashes.com/eyelash-treatment-aftercare/
 
 <div class="body__section body__section--post body__section--project-part body__section--{{ postTag | downcase }}">
 
-Following the successful release of the new e-commerce store, Nouveau Lashes began to update the WordPress end of the website. The site is being worked on section by section and by working closeley with the designers the changes are clearly a vast improvement.
+Following the successful release of the new e-commerce store, Nouveau Lashes began to update the WordPress end of the website. The site is being worked on section by section and by working closely with the designers the changes are clearly a vast improvement.
 
 ## Aftercare
 
