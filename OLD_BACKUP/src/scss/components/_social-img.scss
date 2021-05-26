@@ -1,0 +1,9 @@
+.social-img {
+    height: 0.9rem;
+    @include transitionall(0.3s);
+    &.hov-enabled {
+        &:hover {
+            fill: $dancanettialt;
+        }
+    }
+}

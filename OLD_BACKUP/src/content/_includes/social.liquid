@@ -1,0 +1,27 @@
+<meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Daniel Canetti" />
+{% if pageClass == "sub post" %}
+<meta property="og:title" content="Daniel Canetti • {{ postTitle }}" />
+<meta property="og:description" content="{{ postExcerpt }}" />
+<meta property="og:url" content="https://danielcanetti.com{{ page.url }}" />
+<meta property="og:image" content="https://danielcanetti.com{{ postFeatureImageRetina }}" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • {{ postTitle }}">
+<meta property="twitter:description" content="{{ postExcerpt }}">
+<meta property="twitter:image" content="https://danielcanetti.com{{ postFeatureImageRetina }}">
+<meta property="twitter:url" content="https://danielcanetti.com{{ page.url }}">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+{% else %}
+<meta property="og:title" content="Daniel Canetti • {{ pageTitle }}" />
+<meta property="og:description" content="{{ pageDesc }}" />
+<meta property="og:url" content="https://danielcanetti.com/" />
+<meta property="og:image" content="https://danielcanetti.com{{ pageFeatureImage }}" />
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Daniel Canetti • {{ pageTitle }}">
+<meta property="twitter:description" content="{{ pageDesc }}">
+<meta property="twitter:image" content="https://danielcanetti.com{{ pageFeatureImage }}">
+<meta property="twitter:url" content="https://danielcanetti.com/">
+<meta property="twitter:site" content="@Dan_Canetti">
+<meta property="twitter:creator" content="@Dan_Canetti">
+{% endif %}

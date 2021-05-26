@@ -1,0 +1,13 @@
+.body__section--post-meta {
+    // Date & Reading Time
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    span {
+        margin-right: 25px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

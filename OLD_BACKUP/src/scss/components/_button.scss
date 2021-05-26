@@ -1,0 +1,30 @@
+button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 5px 0;
+    margin-top: 10px;
+    font-size: 1.25rem;
+    color: $dancanettiwhite;
+    text-decoration: none;
+    position: relative;
+    @include transitionall(0.3s);
+    z-index: 1;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
+        opacity: 0.3;
+        background: $dancanettiwhite;
+        @include transitionall(0.3s);
+    }
+    &:hover {
+        cursor: pointer;
+        &:before {
+            opacity: 1;
+            background: $dancanettialt;
+        }
+    }
+}

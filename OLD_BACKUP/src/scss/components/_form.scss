@@ -1,0 +1,73 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+    .form-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        label {
+            font-size: 1rem;
+            @include transitionall(0.3s);
+        }
+        input,
+        textarea {
+            height: 50px;
+            background: none;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid $dancanettiwhite;
+            color: $dancanettiwhite;
+            font-size: 1rem;
+            @include transitionall(0.3s);
+            &.parsley-error {
+                border-bottom: 1px solid $dancanettialt;
+            }
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+        }
+        textarea {
+            resize: vertical;
+            padding: 15px 0;
+            font-family: $pfont;
+        }
+        button {
+            align-self: flex-end;
+            &:disabled {
+                //opacity: 0.5;
+                cursor: not-allowed;
+                pointer-events: none;
+                color: $dancanettialt;
+            }
+        }
+        ul.parsley-errors-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+            animation: fade-in 0.3s 1;
+            li {
+                font-size: 0.75rem;
+                padding: 0.15rem 0.25rem;
+                background: $dancanettialt;
+                color: #fff;
+            }
+        }
+    }
+    .content__gdprLegal {
+        max-width: 65%;
+        margin-top: -55px;
+        p {
+            font-size: 1rem;
+        }
+    }
+}

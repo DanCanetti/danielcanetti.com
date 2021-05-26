@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include meta %}
+        <title>Daniel Canetti • {{ postTitle }}</title>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <meta name="description" content="{{ postExcerpt }}">
+        {% include social %}
+    </head>
+    <body class="{{ pageClass }}">
+        <div id="wrapper" class="wrapper night">
+            {% include nav %}
+            <img class="post--bg-image" src="{{ postFeatureImageRetina }}" alt="{{ post.data.postTitle }} Feature Image" />
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / {% if isProject == 'yes' %}<a href="/about/">About</a> / <span>Work</span>{% else %}<span>Blog</span>{% endif %} / <span>{{ postTitle }}</span>
+            </div>
+            <div id="post" class="body dark post">
+                <div class="body__section body__section--post">
+                    <h1>{{ postTitle }}</h1>
+                    <div class="body__section--post-meta">
+                        <span>{{ date | date: '%B %d, %Y' }}</span>
+                        <span class="body__section--post-tag">{{ postTag }}</span>
+                        {% if isProject == 'yes' %}
+                        <span><a href="{{ projectLink }}" target="_blank" rel="nofollow">Visit</a></span>
+                        {% endif %}
+                        <span class="reading-time"></span>
+                    </div>
+                    {{ content }}
+                    <hr>
+                    <div class="share__blog">
+                        <h3>Share: {{ postTitle }}</h3>
+                        <div class="share__blog__links">
+                            <a class="l" href="https://www.facebook.com/sharer/sharer.php?u=https://danielcanetti.com{{ page.url }}" target="_blank" aria-label="Share on Facebook">
+                                Facebook
+                            </a>
+                            <a class="l" href="https://twitter.com/intent/tweet?text={{ postTitle }}%20by%20@Dan_Canetti%20-%20https://danielcanetti.com{{ page.url }}" target="_blank" aria-label="Share on Twitter">
+                                Twitter
+                            </a>
+                            <a class="l" href="https://www.buymeacoffee.com/dancanetti" target="_blank" aria-label="Buy me a Coffee">
+                                Buy me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer %}
+    </body>
+</html>

@@ -1,0 +1,41 @@
+.gist {
+    margin-top: 30px;
+    width: 100%;
+    .blob-wrapper {
+        padding: 15px 0;
+        background-color: $dancanettiblack;
+        .highlight {
+            background-color: $dancanettiblack;
+        }
+    }
+    .blob-num:before {
+        color: #fff !important;
+    }
+    .pl-kos {
+        color: #fff !important;
+    }
+    .pl-smi {
+        color: #e01a4f !important;
+    }
+    .pl-s1 {
+        color: #53b3cb !important;
+    }
+    .pl-pds,
+    .pl-s,
+    .pl-s .pl-pse .pl-s1,
+    .pl-sr,
+    .pl-sr .pl-cce,
+    .pl-sr .pl-sra,
+    .pl-sr .pl-sre {
+        color: #f15946 !important;
+    }
+    .pl-en,
+    .pl-c1,
+    .pl-s3 {
+        color: #f9c22e !important;
+    }
+    .gist-meta {
+        background: $dancanettiblack !important;
+        color: #fff !important;
+    }
+}

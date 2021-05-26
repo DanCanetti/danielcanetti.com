@@ -1,0 +1,40 @@
+.filter-posts {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    order: 2;
+    @include sm {
+        width: calc(100% - 15px);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 145px;
+        z-index: 10;
+        background-image: url("../images/icons/filter-chevron.svg");
+        background-size: 12px;
+        height: 12px;
+        width: 12px;
+        transform: rotate(180deg);
+        @include sm {
+            right: 16px;
+            left: auto;
+        }
+    }
+    select {
+        width: 170px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 2px;
+        padding: 10px 16px;
+        -webkit-appearance: none;
+        background-color: $dancanettiblack;
+        color: $dancanettiwhite;
+        outline: none;
+        @include sm {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.body .body__section.body__section--post .toc {
+    max-width: 80%;
+    width: 100%;
+    margin: 30px auto 0 0;
+    h3 {
+        width: 100%;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: toc-items;
+        float: left;
+        li {
+            position: relative;
+            margin-left: 0;
+            padding-left: 45px;
+            counter-increment: toc-items;
+            &:before {
+                content: counter(toc-items, decimal-leading-zero);
+                position: absolute;
+                left: 0;
+                font-size: 1.25rem;
+                font-weight: $pfontbold;
+            }
+            &.toc__this {
+                &:before {
+                    color: $dancanettialt;
+                }
+            }
+        }
+    }
+}
