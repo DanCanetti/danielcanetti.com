@@ -1,0 +1,12 @@
+.wrapper {
+    max-width: $mw;
+    text-align: center;
+    padding: #{$ds / 2};
+    .wrapper__links {
+        position: absolute;
+        bottom: #{$ds / 2};
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}

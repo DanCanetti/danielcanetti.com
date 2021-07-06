@@ -5,3 +5,23 @@ html {
   line-height: $lineheight;
   font-size: $fontsize;
 }
+h1 {
+  font-size: #{$fontsize * 2};
+}
+
+h2 {
+  font-size: #{$fontsize * 1.25};
+  color: $green;
+  margin-bottom: $ds;
+  font-weight: $fontreg;
+}
+
+a {
+  color: $black;
+  opacity: 1;
+  margin: 0 10px;
+  @include transitionall(.3s);
+  &:hover {
+    opacity: 0.7;
+  }
+}
