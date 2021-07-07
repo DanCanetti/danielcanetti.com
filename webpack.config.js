@@ -16,6 +16,8 @@ module.exports = {
       patterns: [
         { from: "./src/index.html", to: "../docs/" },
         { from: "./src/404.html", to: "../docs/" },
+        { from: "./src/_config.yml", to: "../docs/" },
+        { from: "./src/journal/", to: "../docs/journal/" },
       ],
     }),
   ],
