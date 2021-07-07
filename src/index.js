@@ -30,6 +30,7 @@ import './_scss/main.scss';
 
 // JS
 import $ from 'jquery';
+import showdown from 'showdown';
 
 // Awesome Websites
 $.ajax({
