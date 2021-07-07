@@ -3,13 +3,17 @@
     text-align: center;
     padding: #{$ds / 2};
     .wrapper__links {
-        position: fixed;
-        padding: #{$ds / 2};
-        bottom: 0;
+        position: absolute;
+        bottom: #{$ds / 2};
         left: 0;
         right: 0;
         margin: auto;
-        width: 100%;
-        background: white;
+        &--fixed {
+            position: fixed;
+            padding: #{$ds / 2};
+            bottom: 0;
+            width: 100%;
+            background: white;
+        }
     }
 }
