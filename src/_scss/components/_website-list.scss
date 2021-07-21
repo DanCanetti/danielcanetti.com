@@ -16,6 +16,7 @@
         flex-direction: row;
         align-items: center;
         text-align: left;
+        margin-bottom: #{$ds / 5};
         img {
             margin-right: 20px;
         }
