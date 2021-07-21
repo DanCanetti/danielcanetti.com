@@ -17,6 +17,7 @@ module.exports = {
         { from: "./src/index.html", to: "../docs/" },
         { from: "./src/404.html", to: "../docs/" },
         { from: "./src/awesome-sites.html", to: "../docs/" },
+        { from: "./src/blog.html", to: "../docs/" },
       ],
     }),
   ],
