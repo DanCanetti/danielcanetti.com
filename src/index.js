@@ -32,6 +32,11 @@ import './_scss/main.scss';
 import $ from 'jquery';
 import showdown from 'showdown';
 
+// Toggle menu
+$( '.wrapper__links__toggle' ).on('click', function() {
+  $('.wrapper__links').toggleClass('wrapper__links--fixed');
+});
+
 // Awesome Websites
 $.ajax({
   url: 'https://api.todoist.com/rest/v1/tasks?project_id=2244262525',

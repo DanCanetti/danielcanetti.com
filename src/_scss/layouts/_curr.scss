@@ -1,0 +1,14 @@
+.curr {
+    display: flex;
+    .person {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+    }
+    .article {
+        width: 50%;
+        align-self: flex-end;
+    }
+}
