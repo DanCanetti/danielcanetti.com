@@ -1,0 +1,9 @@
+.certified {
+    margin-top: 10px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    &:first-of-type {
+        margin-top: 0;
+    }
+}

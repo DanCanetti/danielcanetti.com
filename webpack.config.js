@@ -22,6 +22,7 @@ module.exports = {
         { from: "./src/tools/index.html", to: "../docs/tools/" },
         { from: "./src/about/index.html", to: "../docs/about/" },
         { from: "./src/files/Sage_CRM_Product_Specialist_2021.pdf", to: "../docs/files/" },
+        { from: "./src/files/Sophos_Certified_Sales_Consultant.pdf", to: "../docs/files/" },
         { from: "./src/images/cert.svg", to: "../docs/images/" },
         { from: "./src/images/icons/arrow.svg", to: "../docs/images/" },
       ],
